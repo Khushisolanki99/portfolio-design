@@ -122,7 +122,7 @@ function Hero() {
         </div>
         <div className="hero-ctas">
           <button className="btn accent" onClick={() => document.getElementById("work").scrollIntoView({ behavior: "smooth" })}>View Work →</button>
-          <button className="btn">Download Resume ↓</button>
+          <a className="btn" href="Khushi-Solanki-Resume.pdf" download="Khushi-Solanki-Resume.pdf">Download Resume ↓</a>
           <button className="btn dark" onClick={() => document.getElementById("contact").scrollIntoView({ behavior: "smooth" })}>Contact ↗</button>
         </div>
       </div>
@@ -565,42 +565,52 @@ function Skills() {
 /* DESIGN & ART (paper, premium mosaic)                          */
 /* ============================================================ */
 const ART_TILES = [
-  // Feature poster — bold type
+  // Feature poster — real image
   { cls: "feature", id: "poster.A1",   cap: "TYPE POSTER · 01",    ratio: "3:4",
     render: () => (
-      <div className="art-ph type-poster">
-        <div className="glyph">khu<br />shi.<small>— a study in serif × sans —</small></div>
-      </div>
+      <img src="uploads/art-tile-1.jpeg" alt="Art tile 1"
+        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
     ) },
-  // Tall photo edit
+  // Tall photo edit — real image
   { cls: "col-r",   id: "edit.warm.04", cap: "PHOTO EDIT · warm grade", ratio: "4:5",
-    render: () => <div className="art-ph photo warm" /> },
+    render: () => (
+      <img src="uploads/art-tile-2.png" alt="Art tile 2"
+        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+    ) },
   { cls: "wide",    id: "deck.cover.07", cap: "DECK COVER · 09",    ratio: "16:9",
     render: () => (
-      <div className="art-ph deck">
-        <div className="top"><span><span className="num">01 / 09</span> · cover</span><span>placeholder</span></div>
-        <div className="big">Deck<br /><em>cover — 01.</em></div>
-        <div className="bot"><span>drop a real export</span><div className="bar" /><span>—</span></div>
-      </div>
+      <img src="uploads/art-tile-3.jpeg" alt="Art tile 3"
+        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
     ) },
   { cls: "tall",    id: "edit.cool.03", cap: "PHOTO EDIT · cool grade", ratio: "4:5",
-    render: () => <div className="art-ph photo cool" /> },
-  { cls: "third",   id: "poster.D2",   cap: "TYPE POSTER · 04",    ratio: "1:1",
     render: () => (
-      <div className="art-ph type-poster alt">
-        <div className="glyph">A.<small>after hours</small></div>
-      </div>
+      <video
+        src="uploads/video-surge.mp4"
+        autoPlay muted loop playsInline
+        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+      />
     ) },
-  { cls: "third",   id: "deck.cover.12", cap: "DECK COVER · dark",  ratio: "1:1",
+  { cls: "third",   id: "video.01",   cap: "VIDEO · 01",    ratio: "9:16",
     render: () => (
-      <div className="art-ph deck dark">
-        <div className="top"><span><span className="num">04 / 14</span> · cover</span><span>placeholder</span></div>
-        <div className="big">Deck<br /><em>cover — 02.</em></div>
-        <div className="bot"><span>drop a real export</span><div className="bar" /><span>—</span></div>
-      </div>
+      <video
+        src="uploads/video-1.mp4"
+        autoPlay muted loop playsInline
+        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+      />
     ) },
-  { cls: "third",   id: "edit.dust.09", cap: "PHOTO EDIT · dust",   ratio: "1:1",
-    render: () => <div className="art-ph photo" /> },
+  { cls: "third",   id: "edit.cool.03", cap: "PHOTO EDIT · cool grade",  ratio: "4:5",
+    render: () => (
+      <img src="uploads/art-tile-4.png" alt="Photo edit cool grade"
+        style={{ width: "100%", height: "100%", objectFit: "contain", display: "block", background: "#1a1515" }} />
+    ) },
+  { cls: "third",   id: "video.03", cap: "VIDEO · 03",   ratio: "9:16",
+    render: () => (
+      <video
+        src="uploads/video-3.mp4"
+        autoPlay muted loop playsInline
+        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+      />
+    ) },
   { cls: "half",    id: "poster.C1",   cap: "TYPE POSTER · 06",    ratio: "16:9",
     render: () => (
       <div className="art-ph type-poster">
@@ -679,10 +689,11 @@ function Contact() {
     },
     {
       k: "Resume",
-      v: "Download PDF",
+      v: "Download Resume",
       hint: "BA · Product · UX",
       ar: "↓",
-      href: "#",
+      href: "Khushi-Solanki-Resume.pdf",
+      download: "Khushi-Solanki-Resume.pdf",
     },
     {
       k: "Figma / Portfolio Workspace",
@@ -706,7 +717,7 @@ function Contact() {
       </p>
       <div className="contact-grid">
         {cards.map((c) => (
-          <a className="contact-card" href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined} key={c.k}>
+          <a className="contact-card" href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined} download={c.download || undefined} key={c.k}>
             <div className="k">{c.k}</div>
             <div className="v"><span>{c.v}</span><span className="arrow">{c.ar}</span></div>
             <div className="hint">{c.hint}</div>
