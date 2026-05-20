@@ -1,5 +1,5 @@
 /* global React */
-const { useState: useStateS, useRef: useRefS } = React;
+const { useState: useStateS, useRef: useRefS, useEffect: useEffectS, useMemo: useMemoS } = React;
 
 /* ============================================================ */
 /* Shared monogram                                                */
@@ -17,34 +17,45 @@ function KMark({ size = 36, color = "var(--accent)" }) {
 }
 
 /* ============================================================ */
+/* shadcn-styled Badge (works without a bundler)                 */
+/* ============================================================ */
+function Badge({ children }) {
+  return <span className="sh-badge">{children}</span>;
+}
+
+/* ============================================================ */
 /* HERO                                                          */
 /* ============================================================ */
 function Hero() {
-  // Real product PNGs scattered around the wordmark — Behance-ref style.
+  const { motion } = window.Motion;
+
+  const container = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.14, delayChildren: 0.2 } },
+  };
+  const item = {
+    hidden: { opacity: 0, y: 28 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.25, 0.46, 0.45, 0.94] } },
+  };
+
   const objects = [
-    // top-left corner — CD bleeding off the top-left
     { id: "cd",       src: "images/cd.png",       alt: "CD case",
-      style: { top: "-9%",   left: "-4%",   width: "17%", aspectRatio: "1/1",  transform: "rotate(-22deg)" } },
-    // top-right corner — keyboard, big, bleeding off the top-right
+      pos: { top: "-9%",    left: "-4%",   width: "17%", aspectRatio: "1/1"  }, rot: "rotate(-22deg)", float: "a", parallax: 8,  heroDelay: 600 },
     { id: "keyboard", src: "images/keyboard.png", alt: "Keyboard",
-      style: { top: "-15%",  right: "-5%",  width: "23%", aspectRatio: "3/4",  transform: "rotate(14deg)" } },
-    // top-center — earbuds dropping in from above, half-bleed off top
+      pos: { top: "-15%",   right: "-5%",  width: "23%", aspectRatio: "3/4"  }, rot: "rotate(14deg)",  float: "b", parallax: 14, heroDelay: 700 },
     { id: "earbuds",  src: "images/earbuds.png",  alt: "Earbuds",
-      style: { top: "-7%",   left: "44%",   width: "11%", aspectRatio: "1/1",  transform: "rotate(28deg)" } },
-    // upper-left area — iced latte bleeding off the top edge, sitting between CD and earbuds
+      pos: { top: "-7%",    left: "44%",   width: "11%", aspectRatio: "1/1"  }, rot: "rotate(28deg)",  float: "c", parallax: 10, heroDelay: 750 },
     { id: "latte",    src: "images/latte.png",    alt: "Iced latte",
-      style: { top: "-12%",  left: "16%",   width: "13%", aspectRatio: "2/3",  transform: "rotate(-12deg)" } },
-    // bottom-right corner — radio, large, bleeding off bottom-right
+      pos: { top: "-12%",   left: "16%",   width: "13%", aspectRatio: "2/3"  }, rot: "rotate(-12deg)", float: "d", parallax: 6,  heroDelay: 650 },
     { id: "radio",    src: "images/radio.png",    alt: "Radio",
-      style: { bottom: "-7%", right: "-6%", width: "26%", aspectRatio: "4/5",  transform: "rotate(9deg)" } },
-    // bottom-left corner — notebook anchored to bottom-left, no longer floating
+      pos: { bottom: "-7%", right: "-6%",  width: "26%", aspectRatio: "4/5"  }, rot: "rotate(9deg)",   float: "e", parallax: 12, heroDelay: 800 },
     { id: "notebook", src: "images/notebook.png", alt: "Notebook",
-      style: { bottom: "-6%", left: "-4%",  width: "17%", aspectRatio: "3/4",  transform: "rotate(-17deg)" } },
+      pos: { bottom: "-6%", left: "-4%",   width: "17%", aspectRatio: "3/4"  }, rot: "rotate(-17deg)", float: "f", parallax: 9,  heroDelay: 850 },
   ];
 
   return (
     <section id="index" className="hero bg-grid-dark" data-screen-label="00 Hero">
-      <div className="hero-top">
+      <div className="hero-top" data-hero-enter data-hero-delay="0">
         <div className="brand">
           <div className="mark"><KMark size={28} /></div>
           <div className="name">
@@ -56,7 +67,6 @@ function Hero() {
       </div>
 
       <div className="hero-stage">
-        {/* faint wire/squiggle trail */}
         <div className="hero-wires" aria-hidden>
           <svg viewBox="0 0 100 100" preserveAspectRatio="none">
             <path d="M 12 6 C 28 24, 18 38, 30 50 S 14 70, 36 80 S 60 96, 78 84 S 96 60, 86 44 S 70 18, 52 22" />
@@ -65,12 +75,17 @@ function Hero() {
         </div>
 
         {objects.map((o) => (
-          <div key={o.id} className="hero-obj" style={o.style}>
-            <img src={o.src} alt={o.alt} />
+          <div key={o.id} className="hero-obj hero-obj-animate"
+            style={o.pos}
+            data-parallax={o.parallax}
+            data-hero-delay={o.heroDelay}
+          >
+            <div className={`hero-float float-${o.float}`} style={{ transform: o.rot }}>
+              <img src={o.src} alt={o.alt} />
+            </div>
           </div>
         ))}
 
-        {/* Two black Doberman puppies — drop your own bg-removed PNGs onto these */}
         <div className="hero-obj hero-slot" style={{ top: "34%", left: "2%", width: "14%", aspectRatio: "1/1", transform: "rotate(-8deg)" }}>
           <image-slot
             id="hero-dobie-left"
@@ -91,21 +106,33 @@ function Hero() {
         </div>
 
         <div className="hero-center">
-          <div className="hero-wordmark">
-            <span className="line">BA / Product</span>
-            <span className="line accent">Portfolio</span>
-            <span className="ml-sticker">
-              <span className="sticker">KHUSHI SOLANKI · 2026</span>
-            </span>
-          </div>
-          <p className="hero-tagline">
-            PRDs, flows, screens, dashboards, and creative systems for
-            <span> real-world product problems.</span>
-          </p>
+          <motion.div
+            className="hero-fm-stack"
+            variants={container}
+            initial="hidden"
+            animate="show"
+          >
+            <motion.div variants={item} className="hero-badge-row">
+              <Badge>Open to Work · BA / Product / APM</Badge>
+            </motion.div>
+
+            <motion.div variants={item} className="hero-wordmark">
+              <span className="line">BA / Product</span>
+              <span className="line accent">Portfolio</span>
+              <span className="ml-sticker">
+                <span className="sticker">KHUSHI SOLANKI · 2026</span>
+              </span>
+            </motion.div>
+
+            <motion.p variants={item} className="hero-tagline">
+              PRDs, flows, screens, dashboards, and creative systems for
+              <span> real-world product problems.</span>
+            </motion.p>
+          </motion.div>
         </div>
       </div>
 
-      <div className="hero-bottom">
+      <div className="hero-bottom" data-hero-enter data-hero-delay="660">
         <div className="hero-meta">
           <div className="m">
             <span className="k">Available</span>
@@ -343,9 +370,24 @@ function About() {
 /* WORK — folder tabs + case-study tray                          */
 /* ============================================================ */
 function Work({ onOpen }) {
-  const [active, setActive] = useStateS(0);
+  const [active,   setActive]   = useStateS(0);
+  const [display,  setDisplay]  = useStateS(0);
+  const [trayAnim, setTrayAnim] = useStateS("");
   const cases = window.CASE_STUDIES || [];
-  const cs = cases[active] || cases[0];
+  const cs = cases[display] || cases[0];
+
+  function switchTab(i) {
+    if (i === active) return;
+    setTrayAnim("tray-exit");
+    setTimeout(() => {
+      setDisplay(i);
+      setActive(i);
+      setTimeout(() => {
+        setTrayAnim("tray-enter");
+        setTimeout(() => setTrayAnim(""), 340);
+      }, 16);
+    }, 230);
+  }
 
   return (
     <section id="work" className="section dark bg-grid-dark" data-screen-label="02 Work">
@@ -384,7 +426,7 @@ function Work({ onOpen }) {
           <div
             key={c.id}
             className={`folder-tab ${i === active ? "active" : i % 2 ? "green" : ""}`}
-            onClick={() => setActive(i)}
+            onClick={() => switchTab(i)}
           >
             {c.title} <span style={{ fontWeight: 800, color: i === active ? "rgba(255,255,255,0.85)" : "var(--ink)" }}>{c.titleEm}</span>
             <span className="yr">{c.num} · {c.year}</span>
@@ -393,7 +435,7 @@ function Work({ onOpen }) {
       </div>
 
       <div className="case-tray">
-        <div className="case-tray-inner">
+        <div className={`case-tray-inner ${trayAnim}`}>
           <div>
             {/* Headline outcome chips */}
             <div className="case-outcomes">
@@ -466,6 +508,43 @@ function Work({ onOpen }) {
 }
 
 /* ============================================================ */
+/* Cycling animated word (adapted from animated-hero pattern)    */
+/* ============================================================ */
+function CyclingWord({ words }) {
+  const { motion } = window.Motion;
+  const [idx, setIdx] = useStateS(0);
+
+  useEffectS(() => {
+    const id = setTimeout(() => setIdx((i) => (i + 1) % words.length), 2000);
+    return () => clearTimeout(id);
+  }, [idx, words.length]);
+
+  return (
+    <span className="cycling-word-wrap">
+      {/* invisible widest word keeps layout stable */}
+      <span className="cycling-word-sizer" aria-hidden>
+        {words.reduce((a, b) => (b.length > a.length ? b : a), "")}
+      </span>
+      {words.map((word, i) => (
+        <motion.span
+          key={word}
+          className="cycling-word accent"
+          initial={{ opacity: 0, y: -60 }}
+          transition={{ type: "spring", stiffness: 50 }}
+          animate={
+            idx === i
+              ? { y: 0, opacity: 1 }
+              : { y: idx > i ? -80 : 80, opacity: 0 }
+          }
+        >
+          {word}
+        </motion.span>
+      ))}
+    </span>
+  );
+}
+
+/* ============================================================ */
 /* EXPERIENCE (cream)                                            */
 /* ============================================================ */
 const EXPERIENCE = [
@@ -482,7 +561,11 @@ function Experience() {
       <div className="exp-grid">
         <div>
           <div className="eyebrow-light"><span className="num">03</span><span className="dot" /><span>Practice — 5 disciplines</span></div>
-          <h2>What <span className="accent">I do</span><br />on a Tuesday.</h2>
+          <h2>
+            What I{" "}
+            <CyclingWord words={["analyse", "design", "manage", "ship", "direct"]} />
+            <br />on a Tuesday.
+          </h2>
           <p className="lede">
             Five disciplines that overlap on almost every product brief.
             The order changes, but the core doesn't.

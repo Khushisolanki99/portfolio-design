@@ -175,12 +175,65 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 /* ============================================================ */
 /* HERO                                                          */
 /* ============================================================ */
+
+/* Animated gradient that sits under the grid overlay */
+@keyframes hero-gradient {
+  0%   { background-position: -1px -1px, -1px -1px, 0%   50%; }
+  50%  { background-position: -1px -1px, -1px -1px, 100% 50%; }
+  100% { background-position: -1px -1px, -1px -1px, 0%   50%; }
+}
+
 .hero {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
   padding: 80px var(--pad-x) 40px;
   position: relative;
+}
+
+/* Override bg-grid-dark on hero to layer an animated gradient beneath the grid */
+.hero.bg-grid-dark {
+  background-image:
+    linear-gradient(var(--grid-dark) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-dark) 1px, transparent 1px),
+    linear-gradient(135deg, #1a1715 0%, #211915 25%, #1e1c18 50%, #221a16 75%, #1a1715 100%);
+  background-size: 56px 56px, 56px 56px, 400% 400%;
+  background-position: -1px -1px, -1px -1px, 0% 50%;
+  animation: hero-gradient 18s ease infinite;
+}
+
+/* Badge row spacing above the wordmark */
+.hero-badge-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+/* shadcn Badge — default variant */
+.sh-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 3px 12px;
+  font-size: 11.5px;
+  font-weight: 500;
+  font-family: var(--sans);
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(239, 233, 221, 0.18);
+  background: rgba(239, 233, 221, 0.07);
+  color: rgba(239, 233, 221, 0.68);
+  white-space: nowrap;
+}
+
+/* Framer Motion stagger wrapper — same layout as hero-center flex column */
+.hero-fm-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  max-width: 920px;
+  width: 100%;
+  text-align: center;
 }
 
 .hero-top {
@@ -966,6 +1019,30 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
   letter-spacing: -0.04em; margin: 0 0 18px; color: var(--ink);
 }
 .exp h2 .accent { color: var(--accent); }
+
+/* Animated cycling word inside the Tuesday heading */
+.cycling-word-wrap {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  /* height matches one line of the h2 */
+  height: 1em;
+  line-height: 1em;
+}
+.cycling-word-sizer {
+  /* invisible placeholder keeps the wrap wide enough for longest word */
+  visibility: hidden;
+  display: inline-block;
+}
+.cycling-word {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  font-weight: 800;
+  color: var(--accent);
+}
 .exp p.lede {
   font-family: var(--sans); font-size: 17px; line-height: 1.5;
   color: var(--ink-soft); max-width: 38ch;
@@ -2296,3 +2373,131 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
   color: rgba(239,233,221,0.7);
   line-height: 1.3;
 }
+
+/* ============================================================
+   PREMIUM ANIMATION LAYER — 2026 upgrade
+   All effects are progressive: if JS fails, content is still
+   visible after a short delay via animation-fill fallbacks.
+   ============================================================ */
+
+/* G1 — Lenis: let Lenis handle scroll momentum */
+html { scroll-behavior: auto; }
+
+/* G2 — Custom cursor (desktop pointer only) */
+@media (pointer: fine) {
+  *, *::before, *::after { cursor: none !important; }
+}
+.cursor-dot {
+  position: fixed; top: 0; left: 0; z-index: 9999;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
+  will-change: left, top;
+}
+.cursor-ring {
+  position: fixed; top: 0; left: 0; z-index: 9998;
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1.5px solid var(--accent);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s ease, height 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+  will-change: left, top;
+}
+.cursor-ring.hover {
+  width: 52px; height: 52px;
+  background: rgba(224, 65, 31, 0.1);
+}
+
+/* G3 — Scroll progress bar */
+#scroll-progress {
+  position: fixed; top: 0; left: 0; z-index: 9997;
+  height: 2px; width: 0;
+  background: var(--accent);
+  pointer-events: none;
+}
+
+/* H1 — Hero entrance: general elements (fade + slide up) */
+[data-hero-enter] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.2,.6,.2,1);
+}
+[data-hero-enter="fade"] { transform: none; }
+[data-hero-enter].hero-in { opacity: 1; transform: translateY(0); }
+
+/* H1 — Hero entrance: scattered image objects (fade only, position fixed by inline style) */
+.hero-obj-animate {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.hero-obj-animate.hero-in { opacity: 1; }
+
+/* H2 — Floating images (translate composes with transform rotation on inner wrapper) */
+@keyframes floatA { 0%, 100% { translate: 0 0;    } 50% { translate: 0 -14px; } }
+@keyframes floatB { 0%, 100% { translate: 0 -5px; } 50% { translate: 0  9px;  } }
+@keyframes floatC { 0%, 100% { translate: 0 0;    } 50% { translate: 0 -11px; } }
+.hero-float { display: block; width: 100%; height: 100%; }
+.float-a { animation: floatA 3.8s ease-in-out infinite; }
+.float-b { animation: floatB 4.5s ease-in-out infinite; }
+.float-c { animation: floatC 5.2s ease-in-out infinite; }
+.float-d { animation: floatA 4.2s ease-in-out 0.8s infinite; }
+.float-e { animation: floatB 5.0s ease-in-out 1.2s infinite; }
+.float-f { animation: floatC 3.5s ease-in-out 0.4s infinite; }
+/* hero-obj img filter still applies via .hero-obj img rule; also target nested .hero-float img */
+.hero-float img {
+  display: block; width: 100%; height: 100%; object-fit: contain;
+  filter:
+    drop-shadow(0 22px 30px rgba(0, 0, 0, 0.55))
+    drop-shadow(0 4px 8px rgba(0, 0, 0, 0.35));
+}
+
+/* A1 — Polaroid toss-in */
+.about-polaroids .poly { opacity: 0; }
+@keyframes tossA {
+  from { opacity: 0; transform: translateY(40px) rotate(0deg) scale(0.9); }
+  to   { opacity: 1; transform: rotate(-4deg); }
+}
+@keyframes tossB {
+  from { opacity: 0; transform: translateY(40px) rotate(0deg) scale(0.9); }
+  to   { opacity: 1; transform: rotate(2deg) translateY(10px); }
+}
+@keyframes tossC {
+  from { opacity: 0; transform: translateY(40px) rotate(0deg) scale(0.9); }
+  to   { opacity: 1; transform: rotate(3.5deg); }
+}
+.about-polaroids .poly.tossing.tilt-a { animation: tossA 0.6s  cubic-bezier(.2,.6,.2,1) forwards; }
+.about-polaroids .poly.tossing.tilt-b { animation: tossB 0.65s cubic-bezier(.2,.6,.2,1) forwards; }
+.about-polaroids .poly.tossing.tilt-c { animation: tossC 0.6s  cubic-bezier(.2,.6,.2,1) forwards; }
+.about-polaroids .poly.settled { animation: none; opacity: 1; }
+/* Disable CSS hover — JS handles 3D tilt */
+.about-polaroids .poly:hover { transform: unset; box-shadow: unset; }
+
+/* E1 — Experience rows: staggered alternating slide-in */
+.exp-row {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(.2,.6,.2,1);
+}
+.exp-row.slide-from-left  { transform: translateX(-28px); }
+.exp-row.slide-from-right { transform: translateX(28px); }
+.exp-row.exp-in { opacity: 1 !important; transform: translateX(0) !important; }
+
+/* W1 — Work tab transition */
+@keyframes trayExit {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(-16px); }
+}
+@keyframes trayEnter {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.case-tray-inner.tray-exit  { animation: trayExit  0.22s ease forwards; }
+.case-tray-inner.tray-enter { animation: trayEnter 0.32s cubic-bezier(.2,.6,.2,1) forwards; }
+
+/* D2 — Art tile: JS handles 3D tilt hover */
+.art-tile { transform-style: preserve-3d; }
+.art-tile:hover { transform: none; }
+
+/* M1 — Marquee pause on hover (pure CSS) */
+.marquee:hover .marquee-track { animation-play-state: paused; }
