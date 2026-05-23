@@ -1,4 +1,4 @@
-/* global React */
+﻿/* global React */
 const { useState, useEffect } = React;
 
 /* ============================================================ */
@@ -44,7 +44,7 @@ const CASE_STUDIES = [
       "Audited 6 months of returns — clustered into 4 risk archetypes.",
     ],
     pains: [
-      "“We only know it's a bad order when it comes back.”",
+      "\"We only know it's a bad order when it comes back.\"",
       "Pickers had no way to flag — only escalate verbally.",
       "Ops leads bounced between 3 tabs to make one hold decision.",
     ],
@@ -101,7 +101,7 @@ const CASE_STUDIES = [
     users: [
       "Product managers — coordinate 8–12 syncs/week.",
       "Engineering leads — need decisions, not transcripts.",
-      "Execs — need a weekly “what changed” digest.",
+      "Execs — need a weekly \"what changed\" digest.",
     ],
     context:
       "Built for teams already using Notion + JIRA + Slack. The AI had to be auditable — every action it took needed a visible source in the transcript.",
@@ -111,7 +111,7 @@ const CASE_STUDIES = [
       "Mapped 9 recurring meeting archetypes with distinct brief shapes.",
     ],
     pains: [
-      "“By Friday I can't remember what we agreed Tuesday.”",
+      "\"By Friday I can't remember what we agreed Tuesday.\"",
       "Action items were buried in transcripts nobody re-read.",
       "Owners weren't tagged, so nothing was on a board.",
     ],
@@ -140,70 +140,32 @@ const CASE_STUDIES = [
     ],
   },
   {
-    id: "creator-ai",
+    id: "nudge",
     num: "03",
-    title: "Creator",
-    titleEm: "Insight AI",
-    sub: "AI workspace that surfaces what's working across a creator's content — by topic, format, and audience signal.",
+    title: "Nudge",
+    titleEm: "Buy where you decide",
+    sub: "Embedded checkout layer that collapses the gap between content discovery and purchase — no redirect, no friction.",
     year: "2025",
-    duration: "9 wks",
-    type: "AI Product",
-    client: "Creator Tools, Beta",
-    tags: ["AI Product", "Analytics", "Creator Economy", "Insight Engine"],
-    problemLine: "Creators bounce between TikTok, Instagram, and YouTube dashboards — none tell them WHY a post worked or what to make next.",
+    duration: "8 wks",
+    type: "Commerce Infrastructure",
+    client: "0 → 1 product · PM + BA",
+    tags: ["PM + BA", "Commerce Infra", "0 → 1", "Embedded Checkout"],
+    externalUrl: "case-studies/nudge.html",
+    problemLine: "70% of high-intent shoppers abandon at the redirect — the moment between 'I want this' and 'where do I buy it' is where revenue disappears.",
     spec: {
-      Problem: "Creators bounce between TikTok, Instagram, and YouTube dashboards — none tell them WHY a post worked or what to make next.",
-      Role: "BA + Product",
-      Process: "Diary study → signal mapping → PRD → AI agent spec → flows → screens",
-      Output: "PRD, insight scoring spec, 8 screens, content-recommendation logic",
+      Problem: "High-intent buyers drop at the redirect between discovery and purchase.",
+      Role: "PM + BA — 0 → 1",
+      Process: "Discovery → user interviews → PRD → flow mapping → embedded spec → handoff",
+      Output: "PRD, checkout embed spec, user flows, API contract, metric framework",
       Tools: "Figma, Notion, Miro, JIRA",
     },
     overview:
-      "Creator Insight AI unifies performance across YouTube, TikTok, and Instagram into a single signal score — then explains, in plain English, why each post worked and recommends what to make next.",
-    problem: [
-      "Creators juggle 3–4 dashboards but still can't answer 'what should I post next?'",
-      "Insights are surface-level — likes, views, follows — not signal-level.",
-      "AI tools generate captions, not strategic direction.",
-    ],
-    users: [
-      "Solo creators with 10k–200k followers — short on time, long on uncertainty.",
-      "Creator-teams of 2–4 producing across 2+ platforms.",
-      "Talent managers wanting weekly reports they don't have to chase.",
-    ],
-    context:
-      "Built for creators already drowning in analytics tabs. The AI had to be opinionated — recommend, don't report — and explain its reasoning every time.",
-    research: [
-      "Diary study with 9 creators across YouTube, TikTok, Instagram.",
-      "Coded 240 posts for performance vs. perceived effort.",
-      "Mapped 12 'why-it-worked' archetypes across formats.",
-    ],
-    pains: [
-      "“My TikTok dashboard tells me views, not what worked.”",
-      "Cross-platform comparison was manual or impossible.",
-      "Recommendations from tools felt generic and unbranded.",
-    ],
-    reqs: [
-      "Cross-platform performance unified into one signal score.",
-      "AI surfaces 'why a post worked' — topic, hook, format, timing.",
-      "Weekly recommendations tied to creator's stated goals.",
-      "Export-ready summary for talent manager or brand partner.",
-    ],
-    flow: [
-      { t: "Connect",  d: "Platforms in one click" },
-      { t: "Score",    d: "Posts ranked on signal × effort × fit" },
-      { t: "Why",      d: "AI explains in plain English" },
-      { t: "Next",     d: "5 recommended posts for the week" },
-      { t: "Report",   d: "One-tap export for partners" },
-    ],
+      "Nudge is an embedded checkout layer that lets buyers complete a purchase inside the surface where they discovered the product — social feed, creator post, editorial page — without a redirect, without a new tab.",
     outcome: [
-      { n: "+34%", l: "Avg engagement, beta cohort" },
-      { n: "−5h",  l: "Saved / creator / week" },
-      { n: "9.2",  l: "NPS, 12-creator beta" },
-      { n: "3→1",  l: "Tools collapsed into one" },
-    ],
-    learnings: [
-      "Creators didn't want more data — they wanted permission to stop second-guessing.",
-      "The 'why' explanation was the product. Without it, the score was just another number.",
+      { n: "-30%", l: "Target checkout abandonment" },
+      { n: "+25%", l: "Conversion from content" },
+      { n: "<2min", l: "Intent to purchase" },
+      { n: "8 wks", l: "Discovery to spec" },
     ],
   },
   {
@@ -245,7 +207,7 @@ const CASE_STUDIES = [
       "Mapped the 9 questions every founder under-answers.",
     ],
     pains: [
-      "“I have a deck but I don't have a spec.”",
+      "\"I have a deck but I don't have a spec.\"",
       "Founders mistook feature lists for PRDs.",
       "No way to score scope vs. timeline before building.",
     ],
@@ -968,15 +930,8 @@ function CaseScreens({ cs, set }) {
       </div>
     );
   }
-  if (cs.id === "creator-ai") {
-    return set === "overview" ? (
-      <div className="cs-mocks"><MockCreatorOverview /></div>
-    ) : (
-      <div className="cs-mocks">
-        <MockCreatorRec />
-        <MockCreatorInsight />
-      </div>
-    );
+  if (cs.id === "nudge") {
+    return <div className="cs-mocks"><MockNudgePreview /></div>;
   }
   if (cs.id === "idea-mvp") {
     return set === "overview" ? (
@@ -993,6 +948,46 @@ function CaseScreens({ cs, set }) {
 
 window.CaseScreens = CaseScreens;
 
+function MockNudgePreview() {
+  return (
+    <div className="panel feature">
+      <span className="corner-tl"><span className="dot" />nudge.embed.checkout</span>
+      <div className="mock" style={{ background: "#0c0c0a", padding: "5%", gap: 12, color: "#f0ebe0" }}>
+        <div className="topbar" style={{ borderBottom: "1px solid rgba(232,64,28,0.18)" }}>
+          <div className="brand" style={{ color: "#f0ebe0" }}>Nudge<span className="dot" style={{ color: "#e8401c" }}>●</span>Checkout</div>
+          <div className="nav" style={{ color: "rgba(240,235,224,0.45)" }}><span className="on" style={{ color: "#e8401c" }}>Embed</span><span>Analytics</span><span>Merchants</span></div>
+          <div className="user" style={{ background: "#e8401c" }}>K</div>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 10, marginTop: 4 }}>
+          {[
+            { l: "Abandonment", v: "-30%", d: "vs redirect" },
+            { l: "Content CVR", v: "+25%", d: "week 4" },
+            { l: "Time to buy", v: "<2min", d: "intent to purchase" },
+            { l: "Merchants", v: "12", d: "live on embed" },
+          ].map((k, i) => (
+            <div key={i} style={{ background: "#141410", borderRadius: 6, padding: "10px 12px" }}>
+              <div style={{ fontFamily: "var(--type)", fontSize: 8.5, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(240,235,224,0.4)", marginBottom: 3 }}>{k.l}</div>
+              <div style={{ fontFamily: "var(--display)", fontWeight: 800, fontSize: 20, color: "#e8401c", letterSpacing: "-0.02em" }}>{k.v}</div>
+              <div style={{ fontFamily: "var(--sans)", fontSize: 10, color: "rgba(240,235,224,0.35)" }}>{k.d}</div>
+            </div>
+          ))}
+        </div>
+        <div style={{ background: "#141410", borderRadius: 8, padding: "14px 16px", display: "flex", gap: 16, alignItems: "center" }}>
+          <div style={{ flex: 1 }}>
+            <div style={{ fontFamily: "var(--display)", fontWeight: 800, fontSize: 14, color: "#f0ebe0", marginBottom: 4 }}>Air Max 97 · Sand Drift</div>
+            <div style={{ fontFamily: "var(--sans)", fontSize: 12, color: "rgba(240,235,224,0.45)" }}>Size 8 · ₹12,499 · 3 in stock</div>
+          </div>
+          <div style={{ background: "#e8401c", borderRadius: 6, padding: "8px 16px", fontFamily: "var(--display)", fontWeight: 800, fontSize: 12, color: "#fff", whiteSpace: "nowrap" }}>Buy Now</div>
+        </div>
+        <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "var(--type)", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(240,235,224,0.28)", marginTop: "auto" }}>
+          <span>● embedded · no redirect</span>
+          <span>view full case study ↗</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ============================================================ */
 /* Case preview — slimmer in-tray hero (no panel chrome)         */
 /* ============================================================ */
@@ -1000,7 +995,7 @@ function CasePreview({ cs }) {
   let Comp = null;
   if (cs.id === "rto")        Comp = MockRTOOverview;
   if (cs.id === "ai-meet")    Comp = MockAIOverview;
-  if (cs.id === "creator-ai") Comp = MockCreatorOverview;
+  if (cs.id === "nudge")      Comp = MockNudgePreview;
   if (cs.id === "idea-mvp")   Comp = MockIdeaOverview;
   if (!Comp) return null;
   return (
@@ -1012,6 +1007,374 @@ function CasePreview({ cs }) {
 window.CasePreview = CasePreview;
 
 /* ============================================================ */
+/* RTO Guard — cinematic scroll sections                        */
+/* ============================================================ */
+function RTOCinematicSections() {
+  const dark = "#1a1a1a";
+  const cream = "var(--paper)";
+  const accentColor = "var(--accent)";
+
+  const sectionBase = (bg, extra) => ({
+    background: bg,
+    padding: "88px 8%",
+    ...extra,
+  });
+
+  const eyebrow = {
+    fontFamily: "var(--type)",
+    fontSize: 11,
+    letterSpacing: "0.16em",
+    textTransform: "uppercase",
+    color: accentColor,
+    marginBottom: 28,
+  };
+
+  return (
+    <>
+      {/* ── 1 · THE PROBLEM ──────────────────────────────────── */}
+      <div style={sectionBase(dark, { borderTop: "1px solid rgba(255,255,255,0.06)" })}>
+        <div style={eyebrow}>The Problem</div>
+        <h2 style={{
+          fontFamily: "var(--display)",
+          fontWeight: 900,
+          fontSize: "clamp(34px, 5vw, 68px)",
+          letterSpacing: "-0.03em",
+          color: "#ffffff",
+          lineHeight: 1.04,
+          maxWidth: 820,
+          marginBottom: 36,
+        }}>
+          Returns were bleeding the business.
+        </h2>
+        <p style={{
+          fontFamily: "var(--sans)",
+          fontSize: 18,
+          lineHeight: 1.7,
+          color: "rgba(255,255,255,0.55)",
+          maxWidth: 640,
+        }}>
+          E-commerce ops teams had no early warning system for high-risk orders. By the time a return happened, the damage was done — lost revenue, wasted logistics, angry customers. The question nobody was asking: can we predict a return before it ships?
+        </p>
+      </div>
+
+      {/* ── 2 · DISCOVERY ────────────────────────────────────── */}
+      <div style={sectionBase(cream, { borderTop: "1px solid rgba(0,0,0,0.07)" })}>
+        <div style={eyebrow}>Discovery</div>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          border: "1px solid rgba(0,0,0,0.09)",
+          borderRadius: 10,
+          overflow: "hidden",
+        }}>
+          {[
+            {
+              stat: "8 stakeholder interviews",
+              sub: "Ops managers, logistics heads, customer support leads.",
+            },
+            {
+              stat: "1 in 4 orders",
+              sub: "flagged as potentially returnable using existing data that nobody was reading.",
+            },
+            {
+              stat: "Zero visibility",
+              sub: "Teams were making decisions on gut feel, not signals.",
+            },
+          ].map((card, i) => (
+            <div key={i} style={{
+              background: cream,
+              padding: "52px 40px",
+              borderRight: i < 2 ? "1px dashed rgba(0,0,0,0.1)" : "none",
+            }}>
+              <div style={{
+                fontFamily: "var(--display)",
+                fontWeight: 900,
+                fontSize: "clamp(22px, 2.8vw, 38px)",
+                letterSpacing: "-0.02em",
+                color: accentColor,
+                lineHeight: 1.1,
+                marginBottom: 18,
+              }}>{card.stat}</div>
+              <div style={{
+                fontFamily: "var(--sans)",
+                fontSize: 15,
+                lineHeight: 1.6,
+                color: "var(--ink-soft)",
+              }}>{card.sub}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ── 3 · PROCESS TIMELINE ─────────────────────────────── */}
+      <div style={sectionBase(dark, { borderTop: "1px solid rgba(255,255,255,0.06)" })}>
+        <div style={eyebrow}>Process</div>
+        <h3 style={{
+          fontFamily: "var(--display)",
+          fontWeight: 900,
+          fontSize: "clamp(24px, 3vw, 42px)",
+          letterSpacing: "-0.025em",
+          color: "#ffffff",
+          marginBottom: 56,
+        }}>How we got there.</h3>
+        <div style={{ position: "relative" }}>
+          {/* connector rail */}
+          <div style={{
+            position: "absolute",
+            top: 20,
+            left: "calc(10% + 20px)",
+            right: "calc(10% + 20px)",
+            height: 1,
+            background: "rgba(255,255,255,0.1)",
+            zIndex: 0,
+          }} />
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(5, 1fr)",
+            gap: 8,
+            position: "relative",
+            zIndex: 1,
+          }}>
+            {[
+              { t: "Stakeholder interviews", d: "12 sessions across ops, CX, and finance." },
+              { t: "Workflow audit",         d: "Mapped 17 decision points at the warehouse." },
+              { t: "Risk heuristics defined",d: "Clustered returns into 4 risk archetypes." },
+              { t: "Dashboard IA",           d: "Prioritised glance-level signal for pickers." },
+              { t: "Screen design",          d: "PRD → wireframes → locked Figma screens." },
+            ].map((step, i) => (
+              <div key={i} style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+                padding: "0 8px",
+              }}>
+                <div style={{
+                  width: 40,
+                  height: 40,
+                  borderRadius: "50%",
+                  background: i === 0 ? accentColor : "rgba(255,255,255,0.05)",
+                  border: `1px solid ${i === 0 ? "transparent" : "rgba(255,255,255,0.12)"}`,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontFamily: "var(--type)",
+                  fontSize: 11,
+                  fontWeight: 700,
+                  color: i === 0 ? "#fff" : "rgba(255,255,255,0.35)",
+                  letterSpacing: "0.05em",
+                  marginBottom: 24,
+                  flexShrink: 0,
+                }}>{String(i + 1).padStart(2, "0")}</div>
+                <div style={{
+                  fontFamily: "var(--display)",
+                  fontWeight: 700,
+                  fontSize: 13,
+                  letterSpacing: "-0.01em",
+                  color: "#ffffff",
+                  marginBottom: 10,
+                  lineHeight: 1.25,
+                }}>{step.t}</div>
+                <div style={{
+                  fontFamily: "var(--sans)",
+                  fontSize: 12,
+                  lineHeight: 1.55,
+                  color: "rgba(255,255,255,0.38)",
+                }}>{step.d}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ── 4 · THE SOLUTION ─────────────────────────────────── */}
+      <div style={sectionBase(cream, { borderTop: "1px solid rgba(0,0,0,0.07)" })}>
+        <div style={eyebrow}>The Solution</div>
+        <h2 style={{
+          fontFamily: "var(--display)",
+          fontWeight: 900,
+          fontSize: "clamp(28px, 4vw, 58px)",
+          letterSpacing: "-0.03em",
+          color: "var(--ink)",
+          lineHeight: 1.04,
+          maxWidth: 740,
+          marginBottom: 48,
+        }}>
+          A risk score for every order, before it ships.
+        </h2>
+        {/* Dashboard mock — same panel/mock styling as existing previews */}
+        <div style={{
+          border: "1px solid rgba(0,0,0,0.1)",
+          borderRadius: 12,
+          overflow: "hidden",
+          marginBottom: 48,
+          boxShadow: "0 4px 40px rgba(0,0,0,0.08)",
+        }}>
+          <div className="cs-mocks" style={{ margin: 0, padding: 0 }}>
+            <MockRTOOverview />
+          </div>
+        </div>
+        {/* 3 feature callouts */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          borderTop: "1px solid rgba(0,0,0,0.09)",
+        }}>
+          {[
+            {
+              n: "Risk scoring engine",
+              d: "Every order scored at sync time — buyer history, address signals, COD patterns, and pincode performance collapsed into one confidence number.",
+            },
+            {
+              n: "Order flag system",
+              d: "Red, amber, green flags surface at the pick station. No training required. Pickers act in seconds, not minutes.",
+            },
+            {
+              n: "Ops decision layer",
+              d: "One-tap hold, reroute, or release — with auto-notify to CX and a full audit trail every time.",
+            },
+          ].map((f, i) => (
+            <div key={i} style={{
+              padding: "40px 36px",
+              borderRight: i < 2 ? "1px dashed rgba(0,0,0,0.09)" : "none",
+            }}>
+              <div style={{
+                fontFamily: "var(--type)",
+                fontSize: 10,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                color: accentColor,
+                marginBottom: 14,
+              }}>0{i + 1}</div>
+              <div style={{
+                fontFamily: "var(--display)",
+                fontWeight: 800,
+                fontSize: 18,
+                letterSpacing: "-0.01em",
+                color: "var(--ink)",
+                marginBottom: 10,
+              }}>{f.n}</div>
+              <div style={{
+                fontFamily: "var(--sans)",
+                fontSize: 14,
+                lineHeight: 1.65,
+                color: "var(--ink-soft)",
+              }}>{f.d}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ── 5 · OUTCOME ──────────────────────────────────────── */}
+      <div style={sectionBase(dark, { borderTop: "1px solid rgba(255,255,255,0.06)" })}>
+        <div style={eyebrow}>Outcome</div>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(4, 1fr)",
+          borderTop: "1px solid rgba(255,255,255,0.09)",
+        }}>
+          {[
+            {
+              n: "−38%",
+              l: "RTO rate, Q2",
+              d: "From 12.1% to 7.5% within 8 weeks of launch — beat the 4pp target by nearly double.",
+            },
+            {
+              n: "4.2×",
+              l: "ROI in 90 days",
+              d: "Logistics savings and reduced reverse-logistics cost covered the full build cost in under three months.",
+            },
+            {
+              n: "<3s",
+              l: "Decision time / order",
+              d: "Pickers went from bouncing between 3 tabs to a single glance-level signal. Speed was the adoption unlock.",
+            },
+            {
+              n: "94%",
+              l: "Ops adoption",
+              d: "Within 6 weeks. No training sessions. The reason chips did the onboarding for us.",
+            },
+          ].map((m, i) => (
+            <div key={i} style={{
+              padding: "52px 36px",
+              borderRight: i < 3 ? "1px solid rgba(255,255,255,0.07)" : "none",
+            }}>
+              <div style={{
+                fontFamily: "var(--display)",
+                fontWeight: 900,
+                fontSize: "clamp(36px, 4vw, 62px)",
+                letterSpacing: "-0.03em",
+                color: accentColor,
+                lineHeight: 1,
+                marginBottom: 8,
+              }}>{m.n}</div>
+              <div style={{
+                fontFamily: "var(--type)",
+                fontSize: 10,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                color: "rgba(255,255,255,0.4)",
+                marginBottom: 22,
+              }}>{m.l}</div>
+              <div style={{
+                fontFamily: "var(--sans)",
+                fontSize: 13.5,
+                lineHeight: 1.65,
+                color: "rgba(255,255,255,0.4)",
+              }}>{m.d}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ── 6 · WHAT'S NEXT ──────────────────────────────────── */}
+      <div style={sectionBase(cream, { borderTop: "1px solid rgba(0,0,0,0.07)" })}>
+        <div style={eyebrow}>What's Next</div>
+        <h3 style={{
+          fontFamily: "var(--display)",
+          fontWeight: 900,
+          fontSize: "clamp(26px, 3.5vw, 50px)",
+          letterSpacing: "-0.03em",
+          color: "var(--ink)",
+          lineHeight: 1.1,
+          maxWidth: 580,
+          marginBottom: 44,
+        }}>If I had another sprint.</h3>
+        <div style={{ display: "grid", gap: 0, maxWidth: 660 }}>
+          {[
+            "Predictive restock triggers based on return patterns",
+            "ML model trained on 6 months of flagged order outcomes",
+          ].map((item, i) => (
+            <div key={i} style={{
+              display: "grid",
+              gridTemplateColumns: "48px 1fr",
+              gap: 20,
+              padding: "28px 0",
+              borderBottom: "1px dashed rgba(0,0,0,0.09)",
+              alignItems: "start",
+            }}>
+              <div style={{
+                fontFamily: "var(--type)",
+                fontSize: 11,
+                letterSpacing: "0.12em",
+                color: accentColor,
+                paddingTop: 3,
+              }}>0{i + 1}</div>
+              <div style={{
+                fontFamily: "var(--sans)",
+                fontSize: 17,
+                lineHeight: 1.55,
+                color: "var(--ink)",
+              }}>{item}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
+/* ============================================================ */
 /* Detail view                                                  */
 /* ============================================================ */
 function CaseStudyDetail({ cs, onClose, onNav }) {
@@ -1020,9 +1383,11 @@ function CaseStudyDetail({ cs, onClose, onNav }) {
     document.addEventListener("keydown", onKey);
     window.scrollTo({ top: 0, behavior: "instant" });
     document.body.style.overflow = "hidden";
+    if (window.__lenis) window.__lenis.stop();
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
+      if (window.__lenis) window.__lenis.start();
     };
   }, [cs.id]);
 
@@ -1069,6 +1434,8 @@ function CaseStudyDetail({ cs, onClose, onNav }) {
           </div>
         </div>
       </header>
+
+      {cs.id === "rto" && <RTOCinematicSections />}
 
       <section className="cs-section">
         <div className="hd">
@@ -1205,11 +1572,11 @@ function CaseStudyDetail({ cs, onClose, onNav }) {
       </section>
 
       <div className="cs-nav">
-        <div className="cn" onClick={() => onNav(prev)}>
+        <div className="cn" onClick={() => prev.externalUrl ? (window.location.href = prev.externalUrl) : onNav(prev)}>
           <div className="lbl">← Previous case</div>
           <div className="t">{prev.title} <span className="accent">{prev.titleEm}</span></div>
         </div>
-        <div className="cn right" onClick={() => onNav(next)}>
+        <div className="cn right" onClick={() => next.externalUrl ? (window.location.href = next.externalUrl) : onNav(next)}>
           <div className="lbl">Next case →</div>
           <div className="t">{next.title} <span className="accent">{next.titleEm}</span></div>
         </div>

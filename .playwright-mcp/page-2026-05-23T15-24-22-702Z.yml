@@ -1,0 +1,224 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "K·S" [ref=e4] [cursor=pointer]:
+        - /url: ../Portfolio.html
+      - list [ref=e5]:
+        - listitem [ref=e6]:
+          - link "Problem" [ref=e7] [cursor=pointer]:
+            - /url: "#problem"
+        - listitem [ref=e8]:
+          - link "Solution" [ref=e9] [cursor=pointer]:
+            - /url: "#solution"
+        - listitem [ref=e10]:
+          - link "Flow" [ref=e11] [cursor=pointer]:
+            - /url: "#how"
+        - listitem [ref=e12]:
+          - link "Screens" [ref=e13] [cursor=pointer]:
+            - /url: "#screens"
+        - listitem [ref=e14]:
+          - link "CTA" [ref=e15] [cursor=pointer]:
+            - /url: "#cta"
+      - link "← All work" [ref=e16] [cursor=pointer]:
+        - /url: ../Portfolio.html#work
+  - generic [ref=e17]:
+    - img
+    - generic [ref=e18]:
+      - generic [ref=e19]: Case Study 03 · Commerce Infrastructure · 2025
+      - generic [ref=e21]:
+        - text: NUDGE
+        - text: BUY WHERE
+        - text: YOU DECIDE.
+      - paragraph [ref=e22]: An embedded checkout layer that eliminates the redirect between content discovery and purchase — no new tab, no friction, no lost intent.
+      - generic [ref=e23]:
+        - generic [ref=e24]: PM + BA
+        - generic [ref=e25]: Commerce Infrastructure
+        - generic [ref=e26]: 0 → 1 Product
+        - generic [ref=e27]: Embedded Checkout
+        - generic [ref=e28]: 8 weeks
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e31]: −30%
+          - generic [ref=e32]: Checkout abandonment
+        - generic [ref=e33]:
+          - generic [ref=e34]: +25%
+          - generic [ref=e35]: Conversion from content
+        - generic [ref=e36]:
+          - generic [ref=e37]: <2min
+          - generic [ref=e38]: Intent to purchase
+        - generic [ref=e39]:
+          - generic [ref=e40]: 8 wks
+          - generic [ref=e41]: Discovery to spec
+  - generic [ref=e42]:
+    - img
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - generic [ref=e46]: 01 / The Problem
+        - generic [ref=e47]: "\"70% of high-intent shoppers abandon at the redirect — the moment between 'I want this' and 'where do I buy it'.\""
+        - generic [ref=e48]: 70%
+        - generic [ref=e49]: of buyers who click a product link from content never complete a purchase. The redirect is the primary drop point.
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]: R.01
+          - generic [ref=e53]: Interviewed 14 buyers across social commerce — TikTok Shop, Instagram, creator links. Every single drop happened at the redirect.
+        - generic [ref=e54]:
+          - generic [ref=e55]: R.02
+          - generic [ref=e56]: "Mapped 8 merchant onboarding flows. Average: 3 redirects before a buyer could complete a purchase."
+        - generic [ref=e57]:
+          - generic [ref=e58]: R.03
+          - generic [ref=e59]: Audited 6 competitor embed SDKs. All required full-page redirect or iframe with auth handoff. Zero native embeds existed.
+        - generic [ref=e60]:
+          - generic [ref=e61]: R.04
+          - generic [ref=e62]: "\"The moment I leave the app, the intent is gone.\" — repeated across 11 of 14 buyer interviews."
+  - generic [ref=e63]:
+    - img
+    - generic [ref=e64]:
+      - generic [ref=e65]: 02 / The Solution
+      - heading "One embed tag. Zero redirects. Intent preserved." [level=2] [ref=e66]:
+        - text: One embed tag.
+        - emphasis [ref=e67]: Zero redirects.
+        - text: Intent preserved.
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: "01"
+          - generic [ref=e71]: Zero-redirect checkout
+          - generic [ref=e72]: The entire purchase flow completes inside the surface where the buyer found the product. No new tab. No lost context. No abandoned cart.
+        - generic [ref=e73]:
+          - generic [ref=e74]: "02"
+          - generic [ref=e75]: Single embed tag
+          - generic [ref=e76]: Merchants integrate via one script tag. No complex SDK, no backend dependency on the publisher side. Auth, inventory, and payment all handled by the layer.
+        - generic [ref=e77]:
+          - generic [ref=e78]: "03"
+          - generic [ref=e79]: Real-time inventory sync
+          - generic [ref=e80]: Variant state and inventory pulled live from the merchant catalog. No double-entry, no stale data, no "sorry, out of stock" after checkout attempt.
+  - generic [ref=e82]:
+    - generic [ref=e83]:
+      - generic [ref=e84]:
+        - generic [ref=e85]: 03 / How it Works
+        - generic [ref=e86]: Discover. Decide. Done.
+      - generic [ref=e87]: drag to scroll →
+    - generic [ref=e88]:
+      - generic [ref=e89]:
+        - generic [ref=e90]: STEP 01
+        - generic [ref=e91]: DISCOVER
+        - generic [ref=e92]: Buyer sees product in a creator post, editorial page, or social feed. No redirect has happened yet. Intent is high.
+        - generic [ref=e93]: Content surface
+      - generic [ref=e94]:
+        - generic [ref=e95]: STEP 02
+        - generic [ref=e96]: NUDGE
+        - generic [ref=e97]: Embedded checkout widget surfaces inline — triggered by a tap or auto-shown on scroll past the product. No redirect triggered.
+        - generic [ref=e98]: Embed fires
+      - generic [ref=e99]:
+        - generic [ref=e100]: STEP 03
+        - generic [ref=e101]: SELECT
+        - generic [ref=e102]: Buyer picks size, variant, reviews price and shipping — all inside the original context. They never left the page they were on.
+        - generic [ref=e103]: In-context
+      - generic [ref=e104]:
+        - generic [ref=e105]: STEP 04
+        - generic [ref=e106]: CONFIRM
+        - generic [ref=e107]: Payment via saved method or one-tap wallet. Auth handled by the embed layer. Merchant sees the order in their existing dashboard.
+        - generic [ref=e108]: Payment captured
+      - generic [ref=e109]:
+        - generic [ref=e110]: STEP 05
+        - generic [ref=e111]: DONE
+        - generic [ref=e112]: Order confirmed inline. Buyer stays where they were. Intent preserved, purchase complete, merchant attributed. No redirect ever happened.
+        - generic [ref=e113]: Zero friction
+  - generic [ref=e115]:
+    - generic [ref=e116]:
+      - generic [ref=e117]:
+        - generic [ref=e118]: 04 / Product Screens
+        - generic [ref=e119]: Wireframe walkthrough.
+      - generic [ref=e120]: drag to scroll →
+    - generic [ref=e121]:
+      - generic [ref=e122]:
+        - generic [ref=e135]: 01 · Intent detected
+        - generic [ref=e136]: Product in view
+      - generic [ref=e137]:
+        - generic [ref=e152]: 02 · Widget appears
+        - generic [ref=e153]: Embed slides in
+      - generic [ref=e154]:
+        - generic [ref=e166]: 03 · Checkout pre-filled
+        - generic [ref=e167]: Saved payment loaded
+      - generic [ref=e168]:
+        - img [ref=e176]
+        - generic [ref=e181]: 04 · Order confirmed
+        - generic [ref=e182]: Done — still on page
+      - generic [ref=e183]:
+        - generic [ref=e197]: 05 · Merchant view
+        - generic [ref=e198]: Revenue attributed
+  - generic [ref=e200]:
+    - generic [ref=e201]: 07 / Outcome
+    - generic [ref=e202]:
+      - generic [ref=e203]:
+        - generic [ref=e204]: −30%
+        - generic [ref=e205]: Target abandonment
+        - generic [ref=e206]: Designed against a −30% checkout abandonment target vs. the redirect baseline. The embed removes the single largest friction point.
+      - generic [ref=e207]:
+        - generic [ref=e208]: +25%
+        - generic [ref=e209]: Conversion from content
+        - generic [ref=e210]: Content-to-checkout conversion up 25% over the redirect path. Buyers who stay in context are more likely to complete.
+      - generic [ref=e211]:
+        - generic [ref=e212]: <2min
+        - generic [ref=e213]: Intent to purchase
+        - generic [ref=e214]: "From first seeing the product to completed order: under 2 minutes. The flow preserved intent instead of killing it with friction."
+      - generic [ref=e215]:
+        - generic [ref=e216]: 8 wks
+        - generic [ref=e217]: Discovery to spec
+        - generic [ref=e218]: "Full cycle: user research → signed-off PRD → embed spec → API contract → metric framework. Engineering received an unambiguous spec."
+  - generic [ref=e220]:
+    - generic [ref=e221]: 06 / PM Thinking
+    - generic [ref=e222]: What I learned building this.
+    - generic [ref=e223]:
+      - generic [ref=e224]:
+        - generic [ref=e225]: L.01 · Problem framing
+        - generic [ref=e226]:
+          - strong [ref=e227]: The product wasn't the checkout widget — it was eliminating the redirect.
+          - text: Defining the right problem first made every requirement obvious and every scope decision easy.
+        - generic [ref=e228]: defining the problem ✓
+        - img
+      - generic [ref=e229]:
+        - generic [ref=e230]: L.02 · Discovery
+        - generic [ref=e231]:
+          - strong [ref=e232]: Merchants care about attribution, not just conversion.
+          - text: Revenue share hooks were an afterthought in the brief — and became the most requested feature in stakeholder interviews.
+        - generic [ref=e233]: discovered in week 3
+        - img
+      - generic [ref=e234]:
+        - generic [ref=e235]: L.03 · Scope discipline
+        - generic [ref=e236]:
+          - strong [ref=e237]: A 0→1 product needs a simpler PRD, not a more complete one.
+          - text: Scope discipline at week 2 saved four weeks of negotiation at week 6. Cut fast and cut early.
+        - generic [ref=e238]: scoped on day 12
+        - img
+  - generic [ref=e240]:
+    - generic [ref=e241]: Explore further
+    - heading "The full case study lives here." [level=2] [ref=e242]
+    - generic [ref=e243]:
+      - link "📄 Read full case study Complete 8-week narrative — discovery to spec handoff. Problem framing, research, PRD decisions, and scope calls. Read it →" [ref=e244] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e245]: 📄
+        - generic [ref=e246]: Read full case study
+        - generic [ref=e247]: Complete 8-week narrative — discovery to spec handoff. Problem framing, research, PRD decisions, and scope calls.
+        - generic [ref=e248]: Read it →
+      - 'link "📋 View PRD document Full product requirements: 8 functional requirements, 3 NFRs, API contract, rollout plan, and success metric framework. Open PRD →" [ref=e249] [cursor=pointer]':
+        - /url: "#"
+        - generic [ref=e250]: 📋
+        - generic [ref=e251]: View PRD document
+        - generic [ref=e252]: "Full product requirements: 8 functional requirements, 3 NFRs, API contract, rollout plan, and success metric framework."
+        - generic [ref=e253]: Open PRD →
+      - link "🔗 See prototype Figma prototype of the embedded checkout widget — variant selector, payment confirm, and merchant dashboard screens. Open Figma →" [ref=e254] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e255]: 🔗
+        - generic [ref=e256]: See prototype
+        - generic [ref=e257]: Figma prototype of the embedded checkout widget — variant selector, payment confirm, and merchant dashboard screens.
+        - generic [ref=e258]: Open Figma →
+  - contentinfo [ref=e259]:
+    - generic [ref=e260]:
+      - generic [ref=e261]: "Khushi Solanki — Portfolio 2026 / Case Study: Nudge"
+      - generic [ref=e262]:
+        - link "All work" [ref=e263] [cursor=pointer]:
+          - /url: ../Portfolio.html#work
+        - link "Contact" [ref=e264] [cursor=pointer]:
+          - /url: ../Portfolio.html#contact
+        - link "Email" [ref=e265] [cursor=pointer]:
+          - /url: mailto:solankikhushi2682@gmail.com

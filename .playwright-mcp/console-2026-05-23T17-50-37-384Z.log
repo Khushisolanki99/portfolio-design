@@ -1,0 +1,48 @@
+[      31ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[      87ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[     690ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[     807ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[     808ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[     809ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/.image-slots.state.json:0
+[     809ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  356526ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[  356592ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[  357646ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  357751ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  357752ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  357938ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  357961ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/.image-slots.state.json:0
+[  539856ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[  539982ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[  541027ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  541143ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  541328ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  541329ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  541350ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/.image-slots.state.json:0
+[  668657ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[  668738ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[  669852ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  669935ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  669935ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  669935ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  669937ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/.image-slots.state.json:0

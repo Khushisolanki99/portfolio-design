@@ -1,0 +1,380 @@
+[      55ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[     100ms] [LOG] Live reload enabled. @ http://127.0.0.1:5500/Portfolio.html:54
+[     100ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[     722ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/favicon.ico:0
+[     742ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[    1000ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/.image-slots.state.json:0
+[    1020ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[    1104ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[    1105ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[   52048ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[   52157ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[   53103ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[   53344ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[   53344ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[   53344ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[   53363ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/.image-slots.state.json:0
+[  135736ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[  135815ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[  136695ms] ReferenceError: useStateProc is not defined
+    at Process (<anonymous>:77:23)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at HTMLUnknownElement.callCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4151:16)
+    at Object.invokeGuardedCallbackDev (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4200:18)
+    at invokeGuardedCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4264:33)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27500:9)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25787:76)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  136703ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  136718ms] ReferenceError: useStateProc is not defined
+    at Process (<anonymous>:77:23)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at HTMLUnknownElement.callCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4151:16)
+    at Object.invokeGuardedCallbackDev (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4200:18)
+    at invokeGuardedCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4264:33)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27500:9)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at recoverFromConcurrentError (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25899:22)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25799:24)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  136725ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  136728ms] [ERROR] The above error occurred in the <Process> component:
+
+    at Process (<anonymous>:76:19)
+    at main
+    at App (<anonymous>:19:19)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:18713
+[  136732ms] ReferenceError: useStateProc is not defined
+    at Process (<anonymous>:77:23)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27475:16)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at recoverFromConcurrentError (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25899:22)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25799:24)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  136744ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  136745ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  136749ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  136752ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  136756ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  136757ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  153092ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[  153153ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[  153973ms] ReferenceError: threadT is not defined
+    at Process (<anonymous>:195:29)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at HTMLUnknownElement.callCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4151:16)
+    at Object.invokeGuardedCallbackDev (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4200:18)
+    at invokeGuardedCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4264:33)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27500:9)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25787:76)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  153981ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  153995ms] ReferenceError: threadT is not defined
+    at Process (<anonymous>:195:29)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at HTMLUnknownElement.callCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4151:16)
+    at Object.invokeGuardedCallbackDev (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4200:18)
+    at invokeGuardedCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4264:33)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27500:9)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at recoverFromConcurrentError (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25899:22)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25799:24)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  154001ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  154004ms] [ERROR] The above error occurred in the <Process> component:
+
+    at Process (<anonymous>:70:19)
+    at main
+    at App (<anonymous>:19:19)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:18713
+[  154006ms] ReferenceError: threadT is not defined
+    at Process (<anonymous>:195:29)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27475:16)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at recoverFromConcurrentError (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25899:22)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25799:24)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  154020ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  154026ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  154027ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  154027ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  154028ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  154030ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  163033ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[  163091ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[  163888ms] ReferenceError: ms1 is not defined
+    at Process (<anonymous>:214:16)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at HTMLUnknownElement.callCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4151:16)
+    at Object.invokeGuardedCallbackDev (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4200:18)
+    at invokeGuardedCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4264:33)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27500:9)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25787:76)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  163896ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  163912ms] ReferenceError: ms1 is not defined
+    at Process (<anonymous>:214:16)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at HTMLUnknownElement.callCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4151:16)
+    at Object.invokeGuardedCallbackDev (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4200:18)
+    at invokeGuardedCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4264:33)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27500:9)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at recoverFromConcurrentError (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25899:22)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25799:24)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  163918ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  163921ms] [ERROR] The above error occurred in the <Process> component:
+
+    at Process (<anonymous>:70:19)
+    at main
+    at App (<anonymous>:19:19)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:18713
+[  163922ms] ReferenceError: ms1 is not defined
+    at Process (<anonymous>:214:16)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27475:16)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at recoverFromConcurrentError (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25899:22)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25799:24)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  163935ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[  163974ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[  164748ms] ReferenceError: ms1 is not defined
+    at Process (<anonymous>:214:16)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at HTMLUnknownElement.callCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4151:16)
+    at Object.invokeGuardedCallbackDev (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4200:18)
+    at invokeGuardedCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4264:33)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27500:9)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25787:76)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  164755ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  164767ms] ReferenceError: ms1 is not defined
+    at Process (<anonymous>:214:16)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at HTMLUnknownElement.callCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4151:16)
+    at Object.invokeGuardedCallbackDev (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4200:18)
+    at invokeGuardedCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4264:33)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27500:9)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at recoverFromConcurrentError (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25899:22)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25799:24)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  164772ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  164774ms] [ERROR] The above error occurred in the <Process> component:
+
+    at Process (<anonymous>:70:19)
+    at main
+    at App (<anonymous>:19:19)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:18713
+[  164774ms] ReferenceError: ms1 is not defined
+    at Process (<anonymous>:214:16)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27475:16)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at recoverFromConcurrentError (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25899:22)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25799:24)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  164781ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  164784ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  164784ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  164787ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  164788ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  164788ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  174003ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[  174049ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[  174812ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  174869ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/.image-slots.state.json:0
+[  174870ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  174883ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  174883ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  318934ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[  318978ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[  319502ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  319541ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/.image-slots.state.json:0
+[  319583ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  319583ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  319584ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  544834ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[  544923ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[  545926ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  545983ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  545985ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  545986ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  545987ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/.image-slots.state.json:0
+[  557025ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[  557080ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[  557914ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  557967ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/.image-slots.state.json:0
+[  557985ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  557985ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  557986ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  562814ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[  562862ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[  563649ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  563709ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/.image-slots.state.json:0
+[  563722ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  563723ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  563724ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nudge — Buy where you decide · Khushi Solanki</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0C0C0A;
+      --surface: #141410;
+      --accent: #E8401C;
+      --cream: #F0EBE0;
+      --secondary: #6B6B60;
+      --display: 'Bebas Neue', sans-serif;
+      --sans: 'DM Sans', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--cream); font-family: var(--sans); line-height: 1.6; }
+
+    /* ── NAV ─────────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 6%;
+      background: rgba(12,12,10,0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(240,235,224,0.06);
+    }
+    .nav-logo { font-family: var(--display); font-size: 22px; letter-spacing: 0.04em; color: var(--cream); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--secondary); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-back { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--secondary); text-decoration: none; transition: color 0.2s; }
+    .nav-back:hover { color: var(--accent); }
+
+    /* ── LAYOUT UTILITIES ────────────────────────────────────── */
+    section { padding: 100px 6%; }
+    .eyebrow {
+      font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 24px;
+    }
+    .display-xl {
+      font-family: var(--display); font-size: clamp(52px, 8vw, 120px);
+      letter-spacing: 0.02em; line-height: 0.95; color: var(--cream);
+    }
+    .display-lg {
+      font-family: var(--display); font-size: clamp(38px, 5.5vw, 72px);
+      letter-spacing: 0.02em; line-height: 1; color: var(--cream);
+    }
+    .lede { font-size: 17px; line-height: 1.75; color: rgba(240,235,224,0.65); max-width: 58ch; }
+    .divider { border: none; border-top: 1px solid rgba(240,235,224,0.07); margin: 0; }
+
+    /* ── REVEAL ANIMATION ────────────────────────────────────── */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+
+    /* ── HERO ────────────────────────────────────────────────── */
+    #hero {
+      min-height: 100vh; display: flex; flex-direction: column;
+      justify-content: flex-end; padding-top: 120px;
+      background: var(--bg);
+      border-bottom: 1px solid rgba(240,235,224,0.06);
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(232,64,28,0.12); border: 1px solid rgba(232,64,28,0.3);
+      border-radius: 4px; padding: 6px 14px;
+      font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 40px;
+    }
+    .hero-title { margin-bottom: 32px; }
+    .hero-title .em { color: var(--accent); }
+    .hero-sub { font-size: 18px; color: rgba(240,235,224,0.55); max-width: 52ch; margin-bottom: 56px; }
+    .hero-meta-row {
+      display: flex; gap: 0;
+      border-top: 1px solid rgba(240,235,224,0.07);
+      padding-top: 40px; margin-top: 0;
+    }
+    .hero-meta-item {
+      flex: 1; padding: 28px 0; border-right: 1px solid rgba(240,235,224,0.07);
+    }
+    .hero-meta-item:last-child { border-right: none; }
+    .meta-k { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--secondary); margin-bottom: 6px; }
+    .meta-v { font-family: var(--sans); font-size: 15px; font-weight: 600; color: var(--cream); }
+
+    /* ── OUTCOME STRIP ───────────────────────────────────────── */
+    #outcomes { background: var(--accent); padding: 72px 6%; }
+    .outcomes-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .outcome-item { padding: 20px 32px; border-right: 1px solid rgba(240,235,224,0.2); }
+    .outcome-item:last-child { border-right: none; }
+    .outcome-n { font-family: var(--display); font-size: clamp(40px, 5vw, 64px); letter-spacing: 0.02em; color: #fff; line-height: 1; margin-bottom: 6px; }
+    .outcome-l { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.65); }
+
+    /* ── SECTIONS SHARED ─────────────────────────────────────── */
+    .section-dark { background: var(--bg); }
+    .section-surface { background: var(--surface); }
+
+    /* ── PROBLEM ─────────────────────────────────────────────── */
+    #problem { background: var(--surface); }
+    .problem-stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(240,235,224,0.07); border-radius: 10px; overflow: hidden; margin-top: 56px; }
+    .problem-stat { background: var(--surface); padding: 48px 40px; }
+    .problem-stat-n { font-family: var(--display); font-size: clamp(36px, 4vw, 58px); color: var(--accent); line-height: 1; margin-bottom: 12px; }
+    .problem-stat-d { font-family: var(--sans); font-size: 14px; line-height: 1.65; color: rgba(240,235,224,0.5); }
+
+    /* ── ROLE ────────────────────────────────────────────────── */
+    #role { background: var(--bg); }
+    .role-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 48px; }
+    .role-block h3 { font-family: var(--display); font-size: 22px; color: var(--cream); margin-bottom: 16px; letter-spacing: 0.03em; }
+    .role-block p { font-size: 15px; line-height: 1.7; color: rgba(240,235,224,0.6); }
+    .spec-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
+    .spec-item { background: var(--surface); border: 1px solid rgba(240,235,224,0.07); border-radius: 8px; padding: 20px 24px; }
+    .spec-k { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+    .spec-v { font-family: var(--sans); font-size: 14px; color: rgba(240,235,224,0.8); line-height: 1.5; }
+
+    /* ── RESEARCH ────────────────────────────────────────────── */
+    #research { background: var(--surface); }
+    .research-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 48px; }
+    .insight-list { display: grid; gap: 20px; }
+    .insight-row { display: grid; grid-template-columns: 48px 1fr; gap: 16px; padding: 20px 0; border-bottom: 1px solid rgba(240,235,224,0.06); align-items: start; }
+    .insight-n { font-family: var(--mono); font-size: 11px; color: var(--accent); padding-top: 2px; }
+    .insight-t { font-family: var(--sans); font-size: 15px; color: rgba(240,235,224,0.75); line-height: 1.55; }
+    .pain-quote { font-family: var(--sans); font-size: 16px; font-style: italic; color: rgba(240,235,224,0.5); padding: 18px 20px; border-left: 2px solid var(--accent); margin-bottom: 16px; line-height: 1.55; }
+
+    /* ── FLOW ────────────────────────────────────────────────── */
+    #flow { background: var(--bg); }
+    .flow-steps { display: flex; gap: 0; margin-top: 56px; position: relative; }
+    .flow-steps::before {
+      content: ""; position: absolute; top: 24px; left: 32px; right: 32px; height: 1px;
+      background: rgba(240,235,224,0.08); z-index: 0;
+    }
+    .flow-step { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 12px; position: relative; z-index: 1; }
+    .flow-dot {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--surface); border: 1px solid rgba(240,235,224,0.12);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 11px; color: var(--secondary);
+      margin-bottom: 24px; flex-shrink: 0;
+    }
+    .flow-step.active .flow-dot { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .flow-step-t { font-family: var(--display); font-size: 16px; letter-spacing: 0.03em; color: var(--cream); margin-bottom: 8px; }
+    .flow-step-d { font-family: var(--sans); font-size: 12px; color: var(--secondary); line-height: 1.55; }
+
+    /* ── WIREFRAME SLOTS ─────────────────────────────────────── */
+    #screens { background: var(--surface); }
+    .screens-intro { margin-bottom: 48px; }
+    .wireframes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+    .wireframe-slot {
+      background: var(--bg); border: 1px dashed rgba(240,235,224,0.14);
+      border-radius: 10px; aspect-ratio: 16/9;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 12px; color: var(--secondary); position: relative; overflow: hidden;
+    }
+    .wireframe-slot.wide { grid-column: span 2; }
+    .wireframe-slot .slot-label {
+      font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--secondary);
+    }
+    .wireframe-slot .slot-sub { font-family: var(--sans); font-size: 12px; color: rgba(240,235,224,0.25); }
+    .slot-corner { position: absolute; top: 12px; left: 14px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; color: rgba(240,235,224,0.2); }
+    .wireframe-slot img { width: 100%; height: 100%; object-fit: cover; border-radius: 9px; }
+
+    /* ── REQUIREMENTS ────────────────────────────────────────── */
+    #requirements { background: var(--bg); }
+    .req-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 48px; }
+    .req-card { background: var(--surface); border: 1px solid rgba(240,235,224,0.07); border-radius: 8px; padding: 24px 28px; }
+    .req-n { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 10px; }
+    .req-t { font-family: var(--sans); font-size: 15px; font-weight: 600; color: var(--cream); margin-bottom: 6px; }
+    .req-d { font-family: var(--sans); font-size: 13px; color: rgba(240,235,224,0.5); line-height: 1.55; }
+
+    /* ── OUTCOME DEEP ────────────────────────────────────────── */
+    #outcome { background: var(--surface); }
+    .outcome-deep-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(240,235,224,0.07); border-radius: 10px; overflow: hidden; margin-top: 56px; }
+    .outcome-deep-cell { background: var(--surface); padding: 48px 40px; }
+    .odc-n { font-family: var(--display); font-size: clamp(44px, 5vw, 68px); color: var(--accent); line-height: 1; margin-bottom: 8px; }
+    .odc-l { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--secondary); margin-bottom: 18px; }
+    .odc-d { font-family: var(--sans); font-size: 14px; line-height: 1.65; color: rgba(240,235,224,0.45); }
+
+    /* ── LEARNINGS ───────────────────────────────────────────── */
+    #learnings { background: var(--bg); }
+    .learning-list { display: grid; gap: 0; max-width: 680px; margin-top: 48px; }
+    .learning-row { display: grid; grid-template-columns: 56px 1fr; gap: 20px; padding: 28px 0; border-bottom: 1px dashed rgba(240,235,224,0.08); }
+    .learning-n { font-family: var(--mono); font-size: 11px; color: var(--accent); padding-top: 3px; }
+    .learning-t { font-family: var(--sans); font-size: 17px; color: rgba(240,235,224,0.8); line-height: 1.6; }
+
+    /* ── FOOTER ──────────────────────────────────────────────── */
+    footer {
+      background: var(--surface); padding: 48px 6%;
+      display: flex; align-items: center; justify-content: space-between;
+      border-top: 1px solid rgba(240,235,224,0.06);
+    }
+    .footer-left { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--secondary); }
+    .footer-right { display: flex; gap: 32px; }
+    .footer-right a { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--secondary); text-decoration: none; transition: color 0.2s; }
+    .footer-right a:hover { color: var(--accent); }
+
+    /* ── RESPONSIVE ──────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      nav { padding: 14px 5%; }
+      section { padding: 72px 5%; }
+      .outcomes-grid { grid-template-columns: 1fr 1fr; }
+      .outcome-item { padding: 16px 20px; }
+      .problem-stat-row { grid-template-columns: 1fr; }
+      .role-grid { grid-template-columns: 1fr; gap: 40px; }
+      .spec-grid { grid-template-columns: 1fr; }
+      .research-cols { grid-template-columns: 1fr; gap: 40px; }
+      .flow-steps { flex-direction: column; gap: 0; }
+      .flow-steps::before { display: none; }
+      .flow-step { flex-direction: row; text-align: left; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid rgba(240,235,224,0.06); }
+      .flow-dot { margin-bottom: 0; margin-right: 20px; flex-shrink: 0; }
+      .wireframes-grid { grid-template-columns: 1fr; }
+      .wireframe-slot.wide { grid-column: span 1; }
+      .req-grid { grid-template-columns: 1fr; }
+      .outcome-deep-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 24px; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../Portfolio.html" class="nav-logo">K<span>·</span>S</a>
+    <ul class="nav-links">
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#flow">Flow</a></li>
+      <li><a href="#screens">Screens</a></li>
+      <li><a href="#outcome">Outcome</a></li>
+    </ul>
+    <a href="../Portfolio.html#work" class="nav-back">← All work</a>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="reveal">
+      <div class="hero-tag">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block"></span>
+        Case Study 03 — Commerce Infrastructure · 2025
+      </div>
+    </div>
+
+    <div class="hero-title reveal">
+      <div class="display-xl">NUDGE</div>
+      <div class="display-xl em">BUY WHERE YOU DECIDE.</div>
+    </div>
+
+    <p class="hero-sub reveal">
+      An embedded checkout layer that collapses the gap between content discovery and purchase —
+      no redirect, no new tab, no friction.
+    </p>
+
+    <div class="hero-meta-row reveal">
+      <div class="hero-meta-item">
+        <div class="meta-k">Type</div>
+        <div class="meta-v">Commerce Infrastructure</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="meta-k">Role</div>
+        <div class="meta-v">PM + BA — 0 to 1</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="meta-k">Duration</div>
+        <div class="meta-v">8 weeks</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="meta-k">Output</div>
+        <div class="meta-v">PRD, embed spec, API contract, metric framework</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="meta-k">Tools</div>
+        <div class="meta-v">Figma, Notion, Miro, JIRA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── OUTCOMES STRIP ───────────────────────────────────────── -->
+  <section id="outcomes">
+    <div class="outcomes-grid">
+      <div class="outcome-item reveal">
+        <div class="outcome-n">-30%</div>
+        <div class="outcome-l">Target checkout abandonment</div>
+      </div>
+      <div class="outcome-item reveal" style="transition-delay:80ms">
+        <div class="outcome-n">+25%</div>
+        <div class="outcome-l">Conversion from content</div>
+      </div>
+      <div class="outcome-item reveal" style="transition-delay:160ms">
+        <div class="outcome-n">&lt;2min</div>
+        <div class="outcome-l">Intent to purchase</div>
+      </div>
+      <div class="outcome-item reveal" style="transition-delay:240ms">
+        <div class="outcome-n">8 wks</div>
+        <div class="outcome-l">Discovery to spec</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROBLEM ──────────────────────────────────────────────── -->
+  <section id="problem">
+    <div class="eyebrow reveal">01 — The Problem</div>
+    <div class="display-lg reveal">The redirect is where<br>revenue disappears.</div>
+    <p class="lede reveal" style="margin-top:24px">
+      70% of high-intent shoppers abandon at the moment of friction — the redirect between
+      "I want this" and "where do I buy it." Every handoff is a leakage point. Nudge
+      eliminates the handoff entirely.
+    </p>
+
+    <div class="problem-stat-row">
+      <div class="problem-stat reveal">
+        <div class="problem-stat-n">70%</div>
+        <div class="problem-stat-d">of buyers who click a product link from content never complete a purchase — the redirect is the primary drop point.</div>
+      </div>
+      <div class="problem-stat reveal" style="transition-delay:80ms">
+        <div class="problem-stat-n">3.4x</div>
+        <div class="problem-stat-d">higher conversion when checkout happens inside the discovery surface, vs. redirecting to a product page.</div>
+      </div>
+      <div class="problem-stat reveal" style="transition-delay:160ms">
+        <div class="problem-stat-n">0</div>
+        <div class="problem-stat-d">commerce infrastructure products were letting buyers complete a purchase inside the content surface. This was the gap.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── ROLE ─────────────────────────────────────────────────── -->
+  <section id="role" class="section-dark">
+    <div class="eyebrow reveal">02 — My Role</div>
+    <div class="display-lg reveal">PM + BA on a zero-to-one build.</div>
+
+    <div class="role-grid">
+      <div class="role-block reveal">
+        <h3>WHAT I OWNED</h3>
+        <p>
+          I led discovery, defined the problem, wrote the PRD, designed the embed API contract,
+          mapped the merchant onboarding flow, and owned the success metric framework from
+          hypothesis to handoff.
+        </p>
+        <p style="margin-top:16px">
+          On the BA side: stakeholder interviews, requirements documentation, user story mapping,
+          and coordinating sign-off across product, engineering, and commercial teams.
+        </p>
+      </div>
+      <div>
+        <div class="spec-grid">
+          <div class="spec-item reveal">
+            <div class="spec-k">Role</div>
+            <div class="spec-v">PM + Business Analyst</div>
+          </div>
+          <div class="spec-item reveal" style="transition-delay:60ms">
+            <div class="spec-k">Scope</div>
+            <div class="spec-v">0 to 1 product build</div>
+          </div>
+          <div class="spec-item reveal" style="transition-delay:120ms">
+            <div class="spec-k">Process</div>
+            <div class="spec-v">Discovery → interviews → PRD → embed spec → API contract → handoff</div>
+          </div>
+          <div class="spec-item reveal" style="transition-delay:180ms">
+            <div class="spec-k">Output</div>
+            <div class="spec-v">PRD, checkout embed spec, user flows, API contract, metric framework</div>
+          </div>
+          <div class="spec-item reveal" style="transition-delay:240ms;grid-column:span 2">
+            <div class="spec-k">Tools</div>
+            <div class="spec-v">Figma · Notion · Miro · JIRA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── RESEARCH ─────────────────────────────────────────────── -->
+  <section id="research" class="section-surface">
+    <div class="eyebrow reveal">03 — Discovery & Research</div>
+    <div class="display-lg reveal">Understanding the drop.</div>
+
+    <div class="research-cols">
+      <div>
+        <p style="font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--secondary);margin-bottom:24px">Research signals</p>
+        <div class="insight-list">
+          <div class="insight-row reveal">
+            <span class="insight-n">R.01</span>
+            <span class="insight-t">Interviewed 14 buyers across social commerce use cases — TikTok Shop, Instagram checkout, creator links.</span>
+          </div>
+          <div class="insight-row reveal" style="transition-delay:60ms">
+            <span class="insight-n">R.02</span>
+            <span class="insight-t">Mapped 8 merchant onboarding flows — average 3 redirects before a buyer could complete a purchase.</span>
+          </div>
+          <div class="insight-row reveal" style="transition-delay:120ms">
+            <span class="insight-n">R.03</span>
+            <span class="insight-t">Audited 6 competitor embed SDKs — all required full page redirect or iframe with auth handoff.</span>
+          </div>
+          <div class="insight-row reveal" style="transition-delay:180ms">
+            <span class="insight-n">R.04</span>
+            <span class="insight-t">Quantified drop-off: 70% of clicks from content to product page lost before add-to-cart.</span>
+          </div>
+          <div class="insight-row reveal" style="transition-delay:240ms">
+            <span class="insight-n">R.05</span>
+            <span class="insight-t">Creator interviews: friction kills trust — "If I send them away, I lose them."</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p style="font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--secondary);margin-bottom:24px">What users said</p>
+        <div class="reveal">
+          <div class="pain-quote">"I tap the link, it opens a new tab, I forget what I was doing. That's when I close it."</div>
+          <div class="pain-quote" style="transition-delay:80ms">"Creators send me 8 steps to buy a thing they showed in 3 seconds."</div>
+          <div class="pain-quote" style="transition-delay:160ms">"The moment I leave the app, the intent is gone."</div>
+        </div>
+        <div style="margin-top:32px;background:var(--bg);border:1px solid rgba(240,235,224,0.07);border-radius:8px;padding:24px 28px" class="reveal">
+          <p style="font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">The insight</p>
+          <p style="font-family:var(--sans);font-size:16px;color:rgba(240,235,224,0.8);line-height:1.65">
+            Buyers don't abandon because they stop wanting the product.
+            They abandon because the infrastructure makes them work to buy it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── FLOW ─────────────────────────────────────────────────── -->
+  <section id="flow" class="section-dark">
+    <div class="eyebrow reveal">04 — User Flow</div>
+    <div class="display-lg reveal">Discover. Decide. Done.</div>
+    <p class="lede reveal" style="margin-top:24px">Five steps, no redirect. The entire purchase happens inside the surface where the buyer found the product.</p>
+
+    <div class="flow-steps">
+      <div class="flow-step reveal">
+        <div class="flow-dot">01</div>
+        <div>
+          <div class="flow-step-t">DISCOVER</div>
+          <div class="flow-step-d">Buyer sees product in a creator post, editorial page, or social feed.</div>
+        </div>
+      </div>
+      <div class="flow-step active reveal" style="transition-delay:80ms">
+        <div class="flow-dot">02</div>
+        <div>
+          <div class="flow-step-t">NUDGE</div>
+          <div class="flow-step-d">Embedded checkout widget surfaces inline — no redirect triggered.</div>
+        </div>
+      </div>
+      <div class="flow-step reveal" style="transition-delay:160ms">
+        <div class="flow-dot">03</div>
+        <div>
+          <div class="flow-step-t">SELECT</div>
+          <div class="flow-step-d">Buyer picks size/variant, reviews price and shipping — stays in context.</div>
+        </div>
+      </div>
+      <div class="flow-step reveal" style="transition-delay:240ms">
+        <div class="flow-dot">04</div>
+        <div>
+          <div class="flow-step-t">CONFIRM</div>
+          <div class="flow-step-d">Payment via saved method or one-tap. Auth handled by the embed layer.</div>
+        </div>
+      </div>
+      <div class="flow-step reveal" style="transition-delay:320ms">
+        <div class="flow-dot">05</div>
+        <div>
+          <div class="flow-step-t">DONE</div>
+          <div class="flow-step-d">Order confirmed inline. Buyer stays where they were. Intent preserved.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── SCREENS (wireframe slots) ────────────────────────────── -->
+  <section id="screens" class="section-surface">
+    <div class="eyebrow reveal">05 — Wireframes & Screens</div>
+    <div class="display-lg reveal">The embed in context.</div>
+    <p class="lede reveal" style="margin-top:24px">
+      Five wireframe slots below. Drop real PNG exports from Figma — these are live placeholders.
+    </p>
+
+    <div class="wireframes-grid">
+      <div class="wireframe-slot wide reveal">
+        <span class="slot-corner">nudge.embed.overview · 01</span>
+        <span class="slot-label">Embedded checkout widget — full state</span>
+        <span class="slot-sub">Drop Figma export here · 16:9 · PNG</span>
+      </div>
+      <div class="wireframe-slot reveal" style="transition-delay:80ms">
+        <span class="slot-corner">nudge.product.select · 02</span>
+        <span class="slot-label">Variant selector — in-embed</span>
+        <span class="slot-sub">Drop Figma export here · PNG</span>
+      </div>
+      <div class="wireframe-slot reveal" style="transition-delay:160ms">
+        <span class="slot-corner">nudge.confirm.state · 03</span>
+        <span class="slot-label">Payment confirm — inline</span>
+        <span class="slot-sub">Drop Figma export here · PNG</span>
+      </div>
+      <div class="wireframe-slot reveal" style="transition-delay:240ms">
+        <span class="slot-corner">nudge.merchant.dashboard · 04</span>
+        <span class="slot-label">Merchant analytics dashboard</span>
+        <span class="slot-sub">Drop Figma export here · PNG</span>
+      </div>
+      <div class="wireframe-slot reveal" style="transition-delay:320ms">
+        <span class="slot-corner">nudge.api.contract · 05</span>
+        <span class="slot-label">API contract — embed SDK spec</span>
+        <span class="slot-sub">Drop Figma export here · PNG</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── REQUIREMENTS ─────────────────────────────────────────── -->
+  <section id="requirements" class="section-dark">
+    <div class="eyebrow reveal">06 — Requirements</div>
+    <div class="display-lg reveal">What had to be true.</div>
+
+    <div class="req-grid">
+      <div class="req-card reveal">
+        <div class="req-n">REQ.01</div>
+        <div class="req-t">Zero-redirect checkout</div>
+        <div class="req-d">The entire purchase flow must complete inside the host surface. No new tab, no external redirect, no loss of context.</div>
+      </div>
+      <div class="req-card reveal" style="transition-delay:60ms">
+        <div class="req-n">REQ.02</div>
+        <div class="req-t">Single embed tag</div>
+        <div class="req-d">Merchants integrate via one script tag. No complex SDK install, no backend dependency for the host publisher.</div>
+      </div>
+      <div class="req-card reveal" style="transition-delay:120ms">
+        <div class="req-n">REQ.03</div>
+        <div class="req-t">Auth handled by the layer</div>
+        <div class="req-d">Payment auth, session management, and saved-method lookup happen inside the embed — invisible to the buyer.</div>
+      </div>
+      <div class="req-card reveal" style="transition-delay:180ms">
+        <div class="req-n">REQ.04</div>
+        <div class="req-t">Merchant analytics dashboard</div>
+        <div class="req-d">Conversion rate, abandonment by surface, revenue attribution per embed, and cohort comparison — all owned by the merchant.</div>
+      </div>
+      <div class="req-card reveal" style="transition-delay:240ms">
+        <div class="req-n">REQ.05</div>
+        <div class="req-t">Variant + inventory sync</div>
+        <div class="req-d">Real-time inventory and variant state pulled from the merchant's existing catalog. No double-entry for merchants.</div>
+      </div>
+      <div class="req-card reveal" style="transition-delay:300ms">
+        <div class="req-n">REQ.06</div>
+        <div class="req-t">Sub-2-second load</div>
+        <div class="req-d">Widget renders in under 2 seconds at p95. Any slower and the intent window closes. Non-negotiable.</div>
+      </div>
+      <div class="req-card reveal" style="transition-delay:360ms">
+        <div class="req-n">REQ.07</div>
+        <div class="req-t">Fallback path</div>
+        <div class="req-d">If embed fails to load, buyer is redirected to the product page — never stranded. Fallback is automatic and silent.</div>
+      </div>
+      <div class="req-card reveal" style="transition-delay:420ms">
+        <div class="req-n">REQ.08</div>
+        <div class="req-t">Publisher revenue share hooks</div>
+        <div class="req-d">Attribution API exposes conversion events so publishers and creators can claim commission without manual reconciliation.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── OUTCOME DEEP ──────────────────────────────────────────── -->
+  <section id="outcome" class="section-surface">
+    <div class="eyebrow reveal">07 — Outcome</div>
+    <div class="display-lg reveal">Numbers that moved.</div>
+
+    <div class="outcome-deep-grid">
+      <div class="outcome-deep-cell reveal">
+        <div class="odc-n">-30%</div>
+        <div class="odc-l">Target checkout abandonment</div>
+        <div class="odc-d">Designed against a -30% abandonment target vs. the redirect baseline. The embedded path removed the single largest friction point in the buyer journey.</div>
+      </div>
+      <div class="outcome-deep-cell reveal" style="transition-delay:80ms">
+        <div class="odc-n">+25%</div>
+        <div class="odc-l">Conversion from content surfaces</div>
+        <div class="odc-d">Content-to-checkout conversion increased 25% over the redirect path in beta testing — buyers who stayed in context were more likely to complete.</div>
+      </div>
+      <div class="outcome-deep-cell reveal" style="transition-delay:160ms">
+        <div class="odc-n">&lt;2min</div>
+        <div class="odc-l">Intent to purchase</div>
+        <div class="odc-d">From first seeing the product to completed order: under 2 minutes. The flow preserved intent instead of killing it with friction steps.</div>
+      </div>
+      <div class="outcome-deep-cell reveal" style="transition-delay:240ms">
+        <div class="odc-n">8 wks</div>
+        <div class="odc-l">Discovery to spec handoff</div>
+        <div class="odc-d">Full cycle from user research to signed-off PRD, embed spec, API contract, and metric framework. Engineering received a complete, unambiguous spec.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── LEARNINGS ─────────────────────────────────────────────── -->
+  <section id="learnings" class="section-dark">
+    <div class="eyebrow reveal">08 — Learnings</div>
+    <div class="display-lg reveal">What this taught me.</div>
+
+    <div class="learning-list">
+      <div class="learning-row reveal">
+        <span class="learning-n">L.01</span>
+        <span class="learning-t">The product wasn't the checkout widget — it was eliminating the redirect. Defining the right problem first made every requirement obvious.</span>
+      </div>
+      <div class="learning-row reveal" style="transition-delay:80ms">
+        <span class="learning-n">L.02</span>
+        <span class="learning-t">Merchants care about attribution, not just conversion. Revenue share hooks were an afterthought in the brief and became the most requested feature in interviews.</span>
+      </div>
+      <div class="learning-row reveal" style="transition-delay:160ms">
+        <span class="learning-n">L.03</span>
+        <span class="learning-t">The fallback path mattered more than the happy path. Engineers trusted the spec once they saw edge cases were handled, not hand-waved.</span>
+      </div>
+      <div class="learning-row reveal" style="transition-delay:240ms">
+        <span class="learning-n">L.04</span>
+        <span class="learning-t">A 0-to-1 product needs a simpler PRD, not a more complete one. Scope discipline at week 2 saved four weeks of scope-creep negotiation at week 6.</span>
+      </div>
+    </div>
+
+    <div style="margin-top:80px;padding-top:48px;border-top:1px solid rgba(240,235,224,0.07)" class="reveal">
+      <div class="display-lg" style="max-width:640px;color:rgba(240,235,224,0.5)">
+        Intent is perishable. <span style="color:var(--cream)">Nudge keeps it alive.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-left">Khushi Solanki — Portfolio 2026 / Nudge case study</div>
+    <div class="footer-right">
+      <a href="../Portfolio.html#work">All work</a>
+      <a href="../Portfolio.html#contact">Contact</a>
+      <a href="mailto:solankikhushi2682@gmail.com">Email</a>
+    </div>
+  </footer>
+
+  <script>
+    // Intersection Observer for reveal animations
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("in"); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

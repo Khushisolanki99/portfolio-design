@@ -1,0 +1,597 @@
+[      27ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[      64ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[     228ms] SyntaxError: /http:/127.0.0.1:5500/case-studies.jsx: Unexpected token, expected "," (47:8)
+
+  45 |     ],
+  46 |     pains: [
+> 47 |       ""We only know it's a bad order when it comes back."",
+     |         ^
+  48 |       "Pickers had no way to flag — only escalate verbally.",
+  49 |       "Ops leads bounced between 3 tabs to make one hold decision.",
+  50 |     ],
+    at e (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:260002)
+    at r.raise (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:312098)
+    at r.unexpected (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:312532)
+    at r.expect (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:317386)
+    at r.parseExprList (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:500030)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:498070)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:386511)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:483081)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:353993)
+    at r.parseExprSubscripts (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477958)
+    at r.parseUpdate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477579)
+    at r.parseMaybeUnary (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477193)
+    at r.parseMaybeUnaryOrPrivate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473986)
+    at r.parseExprOps (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:474096)
+    at r.parseMaybeConditional (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473566)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472472)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:393896)
+    at https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472052
+    at r.allowInAnd (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:505261)
+    at r.parseMaybeAssignAllowIn (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472021)
+    at r.parseMaybeAssignAllowInOrVoidPattern (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:506860)
+    at r.parseObjectProperty (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:496098)
+    at r.parseObjPropValue (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:496818)
+    at r.parseObjPropValue (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:389210)
+    at r.parsePropertyDefinition (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:495207)
+    at r.parseObjectLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:493592)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:483123)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:353993)
+    at r.parseExprSubscripts (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477958)
+    at r.parseUpdate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477579)
+    at r.parseMaybeUnary (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477193)
+    at r.parseMaybeUnaryOrPrivate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473986)
+    at r.parseExprOps (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:474096)
+    at r.parseMaybeConditional (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473566)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472472)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:393896)
+    at https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472052
+    at r.allowInAnd (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:505261)
+    at r.parseMaybeAssignAllowIn (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472021)
+    at r.parseMaybeAssignAllowInOrVoidPattern (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:506860)
+    at r.parseExprListItem (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:500623)
+    at r.parseExprList (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:500125)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:498070)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:386511)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:483081)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:353993)
+    at r.parseExprSubscripts (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477958)
+    at r.parseUpdate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477579)
+    at r.parseMaybeUnary (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477193)
+    at r.parseMaybeUnaryOrPrivate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473986)
+[     452ms] TypeError: Cannot read properties of undefined (reading 'outcome')
+    at Work (<anonymous>:577:9)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at HTMLUnknownElement.callCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4151:16)
+    at Object.invokeGuardedCallbackDev (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4200:18)
+    at invokeGuardedCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4264:33)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27500:9)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25787:76)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[     457ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[     470ms] TypeError: Cannot read properties of undefined (reading 'outcome')
+    at Work (<anonymous>:577:9)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at HTMLUnknownElement.callCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4151:16)
+    at Object.invokeGuardedCallbackDev (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4200:18)
+    at invokeGuardedCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4264:33)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27500:9)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at recoverFromConcurrentError (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25899:22)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25799:24)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[     472ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[     478ms] [ERROR] The above error occurred in the <Work> component:
+
+    at Work (<anonymous>:497:22)
+    at main
+    at App (<anonymous>:19:19)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:18713
+[     478ms] TypeError: Cannot read properties of undefined (reading 'outcome')
+    at Work (<anonymous>:577:9)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27475:16)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at recoverFromConcurrentError (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25899:22)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25799:24)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[     508ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[     514ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[     519ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[     520ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[     523ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[     524ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[   37565ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[   37610ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[   37761ms] SyntaxError: /http:/127.0.0.1:5500/case-studies.jsx: Unexpected token, expected "," (47:8)
+
+  45 |     ],
+  46 |     pains: [
+> 47 |       ""We only know it's a bad order when it comes back."",
+     |         ^
+  48 |       "Pickers had no way to flag — only escalate verbally.",
+  49 |       "Ops leads bounced between 3 tabs to make one hold decision.",
+  50 |     ],
+    at e (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:260002)
+    at r.raise (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:312098)
+    at r.unexpected (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:312532)
+    at r.expect (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:317386)
+    at r.parseExprList (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:500030)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:498070)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:386511)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:483081)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:353993)
+    at r.parseExprSubscripts (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477958)
+    at r.parseUpdate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477579)
+    at r.parseMaybeUnary (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477193)
+    at r.parseMaybeUnaryOrPrivate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473986)
+    at r.parseExprOps (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:474096)
+    at r.parseMaybeConditional (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473566)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472472)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:393896)
+    at https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472052
+    at r.allowInAnd (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:505261)
+    at r.parseMaybeAssignAllowIn (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472021)
+    at r.parseMaybeAssignAllowInOrVoidPattern (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:506860)
+    at r.parseObjectProperty (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:496098)
+    at r.parseObjPropValue (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:496818)
+    at r.parseObjPropValue (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:389210)
+    at r.parsePropertyDefinition (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:495207)
+    at r.parseObjectLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:493592)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:483123)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:353993)
+    at r.parseExprSubscripts (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477958)
+    at r.parseUpdate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477579)
+    at r.parseMaybeUnary (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477193)
+    at r.parseMaybeUnaryOrPrivate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473986)
+    at r.parseExprOps (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:474096)
+    at r.parseMaybeConditional (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473566)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472472)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:393896)
+    at https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472052
+    at r.allowInAnd (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:505261)
+    at r.parseMaybeAssignAllowIn (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472021)
+    at r.parseMaybeAssignAllowInOrVoidPattern (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:506860)
+    at r.parseExprListItem (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:500623)
+    at r.parseExprList (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:500125)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:498070)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:386511)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:483081)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:353993)
+    at r.parseExprSubscripts (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477958)
+    at r.parseUpdate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477579)
+    at r.parseMaybeUnary (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477193)
+    at r.parseMaybeUnaryOrPrivate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473986)
+[   38002ms] TypeError: Cannot read properties of undefined (reading 'outcome')
+    at Work (<anonymous>:577:9)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at HTMLUnknownElement.callCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4151:16)
+    at Object.invokeGuardedCallbackDev (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4200:18)
+    at invokeGuardedCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4264:33)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27500:9)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25787:76)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[   38006ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[   38015ms] TypeError: Cannot read properties of undefined (reading 'outcome')
+    at Work (<anonymous>:577:9)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at HTMLUnknownElement.callCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4151:16)
+    at Object.invokeGuardedCallbackDev (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4200:18)
+    at invokeGuardedCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4264:33)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27500:9)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at recoverFromConcurrentError (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25899:22)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25799:24)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[   38018ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[   38020ms] [ERROR] The above error occurred in the <Work> component:
+
+    at Work (<anonymous>:497:22)
+    at main
+    at App (<anonymous>:19:19)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:18713
+[   38021ms] TypeError: Cannot read properties of undefined (reading 'outcome')
+    at Work (<anonymous>:577:9)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27475:16)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at recoverFromConcurrentError (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25899:22)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25799:24)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[   38066ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[   38066ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[   38069ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[   38070ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[   38072ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[   38073ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  132240ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[  132280ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[  132509ms] SyntaxError: /http:/127.0.0.1:5500/case-studies.jsx: Unexpected token, expected "," (104:30)
+
+  102 |       "Product managers — coordinate 8–12 syncs/week.",
+  103 |       "Engineering leads — need decisions, not transcripts.",
+> 104 |       "Execs — need a weekly "what changed" digest.",
+      |                               ^
+  105 |     ],
+  106 |     context:
+  107 |       "Built for teams already using Notion + JIRA + Slack. The AI had to be auditable — every action it took needed a visible source in the transcript.",
+    at e (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:260002)
+    at r.raise (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:312098)
+    at r.unexpected (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:312532)
+    at r.expect (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:317386)
+    at r.parseExprList (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:500030)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:498070)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:386511)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:483081)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:353993)
+    at r.parseExprSubscripts (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477958)
+    at r.parseUpdate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477579)
+    at r.parseMaybeUnary (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477193)
+    at r.parseMaybeUnaryOrPrivate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473986)
+    at r.parseExprOps (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:474096)
+    at r.parseMaybeConditional (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473566)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472472)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:393896)
+    at https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472052
+    at r.allowInAnd (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:505261)
+    at r.parseMaybeAssignAllowIn (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472021)
+    at r.parseMaybeAssignAllowInOrVoidPattern (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:506860)
+    at r.parseObjectProperty (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:496098)
+    at r.parseObjPropValue (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:496818)
+    at r.parseObjPropValue (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:389210)
+    at r.parsePropertyDefinition (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:495207)
+    at r.parseObjectLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:493592)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:483123)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:353993)
+    at r.parseExprSubscripts (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477958)
+    at r.parseUpdate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477579)
+    at r.parseMaybeUnary (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477193)
+    at r.parseMaybeUnaryOrPrivate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473986)
+    at r.parseExprOps (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:474096)
+    at r.parseMaybeConditional (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473566)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472472)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:393896)
+    at https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472052
+    at r.allowInAnd (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:505261)
+    at r.parseMaybeAssignAllowIn (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472021)
+    at r.parseMaybeAssignAllowInOrVoidPattern (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:506860)
+    at r.parseExprListItem (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:500623)
+    at r.parseExprList (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:500125)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:498070)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:386511)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:483081)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:353993)
+    at r.parseExprSubscripts (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477958)
+    at r.parseUpdate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477579)
+    at r.parseMaybeUnary (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477193)
+    at r.parseMaybeUnaryOrPrivate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473986)
+[  132788ms] TypeError: Cannot read properties of undefined (reading 'outcome')
+    at Work (<anonymous>:577:9)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at HTMLUnknownElement.callCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4151:16)
+    at Object.invokeGuardedCallbackDev (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4200:18)
+    at invokeGuardedCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4264:33)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27500:9)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25787:76)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  132791ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  132804ms] TypeError: Cannot read properties of undefined (reading 'outcome')
+    at Work (<anonymous>:577:9)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at HTMLUnknownElement.callCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4151:16)
+    at Object.invokeGuardedCallbackDev (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4200:18)
+    at invokeGuardedCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4264:33)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27500:9)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at recoverFromConcurrentError (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25899:22)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25799:24)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  132806ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  132809ms] [ERROR] The above error occurred in the <Work> component:
+
+    at Work (<anonymous>:497:22)
+    at main
+    at App (<anonymous>:19:19)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:18713
+[  132809ms] TypeError: Cannot read properties of undefined (reading 'outcome')
+    at Work (<anonymous>:577:9)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27475:16)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at recoverFromConcurrentError (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25899:22)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25799:24)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  132815ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  132817ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  132819ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  132820ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  132821ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  132822ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  136506ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[  136544ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[  136721ms] SyntaxError: /http:/127.0.0.1:5500/case-studies.jsx: Unexpected token, expected "," (104:30)
+
+  102 |       "Product managers — coordinate 8–12 syncs/week.",
+  103 |       "Engineering leads — need decisions, not transcripts.",
+> 104 |       "Execs — need a weekly "what changed" digest.",
+      |                               ^
+  105 |     ],
+  106 |     context:
+  107 |       "Built for teams already using Notion + JIRA + Slack. The AI had to be auditable — every action it took needed a visible source in the transcript.",
+    at e (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:260002)
+    at r.raise (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:312098)
+    at r.unexpected (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:312532)
+    at r.expect (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:317386)
+    at r.parseExprList (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:500030)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:498070)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:386511)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:483081)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:353993)
+    at r.parseExprSubscripts (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477958)
+    at r.parseUpdate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477579)
+    at r.parseMaybeUnary (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477193)
+    at r.parseMaybeUnaryOrPrivate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473986)
+    at r.parseExprOps (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:474096)
+    at r.parseMaybeConditional (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473566)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472472)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:393896)
+    at https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472052
+    at r.allowInAnd (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:505261)
+    at r.parseMaybeAssignAllowIn (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472021)
+    at r.parseMaybeAssignAllowInOrVoidPattern (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:506860)
+    at r.parseObjectProperty (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:496098)
+    at r.parseObjPropValue (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:496818)
+    at r.parseObjPropValue (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:389210)
+    at r.parsePropertyDefinition (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:495207)
+    at r.parseObjectLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:493592)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:483123)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:353993)
+    at r.parseExprSubscripts (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477958)
+    at r.parseUpdate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477579)
+    at r.parseMaybeUnary (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477193)
+    at r.parseMaybeUnaryOrPrivate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473986)
+    at r.parseExprOps (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:474096)
+    at r.parseMaybeConditional (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473566)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472472)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:393896)
+    at https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472052
+    at r.allowInAnd (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:505261)
+    at r.parseMaybeAssignAllowIn (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472021)
+    at r.parseMaybeAssignAllowInOrVoidPattern (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:506860)
+    at r.parseExprListItem (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:500623)
+    at r.parseExprList (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:500125)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:498070)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:386511)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:483081)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:353993)
+    at r.parseExprSubscripts (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477958)
+    at r.parseUpdate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477579)
+    at r.parseMaybeUnary (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477193)
+    at r.parseMaybeUnaryOrPrivate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473986)
+[  140750ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[  140785ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[  140936ms] SyntaxError: /http:/127.0.0.1:5500/case-studies.jsx: Unexpected token, expected "," (104:30)
+
+  102 |       "Product managers — coordinate 8–12 syncs/week.",
+  103 |       "Engineering leads — need decisions, not transcripts.",
+> 104 |       "Execs — need a weekly "what changed" digest.",
+      |                               ^
+  105 |     ],
+  106 |     context:
+  107 |       "Built for teams already using Notion + JIRA + Slack. The AI had to be auditable — every action it took needed a visible source in the transcript.",
+    at e (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:260002)
+    at r.raise (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:312098)
+    at r.unexpected (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:312532)
+    at r.expect (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:317386)
+    at r.parseExprList (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:500030)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:498070)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:386511)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:483081)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:353993)
+    at r.parseExprSubscripts (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477958)
+    at r.parseUpdate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477579)
+    at r.parseMaybeUnary (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477193)
+    at r.parseMaybeUnaryOrPrivate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473986)
+    at r.parseExprOps (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:474096)
+    at r.parseMaybeConditional (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473566)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472472)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:393896)
+    at https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472052
+    at r.allowInAnd (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:505261)
+    at r.parseMaybeAssignAllowIn (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472021)
+    at r.parseMaybeAssignAllowInOrVoidPattern (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:506860)
+    at r.parseObjectProperty (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:496098)
+    at r.parseObjPropValue (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:496818)
+    at r.parseObjPropValue (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:389210)
+    at r.parsePropertyDefinition (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:495207)
+    at r.parseObjectLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:493592)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:483123)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:353993)
+    at r.parseExprSubscripts (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477958)
+    at r.parseUpdate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477579)
+    at r.parseMaybeUnary (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477193)
+    at r.parseMaybeUnaryOrPrivate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473986)
+    at r.parseExprOps (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:474096)
+    at r.parseMaybeConditional (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473566)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472472)
+    at r.parseMaybeAssign (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:393896)
+    at https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472052
+    at r.allowInAnd (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:505261)
+    at r.parseMaybeAssignAllowIn (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:472021)
+    at r.parseMaybeAssignAllowInOrVoidPattern (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:506860)
+    at r.parseExprListItem (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:500623)
+    at r.parseExprList (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:500125)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:498070)
+    at r.parseArrayLike (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:386511)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:483081)
+    at r.parseExprAtom (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:353993)
+    at r.parseExprSubscripts (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477958)
+    at r.parseUpdate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477579)
+    at r.parseMaybeUnary (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:477193)
+    at r.parseMaybeUnaryOrPrivate (https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:3:473986)
+[  141239ms] TypeError: Cannot read properties of undefined (reading 'outcome')
+    at Work (<anonymous>:577:9)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at HTMLUnknownElement.callCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4151:16)
+    at Object.invokeGuardedCallbackDev (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4200:18)
+    at invokeGuardedCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4264:33)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27500:9)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25787:76)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  141242ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  141256ms] TypeError: Cannot read properties of undefined (reading 'outcome')
+    at Work (<anonymous>:577:9)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at HTMLUnknownElement.callCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4151:16)
+    at Object.invokeGuardedCallbackDev (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4200:18)
+    at invokeGuardedCallback (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:4264:33)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27500:9)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at recoverFromConcurrentError (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25899:22)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25799:24)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  141258ms] [ERROR] Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s edit.cool.03 
+    at div
+    at section
+    at DesignArt
+    at main
+    at App (<anonymous>:19:19) @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:72
+[  141261ms] [ERROR] The above error occurred in the <Work> component:
+
+    at Work (<anonymous>:497:22)
+    at main
+    at App (<anonymous>:19:19)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:18713
+[  141261ms] TypeError: Cannot read properties of undefined (reading 'outcome')
+    at Work (<anonymous>:577:9)
+    at renderWithHooks (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:15496:20)
+    at mountIndeterminateComponent (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:20113:15)
+    at beginWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:21636:18)
+    at beginWork$1 (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:27475:16)
+    at performUnitOfWork (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26609:14)
+    at workLoopSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26515:7)
+    at renderRootSync (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:26483:9)
+    at recoverFromConcurrentError (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25899:22)
+    at performConcurrentWorkOnRoot (https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:25799:24)
+    at workLoop (https://unpkg.com/react@18.3.1/umd/react.development.js:2653:36)
+    at flushWork (https://unpkg.com/react@18.3.1/umd/react.development.js:2626:16)
+    at MessagePort.performWorkUntilDeadline (https://unpkg.com/react@18.3.1/umd/react.development.js:2920:23)
+[  141267ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  141269ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  141270ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0
+[  141272ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-surge.mp4:0
+[  141273ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-1.mp4:0
+[  141274ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5500/uploads/video-3.mp4:0

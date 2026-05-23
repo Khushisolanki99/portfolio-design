@@ -1,0 +1,790 @@
+- generic [ref=e2]:
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img [ref=e8]
+          - generic [ref=e10]:
+            - text: khushi
+            - generic [ref=e11]: solanki
+            - generic [ref=e12]: business analyst · product · creative direction
+        - img [ref=e14]
+      - generic [ref=e16]:
+        - generic:
+          - img
+        - generic:
+          - img "CD case"
+        - generic:
+          - img "Keyboard"
+        - generic:
+          - img "Earbuds"
+        - generic:
+          - img "Iced latte"
+        - generic:
+          - img "Radio"
+        - generic:
+          - img "Notebook"
+        - generic [ref=e18]:
+          - generic [ref=e20] [cursor=pointer]:
+            - img [ref=e21]
+            - generic [ref=e25]: Doberman pup ↓
+          - generic:
+            - button "Replace"
+            - button "Remove"
+        - generic [ref=e27]:
+          - generic [ref=e29] [cursor=pointer]:
+            - img [ref=e30]
+            - generic [ref=e34]: Doberman pup ↓
+          - generic:
+            - button "Replace"
+            - button "Remove"
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - generic [ref=e37]: BA / Product
+            - generic [ref=e38]: Portfolio
+            - generic [ref=e40]: KHUSHI SOLANKI · 2026
+          - paragraph [ref=e41]: PRDs, flows, screens, dashboards, and creative systems for real-world product problems.
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]:
+            - generic [ref=e45]: Available
+            - generic [ref=e46]: Open to BA / Product / Associate PM roles
+          - generic [ref=e47]:
+            - generic [ref=e48]: Location
+            - generic [ref=e49]: India · Remote-friendly
+          - generic [ref=e50]:
+            - generic [ref=e51]: Focus
+            - generic [ref=e52]: Product thinking + business analysis + design direction
+        - generic [ref=e53]:
+          - button "View Work →" [ref=e54]
+          - button "Download Resume →" [ref=e55]
+          - button "Contact →" [ref=e56]
+    - generic [ref=e58]:
+      - generic [ref=e59]:
+        - generic [ref=e60]: Business Analysis
+        - img [ref=e62]
+      - generic [ref=e64]:
+        - generic [ref=e65]: Product Thinking
+        - img [ref=e67]
+      - generic [ref=e69]:
+        - generic [ref=e70]: UX Design
+        - img [ref=e72]
+      - generic [ref=e74]:
+        - generic [ref=e75]: Workflow Design
+        - img [ref=e77]
+      - generic [ref=e79]:
+        - generic [ref=e80]: Creative Direction
+        - img [ref=e82]
+      - generic [ref=e84]:
+        - generic [ref=e85]: Business Analysis
+        - img [ref=e87]
+      - generic [ref=e89]:
+        - generic [ref=e90]: Product Thinking
+        - img [ref=e92]
+      - generic [ref=e94]:
+        - generic [ref=e95]: UX Design
+        - img [ref=e97]
+      - generic [ref=e99]:
+        - generic [ref=e100]: Workflow Design
+        - img [ref=e102]
+      - generic [ref=e104]:
+        - generic [ref=e105]: Creative Direction
+        - img [ref=e107]
+      - generic [ref=e109]:
+        - generic [ref=e110]: Business Analysis
+        - img [ref=e112]
+      - generic [ref=e114]:
+        - generic [ref=e115]: Product Thinking
+        - img [ref=e117]
+      - generic [ref=e119]:
+        - generic [ref=e120]: UX Design
+        - img [ref=e122]
+      - generic [ref=e124]:
+        - generic [ref=e125]: Workflow Design
+        - img [ref=e127]
+      - generic [ref=e129]:
+        - generic [ref=e130]: Creative Direction
+        - img [ref=e132]
+    - generic [ref=e134]:
+      - generic [ref=e135]:
+        - generic [ref=e136]: ENG
+        - text: /
+        - generic [ref=e137]: HIN
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - img "Khushi Solanki — portrait"
+          - generic [ref=e140]: ● PORTRAIT.01 · CUTOUT
+          - generic [ref=e141]: ✎ MADE BY KHUSHI
+        - generic [ref=e142]:
+          - heading "Hi, I'm Khushi. NEW DELHI INDIA" [level=1] [ref=e143]:
+            - text: Hi, I'm Khushi.
+            - generic [ref=e144]:
+              - generic [ref=e145]: NEW DELHI
+              - generic [ref=e146]: INDIA
+          - generic [ref=e147]:
+            - paragraph [ref=e148]: I work at the intersection of business analysis, product thinking, and visual storytelling. I like taking messy problems, turning them into clear requirements, mapping the user journey, and shaping screens that make the solution easier to understand.
+            - paragraph [ref=e149]:
+              - text: My work usually starts with a
+              - emphasis [ref=e150]: problem statement
+              - text: ", a few uncomfortable questions, and a blank flow. From there, I build PRDs, user stories, wireframes, dashboards, and product concepts that are structured enough for teams and clear enough for users."
+            - paragraph [ref=e151]: Off the clock, I'm usually editing visuals, exploring web layouts, making posters, or redesigning something nobody asked me to redesign.
+          - generic [ref=e152]:
+            - generic [ref=e153]: What I ship
+            - generic [ref=e154]:
+              - generic [ref=e155]: PRDs
+              - generic [ref=e156]: ·
+              - generic [ref=e157]: User flows
+              - generic [ref=e158]: ·
+              - generic [ref=e159]: Requirement specs
+              - generic [ref=e160]: ·
+              - generic [ref=e161]: Journey maps
+              - generic [ref=e162]: ·
+              - generic [ref=e163]: Wireframes
+              - generic [ref=e164]: ·
+              - generic [ref=e165]: Review decks
+              - generic [ref=e166]: ·
+              - generic [ref=e167]: Ops playbooks
+          - generic [ref=e168]:
+            - generic [ref=e169]:
+              - generic [ref=e170]: "01"
+              - generic [ref=e171]: Understand the problem before designing the solution.
+            - generic [ref=e172]:
+              - generic [ref=e173]: "02"
+              - generic [ref=e174]: Turn ambiguity into requirements, flows, and decisions.
+            - generic [ref=e175]:
+              - generic [ref=e176]: "03"
+              - generic [ref=e177]: Make the first version useful before making it beautiful.
+            - generic [ref=e178]:
+              - generic [ref=e179]: "04"
+              - generic [ref=e180]: Use design to communicate, not decorate.
+          - generic [ref=e181]:
+            - generic [ref=e182]:
+              - generic [ref=e183]:
+                - generic [ref=e184]: A.01
+                - generic [ref=e186]: Experience
+              - generic [ref=e187]:
+                - generic [ref=e188]:
+                  - generic [ref=e189]:
+                    - text: "2024"
+                    - generic [ref=e190]: now
+                  - generic [ref=e191]:
+                    - generic [ref=e192]: Business Analyst
+                    - generic [ref=e193]: "[Company Name]"
+                    - generic [ref=e194]: Worked on product requirements, process mapping, stakeholder coordination, and internal tools.
+                - generic [ref=e195]:
+                  - generic [ref=e196]:
+                    - text: "2023"
+                    - generic [ref=e197]: "24"
+                  - generic [ref=e198]:
+                    - generic [ref=e199]: Product / Project Analyst
+                    - generic [ref=e200]: "[Company Name]"
+                    - generic [ref=e201]: Supported PRDs, sprint planning, user flows, and feature documentation.
+                - generic [ref=e202]:
+                  - generic [ref=e203]:
+                    - text: "2022"
+                    - generic [ref=e204]: "23"
+                  - generic [ref=e205]:
+                    - generic [ref=e206]: Brand & Ops
+                    - generic [ref=e207]: "[Company Name]"
+                    - generic [ref=e208]: Worked across content planning, visual direction, operations, and delivery.
+            - generic [ref=e209]:
+              - generic [ref=e210]:
+                - generic [ref=e211]: A.02
+                - generic [ref=e213]: Education
+              - generic [ref=e214]:
+                - generic [ref=e215]:
+                  - generic [ref=e216]:
+                    - text: "2019"
+                    - generic [ref=e217]: "23"
+                  - generic [ref=e218]:
+                    - generic [ref=e219]: BBA, Business Analytics
+                    - generic [ref=e220]: "[University Name]"
+                - generic [ref=e221]:
+                  - generic [ref=e222]: "2024"
+                  - generic [ref=e223]:
+                    - generic [ref=e224]: UX Certification
+                    - generic [ref=e225]: Interaction Design Foundation
+          - generic [ref=e226]:
+            - generic [ref=e227]:
+              - generic [ref=e228]:
+                - generic [ref=e229]: A.03
+                - generic [ref=e231]: Tools on rotation
+              - generic [ref=e232]: used recently, on real projects
+            - generic [ref=e233]:
+              - generic [ref=e234]: Figma
+              - generic [ref=e235]: JIRA
+              - generic [ref=e236]: Notion
+              - generic [ref=e237]: Miro
+              - generic [ref=e238]: Excel
+              - generic [ref=e239]: Power BI
+              - generic [ref=e240]: Canva
+              - generic [ref=e241]: Adobe Suite
+      - generic [ref=e242]:
+        - generic [ref=e243]:
+          - generic [ref=e244]:
+            - generic [ref=e246] [cursor=pointer]:
+              - img [ref=e247]
+              - generic [ref=e251]: workspace ↓
+            - generic:
+              - button "Replace"
+              - button "Remove"
+          - generic [ref=e252]: workspace ★
+        - generic [ref=e253]:
+          - generic [ref=e254]:
+            - generic [ref=e256] [cursor=pointer]:
+              - img [ref=e257]
+              - generic [ref=e261]: sketches ↓
+            - generic:
+              - button "Replace"
+              - button "Remove"
+          - generic [ref=e262]: notes <3
+        - generic [ref=e263]:
+          - generic [ref=e264]:
+            - generic [ref=e266] [cursor=pointer]:
+              - img [ref=e267]
+              - generic [ref=e271]: off-hours ↓
+            - generic:
+              - button "Replace"
+              - button "Remove"
+          - generic [ref=e272]: coffee ✰
+    - generic [ref=e273]:
+      - navigation [ref=e274]:
+        - generic [ref=e275]: Queue
+        - generic [ref=e276]: Brief · Day 01
+        - generic [ref=e277]: Cohorts
+        - generic [ref=e278]: Policy
+        - generic [ref=e279]: Reports
+      - generic [ref=e280]:
+        - generic [ref=e281]:
+          - generic [ref=e283]: From chaos to clarity
+          - generic [ref=e284]: / 01
+        - generic [ref=e285]:
+          - img [ref=e286]
+          - generic [ref=e305]: a tangle of thoughts
+          - generic [ref=e306]: ✎ BRIEF · DAY 01
+      - generic [ref=e307]:
+        - img [ref=e308]
+        - generic:
+          - generic: listen —
+          - generic: interviews · field notes
+        - generic:
+          - generic: — define
+          - generic: problem · users · scope
+        - generic:
+          - generic: structure —
+          - generic: flows · requirements · ship
+      - generic [ref=e313]:
+        - generic [ref=e314]:
+          - generic [ref=e316]: The structured solution
+          - generic [ref=e317]: / 02
+        - generic [ref=e318]:
+          - img
+          - generic [ref=e319]:
+            - generic [ref=e321]: Problem
+            - generic [ref=e322]: First-time users drop off in onboarding at step 3 of 5.
+            - generic [ref=e323]: ↳ user research, n=12
+          - generic [ref=e324]:
+            - generic [ref=e326]: Goal
+            - generic [ref=e327]: Complete signup in under 90 seconds with zero blockers.
+            - generic [ref=e328]: v1.0 · sprint 14
+          - generic [ref=e329]:
+            - generic [ref=e330]: PRD · 04
+            - generic [ref=e331]: last edit 2d
+          - generic [ref=e332]:
+            - generic [ref=e333]:
+              - generic [ref=e334]: User flow
+              - generic [ref=e335]: 4 steps · 0 dead-ends
+            - generic [ref=e336]:
+              - generic [ref=e337]:
+                - generic [ref=e338]: "01"
+                - generic [ref=e339]: Land
+              - generic [ref=e340]: →
+              - generic [ref=e341]:
+                - generic [ref=e342]: "02"
+                - generic [ref=e343]: Try
+              - generic [ref=e344]: →
+              - generic [ref=e345]:
+                - generic [ref=e346]: "03"
+                - generic [ref=e347]: Verify
+              - generic [ref=e348]: →
+              - generic [ref=e349]:
+                - generic [ref=e350]: "04"
+                - generic [ref=e351]: Done
+          - generic [ref=e352]:
+            - generic [ref=e353]:
+              - generic [ref=e354]: Wireframe
+              - generic [ref=e355]: screen 03 · mobile
+            - generic [ref=e366]: Continue →
+          - generic [ref=e367]:
+            - generic [ref=e368]:
+              - generic [ref=e369]: Requirements
+              - generic [ref=e370]: 8 functional · 3 NFR · all owned
+            - list [ref=e371]:
+              - listitem [ref=e372]:
+                - generic [ref=e373]: ✓
+                - text: User stories & acceptance criteria
+              - listitem [ref=e374]:
+                - generic [ref=e375]: ✓
+                - text: Edge cases & error states mapped
+              - listitem [ref=e376]:
+                - generic [ref=e377]: ✓
+                - text: Telemetry & success metrics defined
+              - listitem [ref=e378]:
+                - generic [ref=e379]: ✓
+                - text: Rollout plan + fallback path agreed
+          - generic [ref=e380]:
+            - generic [ref=e381]: +24%
+            - generic [ref=e382]: activation, week 1
+      - generic [ref=e383]:
+        - generic [ref=e384]:
+          - generic [ref=e385]: Messy ideas in.
+          - generic [ref=e386]: Structured solutions out.
+        - generic [ref=e387]:
+          - generic [ref=e389]: process · in practice
+          - generic [ref=e390]: /
+          - generic [ref=e391]: ↓ selected work
+    - generic [ref=e392]:
+      - generic [ref=e393]:
+        - generic [ref=e394]:
+          - generic [ref=e395]:
+            - generic [ref=e396]: "02"
+            - generic [ref=e398]: Selected Work · 2024 — 26
+          - generic [ref=e399]:
+            - text: Business analysis &
+            - text: product
+            - text: thinking
+            - generic [ref=e401]: in practice
+        - generic [ref=e402]:
+          - generic [ref=e403]:
+            - generic [ref=e404]: ★ Selected work index
+            - generic [ref=e405]: 4 case studies · 2024 — 26
+          - generic [ref=e406]:
+            - generic [ref=e407]:
+              - generic [ref=e408]: "01"
+              - generic [ref=e409]:
+                - text: RTO
+                - emphasis [ref=e410]: Guard
+              - generic [ref=e411]: −38%
+            - generic [ref=e412]:
+              - generic [ref=e413]: "02"
+              - generic [ref=e414]:
+                - text: AI Meeting
+                - emphasis [ref=e415]: Brief
+              - generic [ref=e416]: +71%
+            - generic [ref=e417]:
+              - generic [ref=e418]: "03"
+              - generic [ref=e419]:
+                - text: Nudge
+                - emphasis [ref=e420]: Buy where you decide
+              - generic [ref=e421]: "-30%"
+            - generic [ref=e422]:
+              - generic [ref=e423]: "04"
+              - generic [ref=e424]:
+                - text: Idea-to-MVP
+                - emphasis [ref=e425]: Platform
+              - generic [ref=e426]: 2 days
+          - generic [ref=e427]: Each case opens with TL;DR outcomes and a live mock.
+      - generic [ref=e428]:
+        - generic [ref=e429]:
+          - text: RTO Guard
+          - generic [ref=e430]: 01 · 2025
+        - generic [ref=e431]:
+          - text: AI Meeting Brief
+          - generic [ref=e432]: 02 · 2025
+        - generic [ref=e433]:
+          - text: Nudge Buy where you decide
+          - generic [ref=e434]: 03 · 2025
+        - generic [ref=e435]:
+          - text: Idea-to-MVP Platform
+          - generic [ref=e436]: 04 · 2024
+      - generic [ref=e438]:
+        - generic [ref=e439]:
+          - generic [ref=e440]:
+            - generic [ref=e441]:
+              - generic [ref=e442]: −38%
+              - generic [ref=e443]: RTO rate, Q2
+            - generic [ref=e444]:
+              - generic [ref=e445]: 4.2×
+              - generic [ref=e446]: ROI in 90 days
+            - generic [ref=e447]:
+              - generic [ref=e448]: <3s
+              - generic [ref=e449]: Decision time / order
+          - generic [ref=e450]: CASE 01 / 04 · B2B SaaS · 2025 · 8 wks
+          - heading "RTO Guard" [level=3] [ref=e451]
+          - paragraph [ref=e452]: Dashboard that helps e-commerce teams identify risky orders before they become returns.
+          - generic [ref=e453]:
+            - generic [ref=e454]: B2B SaaS
+            - generic [ref=e455]: Dashboard
+            - generic [ref=e456]: Ops
+            - generic [ref=e457]: Risk Detection
+          - generic [ref=e458]:
+            - generic [ref=e459]: What I owned
+            - generic [ref=e460]:
+              - generic [ref=e461]: PRD
+              - generic [ref=e462]: ·
+              - generic [ref=e463]: dashboard IA
+              - generic [ref=e464]: ·
+              - generic [ref=e465]: risk flags
+              - generic [ref=e466]: ·
+              - generic [ref=e467]: order detail screens
+          - generic [ref=e468]:
+            - generic [ref=e469]:
+              - generic [ref=e470]: Role
+              - generic [ref=e471]: BA + Product strategy
+            - generic [ref=e472]:
+              - generic [ref=e473]: Client
+              - generic [ref=e474]: D2C Logistics
+            - generic [ref=e475]:
+              - generic [ref=e476]: Process
+              - generic [ref=e477]: Stakeholder interviews → workflow audit → risk heuristics → PRD → dashboard IA → screens
+            - generic [ref=e478]:
+              - generic [ref=e479]: Tools
+              - generic [ref=e480]: Figma, Miro, Notion, JIRA, Excel
+          - button "Open full case study →" [ref=e481]
+        - generic [ref=e482]:
+          - generic [ref=e485]:
+            - generic [ref=e486]:
+              - generic [ref=e487]:
+                - text: RTO
+                - generic [ref=e488]: ●
+                - text: Guard
+              - generic:
+                - generic [ref=e489]: Queue
+                - generic [ref=e490]: Cohorts
+                - generic [ref=e491]: Policy
+                - generic [ref=e492]: Reports
+              - generic [ref=e493]: K
+            - generic [ref=e494]:
+              - generic [ref=e495]:
+                - generic [ref=e496]: RTO Rate · today
+                - generic [ref=e497]: 8.2%
+                - generic [ref=e498]: ↓ 2.1pp
+              - generic [ref=e499]:
+                - generic [ref=e500]: At-risk orders
+                - generic [ref=e501]: "142"
+                - generic [ref=e502]: "+18"
+              - generic [ref=e503]:
+                - generic [ref=e504]: Held
+                - generic [ref=e505]: "38"
+              - generic [ref=e506]:
+                - generic [ref=e507]: Released
+                - generic [ref=e508]: "104"
+            - generic [ref=e509]:
+              - generic [ref=e510]:
+                - generic [ref=e511]:
+                  - generic [ref=e512]: ORDER
+                  - generic [ref=e513]: BUYER
+                  - generic [ref=e514]: PINCODE
+                  - generic [ref=e515]: SCORE
+                  - generic [ref=e516]: FLAG
+                - generic [ref=e517]:
+                  - generic [ref=e518]: "#48211"
+                  - generic [ref=e519]: R. Mehta
+                  - generic [ref=e520]: 400 089
+                  - generic [ref=e521]: "92"
+                  - generic [ref=e523]: RED
+                - generic [ref=e524]:
+                  - generic [ref=e525]: "#48207"
+                  - generic [ref=e526]: A. Iyer
+                  - generic [ref=e527]: 110 092
+                  - generic [ref=e528]: "78"
+                  - generic [ref=e530]: AMB
+                - generic [ref=e531]:
+                  - generic [ref=e532]: "#48201"
+                  - generic [ref=e533]: P. Shah
+                  - generic [ref=e534]: 700 056
+                  - generic [ref=e535]: "64"
+                  - generic [ref=e537]: AMB
+                - generic [ref=e538]:
+                  - generic [ref=e539]: "#48198"
+                  - generic [ref=e540]: S. Khan
+                  - generic [ref=e541]: 560 100
+                  - generic [ref=e542]: "22"
+                  - generic [ref=e544]: OK
+                - generic [ref=e545]:
+                  - generic [ref=e546]: "#48190"
+                  - generic [ref=e547]: N. Das
+                  - generic [ref=e548]: 411 014
+                  - generic [ref=e549]: "14"
+                  - generic [ref=e551]: OK
+                - generic [ref=e552]:
+                  - generic [ref=e553]: "#48184"
+                  - generic [ref=e554]: V. Rao
+                  - generic [ref=e555]: 500 081
+                  - generic [ref=e556]: "09"
+                  - generic [ref=e558]: OK
+              - generic [ref=e559]:
+                - generic [ref=e560]: RTO Rate · 14 days
+                - img [ref=e561]
+                - generic [ref=e564]:
+                  - generic [ref=e565]:
+                    - generic [ref=e566]: Q2 avg
+                    - generic [ref=e567]: 9.4%
+                  - generic [ref=e568]:
+                    - generic [ref=e569]: Best
+                    - generic [ref=e570]: 6.1%
+                  - generic [ref=e571]:
+                    - generic [ref=e572]: Target
+                    - generic [ref=e573]: 7.0%
+          - generic [ref=e574]: rto.preview · live
+    - generic [ref=e577]:
+      - generic [ref=e578]:
+        - generic [ref=e579]:
+          - generic [ref=e580]: "03"
+          - generic [ref=e582]: Practice — 5 disciplines
+        - heading "What I analyse on a Tuesday." [level=2] [ref=e583]:
+          - text: What I
+          - generic:
+            - generic: analyse
+          - text: on a Tuesday.
+        - paragraph [ref=e584]: Five disciplines that overlap on almost every product brief. The order changes, but the core doesn't.
+        - generic [ref=e585]:
+          - generic [ref=e586]: ★ open to freelance
+          - generic [ref=e587]: ⌁ remote-friendly
+      - generic [ref=e588]:
+        - generic [ref=e589]:
+          - generic [ref=e590]: EXP.01
+          - generic [ref=e591]:
+            - generic [ref=e592]: Business Analysis
+            - generic [ref=e593]: Understanding users, documenting requirements, mapping workflows, and translating business goals into actionable product direction.
+          - link "See examples →" [ref=e594]:
+            - /url: "#work"
+        - generic [ref=e595]:
+          - generic [ref=e596]: EXP.02
+          - generic [ref=e597]:
+            - generic [ref=e598]: Product Thinking
+            - generic [ref=e599]: Defining problems, identifying user pain points, shaping solutions, and aligning features with business value.
+          - link "See examples →" [ref=e600]:
+            - /url: "#work"
+        - generic [ref=e601]:
+          - generic [ref=e602]: EXP.03
+          - generic [ref=e603]:
+            - generic [ref=e604]: Project Management
+            - generic [ref=e605]: Coordinating tasks, timelines, stakeholders, reviews, feedback loops, and execution across project phases.
+          - link "See examples →" [ref=e606]:
+            - /url: "#work"
+        - generic [ref=e607]:
+          - generic [ref=e608]: EXP.04
+          - generic [ref=e609]:
+            - generic [ref=e610]: UX / UI Design
+            - generic [ref=e611]: Creating wireframes, flows, interfaces, visual systems, and user-friendly digital experiences.
+          - link "See examples →" [ref=e612]:
+            - /url: "#work"
+        - generic [ref=e613]:
+          - generic [ref=e614]: EXP.05
+          - generic [ref=e615]:
+            - generic [ref=e616]: Creative Direction
+            - generic [ref=e617]: Using storytelling, layout, visuals, and brand thinking to make ideas easier to understand and remember.
+          - link "See examples →" [ref=e618]:
+            - /url: "#work"
+    - generic [ref=e619]:
+      - generic [ref=e620]:
+        - generic [ref=e621]: "04"
+        - generic [ref=e623]: Capabilities — 24 entries
+      - heading "Skills, in three columns." [level=2] [ref=e624]:
+        - text: Skills, in three
+        - text: columns.
+      - paragraph [ref=e625]: A working inventory of skills used across product briefs, case studies, and shipped work.
+      - generic [ref=e626]:
+        - generic [ref=e627]:
+          - generic [ref=e628]: PRODUCT · 08
+          - heading "Business & Product" [level=4] [ref=e629]
+          - list [ref=e630]:
+            - listitem [ref=e631]:
+              - generic [ref=e632]: "01"
+              - generic [ref=e633]: Requirement Gathering
+            - listitem [ref=e634]:
+              - generic [ref=e635]: "02"
+              - generic [ref=e636]: PRD Writing
+            - listitem [ref=e637]:
+              - generic [ref=e638]: "03"
+              - generic [ref=e639]: User Stories
+            - listitem [ref=e640]:
+              - generic [ref=e641]: "04"
+              - generic [ref=e642]: Acceptance Criteria
+            - listitem [ref=e643]:
+              - generic [ref=e644]: "05"
+              - generic [ref=e645]: Stakeholder Communication
+            - listitem [ref=e646]:
+              - generic [ref=e647]: "06"
+              - generic [ref=e648]: Process Mapping
+            - listitem [ref=e649]:
+              - generic [ref=e650]: "07"
+              - generic [ref=e651]: Market Research
+            - listitem [ref=e652]:
+              - generic [ref=e653]: "08"
+              - generic [ref=e654]: Competitor Research
+        - generic [ref=e655]:
+          - generic [ref=e656]: DELIVERY · 08
+          - heading "Execution & Delivery" [level=4] [ref=e657]
+          - list [ref=e658]:
+            - listitem [ref=e659]:
+              - generic [ref=e660]: "01"
+              - generic [ref=e661]: Agile / Scrum
+            - listitem [ref=e662]:
+              - generic [ref=e663]: "02"
+              - generic [ref=e664]: Sprint Planning
+            - listitem [ref=e665]:
+              - generic [ref=e666]: "03"
+              - generic [ref=e667]: JIRA Boards
+            - listitem [ref=e668]:
+              - generic [ref=e669]: "04"
+              - generic [ref=e670]: Task Tracking
+            - listitem [ref=e671]:
+              - generic [ref=e672]: "05"
+              - generic [ref=e673]: Documentation
+            - listitem [ref=e674]:
+              - generic [ref=e675]: "06"
+              - generic [ref=e676]: Review Presentations
+            - listitem [ref=e677]:
+              - generic [ref=e678]: "07"
+              - generic [ref=e679]: Stakeholder Updates
+            - listitem [ref=e680]:
+              - generic [ref=e681]: "08"
+              - generic [ref=e682]: QA Coordination
+        - generic [ref=e683]:
+          - generic [ref=e684]: CREATIVE · 08
+          - heading "Design & Creative" [level=4] [ref=e685]
+          - list [ref=e686]:
+            - listitem [ref=e687]:
+              - generic [ref=e688]: "01"
+              - generic [ref=e689]: Wireframing
+            - listitem [ref=e690]:
+              - generic [ref=e691]: "02"
+              - generic [ref=e692]: UI Layouts
+            - listitem [ref=e693]:
+              - generic [ref=e694]: "03"
+              - generic [ref=e695]: Design Systems
+            - listitem [ref=e696]:
+              - generic [ref=e697]: "04"
+              - generic [ref=e698]: Visual Storytelling
+            - listitem [ref=e699]:
+              - generic [ref=e700]: "05"
+              - generic [ref=e701]: Figma Prototyping
+            - listitem [ref=e702]:
+              - generic [ref=e703]: "06"
+              - generic [ref=e704]: Portfolio Presentation
+            - listitem [ref=e705]:
+              - generic [ref=e706]: "07"
+              - generic [ref=e707]: Creative Direction
+            - listitem [ref=e708]:
+              - generic [ref=e709]: "08"
+              - generic [ref=e710]: Poster / Web Design
+    - generic [ref=e711]:
+      - generic [ref=e712]:
+        - generic [ref=e713]:
+          - generic [ref=e714]:
+            - generic [ref=e715]: "03"
+            - generic [ref=e717]: Design & Art — off the clock
+          - heading "The other half of the studio." [level=2] [ref=e718]:
+            - text: The other half
+            - text: of the studio.
+          - paragraph [ref=e719]: Posters I make for no one in particular, photos I edit until the light feels right, and deck covers I redesign for the joy of laying things out. Drop real exports on any tile — these are placeholders waiting for the good stuff.
+        - generic [ref=e720]:
+          - generic [ref=e721]: All · 09
+          - generic [ref=e722]: Type
+          - generic [ref=e723]: Photo
+          - generic [ref=e724]: Decks
+      - generic [ref=e725]:
+        - generic [ref=e726]:
+          - img "Art tile 1" [ref=e727]
+          - generic [ref=e728]: poster.A1
+          - generic [ref=e730]: 3:4
+          - generic [ref=e731]: "[ TYPE POSTER · 01 ]"
+        - generic [ref=e732]:
+          - img "Art tile 2" [ref=e733]
+          - generic [ref=e734]: edit.warm.04
+          - generic [ref=e736]: 4:5
+          - generic [ref=e737]: "[ PHOTO EDIT · warm grade ]"
+        - generic [ref=e738]:
+          - img "Art tile 3" [ref=e739]
+          - generic [ref=e740]: deck.cover.07
+          - generic [ref=e742]: 16:9
+          - generic [ref=e743]: "[ DECK COVER · 09 ]"
+        - generic [ref=e744]:
+          - generic [ref=e746]: edit.cool.03
+          - generic [ref=e748]: 4:5
+          - generic [ref=e749]: "[ PHOTO EDIT · cool grade ]"
+        - generic [ref=e750]:
+          - generic [ref=e752]: video.01
+          - generic [ref=e754]: 9:16
+          - generic [ref=e755]: "[ VIDEO · 01 ]"
+        - generic [ref=e756]:
+          - img "Photo edit cool grade" [ref=e757]
+          - generic [ref=e758]: edit.cool.03
+          - generic [ref=e760]: 4:5
+          - generic [ref=e761]: "[ PHOTO EDIT · cool grade ]"
+        - generic [ref=e762]:
+          - generic [ref=e764]: video.03
+          - generic [ref=e766]: 9:16
+          - generic [ref=e767]: "[ VIDEO · 03 ]"
+        - generic [ref=e768]:
+          - generic [ref=e770]:
+            - text: "2026"
+            - generic [ref=e771]: portfolio season
+          - generic [ref=e772]: poster.C1
+          - generic [ref=e774]: 16:9
+          - generic [ref=e775]: "[ TYPE POSTER · 06 ]"
+        - generic [ref=e776]:
+          - generic [ref=e777]:
+            - generic [ref=e778]:
+              - generic [ref=e779]: brief · 02
+              - generic [ref=e780]: placeholder
+            - generic [ref=e781]:
+              - text: Deck
+              - emphasis [ref=e782]: cover — 03.
+            - generic [ref=e783]:
+              - generic [ref=e784]: drop a real export
+              - generic [ref=e786]: —
+          - generic [ref=e787]: deck.cover.18
+          - generic [ref=e789]: 16:9
+          - generic [ref=e790]: "[ DECK COVER · brief ]"
+      - generic [ref=e791]:
+        - generic [ref=e792]: ● 09 pieces · 2024 — 26
+        - generic [ref=e793]: "filed under: posters, edits, deck covers"
+        - generic [ref=e794]: not for sale · made for fun
+    - generic [ref=e795]:
+      - generic [ref=e796]:
+        - generic [ref=e797]: "06"
+        - generic [ref=e799]: Contact — let's chat
+      - heading "Let's build clear, useful, & beautifully structured digital products. ⌁ open · 2026" [level=2] [ref=e800]:
+        - text: Let's build clear, useful, & beautifully structured digital products.
+        - generic [ref=e801]: ⌁ open · 2026
+      - paragraph [ref=e802]: I'm open to BA, Product Analyst, Associate PM, UX / Product, and creative product roles. Also happy to collaborate on product ideas, case studies, dashboards, and early-stage concepts.
+      - generic [ref=e803]:
+        - link "Email hello@khushi.in ↗ fastest way to reach me" [ref=e804]:
+          - /url: mailto:hello@khushi.in
+          - generic [ref=e805]: Email
+          - generic [ref=e806]:
+            - generic [ref=e807]: hello@khushi.in
+            - generic [ref=e808]: ↗
+          - generic [ref=e809]: fastest way to reach me
+        - link "LinkedIn /in/khushi-solanki ↗ roles, network, history" [ref=e810]:
+          - /url: https://linkedin.com/in/khushi-solanki
+          - generic [ref=e811]: LinkedIn
+          - generic [ref=e812]:
+            - generic [ref=e813]: /in/khushi-solanki
+            - generic [ref=e814]: ↗
+          - generic [ref=e815]: roles, network, history
+        - link "Resume Download Resume ↓ BA · Product · UX" [ref=e816]:
+          - /url: Khushi-Solanki-Resume.pdf
+          - generic [ref=e817]: Resume
+          - generic [ref=e818]:
+            - generic [ref=e819]: Download Resume
+            - generic [ref=e820]: ↓
+          - generic [ref=e821]: BA · Product · UX
+        - link "Figma / Portfolio Workspace View workspace ↗ case studies + working files" [ref=e822]:
+          - /url: "#"
+          - generic [ref=e823]: Figma / Portfolio Workspace
+          - generic [ref=e824]:
+            - generic [ref=e825]: View workspace
+            - generic [ref=e826]: ↗
+          - generic [ref=e827]: case studies + working files
+  - contentinfo [ref=e828]:
+    - generic [ref=e829]:
+      - img [ref=e830]
+      - generic [ref=e832]: Khushi Solanki — Portfolio 2026
+    - generic [ref=e833]:
+      - generic [ref=e834]: EST. 2024
+      - generic [ref=e835]: Made with care in Mumbai
+      - generic [ref=e836]: v2.0
