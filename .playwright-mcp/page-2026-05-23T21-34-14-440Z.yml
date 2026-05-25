@@ -1,0 +1,214 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "K·S" [ref=e4] [cursor=pointer]:
+      - /url: ../Portfolio.html
+      - text: K
+      - emphasis [ref=e5]: ·
+      - text: S
+    - generic [ref=e6]: Nudge · Case Study · 2025
+    - link "All work" [ref=e8] [cursor=pointer]:
+      - /url: ../Portfolio.html#work
+      - img [ref=e9]
+      - text: All work
+  - generic [ref=e11]:
+    - generic [ref=e12]:
+      - generic [ref=e13]: Commerce Infrastructure · PM + BA · 2025
+      - heading "Buy where intent happens." [level=1] [ref=e15]:
+        - text: Buy where
+        - emphasis [ref=e16]: intent
+        - text: happens.
+      - paragraph [ref=e17]: Nudge brings checkout into the moment of decision — detecting purchase intent inside content surfaces and reducing the jump from discovery to purchase.
+      - generic [ref=e18]:
+        - generic [ref=e19]: PM + BA
+        - generic [ref=e20]: 0 → 1
+        - generic [ref=e21]: 8 Weeks
+        - generic [ref=e22]: Commerce Infra
+      - generic [ref=e23]:
+        - link "View Prototype →" [ref=e24] [cursor=pointer]:
+          - /url: "#"
+        - link "View PRD" [ref=e25] [cursor=pointer]:
+          - /url: "#"
+        - link "Full Case Study" [ref=e26] [cursor=pointer]:
+          - /url: "#"
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]: Editorial · Fashion · Tech
+        - generic [ref=e30]: The sneaker you've been waiting for is finally here
+        - generic [ref=e31]: product image
+        - generic [ref=e34]:
+          - generic [ref=e35]: Runner Pro X — Black
+          - generic [ref=e36]: $189.00
+      - generic [ref=e37]: Intent detected
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - generic [ref=e41]: Quick checkout
+          - generic [ref=e42]: ✕
+        - generic [ref=e43]:
+          - generic [ref=e44]: 👟
+          - generic [ref=e45]:
+            - generic [ref=e46]: Runner Pro X
+            - generic [ref=e47]: $189.00
+        - generic [ref=e48]:
+          - generic [ref=e49]: Ship to
+          - generic [ref=e50]: 123 Main St, NY
+        - generic [ref=e51]:
+          - generic [ref=e52]: Pay with
+          - generic [ref=e53]: •••• 4291
+        - generic [ref=e54]:
+          - generic [ref=e55]: Size
+          - generic [ref=e56]: Select →
+        - button "Confirm purchase →" [ref=e57]
+  - generic [ref=e59]:
+    - generic [ref=e60]:
+      - generic [ref=e61]: 70%+
+      - generic [ref=e62]: High-intent shoppers drop at the redirect
+    - generic [ref=e63]:
+      - generic [ref=e64]: −30%
+      - generic [ref=e65]: Target abandonment reduction
+    - generic [ref=e66]:
+      - generic [ref=e67]: <2 min
+      - generic [ref=e68]: Intent to confirmed purchase
+    - generic [ref=e69]:
+      - generic [ref=e70]: 8 wks
+      - generic [ref=e71]: Concept to spec handoff
+  - generic [ref=e73]:
+    - generic [ref=e74]: The Problem
+    - heading "The handoff kills intent." [level=2] [ref=e75]
+    - paragraph [ref=e76]: When a buyer clicks a product, they're sent away. That redirect is where 70% of high-intent shoppers disappear — not because they stopped wanting the product, but because the infrastructure made them work for it.
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - generic [ref=e79]: ↩
+        - generic [ref=e80]: Context switch
+        - generic [ref=e81]: Buyer leaves the surface. Momentum breaks at the moment of intent.
+      - generic [ref=e82]:
+        - generic [ref=e83]: ⇄
+        - generic [ref=e84]: Repeated effort
+        - generic [ref=e85]: Re-enter details every time. No continuity, no memory across surfaces.
+      - generic [ref=e86]:
+        - generic [ref=e87]: ✕
+        - generic [ref=e88]: Form fatigue
+        - generic [ref=e89]: Checkout forms destroy intent that content creates in seconds.
+  - generic [ref=e91]:
+    - generic [ref=e92]: The Solution
+    - heading "Checkout moves to the decision." [level=2] [ref=e93]
+    - paragraph [ref=e94]: Instead of pulling the buyer to a checkout page, Nudge brings the checkout layer to the moment of decision — embedded, pre-filled, invisible to the host surface.
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - generic [ref=e97]: "01"
+        - generic [ref=e98]: Content surface
+        - generic [ref=e99]: Buyer browses. Product visible in context.
+        - generic [ref=e100]: →
+      - generic [ref=e101]:
+        - generic [ref=e102]: "02"
+        - generic [ref=e103]: Intent signal
+        - generic [ref=e104]: Hover or tap triggers the checkout layer.
+        - generic [ref=e105]: →
+      - generic [ref=e106]:
+        - generic [ref=e107]: "03"
+        - generic [ref=e108]: Embedded panel
+        - generic [ref=e109]: Checkout appears inline. Pre-filled. No redirect.
+        - generic [ref=e110]: →
+      - generic [ref=e111]:
+        - generic [ref=e112]: "04"
+        - generic [ref=e113]: One-tap confirm
+        - generic [ref=e114]: Order done. Buyer stays in context.
+  - generic [ref=e116]:
+    - generic [ref=e117]: Product Moments
+    - heading "Five screens. Zero redirects." [level=2] [ref=e118]
+    - paragraph [ref=e119]: Scroll or drag to trace the buyer journey from broken redirect to confirmed order inline.
+    - generic [ref=e121]:
+      - generic [ref=e122]:
+        - generic [ref=e123]:
+          - generic [ref=e124]: ◫
+          - generic [ref=e125]: Problem state
+        - generic [ref=e126]:
+          - generic [ref=e127]: 01 · Problem
+          - generic [ref=e128]: The broken redirect
+          - generic [ref=e129]: Buyer clicks link, sent away. Intent lost at handoff.
+      - generic [ref=e130]:
+        - generic [ref=e131]:
+          - generic [ref=e132]: ◫
+          - generic [ref=e133]: Intent detected
+        - generic [ref=e134]:
+          - generic [ref=e135]: 02 · Intent
+          - generic [ref=e136]: Nudge activates
+          - generic [ref=e137]: Hover or tap triggers the embed. No redirect.
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - generic [ref=e140]: ◫
+          - generic [ref=e141]: Pre-filled checkout
+        - generic [ref=e142]:
+          - generic [ref=e143]: 03 · Checkout
+          - generic [ref=e144]: Zero re-entry
+          - generic [ref=e145]: Saved address and payment pre-loaded.
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - generic [ref=e148]: ◫
+          - generic [ref=e149]: Order confirmed
+        - generic [ref=e150]:
+          - generic [ref=e151]: 04 · Confirmed
+          - generic [ref=e152]: Done. Still in context.
+          - generic [ref=e153]: Confirmation inline. Buyer never left the page.
+      - generic [ref=e154]:
+        - generic [ref=e155]:
+          - generic [ref=e156]: ◫
+          - generic [ref=e157]: Merchant dashboard
+        - generic [ref=e158]:
+          - generic [ref=e159]: 05 · Dashboard
+          - generic [ref=e160]: Attribution, not guesswork
+          - generic [ref=e161]: Revenue per embed, abandonment by surface.
+  - generic [ref=e163]:
+    - generic [ref=e164]: PM / BA Thinking
+    - heading "Decisions behind the product." [level=2] [ref=e165]
+    - generic [ref=e166]:
+      - generic [ref=e167]:
+        - generic [ref=e168]: "01"
+        - generic [ref=e169]: Precision over recall
+        - generic [ref=e170]: Show Nudge only when intent is high. Trigger logic was the core product decision.
+      - generic [ref=e171]:
+        - generic [ref=e172]: "02"
+        - generic [ref=e173]: Trust inside an embed
+        - generic [ref=e174]: Buyers need merchant branding and security signals. Anonymous panels see zero completions.
+      - generic [ref=e175]:
+        - generic [ref=e176]: "03"
+        - generic [ref=e177]: Platform constraints first
+        - generic [ref=e178]: CSP, iframe sandboxing, cookie deprecation — spec-level decisions, not afterthoughts.
+      - generic [ref=e179]:
+        - generic [ref=e180]: "04"
+        - generic [ref=e181]: Scope discipline
+        - generic [ref=e182]: Cut loyalty hooks in week 2. Saved four weeks of scope negotiation.
+  - generic [ref=e184]:
+    - generic [ref=e185]: Go deeper
+    - heading "The full work is documented." [level=2] [ref=e186]
+    - paragraph [ref=e187]: This page is the overview. The PRD, full case study, and prototype are linked below.
+    - generic [ref=e188]:
+      - link "📄 Document View PRD Full product requirements — problem definition, embed spec, API contract, and metric framework. Open PRD →" [ref=e189] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e190]: 📄
+        - generic [ref=e191]: Document
+        - generic [ref=e192]: View PRD
+        - generic [ref=e193]: Full product requirements — problem definition, embed spec, API contract, and metric framework.
+        - generic [ref=e194]: Open PRD →
+      - link "📝 Case Study Read Full Case Study Discovery, research, interviews, and the full decision log from 0 to spec. Read case study →" [ref=e195] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e196]: 📝
+        - generic [ref=e197]: Case Study
+        - generic [ref=e198]: Read Full Case Study
+        - generic [ref=e199]: Discovery, research, interviews, and the full decision log from 0 to spec.
+        - generic [ref=e200]: Read case study →
+      - link "🔗 Prototype Open Prototype Interactive Figma — checkout flow, merchant dashboard, and onboarding walkthrough. View prototype →" [ref=e201] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e202]: 🔗
+        - generic [ref=e203]: Prototype
+        - generic [ref=e204]: Open Prototype
+        - generic [ref=e205]: Interactive Figma — checkout flow, merchant dashboard, and onboarding walkthrough.
+        - generic [ref=e206]: View prototype →
+  - contentinfo [ref=e207]:
+    - generic [ref=e208]: Khushi Solanki — Nudge · 2025
+    - generic [ref=e209]:
+      - link "All work" [ref=e210] [cursor=pointer]:
+        - /url: ../Portfolio.html#work
+      - link "Contact" [ref=e211] [cursor=pointer]:
+        - /url: ../Portfolio.html#contact
+      - link "Email" [ref=e212] [cursor=pointer]:
+        - /url: mailto:solankikhushi2682@gmail.com
