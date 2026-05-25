@@ -2961,11 +2961,22 @@ html { scroll-behavior: auto; }
 
 /* ── Screen 3: Board ────────────────────────────────────────────── */
 .process-board-wrap {
-  padding: 96px var(--pad-x) 112px;
+  padding: 0 var(--pad-x) 96px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 56px;
+}
+
+/* Branch diagram: wavy trunk → 3 child nodes */
+.board-branch {
+  width: 100%;
+  max-width: 680px;
+}
+.board-branch svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
 }
 .process-board-label {
   display: inline-flex;

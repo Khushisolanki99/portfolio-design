@@ -245,92 +245,94 @@ function Process() {
         </div>
       </div>
 
-      {/* Screen 3 — Structured solution board */}
+      {/* Screen 3 — Branch output diagram */}
       <div className="process-board-wrap">
-        <div className="process-board-label reveal">
-          <span className="dot" />
-          <span>The structured solution</span>
-          <span className="num">/ 02</span>
-        </div>
+        <div className="board-branch reveal" aria-hidden="true">
+          <svg viewBox="0 0 680 370" xmlns="http://www.w3.org/2000/svg">
 
-        <div className="process-board">
-          <svg className="board-connectors" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M 180 90 C 260 140, 320 160, 420 200" stroke="rgba(24,21,19,0.35)" strokeWidth="1" strokeDasharray="3 4" fill="none" />
-            <path d="M 560 230 C 640 240, 720 220, 820 200" stroke="rgba(24,21,19,0.35)" strokeWidth="1" strokeDasharray="3 4" fill="none" />
-            <path d="M 360 320 C 380 380, 380 420, 360 470" stroke="rgba(24,21,19,0.35)" strokeWidth="1" strokeDasharray="3 4" fill="none" />
+            {/* ── Orange wavy trunk ── */}
+            <path d="M 340,0 C 348,18 332,42 341,62 S 334,76 340,85"
+                  stroke="var(--accent)" strokeWidth="3" fill="none" strokeLinecap="round" />
+            <circle cx="340" cy="85" r="4.5" fill="var(--accent)" />
+
+            {/* ── Three wavy branches ── */}
+            <path d="M 340,85 C 300,110 220,132 176,160 S 128,180 112,187"
+                  stroke="var(--accent)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <path d="M 340,85 C 348,110 332,134 341,158 S 334,178 340,187"
+                  stroke="var(--accent)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <path d="M 340,85 C 380,110 460,132 504,160 S 552,180 568,187"
+                  stroke="var(--accent)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+
+            {/* ══ Node 1 · PRD · hand-drawn document  (130 × 150 px) ══ */}
+            {/* x: 47–177  y: 187–337  dog-ear at x=155 */}
+            <path d="M 49,188 C 48,187 47,188 47,190 L 47,335 C 47,337 49,338 51,337
+                     L 175,337 L 175,210 L 155,188 Z"
+                  fill="none" stroke="var(--ink)" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M 155,188 C 155,196 156,208 155,210 L 175,210"
+                  fill="none" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.58" />
+            <path d="M 60,232 C 66,231 96,233 128,232"  fill="none" stroke="var(--ink)" strokeWidth="2"   strokeLinecap="round" opacity="0.52"/>
+            <path d="M 60,248 C 67,247 100,249 142,248"  fill="none" stroke="var(--ink)" strokeWidth="2"   strokeLinecap="round" opacity="0.52"/>
+            <path d="M 60,264 C 65,263 98,265 136,264"  fill="none" stroke="var(--ink)" strokeWidth="2"   strokeLinecap="round" opacity="0.52"/>
+            <path d="M 60,280 C 66,279 96,281 125,280"  fill="none" stroke="var(--ink)" strokeWidth="2"   strokeLinecap="round" opacity="0.52"/>
+            <path d="M 60,296 C 64,295 91,297 112,296"  fill="none" stroke="var(--ink)" strokeWidth="1.8" strokeLinecap="round" opacity="0.38"/>
+
+            {/* ══ Node 2 · Workflow · hand-drawn process boxes (130 × 155 px) ══ */}
+            {/* x: 275–405  y: 187–342 */}
+            {/* Box 1 */}
+            <path d="M 277,189 C 276,188 274,188 274,190 L 274,226 C 274,228 276,229 278,229
+                     L 402,229 C 404,229 406,228 405,226 L 406,190 C 406,188 404,187 402,188 Z"
+                  fill="none" stroke="var(--ink)" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M 340,229 C 342,237 337,243 340,249"
+                  fill="none" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M 333,246 L 340,253 L 347,246"
+                  fill="none" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.68"/>
+            {/* Box 2 */}
+            <path d="M 277,254 C 276,253 274,253 274,255 L 274,291 C 274,293 276,294 278,294
+                     L 402,294 C 404,294 406,293 405,291 L 406,255 C 406,253 404,252 402,253 Z"
+                  fill="none" stroke="var(--ink)" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M 340,294 C 342,302 337,308 340,314"
+                  fill="none" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M 333,311 L 340,318 L 347,311"
+                  fill="none" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.68"/>
+            {/* Box 3 */}
+            <path d="M 277,319 C 276,318 274,318 274,320 L 274,342 C 274,344 276,345 278,345
+                     L 402,345 C 404,345 406,344 405,342 L 406,320 C 406,318 404,317 402,318 Z"
+                  fill="none" stroke="var(--ink)" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+
+            {/* ══ Node 3 · Wireframe · hand-drawn screen (130 × 150 px) ══ */}
+            {/* x: 503–633  y: 187–337 */}
+            <path d="M 505,189 C 504,188 502,188 502,190 L 502,335 C 502,337 504,338 506,337
+                     L 631,337 C 633,337 634,336 634,334 L 635,190 C 635,188 633,187 631,188 Z"
+                  fill="none" stroke="var(--ink)" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+            {/* Nav bar */}
+            <path d="M 502,206 C 524,205 568,207 635,206"
+                  fill="none" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round" opacity="0.62"/>
+            {/* Headline block */}
+            <path d="M 514,218 C 518,217 552,219 582,218 L 582,230 C 580,231 550,231 515,230 Z"
+                  fill="none" stroke="var(--ink)" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" opacity="0.52"/>
+            {/* Content text lines */}
+            <path d="M 514,242 C 520,241 560,243 608,242"
+                  fill="none" stroke="var(--ink)" strokeWidth="1.8" strokeLinecap="round" opacity="0.44"/>
+            <path d="M 514,257 C 519,256 556,258 592,257"
+                  fill="none" stroke="var(--ink)" strokeWidth="1.8" strokeLinecap="round" opacity="0.44"/>
+            <path d="M 514,272 C 518,271 548,273 572,272"
+                  fill="none" stroke="var(--ink)" strokeWidth="1.8" strokeLinecap="round" opacity="0.44"/>
+            {/* CTA button */}
+            <path d="M 514,287 C 513,286 511,287 511,289 L 511,302 C 511,304 513,305 515,305
+                     L 618,305 C 620,305 621,304 621,302 L 622,289 C 622,287 620,286 618,287 Z"
+                  fill="none" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.56"/>
+
+            {/* ── Labels ── */}
+            <text x="112" y="358" textAnchor="middle"
+                  fontFamily="Special Elite, Courier New, monospace"
+                  fontSize="13" letterSpacing="0.12em" fill="var(--ink)" opacity="0.72">PRD</text>
+            <text x="340" y="364" textAnchor="middle"
+                  fontFamily="Special Elite, Courier New, monospace"
+                  fontSize="13" letterSpacing="0.12em" fill="var(--ink)" opacity="0.72">WORKFLOW</text>
+            <text x="568" y="358" textAnchor="middle"
+                  fontFamily="Special Elite, Courier New, monospace"
+                  fontSize="13" letterSpacing="0.12em" fill="var(--ink)" opacity="0.72">WIREFRAME</text>
           </svg>
-
-          <div className="b-card b-sticky b-sticky-1 reveal" style={{ transitionDelay: "0ms" }}>
-            <span className="b-sticky-pin" />
-            <div className="b-k">Problem</div>
-            <div className="b-body">First-time users drop off in onboarding at step 3 of 5.</div>
-            <div className="b-sticky-foot">↳ user research, n=12</div>
-          </div>
-
-          <div className="b-card b-sticky b-sticky-2 reveal" style={{ transitionDelay: "80ms" }}>
-            <span className="b-sticky-pin" />
-            <div className="b-k">Goal</div>
-            <div className="b-body">Complete signup in under 90 seconds with zero blockers.</div>
-            <div className="b-sticky-foot">v1.0 · sprint 14</div>
-          </div>
-
-          <div className="b-badge reveal" style={{ transitionDelay: "160ms" }}>
-            <span className="b-badge-tag">PRD · 04</span>
-            <span className="b-badge-sub">last edit 2d</span>
-          </div>
-
-          <div className="b-card b-flow reveal" style={{ transitionDelay: "240ms" }}>
-            <div className="b-card-head">
-              <span className="b-k">User flow</span>
-              <span className="b-mini">4 steps · 0 dead-ends</span>
-            </div>
-            <div className="b-flow-row">
-              <div className="b-node"><span className="n">01</span><span className="t">Land</span></div>
-              <span className="b-flow-arrow">→</span>
-              <div className="b-node"><span className="n">02</span><span className="t">Try</span></div>
-              <span className="b-flow-arrow">→</span>
-              <div className="b-node"><span className="n">03</span><span className="t">Verify</span></div>
-              <span className="b-flow-arrow">→</span>
-              <div className="b-node accent"><span className="n">04</span><span className="t">Done</span></div>
-            </div>
-          </div>
-
-          <div className="b-card b-wire reveal" style={{ transitionDelay: "320ms" }}>
-            <div className="b-card-head">
-              <span className="b-k">Wireframe</span>
-              <span className="b-mini">screen 03 · mobile</span>
-            </div>
-            <div className="b-wire-frame">
-              <div className="b-wire-top">
-                <span className="b-wire-dot" /><span className="b-wire-dot" /><span className="b-wire-dot" />
-              </div>
-              <div className="b-wire-stack">
-                <div className="b-wire-line w-80" />
-                <div className="b-wire-line w-55" />
-                <div className="b-wire-line w-70" />
-                <div className="b-wire-line w-40" />
-                <div className="b-wire-cta">Continue →</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="b-card b-prd reveal" style={{ transitionDelay: "400ms" }}>
-            <div className="b-card-head">
-              <span className="b-k">Requirements</span>
-              <span className="b-mini">8 functional · 3 NFR · all owned</span>
-            </div>
-            <ul className="b-checklist">
-              <li><span className="b-check" />User stories &amp; acceptance criteria</li>
-              <li><span className="b-check" />Edge cases &amp; error states mapped</li>
-              <li><span className="b-check" />Telemetry &amp; success metrics defined</li>
-              <li><span className="b-check" />Rollout plan + fallback path agreed</li>
-            </ul>
-          </div>
-
-          <div className="b-outcome reveal" style={{ transitionDelay: "480ms" }}>
-            <span className="b-outcome-n">+24%</span>
-            <span className="b-outcome-l">activation, week 1</span>
-          </div>
         </div>
       </div>
 
