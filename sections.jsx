@@ -29,17 +29,17 @@ function Badge({ children }) {
 function Hero() {
   const objects = [
     { id: "cd",       src: "images/cd.png",       alt: "CD case",
-      style: { top: "-9%",    left: "-4%",   width: "17%", aspectRatio: "1/1",  transform: "rotate(-22deg)" } },
+      style: { top: "12%",    left: "-3%",   width: "11%", aspectRatio: "1/1",  transform: "rotate(-22deg)" } },
     { id: "keyboard", src: "images/keyboard.png", alt: "Keyboard",
-      style: { top: "-15%",   right: "-5%",  width: "23%", aspectRatio: "3/4",  transform: "rotate(14deg)"  } },
+      style: { top: "-20%",   right: "-6%",  width: "30%", aspectRatio: "3/4",  transform: "rotate(65deg)"  } },
     { id: "earbuds",  src: "images/earbuds.png",  alt: "Earbuds",
       style: { top: "-7%",    left: "44%",   width: "11%", aspectRatio: "1/1",  transform: "rotate(28deg)"  } },
     { id: "latte",    src: "images/latte.png",    alt: "Iced latte",
-      style: { top: "-12%",   left: "16%",   width: "13%", aspectRatio: "2/3",  transform: "rotate(-12deg)" } },
+      style: { top: "22%",    left: "8%",    width: "21%", aspectRatio: "2/3",  transform: "rotate(3deg)"   } },
     { id: "radio",    src: "images/radio.png",    alt: "Radio",
-      style: { bottom: "-7%", right: "-6%",  width: "26%", aspectRatio: "4/5",  transform: "rotate(9deg)"   } },
+      style: { bottom: "-8%", right: "-8%",  width: "24%", aspectRatio: "4/5",  transform: "rotate(5deg)"   } },
     { id: "notebook", src: "images/notebook.png", alt: "Notebook",
-      style: { bottom: "-6%", left: "-4%",   width: "17%", aspectRatio: "3/4",  transform: "rotate(-17deg)" } },
+      style: { bottom: "-5%", left: "-5%",   width: "20%", aspectRatio: "3/4",  transform: "rotate(-17deg)" } },
   ];
 
   return (
@@ -48,11 +48,10 @@ function Hero() {
         <div className="brand">
           <div className="mark"><KMark size={28} /></div>
           <div className="name">
-            khushi<br /><b>solanki</b>
+            Khushi <b>Solanki</b>
             <span>business analyst · product · creative direction</span>
           </div>
         </div>
-        <div className="brand-mark-corner"><KMark size={36} /></div>
       </div>
 
       <div className="hero-stage">
@@ -69,32 +68,10 @@ function Hero() {
           </div>
         ))}
 
-        <div className="hero-obj hero-slot" style={{ top: "34%", left: "2%", width: "14%", aspectRatio: "1/1", transform: "rotate(-8deg)" }}>
-          <image-slot
-            id="hero-dobie-left"
-            shape="rect"
-            fit="contain"
-            placeholder="Doberman pup ↓"
-            style={{ width: "100%", height: "100%", background: "transparent", border: "1px dashed rgba(239,233,221,0.22)" }}
-          ></image-slot>
-        </div>
-        <div className="hero-obj hero-slot" style={{ top: "42%", right: "3%", width: "15%", aspectRatio: "1/1", transform: "rotate(11deg)" }}>
-          <image-slot
-            id="hero-dobie-right"
-            shape="rect"
-            fit="contain"
-            placeholder="Doberman pup ↓"
-            style={{ width: "100%", height: "100%", background: "transparent", border: "1px dashed rgba(239,233,221,0.22)" }}
-          ></image-slot>
-        </div>
-
         <div className="hero-center">
           <div className="hero-wordmark">
             <span className="line">BA / Product</span>
             <span className="line accent">Portfolio</span>
-            <span className="ml-sticker">
-              <span className="sticker">KHUSHI SOLANKI · 2026</span>
-            </span>
           </div>
           <p className="hero-tagline">
             PRDs, flows, screens, dashboards, and creative systems for
@@ -146,7 +123,7 @@ function Marquee() {
         {items.map((w, i) => (
           <span key={i} style={{ display: "inline-flex", alignItems: "center", gap: 50 }}>
             <span>{w.t}</span>
-            <span className="sep"><KMark size={32} color="var(--accent)" /></span>
+            <span className="sep" style={{ width: 10, height: 10, borderRadius: "50%", background: "var(--accent)", flexShrink: 0 }} />
           </span>
         ))}
       </div>
@@ -155,182 +132,129 @@ function Marquee() {
 }
 
 /* ============================================================ */
-/* ABOUT — story-driven                                          */
+/* ABOUT — editorial poster (reference-matched)                  */
 /* ============================================================ */
 function About() {
   return (
     <section id="about" className="about bg-grid-paper" data-screen-label="01 About">
-      <div className="about-lang">
-        <span className="on">ENG</span> / <span>HIN</span>
-      </div>
+      <div className="ae-wrap">
 
-      <div className="about-grid">
-        {/* Portrait — freestanding cutout with orange silhouette outline. */}
-        <div className="about-portrait">
-          <img
-            className="cutout"
-            src="images/khushi.png"
-            alt="Khushi Solanki — portrait"
-          />
-          <span className="about-tag sticker tilt-l">● PORTRAIT.01 · CUTOUT</span>
-          <span className="about-hecho sticker lg tilt-r">✎ MADE BY KHUSHI</span>
+        {/* Portrait — left, full height */}
+        <div className="ae-portrait">
+          <img className="cutout" src="images/khushi.png" alt="Khushi Solanki — portrait" />
+          <span className="sticker ae-hecho tilt-r">✎ MADE BY KHUSHI</span>
+          <span className="sticker ae-ptag tilt-l">● PORTRAIT.01 · CUTOUT</span>
         </div>
 
-        {/* Right column — story-driven */}
-        <div>
-          <h1 className="about-head">
-            Hi, I'm <span className="accent">Khu</span>shi.
-            <span className="ny-tag">
+        {/* Content — right */}
+        <div className="ae-content">
+
+          {/* Heading + location stickers */}
+          <div className="ae-head-zone">
+            <h1 className="ae-head">Hi, I'm <span className="accent">Khushi</span> Solanki</h1>
+            <div className="ae-loc-stickers">
               <span className="sticker tilt-r">NEW DELHI</span>
               <span className="sticker tilt-l">INDIA</span>
-            </span>
-          </h1>
-
-          <div className="about-story">
-            <p>
-              I work at the intersection of <b>business analysis, product thinking,
-              and visual storytelling</b>. I like taking messy problems, turning them
-              into clear requirements, mapping the user journey, and shaping screens
-              that make the solution easier to understand.
-            </p>
-            <p>
-              My work usually starts with a <em>problem statement</em>, a few
-              uncomfortable questions, and a blank flow. From there, I build PRDs,
-              user stories, wireframes, dashboards, and product concepts that are
-              <b> structured enough for teams</b> and <b>clear enough for users</b>.
-            </p>
-            <p>
-              Off the clock, I'm usually editing visuals, exploring web layouts,
-              making posters, or redesigning something nobody asked me to redesign.
-            </p>
-          </div>
-
-          {/* What I ship — BA credibility marker */}
-          <div className="about-ships">
-            <span className="lbl">What I ship</span>
-            <div className="items">
-              <span>PRDs</span><span>·</span>
-              <span>User flows</span><span>·</span>
-              <span>Requirement specs</span><span>·</span>
-              <span>Journey maps</span><span>·</span>
-              <span>Wireframes</span><span>·</span>
-              <span>Review decks</span><span>·</span>
-              <span>Ops playbooks</span>
             </div>
           </div>
 
-          {/* Principles */}
-          <div className="about-principles">
-            <div className="chip-card"><span className="n">01</span><span>Understand the problem before designing the solution.</span></div>
-            <div className="chip-card"><span className="n">02</span><span>Turn ambiguity into requirements, flows, and decisions.</span></div>
-            <div className="chip-card"><span className="n">03</span><span>Make the first version useful before making it beautiful.</span></div>
-            <div className="chip-card"><span className="n">04</span><span>Use design to communicate, not decorate.</span></div>
-          </div>
+          {/* Three-column middle: bio | experience | sidebar */}
+          <div className="ae-middle">
 
-          {/* Experience + Education timeline */}
-          <div className="about-time">
-            <div className="about-time-block">
-              <div className="eyebrow-light"><span className="num">A.01</span><span className="dot" /><span>Experience</span></div>
-              <div className="about-time-list">
-                <div className="trow">
-                  <span className="yr">2024<small>now</small></span>
-                  <div className="t">
-                    <div className="role">Business Analyst</div>
-                    <div className="co">[Company Name]</div>
-                    <div className="d">Worked on product requirements, process mapping, stakeholder coordination, and internal tools.</div>
-                  </div>
+            {/* Col 1: Intro bio */}
+            <div className="ae-bio">
+              <p>
+                I work at the intersection of <b>business analysis, product thinking,
+                and visual storytelling</b>. I take messy problems, turn them into clear
+                requirements, map the user journey, and shape screens that make the
+                solution easier to understand.
+              </p>
+              <p>
+                My work starts with a <em>problem statement</em>, a few uncomfortable
+                questions, and a blank flow. From there I build PRDs, user stories,
+                wireframes and dashboards that are <b>structured enough for teams</b> and
+                <b> clear enough for users</b>.
+              </p>
+              <div className="ae-ships">
+                <span className="lbl">What I ship →</span>
+                PRDs · User flows · Specs · Journey maps · Wireframes · Decks · Playbooks
+              </div>
+            </div>
+
+            {/* Col 2: Experience */}
+            <div className="ae-exp-col">
+              <div className="ae-sec-title">Experience</div>
+              <div className="ae-timeline">
+                <div className="ae-entry">
+                  <div className="ae-yr ac">2024<small>now</small></div>
+                  <div><div className="ae-co">[Company Name]</div><div className="ae-role">Business Analyst</div></div>
                 </div>
-                <div className="trow">
-                  <span className="yr">2023<small>24</small></span>
-                  <div className="t">
-                    <div className="role">Product / Project Analyst</div>
-                    <div className="co">[Company Name]</div>
-                    <div className="d">Supported PRDs, sprint planning, user flows, and feature documentation.</div>
-                  </div>
+                <div className="ae-entry">
+                  <div className="ae-yr ac">2023<small>24</small></div>
+                  <div><div className="ae-co">[Company Name]</div><div className="ae-role">Product / Project Analyst</div></div>
                 </div>
-                <div className="trow">
-                  <span className="yr">2022<small>23</small></span>
-                  <div className="t">
-                    <div className="role">Brand &amp; Ops</div>
-                    <div className="co">[Company Name]</div>
-                    <div className="d">Worked across content planning, visual direction, operations, and delivery.</div>
-                  </div>
+                <div className="ae-entry">
+                  <div className="ae-yr ac">2022<small>23</small></div>
+                  <div><div className="ae-co">[Company Name]</div><div className="ae-role">Brand &amp; Ops</div></div>
                 </div>
               </div>
             </div>
 
-            <div className="about-time-block">
-              <div className="eyebrow-light"><span className="num">A.02</span><span className="dot" /><span>Education</span></div>
-              <div className="about-time-list">
-                <div className="trow gr">
-                  <span className="yr">2019<small>23</small></span>
-                  <div className="t">
-                    <div className="role">BBA, Business Analytics</div>
-                    <div className="co">[University Name]</div>
+            {/* Col 3: Education + Focus + Tools */}
+            <div className="ae-sidebar">
+              <div className="ae-sb-block">
+                <div className="ae-sec-title">Education</div>
+                <div className="ae-timeline">
+                  <div className="ae-entry">
+                    <div className="ae-yr gr">2019<small>23</small></div>
+                    <div><div className="ae-co">BBA, Business Analytics</div><div className="ae-role">[University Name]</div></div>
                   </div>
-                </div>
-                <div className="trow gr">
-                  <span className="yr">2024</span>
-                  <div className="t">
-                    <div className="role">UX Certification</div>
-                    <div className="co">Interaction Design Foundation</div>
+                  <div className="ae-entry">
+                    <div className="ae-yr gr">2024</div>
+                    <div><div className="ae-co">UX Certification</div><div className="ae-role">Interaction Design Foundation</div></div>
                   </div>
                 </div>
               </div>
+              <div className="ae-sb-block">
+                <div className="ae-sec-title">Focus</div>
+                <ul className="ae-focus-list">
+                  <li>Business Analysis</li>
+                  <li>Product Thinking</li>
+                  <li>UX / Wireframing</li>
+                  <li>Creative Direction</li>
+                </ul>
+              </div>
+              <div className="ae-sb-block">
+                <div className="ae-sec-title">Tools</div>
+                <div className="ae-tag-cloud">
+                  {["Figma","JIRA","Notion","Miro","Excel","Power BI","Canva","Adobe Suite"].map(t => (
+                    <span key={t} className="ae-tag">{t}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Polaroid collage — bottom */}
+          <div className="ae-collage">
+            <div className="ae-poly tilt-a">
+              <image-slot id="about-poly-1" shape="rect" placeholder="workspace ↓"
+                style={{width:"100%",aspectRatio:"4/3",background:"#d8cfc0"}}></image-slot>
+              <div className="ae-cap">workspace ★</div>
+            </div>
+            <div className="ae-poly tilt-b">
+              <image-slot id="about-poly-2" shape="rect" placeholder="sketches ↓"
+                style={{width:"100%",aspectRatio:"4/3",background:"#d8cfc0"}}></image-slot>
+              <div className="ae-cap">bocetos ♡</div>
+            </div>
+            <div className="ae-poly tilt-c">
+              <image-slot id="about-poly-3" shape="rect" placeholder="off-hours ↓"
+                style={{width:"100%",aspectRatio:"4/3",background:"#d8cfc0"}}></image-slot>
+              <div className="ae-cap">coffee ✰</div>
             </div>
           </div>
 
-          {/* Tools on rotation card */}
-          <div className="about-tools-card">
-            <div className="head">
-              <span className="eyebrow-light"><span className="num">A.03</span><span className="dot" /><span>Tools on rotation</span></span>
-              <span className="hint">used recently, on real projects</span>
-            </div>
-            <div className="grid">
-              <span>Figma</span>
-              <span>JIRA</span>
-              <span>Notion</span>
-              <span>Miro</span>
-              <span>Excel</span>
-              <span>Power BI</span>
-              <span>Canva</span>
-              <span>Adobe Suite</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Polaroid strip — user drops real images on these */}
-      <div className="about-polaroids">
-        <div className="poly tilt-a">
-          <image-slot
-            id="about-poly-1"
-            shape="rect"
-            fit="cover"
-            placeholder="workspace ↓"
-            style={{ width: "100%", aspectRatio: "4/5", background: "#e5dfd1" }}
-          ></image-slot>
-          <div className="cap hand">workspace ★</div>
-        </div>
-        <div className="poly tilt-b">
-          <image-slot
-            id="about-poly-2"
-            shape="rect"
-            fit="cover"
-            placeholder="sketches ↓"
-            style={{ width: "100%", aspectRatio: "4/5", background: "#e5dfd1" }}
-          ></image-slot>
-          <div className="cap hand">notes &lt;3</div>
-        </div>
-        <div className="poly tilt-c">
-          <image-slot
-            id="about-poly-3"
-            shape="rect"
-            fit="cover"
-            placeholder="off-hours ↓"
-            style={{ width: "100%", aspectRatio: "4/5", background: "#e5dfd1" }}
-          ></image-slot>
-          <div className="cap hand">coffee ✰</div>
         </div>
       </div>
     </section>

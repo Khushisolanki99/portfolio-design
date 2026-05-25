@@ -33,6 +33,7 @@
       padding: 28px 0 52px;
     }
 
+    /* ── Topbar ── */
     .topbar {
       display: flex;
       align-items: center;
@@ -48,13 +49,13 @@
     }
     .topbar a { color: inherit; text-decoration: none; }
 
+    /* ── Hero ── */
     .hero {
       text-align: center;
       padding: 56px 12px 46px;
       border: 1px solid var(--line);
       background: var(--panel);
     }
-
     .eyebrow {
       font-family: "IBM Plex Mono", monospace;
       font-size: 11px;
@@ -63,7 +64,6 @@
       color: #C8C8C8;
       margin-bottom: 14px;
     }
-
     h1 {
       margin: 0 auto 14px;
       font-family: "Manrope", sans-serif;
@@ -73,21 +73,18 @@
       max-width: 12ch;
       font-weight: 800;
     }
-
     .hero p {
       margin: 0 auto 20px;
       color: var(--muted);
       max-width: 70ch;
       font-size: 1.02rem;
     }
-
     .cta {
       display: inline-flex;
       gap: 10px;
       flex-wrap: wrap;
       justify-content: center;
     }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -106,122 +103,139 @@
     .btn.primary { background: var(--blue); }
     .btn.primary:hover { opacity: .9; }
 
+    /* ── Section shared ── */
+    .section-label {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: #BDBDBD;
+    }
+
+    /* ── Problem section ── */
+    .problem-section {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 32px 36px 36px;
+    }
+    .problem-section .section-label {
+      margin-bottom: 20px;
+    }
+    .problem-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.75;
+      max-width: 74ch;
+    }
+
+    /* ── Product Flow ── */
     .flow-section {
       margin-top: 18px;
       border: 1px solid var(--line);
       background: var(--panel);
-      padding: 22px 16px;
+    }
+    .flow-section-header {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--line);
     }
 
     .flow-shell {
       display: grid;
-      grid-template-columns: minmax(290px, 35%) 1fr;
-      gap: 22px;
-      min-height: 76vh;
+      grid-template-columns: minmax(260px, 32%) 1fr;
       align-items: start;
     }
 
+    /* Left: sticky panel */
     .flow-left {
       position: sticky;
-      top: 18px;
+      top: 0;
       align-self: start;
       border-right: 1px solid var(--line);
-      padding-right: 18px;
-    }
-
-    .flow-label {
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 10px;
-      letter-spacing: .11em;
-      text-transform: uppercase;
-      color: #BDBDBD;
-      margin-bottom: 14px;
+      padding: 32px 28px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .active-step-number {
       font-family: "IBM Plex Mono", monospace;
-      color: var(--blue);
-      font-size: 12px;
-      margin-bottom: 6px;
-      letter-spacing: .1em;
+      font-size: 11px;
+      letter-spacing: .13em;
       text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
     }
-
     .active-step-title {
       font-family: "Manrope", sans-serif;
-      font-size: clamp(1.35rem, 2.1vw, 2rem);
-      line-height: 1.1;
-      margin: 0 0 8px;
-      letter-spacing: -.02em;
+      font-size: clamp(1.4rem, 2.2vw, 2.1rem);
+      font-weight: 800;
+      letter-spacing: -.025em;
+      line-height: 1.08;
+      margin: 0 0 12px;
     }
-
     .active-step-copy {
-      margin: 0 0 20px;
+      margin: 0 0 32px;
       color: var(--muted);
-      max-width: 34ch;
+      font-size: .95rem;
+      line-height: 1.65;
+      max-width: 30ch;
     }
 
+    /* Step list */
     .step-list {
+      list-style: none;
       margin: 0;
       padding: 0;
-      list-style: none;
-      border-left: 2px solid #1A1A1A;
+      border-left: 2px solid #1C1C1C;
     }
-
     .step-list li {
       position: relative;
-      padding: 10px 10px 10px 14px;
-      color: #8D8D8D;
-      font-size: .92rem;
+      padding: 9px 10px 9px 16px;
+      color: #666;
+      font-size: .88rem;
       cursor: pointer;
-      transition: color .18s ease;
+      transition: color .18s;
     }
-
     .step-list li::before {
       content: "";
       position: absolute;
-      left: -6px;
-      top: 17px;
+      left: -7px;
+      top: 50%;
+      transform: translateY(-50%);
       width: 10px;
       height: 10px;
       border-radius: 999px;
-      border: 2px solid #2B2B2B;
-      background: #0B0B0B;
-      transition: .18s ease;
+      border: 2px solid #2A2A2A;
+      background: #0A0A0A;
+      transition: border-color .18s, background .18s;
     }
-
     .step-list li.active {
       color: var(--text);
     }
-
     .step-list li.active::before {
       border-color: var(--blue);
       background: var(--blue);
     }
 
+    /* Right: scroll area */
     .flow-right {
-      position: relative;
-      padding-bottom: 8vh;
-    }
-
-    .trigger {
-      height: 72vh;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 1px solid #111;
+      flex-direction: column;
     }
 
+    /* Sticky image stage pinned at the top of the viewport */
     .screen-stage {
       position: sticky;
-      top: 18px;
-      margin-bottom: 18px;
-      border: 1px solid #1F1F1F;
+      top: 0;
+      height: 100vh;
       background: #000;
-      height: min(68vh, 620px);
       display: grid;
       place-items: center;
       overflow: hidden;
+      border-bottom: 1px solid #111;
     }
 
     .screen-image {
@@ -230,23 +244,24 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
+      padding: 32px 40px;
       opacity: 0;
-      transform: scale(.985);
-      transition: opacity .32s ease, transform .32s ease;
-      padding: 16px;
+      transform: scale(.97);
+      transition: opacity .3s ease, transform .3s ease;
       background: #000;
     }
-
     .screen-image.active {
       opacity: 1;
       transform: scale(1);
     }
 
-    .screen-fallback {
-      color: #6F6F6F;
-      font-size: .9rem;
-      border: 1px dashed #2D2D2D;
-      padding: 14px;
+    /* Scroll triggers — one per step, provide scrollable height */
+    .trigger {
+      height: 80vh;
+      border-bottom: 1px solid #111;
+    }
+    .trigger:last-child {
+      border-bottom: none;
     }
 
     .bottom-note {
@@ -257,32 +272,34 @@
       letter-spacing: .02em;
     }
 
-    @media (max-width: 920px) {
-      .flow-shell { grid-template-columns: 1fr; min-height: auto; }
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .flow-shell { grid-template-columns: 1fr; }
       .flow-left {
         position: static;
+        min-height: auto;
         border-right: none;
         border-bottom: 1px solid var(--line);
-        padding-right: 0;
-        padding-bottom: 12px;
-        margin-bottom: 10px;
+        padding: 24px 20px;
+        justify-content: flex-start;
       }
+      .active-step-copy { max-width: none; }
       .screen-stage {
         position: static;
-        height: 46vh;
+        height: 50vw;
+        min-height: 280px;
+        max-height: 520px;
+        border-bottom: none;
       }
-      .trigger {
-        height: auto;
-        min-height: 300px;
-        margin-bottom: 10px;
-      }
+      .screen-image { padding: 16px 20px; }
+      .trigger { height: 60vw; min-height: 200px; max-height: 400px; }
+      .problem-section { padding: 24px 20px 28px; }
     }
 
     @media (max-width: 640px) {
       .hero { padding: 38px 12px 34px; }
-      .hero p { font-size: .95rem; }
-      .screen-stage { height: 40vh; }
-      .step-list li { font-size: .9rem; }
+      .screen-stage { height: 60vw; }
+      .trigger { height: 50vw; min-height: 160px; }
     }
   </style>
 </head>
@@ -299,29 +316,34 @@
       <h1>Checkout at the moment of intent.</h1>
       <p>Nudge is a concept case study exploring how checkout can happen inside the buying moment instead of after a redirect. The goal was to reduce handoff friction and keep the buyer in context.</p>
       <div class="cta">
-        <!-- Replace PRD link href below -->
-        <a class="btn primary" id="prd-link" href="#">Read PRD</a>
-        <!-- Replace Case Study link href below -->
-        <a class="btn" id="case-study-link" href="#">Read Case Study</a>
+        <a class="btn primary" href="https://capable-grey-48b.notion.site/CASE-STUDY-1-Research-to-Checkout-Flow-Redesign-8eb6fc8e583844c4a5c9d6333bdbb1c0" target="_blank" rel="noopener">Read PRD</a>
+        <a class="btn" href="https://capable-grey-48b.notion.site/CASE-STUDY-1-Research-to-Checkout-Flow-Redesign-8eb6fc8e583844c4a5c9d6333bdbb1c0" target="_blank" rel="noopener">Read Case Study</a>
       </div>
     </section>
 
-    <section class="flow-section" id="nudge-flow">
+    <section class="problem-section">
+      <div class="section-label">Problem · Why I explored this</div>
+      <p class="problem-copy">High-intent buyers often discover products inside blogs, reviews, and recommendation pages, but checkout usually happens after a redirect. That handoff breaks context, cools down intent, and adds friction exactly when the buyer is most ready to act. Nudge explores whether checkout can happen inside the buying moment itself — without forcing the user to leave the content surface.</p>
+    </section>
+
+    <section class="flow-section">
+      <div class="flow-section-header">
+        <span class="section-label">Product Flow</span>
+      </div>
       <div class="flow-shell">
+
         <aside class="flow-left">
-          <div class="flow-label">Scroll-driven flow</div>
           <div class="active-step-number" id="activeStepNumber">Step 01</div>
           <h2 class="active-step-title" id="activeStepTitle">Content surface</h2>
-          <p class="active-step-copy" id="activeStepCopy">Buyer is already engaged with the product.</p>
+          <p class="active-step-copy" id="activeStepCopy">Buyer is reading an editorial/review page and is already engaged.</p>
           <ol class="step-list" id="stepList"></ol>
         </aside>
 
-        <div class="flow-right" id="flowRight">
-          <div class="screen-stage" id="screenStage">
-            <div class="screen-fallback" id="screenFallback">Add your screen image paths in the SCREEN_STEPS array.</div>
-          </div>
+        <div class="flow-right">
+          <div class="screen-stage" id="screenStage"></div>
           <div id="triggers"></div>
         </div>
+
       </div>
     </section>
 
@@ -329,130 +351,95 @@
   </main>
 
   <script>
-    // ===== Replace screen image paths below =====
-    // Use relative paths from this file (case-studies/nudge.html)
-    // Example: "../uploads/nudge-screen-01.png"
-    const SCREEN_STEPS = [
+    const STEPS = [
       {
         number: "01",
         title: "Content surface",
-        copy: "Buyer is already engaged with the product.",
-        // Screen 01 image path:
-        image: "../uploads/nudge-screen-01.png"
+        copy: "Buyer is reading an editorial/review page and is already engaged.",
+        image: "../../Blog - Portfolio Style (Compact v2).png"
       },
       {
         number: "02",
         title: "Intent detected",
-        copy: "The system waits for a strong signal before acting.",
-        // Screen 02 image path:
-        image: "../uploads/nudge-screen-02.png"
+        copy: "Buyer shows product interest from the content.",
+        image: "../../AI Assistant - Portfolio Style (Compact).png"
       },
       {
         number: "03",
         title: "Embedded checkout",
-        copy: "Checkout appears inside the context instead of sending the buyer away.",
-        // Screen 03 image path:
-        image: "../uploads/nudge-screen-03.png"
+        copy: "Checkout opens inside the same context.",
+        image: "../../Checkout - Portfolio Style (Compact) (1).png"
       },
       {
         number: "04",
         title: "Confirmation",
-        copy: "The purchase completes inline, with trust and clarity.",
-        // Screen 04 image path:
-        image: "../uploads/nudge-screen-04.png"
+        copy: "Buyer completes the order without losing flow.",
+        image: "../../Order Confirmation - Portfolio Style (Compact).png"
       },
       {
         number: "05",
-        title: "Merchant view",
-        copy: "The merchant still gets visibility, attribution, and control.",
-        // Screen 05 image path:
-        image: "../uploads/nudge-screen-05.png"
-      },
-      {
-        number: "06",
-        title: "Optional sixth screen",
-        copy: "Use this if you have one more state to show.",
-        // Screen 06 image path (optional):
-        image: "../uploads/nudge-screen-06.png"
+        title: "Merchant dashboard",
+        copy: "Merchant sees intent, conversion, and performance signals.",
+        image: "../../Merchant Dashboard - Portfolio Style (Compact).png"
       }
     ];
 
-    const activeStepNumber = document.getElementById('activeStepNumber');
-    const activeStepTitle = document.getElementById('activeStepTitle');
-    const activeStepCopy = document.getElementById('activeStepCopy');
-    const stepList = document.getElementById('stepList');
-    const screenStage = document.getElementById('screenStage');
-    const screenFallback = document.getElementById('screenFallback');
-    const triggers = document.getElementById('triggers');
+    const elNumber = document.getElementById('activeStepNumber');
+    const elTitle  = document.getElementById('activeStepTitle');
+    const elCopy   = document.getElementById('activeStepCopy');
+    const elList   = document.getElementById('stepList');
+    const stage    = document.getElementById('screenStage');
+    const trigBox  = document.getElementById('triggers');
 
-    const images = [];
+    const images   = [];
+    const listItems = [];
 
-    SCREEN_STEPS.forEach((step, i) => {
-      const li = document.createElement('li');
-      li.textContent = `Step ${step.number} · ${step.title}`;
-      li.dataset.index = i;
-      stepList.appendChild(li);
-
+    STEPS.forEach((step, i) => {
+      // image
       const img = document.createElement('img');
       img.className = 'screen-image';
-      img.alt = `${step.title} screen`;
-      img.dataset.index = i;
       img.src = step.image;
+      img.alt = step.title;
       img.loading = i === 0 ? 'eager' : 'lazy';
-      screenStage.appendChild(img);
+      stage.appendChild(img);
       images.push(img);
 
-      const trigger = document.createElement('section');
-      trigger.className = 'trigger';
-      trigger.dataset.index = i;
-      triggers.appendChild(trigger);
+      // step list item
+      const li = document.createElement('li');
+      li.textContent = `${step.number} · ${step.title}`;
+      elList.appendChild(li);
+      listItems.push(li);
+
+      // scroll trigger
+      const trig = document.createElement('div');
+      trig.className = 'trigger';
+      trig.dataset.index = i;
+      trigBox.appendChild(trig);
 
       li.addEventListener('click', () => {
-        trigger.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        setActive(i);
+        trig.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
     });
 
     function setActive(index) {
-      const step = SCREEN_STEPS[index];
+      const step = STEPS[index];
       if (!step) return;
-
-      activeStepNumber.textContent = `Step ${step.number}`;
-      activeStepTitle.textContent = step.title;
-      activeStepCopy.textContent = step.copy;
-
-      [...stepList.children].forEach((li, i) => li.classList.toggle('active', i === index));
-      images.forEach((img, i) => img.classList.toggle('active', i === index));
-
-      // Hide fallback after first successful active set
-      screenFallback.style.display = 'none';
+      elNumber.textContent = `Step ${step.number}`;
+      elTitle.textContent  = step.title;
+      elCopy.textContent   = step.copy;
+      images.forEach((img, i)   => img.classList.toggle('active', i === index));
+      listItems.forEach((li, i) => li.classList.toggle('active', i === index));
     }
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const idx = Number(entry.target.dataset.index);
-          setActive(idx);
+          setActive(Number(entry.target.dataset.index));
         }
       });
-    }, {
-      root: null,
-      threshold: 0.55
-    });
+    }, { threshold: 0.5 });
 
     document.querySelectorAll('.trigger').forEach(el => observer.observe(el));
-
-    // Graceful handling for missing images
-    images.forEach((img) => {
-      img.addEventListener('error', () => {
-        img.style.display = 'none';
-      });
-      img.addEventListener('load', () => {
-        if (img.dataset.index === '0') {
-          screenFallback.style.display = 'none';
-        }
-      });
-    });
 
     setActive(0);
   </script>
