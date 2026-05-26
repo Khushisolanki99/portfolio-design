@@ -236,7 +236,7 @@ function About() {
             <div className="ae-poly tilt-a">
               <image-slot id="about-poly-1" shape="rect" placeholder="workspace ↓"
                 style={{width:"100%",aspectRatio:"4/3",background:"#d8cfc0"}}></image-slot>
-              <div className="ae-cap">art ★</div>
+              <div className="ae-cap">coffee ★</div>
             </div>
             <div className="ae-poly tilt-b">
               <image-slot id="about-poly-2" shape="rect" placeholder="sketches ↓"
@@ -246,7 +246,7 @@ function About() {
             <div className="ae-poly tilt-c">
               <image-slot id="about-poly-3" shape="rect" placeholder="off-hours ↓"
                 style={{width:"100%",aspectRatio:"4/3",background:"#d8cfc0"}}></image-slot>
-              <div className="ae-cap">coffee ✰</div>
+              <div className="ae-cap">art ✰</div>
             </div>
           </div>
 
@@ -306,16 +306,6 @@ function Work({ onOpen }) {
       owned: "PRD, checkout embed spec, user flows, API contract",
       tools: "Figma · Notion · Miro · JIRA",
       url: "case-studies/nudge.html",
-      csIndex: 2,
-    },
-    {
-      num: "04",
-      cardClass: "wc-card--mvp",
-      title: "Idea-to-MVP Platform",
-      desc: "Platform concept for turning rough ideas into structured MVP plans.",
-      tags: ["Product", "MVP", "Planning"],
-      owned: "PRD, scope scoring, flow generator, idea-to-spec playbook",
-      tools: "Figma · Notion · Miro · JIRA",
       csIndex: 2,
     },
   ];
