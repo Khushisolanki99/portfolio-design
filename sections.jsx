@@ -1,5 +1,5 @@
 /* global React */
-const { useState: useStateS, useRef: useRefS } = React;
+const { useState: useStateS, useRef: useRefS, useEffect: useEffectS } = React;
 
 /* ============================================================ */
 /* Shared monogram                                                */
@@ -143,7 +143,6 @@ function About() {
         <div className="ae-portrait">
           <img className="cutout" src="images/khushi.png" alt="Khushi Solanki — portrait" />
           <span className="sticker ae-hecho tilt-r">✎ MADE BY KHUSHI</span>
-          <span className="sticker ae-ptag tilt-l">● PORTRAIT.01 · CUTOUT</span>
         </div>
 
         {/* Content — right */}
@@ -152,10 +151,6 @@ function About() {
           {/* Heading + location stickers */}
           <div className="ae-head-zone">
             <h1 className="ae-head">Hi, I'm <span className="accent">Khushi</span> Solanki</h1>
-            <div className="ae-loc-stickers">
-              <span className="sticker tilt-r">NEW DELHI</span>
-              <span className="sticker tilt-l">INDIA</span>
-            </div>
           </div>
 
           {/* Three-column middle: bio | experience | sidebar */}
@@ -170,7 +165,7 @@ function About() {
                 solution easier to understand.
               </p>
               <p>
-                My work starts with a <em>problem statement</em>, a few uncomfortable
+                My work starts with a <em style={{color:"var(--accent)"}}>problem statement</em>, a few uncomfortable
                 questions, and a blank flow. From there I build PRDs, user stories,
                 wireframes and dashboards that are <b>structured enough for teams</b> and
                 <b> clear enough for users</b>.
@@ -186,16 +181,16 @@ function About() {
               <div className="ae-sec-title">Experience</div>
               <div className="ae-timeline">
                 <div className="ae-entry">
-                  <div className="ae-yr ac">2024<small>now</small></div>
-                  <div><div className="ae-co">[Company Name]</div><div className="ae-role">Business Analyst</div></div>
+                  <div className="ae-yr ac">2024<small>26</small></div>
+                  <div><div className="ae-co">ProCohat Technologies</div><div className="ae-role">Project Manager</div></div>
                 </div>
                 <div className="ae-entry">
                   <div className="ae-yr ac">2023<small>24</small></div>
-                  <div><div className="ae-co">[Company Name]</div><div className="ae-role">Product / Project Analyst</div></div>
+                  <div><div className="ae-co">ProCohat Technologies</div><div className="ae-role">Product Associate Intern</div></div>
                 </div>
                 <div className="ae-entry">
                   <div className="ae-yr ac">2022<small>23</small></div>
-                  <div><div className="ae-co">[Company Name]</div><div className="ae-role">Brand &amp; Ops</div></div>
+                  <div><div className="ae-co">Breathing Paper</div><div className="ae-role">Marketing Intern</div></div>
                 </div>
               </div>
             </div>
@@ -206,12 +201,12 @@ function About() {
                 <div className="ae-sec-title">Education</div>
                 <div className="ae-timeline">
                   <div className="ae-entry">
-                    <div className="ae-yr gr">2019<small>23</small></div>
-                    <div><div className="ae-co">BBA, Business Analytics</div><div className="ae-role">[University Name]</div></div>
+                    <div className="ae-yr gr">2021<small>24</small></div>
+                    <div><div className="ae-co">B.Tech, Artificial Intelligence</div><div className="ae-role">G.H. Raisoni Institute of Engineering &amp; Technology, Nagpur</div></div>
                   </div>
                   <div className="ae-entry">
-                    <div className="ae-yr gr">2024</div>
-                    <div><div className="ae-co">UX Certification</div><div className="ae-role">Interaction Design Foundation</div></div>
+                    <div className="ae-yr gr">2025<small>now</small></div>
+                    <div><div className="ae-co">Product Management with Generative &amp; Agentic AI</div><div className="ae-role">BITSoM</div></div>
                   </div>
                 </div>
               </div>
@@ -227,7 +222,7 @@ function About() {
               <div className="ae-sb-block">
                 <div className="ae-sec-title">Tools</div>
                 <div className="ae-tag-cloud">
-                  {["Figma","JIRA","Notion","Miro","Excel","Power BI","Canva","Adobe Suite"].map(t => (
+                  {["Figma","JIRA","Notion","Miro","SQL","Excel","Google Sheets","Power BI","Canva","Adobe Suite","PowerPoint"].map(t => (
                     <span key={t} className="ae-tag">{t}</span>
                   ))}
                 </div>
@@ -241,12 +236,12 @@ function About() {
             <div className="ae-poly tilt-a">
               <image-slot id="about-poly-1" shape="rect" placeholder="workspace ↓"
                 style={{width:"100%",aspectRatio:"4/3",background:"#d8cfc0"}}></image-slot>
-              <div className="ae-cap">workspace ★</div>
+              <div className="ae-cap">art ★</div>
             </div>
             <div className="ae-poly tilt-b">
               <image-slot id="about-poly-2" shape="rect" placeholder="sketches ↓"
                 style={{width:"100%",aspectRatio:"4/3",background:"#d8cfc0"}}></image-slot>
-              <div className="ae-cap">bocetos ♡</div>
+              <div className="ae-cap">picture ♡</div>
             </div>
             <div className="ae-poly tilt-c">
               <image-slot id="about-poly-3" shape="rect" placeholder="off-hours ↓"
@@ -262,125 +257,124 @@ function About() {
 }
 
 /* ============================================================ */
-/* WORK — folder tabs + case-study tray                          */
+/* WORK — compact card grid                                      */
 /* ============================================================ */
 function Work({ onOpen }) {
-  const [active, setActive] = useStateS(0);
+  const sectionRef = useRefS(null);
   const cases = window.CASE_STUDIES || [];
-  const cs = cases[active] || cases[0];
+
+  useEffectS(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) { el.classList.add('ws-visible'); obs.disconnect(); }
+    }, { threshold: 0.06 });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  const projects = [
+    {
+      num: "01",
+      cardClass: "wc-card--rto",
+      title: "RTO Guard",
+      desc: "Dashboard concept for identifying risky e-commerce orders before they become returns.",
+      tags: ["BA", "Product Strategy", "Dashboard"],
+      owned: "Requirements, dashboard IA, risk scoring logic, PRD",
+      tools: "Figma · Miro · Notion · JIRA · Excel",
+      url: "case-studies/rto-guard.html",
+      csIndex: 0,
+    },
+    {
+      num: "02",
+      cardClass: "wc-card--meeting",
+      title: "AI Meeting Brief",
+      desc: "AI workspace for preparing meeting context, risks, and follow-up actions.",
+      tags: ["Product Thinking", "AI", "Workflow"],
+      owned: "Product spec, user flow, AI brief logic, core screens",
+      tools: "Figma · Notion · Miro · JIRA",
+      url: "case-studies/ai-meeting-brief.html",
+      csIndex: 1,
+    },
+    {
+      num: "03",
+      cardClass: "wc-card--nudge",
+      title: "Nudge",
+      subtitle: "Buy where you decide",
+      desc: "Checkout concept that lets buyers act at the moment of intent.",
+      tags: ["UX Flow", "Commerce", "Case Study"],
+      owned: "PRD, checkout embed spec, user flows, API contract",
+      tools: "Figma · Notion · Miro · JIRA",
+      url: "case-studies/nudge.html",
+      csIndex: 2,
+    },
+    {
+      num: "04",
+      cardClass: "wc-card--mvp",
+      title: "Idea-to-MVP Platform",
+      desc: "Platform concept for turning rough ideas into structured MVP plans.",
+      tags: ["Product", "MVP", "Planning"],
+      owned: "PRD, scope scoring, flow generator, idea-to-spec playbook",
+      tools: "Figma · Notion · Miro · JIRA",
+      csIndex: 2,
+    },
+  ];
+
+  function handleOpen(p) {
+    if (p.url) { window.location.href = p.url; return; }
+    const cs = cases[p.csIndex];
+    if (cs) onOpen(cs);
+  }
 
   return (
-    <section id="work" className="section dark bg-grid-dark" data-screen-label="02 Work">
-      <div className="sec-head-dark">
-        <div>
-          <div className="eyebrow-dark"><span className="num">02</span><span className="dot" /><span>Selected Work · 2024 — 26</span></div>
-          <div className="title">
-            <span>Business </span>
-            <span className="accent">analysis</span>
-            <span className="of"> &amp;</span><br />
-            <span>product</span><br />
-            <span className="accent">thinking</span>
-            <span className="sub-sticker"><span className="sticker">in practice</span></span>
-          </div>
+    <section id="work" ref={sectionRef} className="ws-section dark bg-grid-dark" data-screen-label="02 Work">
+
+      <div className="ws-header">
+        <div className="ws-eyebrow-row">
+          <span className="ws-num">02</span>
+          <span className="ws-dot-sep" />
+          <span>Selected Work · 2024 — 26</span>
         </div>
-        <div className="work-summary">
-          <div className="head">
-            <span className="lbl">★ Selected work index</span>
-            <span className="hint">4 case studies · 2024 — 26</span>
-          </div>
-          <div className="rows">
-            {cases.map((c) => (
-              <div className="r" key={c.id} onClick={() => setActive(cases.indexOf(c))}>
-                <span className="n">{c.num}</span>
-                <span className="t">{c.title} <em>{c.titleEm}</em></span>
-                <span className="m">{(c.outcome && c.outcome[0]) ? c.outcome[0].n : "—"}</span>
-              </div>
-            ))}
-          </div>
-          <div className="foot">Each case opens with TL;DR outcomes and a live mock.</div>
-        </div>
+        <h2 className="ws-headline">
+          Business <span className="accent">analysis</span> &amp; product <span className="accent">thinking</span>
+        </h2>
       </div>
 
-      <div className="folder-tabs">
-        {cases.map((c, i) => (
+      <div className="wc-grid">
+        {projects.map((p) => (
           <div
-            key={c.id}
-            className={`folder-tab ${i === active ? "active" : i % 2 ? "green" : ""}`}
-            onClick={() => setActive(i)}
+            key={p.num}
+            className={`wc-card${p.cardClass ? ' ' + p.cardClass : ''}`}
+            onClick={() => handleOpen(p)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleOpen(p); }}
           >
-            {c.title} <span style={{ fontWeight: 800, color: i === active ? "rgba(255,255,255,0.85)" : "var(--ink)" }}>{c.titleEm}</span>
-            <span className="yr">{c.num} · {c.year}</span>
+            <div className="wc-top">
+              <span className="wc-num">{p.num}</span>
+              <div className="wc-tags">
+                {p.tags.map((t) => <span className="wc-tag" key={t}>{t}</span>)}
+              </div>
+            </div>
+            <h3 className="wc-title">
+              {p.title}{p.subtitle && <span className="wc-subtitle"> — {p.subtitle}</span>}
+            </h3>
+            <p className="wc-desc">{p.desc}</p>
+            <div className="wc-meta">
+              <div className="wc-meta-row">
+                <span className="wc-meta-k">Owned</span>
+                <span className="wc-meta-v">{p.owned}</span>
+              </div>
+              <div className="wc-meta-row">
+                <span className="wc-meta-k">Tools</span>
+                <span className="wc-meta-v">{p.tools}</span>
+              </div>
+            </div>
+            <div className="wc-foot">
+              <span className="wc-btn">Open case study <span className="wc-arrow">→</span></span>
+            </div>
           </div>
         ))}
-      </div>
-
-      <div className="case-tray">
-        <div className="case-tray-inner">
-          <div>
-            <div className="case-outcomes">
-              {cs.outcome.slice(0, 3).map((o, i) => (
-                <div className="oc" key={i}>
-                  <span className="n">{o.n}</span>
-                  <span className="l">{o.l}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="case-eyebrow">
-              CASE {cs.num} / {String(cases.length).padStart(2, "0")} · {cs.type} · {cs.year} · {cs.duration}
-            </div>
-            <h3>{cs.title} <span className="accent">{cs.titleEm}</span></h3>
-            <p className="sub">{cs.sub}</p>
-            <div className="case-tags">
-              {cs.tags.map((t) => <span key={t}>{t}</span>)}
-            </div>
-
-            <div className="case-owned">
-              <span className="lbl">What I owned</span>
-              <div className="items">
-                {cs.spec.Output.split(",").map((it, i, arr) => (
-                  <React.Fragment key={i}>
-                    <span>{it.trim()}</span>
-                    {i < arr.length - 1 && <span className="sep">·</span>}
-                  </React.Fragment>
-                ))}
-              </div>
-            </div>
-
-            <div className="case-spec">
-              <div className="item">
-                <div className="k">Role</div>
-                <div className="v">{cs.spec.Role.split("—")[0].trim()}</div>
-              </div>
-              <div className="item">
-                <div className="k">Client</div>
-                <div className="v">{cs.client}</div>
-              </div>
-              <div className="item">
-                <div className="k">Process</div>
-                <div className="v">{cs.spec.Process}</div>
-              </div>
-              <div className="item">
-                <div className="k">Tools</div>
-                <div className="v">{cs.spec.Tools}</div>
-              </div>
-            </div>
-
-            <button className="btn accent" onClick={() => {
-              if (cs.externalUrl) { window.location.href = cs.externalUrl; }
-              else { onOpen(cs); }
-            }}>
-              Open full case study →
-            </button>
-          </div>
-
-          <div className="case-cover-live">
-            <window.CasePreview cs={cs} />
-            <div className="case-cover-meta">
-              <span className="dot" /> {cs.id}.preview · live
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -395,48 +389,120 @@ function CyclingWord({ words }) {
 }
 
 /* ============================================================ */
-/* EXPERIENCE (cream)                                            */
+/* EXPERIENCE — compact skill map (paper)                        */
 /* ============================================================ */
-const EXPERIENCE = [
-  { idx: "01", title: "Business Analysis",  desc: "Understanding users, documenting requirements, mapping workflows, and translating business goals into actionable product direction." },
-  { idx: "02", title: "Product Thinking",   desc: "Defining problems, identifying user pain points, shaping solutions, and aligning features with business value." },
-  { idx: "03", title: "Project Management", desc: "Coordinating tasks, timelines, stakeholders, reviews, feedback loops, and execution across project phases." },
-  { idx: "04", title: "UX / UI Design",     desc: "Creating wireframes, flows, interfaces, visual systems, and user-friendly digital experiences." },
-  { idx: "05", title: "Creative Direction", desc: "Using storytelling, layout, visuals, and brand thinking to make ideas easier to understand and remember." },
+const DISCIPLINES = [
+  {
+    idx: "01", title: "Business Analysis",
+    desc: "Requirements, stakeholder needs, workflows, and decision clarity.",
+    tag: "PRD brain", delay: "0s",
+    pos: { top: "12%", left: "14%" },
+  },
+  {
+    idx: "02", title: "Product Thinking",
+    desc: "Problems, users, scope, trade-offs, and business value.",
+    tag: "messy → clear", delay: "0.8s",
+    pos: { top: "10%", left: "76%" },
+  },
+  {
+    idx: "03", title: "Project Management",
+    desc: "Timelines, dependencies, feedback loops, and delivery rhythm.",
+    tag: "delivery mode", delay: "1.6s",
+    pos: { top: "46%", left: "88%" },
+  },
+  {
+    idx: "04", title: "UX / UI Design",
+    desc: "Screens, wireframes, flows, and usable interfaces.",
+    tag: "design chaos", delay: "2.4s",
+    pos: { top: "80%", left: "13%" },
+  },
+  {
+    idx: "05", title: "Creative Direction",
+    desc: "Visual systems, storytelling, layout, and brand feeling.",
+    tag: "big picture", delay: "3.2s",
+    pos: { top: "82%", left: "72%" },
+  },
+];
+
+const MICRO_SKILLS = [
+  { label: "Requirements Writing", desc: "Turning ambiguity into clear product specs.",              delay: "0.4s", pos: { top: "28%", left: "27%" } },
+  { label: "PRDs",                 desc: "Structuring product decisions into build-ready documents.", delay: "1.1s", pos: { top: "7%",  left: "50%" } },
+  { label: "Wireframing",          desc: "Making ideas visible before design polish.",                delay: "1.9s", pos: { top: "65%", left: "29%" } },
+  { label: "User Flows",           desc: "Mapping how users move from intent to action.",             delay: "2.3s", pos: { top: "88%", left: "50%" } },
+  { label: "Stakeholder Mapping",  desc: "Understanding who needs what and why.",                    delay: "0.6s", pos: { top: "26%", left: "66%" } },
+  { label: "Dashboard Thinking",   desc: "Turning messy data into readable product signals.",         delay: "1.5s", pos: { top: "56%", left: "18%" } },
+  { label: "Visual Storytelling",  desc: "Making complex ideas easier to understand.",                delay: "2.7s", pos: { top: "76%", left: "60%" } },
 ];
 
 function Experience() {
+  const [active, setActive] = useStateS(null);
+  const [hoveredMicro, setHoveredMicro] = useStateS(null);
+
   return (
-    <section id="experience" className="exp bg-grid-paper" data-screen-label="03 Practice">
-      <div className="exp-grid">
-        <div>
-          <div className="eyebrow-light"><span className="num">03</span><span className="dot" /><span>Practice — 5 disciplines</span></div>
-          <h2>
-            What I{" "}
-            <CyclingWord words={["analyse", "design", "manage", "ship", "direct"]} />
-            <br />on a Tuesday.
-          </h2>
-          <p className="lede">
-            Five disciplines that overlap on almost every product brief.
-            The order changes, but the core doesn't.
-          </p>
-          <div style={{ marginTop: 28, display: "flex", gap: 10, flexWrap: "wrap" }}>
+    <section id="experience" className="exp-orbit bg-grid-paper" data-screen-label="03 Practice">
+      <div className="eyebrow-light">
+        <span className="num">03</span><span className="dot" /><span>Practice — 12 skills</span>
+      </div>
+
+      <div className="exp-orbit-stage">
+        {/* Connector lines — viewBox 0 0 100 100, preserveAspectRatio none = 1 unit = 1% of stage */}
+        <svg className="exp-orbit-svg" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <line x1="50" y1="50" x2="14" y2="12" stroke="var(--ink)" strokeWidth="0.3" strokeDasharray="1.5 3" opacity="0.22"/>
+          <line x1="50" y1="50" x2="76" y2="10" stroke="var(--ink)" strokeWidth="0.3" strokeDasharray="1.5 3" opacity="0.22"/>
+          <line x1="50" y1="50" x2="88" y2="46" stroke="var(--ink)" strokeWidth="0.3" strokeDasharray="1.5 3" opacity="0.22"/>
+          <line x1="50" y1="50" x2="13" y2="80" stroke="var(--ink)" strokeWidth="0.3" strokeDasharray="1.5 3" opacity="0.22"/>
+          <line x1="50" y1="50" x2="72" y2="82" stroke="var(--ink)" strokeWidth="0.3" strokeDasharray="1.5 3" opacity="0.22"/>
+          <line x1="50" y1="50" x2="27" y2="28" stroke="var(--ink)" strokeWidth="0.18" strokeDasharray="1 4" opacity="0.12"/>
+          <line x1="50" y1="50" x2="50" y2="7"  stroke="var(--ink)" strokeWidth="0.18" strokeDasharray="1 4" opacity="0.12"/>
+          <line x1="50" y1="50" x2="66" y2="26" stroke="var(--ink)" strokeWidth="0.18" strokeDasharray="1 4" opacity="0.12"/>
+          <ellipse cx="50" cy="50" rx="18" ry="15" fill="none" stroke="var(--ink)" strokeWidth="0.2" strokeDasharray="1 5" opacity="0.09"/>
+        </svg>
+
+        {/* Center heading card */}
+        <div className="exp-orbit-center">
+          <h2 className="exp-orbit-heading">What I do<br />on a Tuesday.</h2>
+          <p className="exp-orbit-sub">Five disciplines that overlap on almost every product brief.</p>
+          <div className="exp-orbit-tags">
             <span className="sticker tilt-l">★ open to freelance</span>
             <span className="sticker tilt-r">⌁ remote-friendly</span>
           </div>
         </div>
-        <div className="exp-list">
-          {EXPERIENCE.map((e) => (
-            <div className="exp-row" key={e.idx}>
-              <div className="n">EXP.{e.idx}</div>
-              <div className="body">
-                <div className="t">{e.title}</div>
-                <div className="d">{e.desc}</div>
-              </div>
-              <a className="arrow" href="#work" onClick={(ev) => { ev.preventDefault(); document.getElementById("work").scrollIntoView({ behavior: "smooth" }); }}>See examples →</a>
-            </div>
-          ))}
-        </div>
+
+        {/* Main discipline nodes */}
+        {DISCIPLINES.map((d) => (
+          <button
+            key={d.idx}
+            className={`exp-node${active === d.idx ? ' exp-node-active' : ''}`}
+            style={{ ...d.pos, animationDelay: d.delay }}
+            onClick={() => setActive(active === d.idx ? null : d.idx)}
+            aria-expanded={active === d.idx}
+          >
+            <div className="exp-node-dot" />
+            <div className="exp-node-num">EXP.{d.idx}</div>
+            <div className="exp-node-title">{d.title}</div>
+            <div className="exp-node-desc">{d.desc}</div>
+            <div className="exp-node-tag">{d.tag}</div>
+          </button>
+        ))}
+
+        {/* Micro skill tags */}
+        {MICRO_SKILLS.map((s) => (
+          <span
+            key={s.label}
+            className={`exp-micro${hoveredMicro === s.label ? ' exp-micro-active' : ''}`}
+            style={{ ...s.pos, animationDelay: s.delay }}
+            onMouseEnter={() => setHoveredMicro(s.label)}
+            onMouseLeave={() => setHoveredMicro(null)}
+          >
+            {s.label}
+            <span className="exp-micro-tooltip">{s.desc}</span>
+          </span>
+        ))}
+
+        <span className="exp-doodle exp-d1" aria-hidden="true">✦</span>
+        <span className="exp-doodle exp-d2" aria-hidden="true">→</span>
+        <span className="exp-doodle exp-d3" aria-hidden="true">◦</span>
+        <span className="exp-doodle exp-d4" aria-hidden="true">✦</span>
       </div>
     </section>
   );

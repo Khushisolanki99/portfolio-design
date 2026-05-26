@@ -207,9 +207,6 @@ function Process() {
       <nav className="process-ui-nav" aria-hidden="true">
         <span className="pun-item">Queue</span>
         <span className="pun-item pun-active">Brief · Day 01</span>
-        <span className="pun-item">Cohorts</span>
-        <span className="pun-item">Policy</span>
-        <span className="pun-item">Reports</span>
       </nav>
 
       {/* Screen 1 — Messy scribble */}
@@ -223,7 +220,6 @@ function Process() {
           {/* Invisible spacer keeps layout height identical to before */}
           <svg aria-hidden="true" className="scribble-svg" viewBox="0 0 400 260" style={{ visibility: 'hidden' }} />
           <span className="scribble-cap hand">a tangle of thoughts</span>
-          <span className="scribble-tag sticker tilt-l">✎ BRIEF · DAY 01</span>
         </div>
       </div>
 

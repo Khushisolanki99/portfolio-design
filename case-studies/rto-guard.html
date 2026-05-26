@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nudge — Concept Case Study · Khushi Solanki</title>
+  <title>RTO Guard — Concept Case Study · Khushi Solanki</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
       --text: #F7F5EF;
       --muted: #A3A3A3;
       --line: #222222;
-      --blue: #0707EB;
+      --accent: #E04E1E;
     }
 
     * { box-sizing: border-box; }
@@ -92,15 +92,15 @@
       text-decoration: none;
       min-width: 156px;
       padding: 11px 16px;
-      border: 1px solid var(--blue);
+      border: 1px solid var(--accent);
       color: var(--text);
       font-weight: 600;
       font-size: .94rem;
       background: transparent;
-      transition: .2s ease;
+      transition: background .2s ease, opacity .2s ease;
     }
-    .btn:hover { background: var(--blue); }
-    .btn.primary { background: var(--blue); }
+    .btn:hover { background: var(--accent); }
+    .btn.primary { background: var(--accent); }
     .btn.primary:hover { opacity: .9; }
 
     /* ── Section shared ── */
@@ -120,6 +120,7 @@
       padding: 32px 36px 36px;
     }
     .problem-section .section-label {
+      display: block;
       margin-bottom: 20px;
     }
     .problem-copy {
@@ -128,6 +129,13 @@
       font-size: 1.02rem;
       line-height: 1.75;
       max-width: 74ch;
+    }
+    .problem-copy + .problem-copy { margin-top: 16px; }
+
+    mark {
+      background: transparent;
+      color: var(--accent);
+      font-weight: 600;
     }
 
     /* ── Product Flow ── */
@@ -140,14 +148,13 @@
       padding: 14px 20px;
       border-bottom: 1px solid var(--line);
     }
-
     .flow-shell {
       display: grid;
       grid-template-columns: minmax(260px, 32%) 1fr;
       align-items: start;
     }
 
-    /* Left: sticky panel */
+    /* Left sticky panel */
     .flow-left {
       position: sticky;
       top: 0;
@@ -159,13 +166,12 @@
       flex-direction: column;
       justify-content: center;
     }
-
     .active-step-number {
       font-family: "IBM Plex Mono", monospace;
       font-size: 11px;
       letter-spacing: .13em;
       text-transform: uppercase;
-      color: var(--blue);
+      color: var(--accent);
       margin-bottom: 10px;
     }
     .active-step-title {
@@ -212,21 +218,15 @@
       background: #0A0A0A;
       transition: border-color .18s, background .18s;
     }
-    .step-list li.active {
-      color: var(--text);
-    }
+    .step-list li.active { color: var(--text); }
     .step-list li.active::before {
-      border-color: var(--blue);
-      background: var(--blue);
+      border-color: var(--accent);
+      background: var(--accent);
     }
 
-    /* Right: scroll area */
-    .flow-right {
-      display: flex;
-      flex-direction: column;
-    }
+    /* Right scroll area */
+    .flow-right { display: flex; flex-direction: column; }
 
-    /* Sticky image stage pinned at the top of the viewport */
     .screen-stage {
       position: sticky;
       top: 0;
@@ -237,7 +237,6 @@
       overflow: hidden;
       border-bottom: 1px solid #111;
     }
-
     .screen-image {
       position: absolute;
       inset: 0;
@@ -255,14 +254,46 @@
       transform: scale(1);
     }
 
-    /* Scroll triggers — one per step, provide scrollable height */
     .trigger {
       height: 80vh;
       border-bottom: 1px solid #111;
     }
-    .trigger:last-child {
-      border-bottom: none;
+    .trigger:last-child { border-bottom: none; }
+
+    /* ── Narrative grid ── */
+    .narrative-section { margin-top: 18px; }
+    .narrative-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--line);
+      background: var(--panel);
     }
+    .narrative-card {
+      padding: 28px 32px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .narrative-card:nth-child(even) { border-right: none; }
+    .narrative-card:nth-last-child(-n+2) { border-bottom: none; }
+
+    .narrative-card .section-label {
+      display: block;
+      margin-bottom: 14px;
+    }
+    .narrative-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: .95rem;
+      line-height: 1.7;
+    }
+    .narrative-list {
+      margin: 0;
+      padding-left: 16px;
+      color: var(--muted);
+      font-size: .95rem;
+      line-height: 1.9;
+    }
+    .narrative-list li { margin-bottom: 2px; }
 
     .bottom-note {
       margin-top: 12px;
@@ -294,12 +325,20 @@
       .screen-image { padding: 16px 20px; }
       .trigger { height: 60vw; min-height: 200px; max-height: 400px; }
       .problem-section { padding: 24px 20px 28px; }
+      .narrative-grid { grid-template-columns: 1fr; }
+      .narrative-card {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+      .narrative-card:nth-last-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .narrative-card:last-child { border-bottom: none; }
     }
 
     @media (max-width: 640px) {
       .hero { padding: 38px 12px 34px; }
       .screen-stage { height: 60vw; }
       .trigger { height: 50vw; min-height: 160px; }
+      .narrative-card { padding: 20px; }
     }
 
     /* ── Cursor glow ── */
@@ -315,25 +354,27 @@
 <body>
   <div id="cursor-glow" aria-hidden="true"></div>
   <main class="page">
+
     <header class="topbar">
       <div>Khushi Solanki · Portfolio</div>
-      <div>Nudge · Concept Case Study</div>
+      <div>RTO Guard · Concept Case Study</div>
       <a href="../Portfolio.html">← All work</a>
     </header>
 
     <section class="hero">
-      <div class="eyebrow">Nudge · Concept Case Study</div>
-      <h1>Checkout at the moment of intent.</h1>
-      <p>Nudge is a concept case study exploring how checkout can happen inside the buying moment instead of after a redirect. The goal was to reduce handoff friction and keep the buyer in context.</p>
+      <div class="eyebrow">RTO Guard · Concept Case Study</div>
+      <h1>RTO Guard</h1>
+      <p>Post-purchase risk dashboard for detecting likely-to-fail e-commerce deliveries before they become returns.</p>
       <div class="cta">
-        <a class="btn primary" href="https://capable-grey-48b.notion.site/CASE-STUDY-1-Research-to-Checkout-Flow-Redesign-8eb6fc8e583844c4a5c9d6333bdbb1c0" target="_blank" rel="noopener">Read PRD</a>
-        <a class="btn" href="https://capable-grey-48b.notion.site/CASE-STUDY-1-Research-to-Checkout-Flow-Redesign-8eb6fc8e583844c4a5c9d6333bdbb1c0" target="_blank" rel="noopener">Read Case Study</a>
+        <a class="btn primary" href="./assets/RTO-Guard-Case-Study.pdf" target="_blank" rel="noopener">Read PRD</a>
+        <a class="btn" href="./assets/RTO-Guard-Case-Study.pdf" target="_blank" rel="noopener">Read Case Study</a>
       </div>
     </section>
 
     <section class="problem-section">
       <div class="section-label">Problem · Why I explored this</div>
-      <p class="problem-copy">High-intent buyers often discover products inside blogs, reviews, and recommendation pages, but checkout usually happens after a redirect. That handoff breaks context, cools down intent, and adds friction exactly when the buyer is most ready to act. Nudge explores whether checkout can happen inside the buying moment itself — without forcing the user to leave the content surface.</p>
+      <p class="problem-copy"><mark>D2C and e-commerce brands</mark> often lose margin after an order has already started failing — <mark>repeated delivery attempts</mark>, <mark>unreachable customers</mark>, <mark>address issues</mark>, <mark>COD risk</mark>, and delayed courier updates all show up too late. Ops teams usually work from scattered dashboards, manual follow-ups, and reactive reports.</p>
+      <p class="problem-copy">RTO Guard explores how a post-purchase risk dashboard could help operations teams <mark>identify risky orders earlier</mark>, understand why they are at risk, and <mark>take action before the order becomes RTO</mark>.</p>
     </section>
 
     <section class="flow-section">
@@ -344,14 +385,62 @@
 
         <aside class="flow-left">
           <div class="active-step-number" id="activeStepNumber">Step 01</div>
-          <h2 class="active-step-title" id="activeStepTitle">Content surface</h2>
-          <p class="active-step-copy" id="activeStepCopy">Buyer is reading an editorial/review page and is already engaged.</p>
+          <h2 class="active-step-title" id="activeStepTitle">Dashboard overview</h2>
+          <p class="active-step-copy" id="activeStepCopy">Ops manager gets a quick view of risky orders, exceptions, and delivery health.</p>
           <ol class="step-list" id="stepList"></ol>
         </aside>
 
         <div class="flow-right">
           <div class="screen-stage" id="screenStage"></div>
           <div id="triggers"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="narrative-section">
+      <div class="narrative-grid">
+
+        <div class="narrative-card">
+          <span class="section-label">Problem</span>
+          <p class="narrative-copy">Ops teams lack an early-warning system for orders likely to fail delivery.</p>
+        </div>
+
+        <div class="narrative-card">
+          <span class="section-label">Persona</span>
+          <p class="narrative-copy">D2C operations manager handling 500–5,000 orders per day.</p>
+        </div>
+
+        <div class="narrative-card">
+          <span class="section-label">Goals</span>
+          <ul class="narrative-list">
+            <li>Surface risky orders early</li>
+            <li>Explain why each order is risky</li>
+            <li>Reduce manual follow-up effort</li>
+            <li>Help teams prioritize action</li>
+            <li>Track RTO patterns and courier performance</li>
+          </ul>
+        </div>
+
+        <div class="narrative-card">
+          <span class="section-label">Product Thinking</span>
+          <p class="narrative-copy">This concept focuses on turning scattered delivery signals into a focused risk workflow. Instead of showing only shipment status, the dashboard highlights risk status, reason codes, priority, and suggested next action.</p>
+        </div>
+
+        <div class="narrative-card">
+          <span class="section-label">Design Decisions</span>
+          <ul class="narrative-list">
+            <li>Risk-first dashboard instead of status-only tracking</li>
+            <li>Clear risk categories: On Track, At Risk, Exception</li>
+            <li>Order-level drilldown for root-cause visibility</li>
+            <li>Action-oriented layout for ops teams</li>
+            <li>Simple trend and courier insights for monitoring</li>
+          </ul>
+        </div>
+
+        <div class="narrative-card">
+          <span class="section-label">Outcome · What this demonstrates</span>
+          <p class="narrative-copy">This case study demonstrates business analysis, dashboard thinking, workflow mapping, risk-prioritization logic, and product storytelling for a post-purchase operations problem.</p>
         </div>
 
       </div>
@@ -364,33 +453,33 @@
     const STEPS = [
       {
         number: "01",
-        title: "Content surface",
-        copy: "Buyer is reading an editorial/review page and is already engaged.",
-        image: "../../Blog - Portfolio Style (Compact v2).png"
+        title: "Dashboard overview",
+        copy: "Ops manager gets a quick view of risky orders, exceptions, and delivery health.",
+        image: "./assets/rto-overview-dashboard.png"
       },
       {
         number: "02",
-        title: "Intent detected",
-        copy: "Buyer shows product interest from the content.",
-        image: "../../AI Assistant - Portfolio Style (Compact).png"
+        title: "Risk queue",
+        copy: "Orders are grouped by risk status so the team can prioritize where to act first.",
+        image: "./assets/rto-risky-orders.png"
       },
       {
         number: "03",
-        title: "Embedded checkout",
-        copy: "Checkout opens inside the same context.",
-        image: "../../Checkout - Portfolio Style (Compact) (1).png"
+        title: "Order detail",
+        copy: "Each risky order shows reason codes, customer/delivery signals, and suggested action.",
+        image: "./assets/rto-order-detail.png"
       },
       {
         number: "04",
-        title: "Confirmation",
-        copy: "Buyer completes the order without losing flow.",
-        image: "../../Order Confirmation - Portfolio Style (Compact).png"
+        title: "Action / nudge",
+        copy: "Ops can trigger follow-up actions such as customer confirmation, address check, or courier escalation.",
+        image: "./assets/rto-action-panel.png"
       },
       {
         number: "05",
-        title: "Merchant dashboard",
-        copy: "Merchant sees intent, conversion, and performance signals.",
-        image: "../../Merchant Dashboard - Portfolio Style (Compact).png"
+        title: "Performance insights",
+        copy: "Team tracks RTO trends, courier performance, reason patterns, and improvement opportunities.",
+        image: "./assets/rto-delivery-insights.png"
       }
     ];
 
@@ -401,26 +490,24 @@
     const stage    = document.getElementById('screenStage');
     const trigBox  = document.getElementById('triggers');
 
-    const images   = [];
+    const images    = [];
     const listItems = [];
 
     STEPS.forEach((step, i) => {
-      // image
       const img = document.createElement('img');
       img.className = 'screen-image';
       img.src = step.image;
       img.alt = step.title;
       img.loading = i === 0 ? 'eager' : 'lazy';
+      img.onerror = () => { img.style.display = 'none'; };
       stage.appendChild(img);
       images.push(img);
 
-      // step list item
       const li = document.createElement('li');
       li.textContent = `${step.number} · ${step.title}`;
       elList.appendChild(li);
       listItems.push(li);
 
-      // scroll trigger
       const trig = document.createElement('div');
       trig.className = 'trigger';
       trig.dataset.index = i;
@@ -437,15 +524,13 @@
       elNumber.textContent = `Step ${step.number}`;
       elTitle.textContent  = step.title;
       elCopy.textContent   = step.copy;
-      images.forEach((img, i)   => img.classList.toggle('active', i === index));
-      listItems.forEach((li, i) => li.classList.toggle('active', i === index));
+      images.forEach((img, i)    => img.classList.toggle('active', i === index));
+      listItems.forEach((li, i)  => li.classList.toggle('active', i === index));
     }
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setActive(Number(entry.target.dataset.index));
-        }
+        if (entry.isIntersecting) setActive(Number(entry.target.dataset.index));
       });
     }, { threshold: 0.5 });
 
@@ -453,13 +538,13 @@
 
     setActive(0);
 
-    // Cursor gradient
+    // Cursor glow — orange-red tint matching accent
     const glow = document.getElementById('cursor-glow');
     let glowX = window.innerWidth / 2, glowY = window.innerHeight / 2;
     let rafGlow = 0;
 
     function updateGlow() {
-      glow.style.background = `radial-gradient(600px circle at ${glowX}px ${glowY}px, rgba(7,7,235,0.13) 0%, rgba(7,7,235,0.05) 35%, transparent 70%)`;
+      glow.style.background = `radial-gradient(600px circle at ${glowX}px ${glowY}px, rgba(224,78,30,0.12) 0%, rgba(224,78,30,0.05) 35%, transparent 70%)`;
       rafGlow = 0;
     }
 
