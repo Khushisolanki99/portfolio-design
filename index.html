@@ -37,6 +37,8 @@
 
     document.addEventListener('mousemove', function (e) {
       x = e.clientX; y = e.clientY;
+      dot.style.opacity  = '1';
+      ring.style.opacity = '1';
       if (!raf) raf = requestAnimationFrame(paint);
     });
 
@@ -52,9 +54,6 @@
       var el = e.target && e.target.closest('a, button, [role="button"], .work-card, .art-tile, label, .skill-pill, .cs-nav-btn');
       ring.classList.toggle('hover', !!el);
     });
-
-    document.addEventListener('mouseleave', function () { dot.style.opacity = '0'; ring.style.opacity = '0'; });
-    document.addEventListener('mouseenter', function () { dot.style.opacity = ''; ring.style.opacity = ''; });
   })();
   </script>
 </body>

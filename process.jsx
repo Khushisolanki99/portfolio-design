@@ -110,9 +110,13 @@ function Process() {
       const cssScribbleW  = Math.min(480, window.innerWidth * 0.85);
       const scribbleScale = cssScribbleW / 400;
 
-      /* Center the scribble group in the screen div, 40px top padding */
+      /* Place the scribble to match the flex-centered layout:
+         label (~28px) + margin-bottom (48px) sit above the scribble block. */
+      const scrH = scrRect.height;
+      const scribbleH = 260 * scribbleScale;
+      const labelWithMargin = 76; // 28px label + 48px margin-bottom
       const scribbleX = scrLeft + (scrW - cssScribbleW) / 2;
-      const scribbleY = scrTop + 40;
+      const scribbleY = scrTop + (scrH - labelWithMargin - scribbleH) / 2 + labelWithMargin;
 
       /* Position the scribble group in section-local space */
       scribbleG.setAttribute('transform',

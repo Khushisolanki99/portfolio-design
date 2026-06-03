@@ -1,0 +1,538 @@
+- generic [ref=e2]:
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e6]:
+        - img [ref=e8]
+        - generic [ref=e10]:
+          - text: Khushi Solanki
+          - generic [ref=e11]: business analyst · product · creative direction
+      - generic [ref=e12]:
+        - generic:
+          - img
+        - generic:
+          - img "CD case"
+        - generic:
+          - img "Keyboard"
+        - generic:
+          - img "Earbuds"
+        - generic:
+          - img "Iced latte"
+        - generic:
+          - img "Radio"
+        - generic:
+          - img "Notebook"
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - generic [ref=e15]: BA / Product
+            - generic [ref=e16]: Portfolio
+          - paragraph [ref=e17]: PRDs, flows, screens, dashboards, and creative systems for real-world product problems.
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - generic [ref=e21]: Available
+            - generic [ref=e22]: Open to BA / Product / Associate PM roles
+          - generic [ref=e23]:
+            - generic [ref=e24]: Location
+            - generic [ref=e25]: India · Remote-friendly
+          - generic [ref=e26]:
+            - generic [ref=e27]: Focus
+            - generic [ref=e28]: Product thinking + business analysis + design direction
+        - generic [ref=e29]:
+          - button "View Work →" [ref=e30]
+          - button "Download Resume →" [ref=e31]
+          - button "Contact →" [ref=e32]
+    - generic [ref=e34]:
+      - generic [ref=e36]: Business Analysis
+      - generic [ref=e39]: Product Thinking
+      - generic [ref=e42]: UX Design
+      - generic [ref=e45]: Workflow Design
+      - generic [ref=e48]: Creative Direction
+      - generic [ref=e51]: Business Analysis
+      - generic [ref=e54]: Product Thinking
+      - generic [ref=e57]: UX Design
+      - generic [ref=e60]: Workflow Design
+      - generic [ref=e63]: Creative Direction
+      - generic [ref=e66]: Business Analysis
+      - generic [ref=e69]: Product Thinking
+      - generic [ref=e72]: UX Design
+      - generic [ref=e75]: Workflow Design
+      - generic [ref=e78]: Creative Direction
+    - generic [ref=e81]:
+      - generic [ref=e82]:
+        - img "Khushi Solanki — portrait" [ref=e83]
+        - generic [ref=e84]: ✎ MADE BY KHUSHI
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - generic [ref=e87]: "01"
+          - generic [ref=e89]: About — Khushi Solanki
+        - heading "Hi, I'm Khushi Solanki" [level=1] [ref=e91]
+        - generic [ref=e92]:
+          - generic [ref=e93]:
+            - paragraph [ref=e94]: I work at the intersection of business analysis, product thinking, and visual storytelling — turning unclear ideas into structured product direction. I like taking messy problems, asking the right questions, mapping user journeys, and shaping requirements that help teams understand what needs to be built and why.
+            - paragraph [ref=e95]:
+              - text: My work usually starts with a
+              - emphasis [ref=e96]: problem statement
+              - text: ", a few uncomfortable questions, and a blank flow. From there, I build PRDs, user stories, wireframes, dashboards, process maps, and product concepts that are structured enough for teams and clear enough for users."
+            - paragraph [ref=e97]: I care about making product thinking visible — connecting business goals with user needs, translating ambiguity into decisions, and using design to communicate the solution clearly, not just make it look good.
+            - paragraph [ref=e98]: "Off the clock: editing visuals, exploring web layouts, making posters, or redesigning something nobody asked me to redesign."
+            - generic [ref=e99]:
+              - generic [ref=e100]: WHAT I SHIP —
+              - generic [ref=e101]: PRDs · User Flows · Specs · Journey Maps · Wireframes · Decks · Playbooks
+          - generic [ref=e102]:
+            - generic [ref=e103]:
+              - generic [ref=e104]: Experience
+              - generic [ref=e105]:
+                - generic [ref=e106]:
+                  - generic [ref=e107]: 2024–2026
+                  - generic [ref=e108]:
+                    - generic [ref=e109]: ProChat Technologies
+                    - generic [ref=e110]: Project Manager
+                - generic [ref=e111]:
+                  - generic [ref=e112]: 2023–2024
+                  - generic [ref=e113]:
+                    - generic [ref=e114]: ProChat Technologies
+                    - generic [ref=e115]: Product Associate Intern
+                - generic [ref=e116]:
+                  - generic [ref=e117]: 2022–2023
+                  - generic [ref=e118]:
+                    - generic [ref=e119]: Breathing Paper
+                    - generic [ref=e120]: Marketing Intern
+            - generic [ref=e121]:
+              - generic [ref=e122]: Education
+              - generic [ref=e123]:
+                - generic [ref=e124]:
+                  - generic [ref=e125]: 2025–now
+                  - generic [ref=e126]:
+                    - generic [ref=e127]: Product Management with Generative & Agentic AI
+                    - generic [ref=e128]: BITSOM
+                - generic [ref=e129]:
+                  - generic [ref=e130]: 2021–2024
+                  - generic [ref=e131]:
+                    - generic [ref=e132]: B.Tech, Artificial Intelligence
+                    - generic [ref=e133]: G.H. Raisoni Institute of Engineering & Technology, Nagpur
+            - generic [ref=e134]:
+              - generic [ref=e135]: Focus
+              - list [ref=e136]:
+                - listitem [ref=e137]: → Business Analysis
+                - listitem [ref=e138]: → Product Thinking
+                - listitem [ref=e139]: → UX / Wireframing
+                - listitem [ref=e140]: → Creative Direction
+            - generic [ref=e141]:
+              - generic [ref=e142]: Tools
+              - generic [ref=e143]:
+                - generic [ref=e144]: Figma
+                - generic [ref=e145]: JIRA
+                - generic [ref=e146]: Notion
+                - generic [ref=e147]: Miro
+                - generic [ref=e148]: SQL
+                - generic [ref=e149]: Excel
+                - generic [ref=e150]: Google Sheets
+                - generic [ref=e151]: Power BI
+                - generic [ref=e152]: Canva
+                - generic [ref=e153]: Adobe Suite
+                - generic [ref=e154]: PowerPoint
+        - generic [ref=e155]:
+          - generic [ref=e156]:
+            - generic [ref=e157]:
+              - generic [ref=e159] [cursor=pointer]:
+                - img [ref=e160]
+                - generic [ref=e164]: workspace ↓
+              - generic:
+                - button "Replace"
+                - button "Remove"
+            - generic [ref=e165]: coffee ★
+          - generic [ref=e166]:
+            - generic [ref=e167]:
+              - generic [ref=e169] [cursor=pointer]:
+                - img [ref=e170]
+                - generic [ref=e174]: sketches ↓
+              - generic:
+                - button "Replace"
+                - button "Remove"
+            - generic [ref=e175]: picture ♡
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - generic [ref=e179] [cursor=pointer]:
+                - img [ref=e180]
+                - generic [ref=e184]: off-hours ↓
+              - generic:
+                - button "Replace"
+                - button "Remove"
+            - generic [ref=e185]: art ✰
+    - generic [ref=e186]:
+      - navigation [ref=e187]:
+        - generic [ref=e188]: Queue
+        - generic [ref=e189]: Brief · Day 01
+      - generic [ref=e190]:
+        - generic [ref=e191]:
+          - generic [ref=e193]: From chaos to clarity
+          - generic [ref=e194]: / 01
+        - generic [ref=e196]: a tangle of thoughts
+      - generic [ref=e197]:
+        - generic:
+          - generic:
+            - generic: listen —
+            - generic: interviews · field notes
+          - generic:
+            - generic: — define
+            - generic: problem · users · scope
+          - generic:
+            - generic: structure —
+            - generic: flows · requirements · ship
+      - img [ref=e200]:
+        - generic [ref=e227]: PRD
+        - generic [ref=e228]: WORKFLOW
+        - generic [ref=e229]: WIREFRAME
+      - generic [ref=e230]:
+        - generic [ref=e231]:
+          - generic [ref=e232]: Messy ideas in.
+          - generic [ref=e233]: Structured solutions out.
+        - generic [ref=e234]:
+          - generic [ref=e236]: process · in practice
+          - generic [ref=e237]: /
+          - generic [ref=e238]: ↓ selected work
+      - img
+    - generic [ref=e239]:
+      - generic [ref=e240]:
+        - generic [ref=e241]:
+          - generic [ref=e242]: "02"
+          - generic [ref=e244]: Selected Work · 2024 — 26
+        - heading "Business analysis & product thinking" [level=2] [ref=e245]
+      - generic [ref=e246]:
+        - button "01 BA Product Strategy Dashboard RTO Guard Dashboard concept for identifying risky e-commerce orders before they become returns. Owned Requirements, dashboard IA, risk scoring logic, PRD Tools Figma · Miro · Notion · JIRA · Excel Open case study →" [ref=e247]:
+          - generic [ref=e248]:
+            - generic [ref=e249]: "01"
+            - generic [ref=e250]:
+              - generic [ref=e251]: BA
+              - generic [ref=e252]: Product Strategy
+              - generic [ref=e253]: Dashboard
+          - heading "RTO Guard" [level=3] [ref=e254]
+          - paragraph [ref=e255]: Dashboard concept for identifying risky e-commerce orders before they become returns.
+          - generic [ref=e256]:
+            - generic [ref=e257]:
+              - generic [ref=e258]: Owned
+              - generic [ref=e259]: Requirements, dashboard IA, risk scoring logic, PRD
+            - generic [ref=e260]:
+              - generic [ref=e261]: Tools
+              - generic [ref=e262]: Figma · Miro · Notion · JIRA · Excel
+          - generic [ref=e264]:
+            - text: Open case study
+            - generic [ref=e265]: →
+        - button "02 Product Thinking AI Workflow AI Meeting Brief AI workspace for preparing meeting context, risks, and follow-up actions. Owned Product spec, user flow, AI brief logic, core screens Tools Figma · Notion · Miro · JIRA Open case study →" [ref=e266]:
+          - generic [ref=e267]:
+            - generic [ref=e268]: "02"
+            - generic [ref=e269]:
+              - generic [ref=e270]: Product Thinking
+              - generic [ref=e271]: AI
+              - generic [ref=e272]: Workflow
+          - heading "AI Meeting Brief" [level=3] [ref=e273]
+          - paragraph [ref=e274]: AI workspace for preparing meeting context, risks, and follow-up actions.
+          - generic [ref=e275]:
+            - generic [ref=e276]:
+              - generic [ref=e277]: Owned
+              - generic [ref=e278]: Product spec, user flow, AI brief logic, core screens
+            - generic [ref=e279]:
+              - generic [ref=e280]: Tools
+              - generic [ref=e281]: Figma · Notion · Miro · JIRA
+          - generic [ref=e283]:
+            - text: Open case study
+            - generic [ref=e284]: →
+        - button "03 UX Flow Commerce Case Study Nudge — Buy where you decide Checkout concept that lets buyers act at the moment of intent. Owned PRD, checkout embed spec, user flows, API contract Tools Figma · Notion · Miro · JIRA Open case study →" [ref=e285]:
+          - generic [ref=e286]:
+            - generic [ref=e287]: "03"
+            - generic [ref=e288]:
+              - generic [ref=e289]: UX Flow
+              - generic [ref=e290]: Commerce
+              - generic [ref=e291]: Case Study
+          - heading "Nudge — Buy where you decide" [level=3] [ref=e292]:
+            - text: Nudge
+            - generic [ref=e293]: — Buy where you decide
+          - paragraph [ref=e294]: Checkout concept that lets buyers act at the moment of intent.
+          - generic [ref=e295]:
+            - generic [ref=e296]:
+              - generic [ref=e297]: Owned
+              - generic [ref=e298]: PRD, checkout embed spec, user flows, API contract
+            - generic [ref=e299]:
+              - generic [ref=e300]: Tools
+              - generic [ref=e301]: Figma · Notion · Miro · JIRA
+          - generic [ref=e303]:
+            - text: Open case study
+            - generic [ref=e304]: →
+    - generic [ref=e305]:
+      - generic [ref=e306]:
+        - generic [ref=e307]: "03"
+        - generic [ref=e309]: Practice — 12 Skills
+      - generic [ref=e310]:
+        - img
+        - generic [ref=e311]:
+          - heading "What I do on a Tuesday." [level=2] [ref=e312]:
+            - text: What I do
+            - text: on a Tuesday.
+          - paragraph [ref=e313]: Five disciplines that overlap on almost every product brief.
+          - generic [ref=e314]:
+            - generic [ref=e315]: ★ open to freelance
+            - generic [ref=e316]: ⌁ remote-friendly
+        - generic [ref=e317]:
+          - generic [ref=e318]: EXP.01
+          - generic [ref=e319]: Business Analysis
+          - generic [ref=e320]: Requirements, stakeholder needs, workflows, and decision clarity.
+          - generic [ref=e321]: PRO BRAIN
+        - generic [ref=e322]:
+          - generic [ref=e323]: EXP.02
+          - generic [ref=e324]: Product Thinking
+          - generic [ref=e325]: Problems, users, scope, trade-offs, and business value.
+          - generic [ref=e326]: MESSY + CLEAR
+        - generic [ref=e327]:
+          - generic [ref=e328]: EXP.03
+          - generic [ref=e329]: Project Management
+          - generic [ref=e330]: Timelines, dependencies, feedback loops, and delivery rhythm.
+          - generic [ref=e331]: DELIVERY MODE
+        - generic [ref=e332]:
+          - generic [ref=e333]: EXP.04
+          - generic [ref=e334]: UX / UI Design
+          - generic [ref=e335]: Screens, wireframes, flows, and usable interfaces.
+          - generic [ref=e336]: DESIGN CHAOS
+        - generic [ref=e337]:
+          - generic [ref=e338]: EXP.05
+          - generic [ref=e339]: Creative Direction
+          - generic [ref=e340]: Visual systems, storytelling, layout, and brand feeling.
+          - generic [ref=e341]: BIG PICTURE
+        - generic [ref=e342]:
+          - generic [ref=e343]: EXP.06
+          - generic [ref=e344]: PRDs
+          - generic [ref=e345]: Structured product requirement documents that align teams.
+          - generic [ref=e346]: SOURCE OF TRUTH
+        - generic [ref=e347]:
+          - generic [ref=e348]: EXP.07
+          - generic [ref=e349]: Requirements Writing
+          - generic [ref=e350]: Translating ambiguous needs into clear, actionable specs.
+          - generic [ref=e351]: NO GUESSING
+        - generic [ref=e352]:
+          - generic [ref=e353]: EXP.08
+          - generic [ref=e354]: Stakeholder Mapping
+          - generic [ref=e355]: Identifying, aligning, and managing stakeholder expectations.
+          - generic [ref=e356]: PEOPLE LAYER
+        - generic [ref=e357]:
+          - generic [ref=e358]: EXP.09
+          - generic [ref=e359]: Dashboard Thinking
+          - generic [ref=e360]: Turning raw data into decisions through visual reporting.
+          - generic [ref=e361]: DATA CLARITY
+        - generic [ref=e362]:
+          - generic [ref=e363]: EXP.10
+          - generic [ref=e364]: Wireframing
+          - generic [ref=e365]: Low to mid-fidelity flows that communicate before design does.
+          - generic [ref=e366]: THINK FIRST
+        - generic [ref=e367]:
+          - generic [ref=e368]: EXP.11
+          - generic [ref=e369]: Visual Storytelling
+          - generic [ref=e370]: Making complex information feel simple and worth reading.
+          - generic [ref=e371]: SHOW DON'T TELL
+        - generic [ref=e372]:
+          - generic [ref=e373]: EXP.12
+          - generic [ref=e374]: User Flows
+          - generic [ref=e375]: Mapping every step a user takes through a product journey.
+          - generic [ref=e376]: PATH FINDER
+    - generic [ref=e377]:
+      - generic [ref=e378]:
+        - generic [ref=e379]: "04"
+        - generic [ref=e381]: Capabilities — 24 entries
+      - heading "Skills, in three columns." [level=2] [ref=e382]:
+        - text: Skills, in three
+        - text: columns.
+      - paragraph [ref=e383]: A working inventory of skills used across product briefs, case studies, and shipped work.
+      - generic [ref=e384]:
+        - generic [ref=e385]:
+          - generic [ref=e386]: PRODUCT · 08
+          - heading "Business & Product" [level=4] [ref=e387]
+          - list [ref=e388]:
+            - listitem [ref=e389]:
+              - generic [ref=e390]: "01"
+              - generic [ref=e391]: Requirement Gathering
+            - listitem [ref=e392]:
+              - generic [ref=e393]: "02"
+              - generic [ref=e394]: PRD Writing
+            - listitem [ref=e395]:
+              - generic [ref=e396]: "03"
+              - generic [ref=e397]: User Stories
+            - listitem [ref=e398]:
+              - generic [ref=e399]: "04"
+              - generic [ref=e400]: Acceptance Criteria
+            - listitem [ref=e401]:
+              - generic [ref=e402]: "05"
+              - generic [ref=e403]: Stakeholder Communication
+            - listitem [ref=e404]:
+              - generic [ref=e405]: "06"
+              - generic [ref=e406]: Process Mapping
+            - listitem [ref=e407]:
+              - generic [ref=e408]: "07"
+              - generic [ref=e409]: Market Research
+            - listitem [ref=e410]:
+              - generic [ref=e411]: "08"
+              - generic [ref=e412]: Competitor Research
+        - generic [ref=e413]:
+          - generic [ref=e414]: DELIVERY · 08
+          - heading "Execution & Delivery" [level=4] [ref=e415]
+          - list [ref=e416]:
+            - listitem [ref=e417]:
+              - generic [ref=e418]: "01"
+              - generic [ref=e419]: Agile / Scrum
+            - listitem [ref=e420]:
+              - generic [ref=e421]: "02"
+              - generic [ref=e422]: Sprint Planning
+            - listitem [ref=e423]:
+              - generic [ref=e424]: "03"
+              - generic [ref=e425]: JIRA Boards
+            - listitem [ref=e426]:
+              - generic [ref=e427]: "04"
+              - generic [ref=e428]: Task Tracking
+            - listitem [ref=e429]:
+              - generic [ref=e430]: "05"
+              - generic [ref=e431]: Documentation
+            - listitem [ref=e432]:
+              - generic [ref=e433]: "06"
+              - generic [ref=e434]: Review Presentations
+            - listitem [ref=e435]:
+              - generic [ref=e436]: "07"
+              - generic [ref=e437]: Stakeholder Updates
+            - listitem [ref=e438]:
+              - generic [ref=e439]: "08"
+              - generic [ref=e440]: QA Coordination
+        - generic [ref=e441]:
+          - generic [ref=e442]: CREATIVE · 08
+          - heading "Design & Creative" [level=4] [ref=e443]
+          - list [ref=e444]:
+            - listitem [ref=e445]:
+              - generic [ref=e446]: "01"
+              - generic [ref=e447]: Wireframing
+            - listitem [ref=e448]:
+              - generic [ref=e449]: "02"
+              - generic [ref=e450]: UI Layouts
+            - listitem [ref=e451]:
+              - generic [ref=e452]: "03"
+              - generic [ref=e453]: Design Systems
+            - listitem [ref=e454]:
+              - generic [ref=e455]: "04"
+              - generic [ref=e456]: Visual Storytelling
+            - listitem [ref=e457]:
+              - generic [ref=e458]: "05"
+              - generic [ref=e459]: Figma Prototyping
+            - listitem [ref=e460]:
+              - generic [ref=e461]: "06"
+              - generic [ref=e462]: Portfolio Presentation
+            - listitem [ref=e463]:
+              - generic [ref=e464]: "07"
+              - generic [ref=e465]: Creative Direction
+            - listitem [ref=e466]:
+              - generic [ref=e467]: "08"
+              - generic [ref=e468]: Poster / Web Design
+    - generic [ref=e469]:
+      - generic [ref=e470]:
+        - generic [ref=e471]:
+          - generic [ref=e472]:
+            - generic [ref=e473]: "03"
+            - generic [ref=e475]: Design & Art — off the clock
+          - heading "The other half of the studio." [level=2] [ref=e476]:
+            - text: The other half
+            - text: of the studio.
+          - paragraph [ref=e477]: Posters I make for no one in particular, photos I edit until the light feels right, and deck covers I redesign for the joy of laying things out. Drop real exports on any tile — these are placeholders waiting for the good stuff.
+        - generic [ref=e478]:
+          - generic [ref=e479]: All · 09
+          - generic [ref=e480]: Type
+          - generic [ref=e481]: Photo
+          - generic [ref=e482]: Decks
+      - generic [ref=e483]:
+        - generic [ref=e484]:
+          - img "Art tile 1" [ref=e485]
+          - generic [ref=e486]: poster.A1
+          - generic [ref=e488]: 3:4
+          - generic [ref=e489]: "[ TYPE POSTER · 01 ]"
+        - generic [ref=e490]:
+          - img "Art tile 2" [ref=e491]
+          - generic [ref=e492]: edit.warm.04
+          - generic [ref=e494]: 4:5
+          - generic [ref=e495]: "[ PHOTO EDIT · warm grade ]"
+        - generic [ref=e496]:
+          - img "Art tile 3" [ref=e497]
+          - generic [ref=e498]: deck.cover.07
+          - generic [ref=e500]: 16:9
+          - generic [ref=e501]: "[ DECK COVER · 09 ]"
+        - generic [ref=e502]:
+          - generic [ref=e504]: edit.cool.03
+          - generic [ref=e506]: 4:5
+          - generic [ref=e507]: "[ PHOTO EDIT · cool grade ]"
+        - generic [ref=e508]:
+          - generic [ref=e510]: video.01
+          - generic [ref=e512]: 9:16
+          - generic [ref=e513]: "[ VIDEO · 01 ]"
+        - generic [ref=e514]:
+          - img "Photo edit cool grade" [ref=e515]
+          - generic [ref=e516]: edit.cool.03
+          - generic [ref=e518]: 4:5
+          - generic [ref=e519]: "[ PHOTO EDIT · cool grade ]"
+        - generic [ref=e520]:
+          - generic [ref=e522]: video.03
+          - generic [ref=e524]: 9:16
+          - generic [ref=e525]: "[ VIDEO · 03 ]"
+        - generic [ref=e526]:
+          - generic [ref=e528]:
+            - text: "2026"
+            - generic [ref=e529]: portfolio season
+          - generic [ref=e530]: poster.C1
+          - generic [ref=e532]: 16:9
+          - generic [ref=e533]: "[ TYPE POSTER · 06 ]"
+        - generic [ref=e534]:
+          - generic [ref=e535]:
+            - generic [ref=e536]:
+              - generic [ref=e537]: brief · 02
+              - generic [ref=e538]: placeholder
+            - generic [ref=e539]:
+              - text: Deck
+              - emphasis [ref=e540]: cover — 03.
+            - generic [ref=e541]:
+              - generic [ref=e542]: drop a real export
+              - generic [ref=e544]: —
+          - generic [ref=e545]: deck.cover.18
+          - generic [ref=e547]: 16:9
+          - generic [ref=e548]: "[ DECK COVER · brief ]"
+      - generic [ref=e549]:
+        - generic [ref=e550]: ● 09 pieces · 2024 — 26
+        - generic [ref=e551]: "filed under: posters, edits, deck covers"
+        - generic [ref=e552]: not for sale · made for fun
+    - generic [ref=e553]:
+      - generic [ref=e554]:
+        - generic [ref=e555]: "06"
+        - generic [ref=e557]: Contact — let's chat
+      - heading "Let's build clear, useful, & beautifully structured digital products. ⌁ open · 2026" [level=2] [ref=e558]:
+        - text: Let's build clear, useful, & beautifully structured digital products.
+        - generic [ref=e559]: ⌁ open · 2026
+      - paragraph [ref=e560]: I'm open to BA, Product Analyst, Associate PM, UX / Product, and creative product roles. Also happy to collaborate on product ideas, case studies, dashboards, and early-stage concepts.
+      - generic [ref=e561]:
+        - link "Email khushii.solannki@gmail.com ↗ fastest way to reach me" [ref=e562]:
+          - /url: mailto:khushii.solannki@gmail.com
+          - generic [ref=e563]: Email
+          - generic [ref=e564]:
+            - generic [ref=e565]: khushii.solannki@gmail.com
+            - generic [ref=e566]: ↗
+          - generic [ref=e567]: fastest way to reach me
+        - link "LinkedIn /in/khushisolanki-pm ↗ roles, network, history" [ref=e568]:
+          - /url: https://www.linkedin.com/in/khushisolanki-pm
+          - generic [ref=e569]: LinkedIn
+          - generic [ref=e570]:
+            - generic [ref=e571]: /in/khushisolanki-pm
+            - generic [ref=e572]: ↗
+          - generic [ref=e573]: roles, network, history
+        - link "Resume Download Resume ↓ BA · Product · UX" [ref=e574]:
+          - /url: Khushi-Solanki-Resume.pdf
+          - generic [ref=e575]: Resume
+          - generic [ref=e576]:
+            - generic [ref=e577]: Download Resume
+            - generic [ref=e578]: ↓
+          - generic [ref=e579]: BA · Product · UX
+  - contentinfo [ref=e580]:
+    - generic [ref=e581]:
+      - img [ref=e582]
+      - generic [ref=e584]: Khushi Solanki — Portfolio 2026
+    - generic [ref=e585]:
+      - generic [ref=e586]: EST. 2024
+      - generic [ref=e587]: Made with care in Mumbai
+      - generic [ref=e588]: v2.0

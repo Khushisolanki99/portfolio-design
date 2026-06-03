@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthcare Memory-Care App · Khushi Solanki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000000;
+      --panel: #050505;
+      --text: #F7F5EF;
+      --muted: #A3A3A3;
+      --line: #222222;
+      --accent: #2A9D8F;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.45;
+    }
+
+    .page {
+      width: min(1200px, 92vw);
+      margin: 0 auto;
+      padding: 28px 0 52px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      color: #BEBEBE;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 14px;
+      margin-bottom: 20px;
+    }
+    .topbar a { color: inherit; text-decoration: none; }
+
+    .hero {
+      text-align: center;
+      padding: 56px 12px 46px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .eyebrow {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #C8C8C8;
+      margin-bottom: 14px;
+    }
+    h1 {
+      margin: 0 auto 14px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(2rem, 6vw, 4.2rem);
+      letter-spacing: -0.035em;
+      line-height: 1.0;
+      font-weight: 800;
+    }
+    .hero p {
+      margin: 0 auto;
+      color: var(--muted);
+      max-width: 64ch;
+      font-size: 1.02rem;
+    }
+    .hero-badge {
+      display: inline-block;
+      margin-top: 22px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 5px 14px;
+    }
+
+    .section-label {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: #BDBDBD;
+    }
+
+    .problem-section {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 32px 36px 36px;
+    }
+    .problem-section .section-label {
+      display: block;
+      margin-bottom: 20px;
+    }
+    .problem-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.75;
+      max-width: 74ch;
+    }
+    .problem-copy + .problem-copy { margin-top: 16px; }
+    mark {
+      background: transparent;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .narrative-section { margin-top: 18px; }
+    .narrative-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .narrative-card {
+      padding: 28px 32px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .narrative-card:nth-child(even) { border-right: none; }
+    .narrative-card:nth-last-child(-n+2) { border-bottom: none; }
+    .narrative-card .section-label {
+      display: block;
+      margin-bottom: 14px;
+    }
+    .narrative-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: .95rem;
+      line-height: 1.7;
+    }
+    .narrative-copy + .narrative-copy { margin-top: 12px; }
+    .narrative-list {
+      margin: 0;
+      padding-left: 16px;
+      color: var(--muted);
+      font-size: .95rem;
+      line-height: 1.9;
+    }
+    .narrative-list li { margin-bottom: 2px; }
+
+    /* Gallery */
+    .gallery-section {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .gallery-header {
+      padding: 14px 24px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .gallery-note-inline {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: .06em;
+      color: #555;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .gallery-tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 48px 32px 24px;
+      border-right: 1px solid var(--line);
+      background: #020202;
+      gap: 18px;
+      min-height: 480px;
+    }
+    .gallery-tile:last-child { border-right: none; }
+    .gallery-tile img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+    .gallery-tile-cap {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 9px;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: #444;
+      text-align: center;
+    }
+    .gallery-footer-note {
+      padding: 16px 24px;
+      border-top: 1px solid var(--line);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: .05em;
+      color: #4a4a4a;
+      font-style: italic;
+    }
+
+    .bottom-note {
+      margin-top: 14px;
+      text-align: center;
+      color: #8A8A8A;
+      font-size: 11px;
+      letter-spacing: .02em;
+    }
+
+    @media (max-width: 900px) {
+      .narrative-grid { grid-template-columns: 1fr; }
+      .narrative-card { border-right: none; border-bottom: 1px solid var(--line); }
+      .narrative-card:nth-last-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .narrative-card:last-child { border-bottom: none; }
+      .problem-section { padding: 24px 20px 28px; }
+    }
+    @media (max-width: 600px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-tile { border-right: none; border-bottom: 1px solid var(--line); }
+      .gallery-tile:last-child { border-bottom: none; }
+      .hero { padding: 38px 12px 34px; }
+    }
+
+    #cursor-glow {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <div id="cursor-glow" aria-hidden="true"></div>
+  <main class="page">
+
+    <header class="topbar">
+      <div>Khushi Solanki · Portfolio</div>
+      <div>Healthcare Memory-Care App · Case Study</div>
+      <a href="../Portfolio.html">← All work</a>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">Healthcare Mobile App · BA + PM · Wireframes · Confidential</div>
+      <h1>Healthcare<br />Memory-Care App</h1>
+      <p>Confidential healthcare mobile app for dementia patient and caregiver support — structured from client requirements through full mobile wireframes.</p>
+      <div class="hero-badge">Brand name withheld · Client project</div>
+    </section>
+
+    <section class="problem-section">
+      <div class="section-label">Problem Statement</div>
+      <p class="problem-copy"><mark>Dementia-care products</mark> need to support both patients and caregivers with simple, trustworthy, and easy-to-follow flows. The challenge was to structure a mobile experience that could make <mark>care-related actions clearer</mark> without overwhelming either user type.</p>
+      <p class="problem-copy">Most existing tools were either too clinical for daily caregiver use or too simplified to handle real care coordination. The product needed to be structured around user trust, <mark>clarity of next steps</mark>, and an architecture that felt safe and familiar to both sides of the care relationship.</p>
+    </section>
+
+    <section class="narrative-section">
+      <div class="narrative-grid">
+
+        <div class="narrative-card">
+          <span class="section-label">My Role</span>
+          <p class="narrative-copy">I worked as a <strong>Business Analyst and Project Manager</strong>. I participated in client meetings, gathered and clarified requirements, understood user and business needs, mapped flows, and created a complete mobile wireframe system based on the client's requirements.</p>
+        </div>
+
+        <div class="narrative-card">
+          <span class="section-label">What I Contributed</span>
+          <ul class="narrative-list">
+            <li>Requirement gathering from client discussions</li>
+            <li>User flow mapping for patient and caregiver sides</li>
+            <li>Wireframe creation across key screens</li>
+            <li>Feature structure and screen-level planning</li>
+            <li>Product documentation support</li>
+            <li>Coordination across the product cycle</li>
+          </ul>
+        </div>
+
+        <div class="narrative-card">
+          <span class="section-label">Process · How I Approached It</span>
+          <p class="narrative-copy">The work started in client meetings — understanding who the product was for, what caregivers actually needed day-to-day, and where clarity was breaking down in the existing experience.</p>
+          <p class="narrative-copy">I mapped the dual-user architecture (patient side vs. caregiver side), defined the core flows, and then built the wireframe system from those foundations. Each screen decision was anchored in: <em>what action does this user need to take, and what makes it harder than it should be?</em></p>
+        </div>
+
+        <div class="narrative-card">
+          <span class="section-label">What This Demonstrates</span>
+          <ul class="narrative-list">
+            <li>Healthcare domain BA and PM work</li>
+            <li>Dual-persona product structuring</li>
+            <li>Client requirement gathering and translation</li>
+            <li>Mobile wireframe architecture</li>
+            <li>Sensitivity to user trust and cognitive load</li>
+            <li>End-to-end product cycle ownership</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="gallery-header">
+        <span class="section-label">Screens · Mobile App Mockups</span>
+      </div>
+      <div class="gallery-grid">
+
+        <div class="gallery-tile">
+          <img src="./assets/tanvish-screen-isometric.png" alt="Healthcare Memory-Care App — isometric mobile mockup" />
+          <span class="gallery-tile-cap">App · Isometric View</span>
+        </div>
+
+        <div class="gallery-tile">
+          <img src="./assets/tanvish-screen-tilt.png" alt="Healthcare Memory-Care App — perspective tilt mockup" />
+          <span class="gallery-tile-cap">App · Perspective View</span>
+        </div>
+
+        <div class="gallery-tile">
+          <img src="./assets/tanvish-screen-duo.png" alt="Healthcare Memory-Care App — two screens layered" />
+          <span class="gallery-tile-cap">App · Dual Screen View</span>
+        </div>
+
+      </div>
+      <div class="gallery-footer-note">Brand name is withheld for client confidentiality. Additional wireframes and archived screenshots will be added here.</div>
+    </section>
+
+    <p class="bottom-note">Healthcare mobile app · Dementia patient and caregiver support · BA + PM · Mobile wireframes</p>
+
+  </main>
+  <script>
+    const glow = document.getElementById('cursor-glow');
+    let glowX = window.innerWidth / 2, glowY = window.innerHeight / 2, raf = 0;
+    function draw() {
+      glow.style.background = `radial-gradient(600px circle at ${glowX}px ${glowY}px, rgba(42,157,143,0.12) 0%, rgba(42,157,143,0.05) 35%, transparent 70%)`;
+      raf = 0;
+    }
+    document.addEventListener('mousemove', e => { glowX = e.clientX; glowY = e.clientY; if (!raf) raf = requestAnimationFrame(draw); });
+    draw();
+  </script>
+</body>
+</html>

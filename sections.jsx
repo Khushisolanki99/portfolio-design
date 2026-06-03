@@ -132,124 +132,95 @@ function Marquee() {
 }
 
 /* ============================================================ */
-/* ABOUT — editorial poster (reference-matched)                  */
+/* ABOUT — editorial poster (no portrait, full-width spread)     */
+/* ============================================================ */
+/* ABOUT SECTION — self-contained, scoped to .about-section      */
 /* ============================================================ */
 function About() {
   return (
-    <section id="about" className="about bg-grid-paper" data-screen-label="01 About">
-      <div className="ae-wrap">
+    <section id="about" className="about-section" data-screen-label="01 About">
+      <img
+        className="about-bg"
+        src="images/about-photo.jpeg"
+        alt="Khushi Solanki standing in a warm, light-filled stone corridor"
+      />
+      <div className="about-tint" aria-hidden></div>
 
-        {/* Portrait — left, full height */}
-        <div className="ae-portrait">
-          <img className="cutout" src="images/khushi.png" alt="Khushi Solanki — portrait" />
-          <span className="sticker ae-hecho tilt-r">✎ MADE BY KHUSHI</span>
+      <div className="about-stage">
+        {/* HEADLINE */}
+        <div className="about-panel about-headline">
+          <span className="about-kicker">portfolio 2026 · 01 — about</span>
+          <h1>Hi, I'm <span className="o">Khushi</span><br />Solanki.</h1>
+          <div className="about-tags">
+            <span>Business Analysis</span>
+            <span>Product Thinking</span>
+            <span>Visual Storytelling</span>
+          </div>
         </div>
 
-        {/* Content — right */}
-        <div className="ae-content">
+        {/* INTRO */}
+        <div className="about-panel about-intro">
+          <span className="about-pin" aria-hidden></span>
+          <span className="about-label">— intro</span>
+          <p>I work at the intersection of <b>business analysis, product thinking and visual storytelling</b> — turning unclear ideas into structured product direction. I take messy problems, ask the right questions, map user journeys, and shape requirements that tell teams what to build and why.</p>
+          <p>My work usually starts with a <em>problem statement</em>, a few uncomfortable questions, and a blank flow. From there I build PRDs, user stories, wireframes, dashboards, process maps and product concepts — <b>structured enough for teams</b>, <b>clear enough for users</b>.</p>
+          <p>I care about making product thinking visible — connecting business goals with user needs, translating ambiguity into decisions, and using design to communicate the solution, not just decorate it.</p>
+          <p className="about-off"><span>Off the clock —</span> editing visuals, exploring web layouts, making posters, or redesigning something nobody asked me to.</p>
+        </div>
 
-          {/* Heading + location stickers */}
-          <div className="ae-head-zone">
-            <h1 className="ae-head">Hi, I'm <span className="accent">Khushi</span> Solanki</h1>
+        {/* WHAT I SHIP */}
+        <div className="about-panel about-ship">
+          <span className="about-label">what i ship</span>
+          <p className="about-shiplist">PRDs · User Flows · Specs · Journey Maps · Wireframes · Decks · Playbooks</p>
+        </div>
+
+        {/* EXPERIENCE */}
+        <div className="about-panel about-experience">
+          <div className="about-cardhead"><span className="about-label">experience</span><span className="about-rule" aria-hidden></span></div>
+          <div className="about-row">
+            <span className="yr">2024–2026</span>
+            <div className="meta"><span className="role">Project Manager</span><span className="co">ProChat Technologies</span></div>
           </div>
-
-          {/* Three-column middle: bio | experience | sidebar */}
-          <div className="ae-middle">
-
-            {/* Col 1: Intro bio */}
-            <div className="ae-bio">
-              <p>
-                I work at the intersection of <b>business analysis, product thinking,
-                and visual storytelling</b>. I take messy problems, turn them into clear
-                requirements, map the user journey, and shape screens that make the
-                solution easier to understand.
-              </p>
-              <p>
-                My work starts with a <em style={{color:"var(--accent)"}}>problem statement</em>, a few uncomfortable
-                questions, and a blank flow. From there I build PRDs, user stories,
-                wireframes and dashboards that are <b>structured enough for teams</b> and
-                <b> clear enough for users</b>.
-              </p>
-              <div className="ae-ships">
-                <span className="lbl">What I ship →</span>
-                PRDs · User flows · Specs · Journey maps · Wireframes · Decks · Playbooks
-              </div>
-            </div>
-
-            {/* Col 2: Experience */}
-            <div className="ae-exp-col">
-              <div className="ae-sec-title">Experience</div>
-              <div className="ae-timeline">
-                <div className="ae-entry">
-                  <div className="ae-yr ac">2024<small>26</small></div>
-                  <div><div className="ae-co">ProCohat Technologies</div><div className="ae-role">Project Manager</div></div>
-                </div>
-                <div className="ae-entry">
-                  <div className="ae-yr ac">2023<small>24</small></div>
-                  <div><div className="ae-co">ProCohat Technologies</div><div className="ae-role">Product Associate Intern</div></div>
-                </div>
-                <div className="ae-entry">
-                  <div className="ae-yr ac">2022<small>23</small></div>
-                  <div><div className="ae-co">Breathing Paper</div><div className="ae-role">Marketing Intern</div></div>
-                </div>
-              </div>
-            </div>
-
-            {/* Col 3: Education + Focus + Tools */}
-            <div className="ae-sidebar">
-              <div className="ae-sb-block">
-                <div className="ae-sec-title">Education</div>
-                <div className="ae-timeline">
-                  <div className="ae-entry">
-                    <div className="ae-yr gr">2021<small>24</small></div>
-                    <div><div className="ae-co">B.Tech, Artificial Intelligence</div><div className="ae-role">G.H. Raisoni Institute of Engineering &amp; Technology, Nagpur</div></div>
-                  </div>
-                  <div className="ae-entry">
-                    <div className="ae-yr gr">2025<small>now</small></div>
-                    <div><div className="ae-co">Product Management with Generative &amp; Agentic AI</div><div className="ae-role">BITSoM</div></div>
-                  </div>
-                </div>
-              </div>
-              <div className="ae-sb-block">
-                <div className="ae-sec-title">Focus</div>
-                <ul className="ae-focus-list">
-                  <li>Business Analysis</li>
-                  <li>Product Thinking</li>
-                  <li>UX / Wireframing</li>
-                  <li>Creative Direction</li>
-                </ul>
-              </div>
-              <div className="ae-sb-block">
-                <div className="ae-sec-title">Tools</div>
-                <div className="ae-tag-cloud">
-                  {["Figma","JIRA","Notion","Miro","SQL","Excel","Google Sheets","Power BI","Canva","Adobe Suite","PowerPoint"].map(t => (
-                    <span key={t} className="ae-tag">{t}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
+          <div className="about-row">
+            <span className="yr">2023–2024</span>
+            <div className="meta"><span className="role">Product Associate Intern</span><span className="co">ProChat Technologies</span></div>
           </div>
-
-          {/* Polaroid collage — bottom */}
-          <div className="ae-collage">
-            <div className="ae-poly tilt-a">
-              <image-slot id="about-poly-1" shape="rect" placeholder="workspace ↓"
-                style={{width:"100%",aspectRatio:"4/3",background:"#d8cfc0"}}></image-slot>
-              <div className="ae-cap">coffee ★</div>
-            </div>
-            <div className="ae-poly tilt-b">
-              <image-slot id="about-poly-2" shape="rect" placeholder="sketches ↓"
-                style={{width:"100%",aspectRatio:"4/3",background:"#d8cfc0"}}></image-slot>
-              <div className="ae-cap">picture ♡</div>
-            </div>
-            <div className="ae-poly tilt-c">
-              <image-slot id="about-poly-3" shape="rect" placeholder="off-hours ↓"
-                style={{width:"100%",aspectRatio:"4/3",background:"#d8cfc0"}}></image-slot>
-              <div className="ae-cap">art ✰</div>
-            </div>
+          <div className="about-row">
+            <span className="yr">2022–2023</span>
+            <div className="meta"><span className="role">Marketing Intern</span><span className="co">Breathing Paper</span></div>
           </div>
+        </div>
 
+        {/* EDUCATION */}
+        <div className="about-panel about-education">
+          <div className="about-cardhead"><span className="about-label">education</span><span className="about-rule" aria-hidden></span></div>
+          <div className="about-row">
+            <span className="yr">2025–now</span>
+            <div className="meta"><span className="role">PM, Generative &amp; Agentic AI</span><span className="co">BITSOM</span></div>
+          </div>
+          <div className="about-row">
+            <span className="yr">2021–2024</span>
+            <div className="meta"><span className="role">B.Tech, Artificial Intelligence</span><span className="co">G.H. Raisoni Institute · Nagpur</span></div>
+          </div>
+        </div>
+
+        {/* FOCUS */}
+        <div className="about-panel about-focus">
+          <span className="about-label">focus</span>
+          <ul>
+            <li>Business Analysis</li>
+            <li>Product Thinking</li>
+            <li>UX / Wireframing</li>
+            <li>Creative Direction</li>
+          </ul>
+        </div>
+
+        {/* TOOLS */}
+        <div className="about-panel about-tools">
+          <span className="about-label">tools</span>
+          <div className="about-chips">
+            <span>Figma</span><span>JIRA</span><span>Notion</span><span>Miro</span><span>SQL</span><span>Excel</span><span>Sheets</span><span>Power BI</span><span>Canva</span><span>Adobe</span><span>PPT</span>
+          </div>
         </div>
       </div>
     </section>
@@ -307,6 +278,39 @@ function Work({ onOpen }) {
       tools: "Figma · Notion · Miro · JIRA",
       url: "case-studies/nudge.html",
       csIndex: 2,
+    },
+    {
+      num: "04",
+      cardClass: "wc-card--healthcare",
+      title: "Healthcare Memory-Care App",
+      desc: "Confidential healthcare mobile app for dementia patient and caregiver support.",
+      tags: ["Healthcare", "BA + PM", "Wireframes", "Mobile App"],
+      owned: "Requirements · Client meetings · User flows · Wireframes · Product structure",
+      tools: "Figma · Requirement mapping · Flow documentation",
+      url: "case-studies/healthcare-memory-care.html",
+      csIndex: null,
+    },
+    {
+      num: "05",
+      cardClass: "wc-card--wellness",
+      title: "Tanvish Wellness App",
+      desc: "Wellness mobile app for meditation videos, live meditation, daily quotes, and store experiences.",
+      tags: ["Wellness", "BA + PM", "Wireframes", "UI Design"],
+      owned: "Requirements · App flow · Wireframes · UI design · Feature structure",
+      tools: "Figma · Product mapping · UI design · Client discussions",
+      url: "case-studies/tanvish-wellness.html",
+      csIndex: null,
+    },
+    {
+      num: "06",
+      cardClass: "wc-card--event",
+      title: "Event Management SaaS",
+      desc: "SaaS concept for managing events, registrations, vendors, attendees, and operational workflows.",
+      tags: ["SaaS", "Event Management", "Dashboard"],
+      owned: "Requirements · User flows · Dashboard structure · Admin workflows · Wireframes",
+      tools: "Figma · Product mapping · Flow documentation",
+      url: "case-studies/event-management-saas.html",
+      csIndex: null,
     },
   ];
 
@@ -379,76 +383,48 @@ function CyclingWord({ words }) {
 }
 
 /* ============================================================ */
-/* EXPERIENCE — compact skill map (paper)                        */
+/* EXPERIENCE — constellation skill map (paper)                  */
 /* ============================================================ */
-const DISCIPLINES = [
-  {
-    idx: "01", title: "Business Analysis",
-    desc: "Requirements, stakeholder needs, workflows, and decision clarity.",
-    tag: "PRD brain", delay: "0s",
-    pos: { top: "12%", left: "14%" },
-  },
-  {
-    idx: "02", title: "Product Thinking",
-    desc: "Problems, users, scope, trade-offs, and business value.",
-    tag: "messy → clear", delay: "0.8s",
-    pos: { top: "10%", left: "76%" },
-  },
-  {
-    idx: "03", title: "Project Management",
-    desc: "Timelines, dependencies, feedback loops, and delivery rhythm.",
-    tag: "delivery mode", delay: "1.6s",
-    pos: { top: "46%", left: "88%" },
-  },
-  {
-    idx: "04", title: "UX / UI Design",
-    desc: "Screens, wireframes, flows, and usable interfaces.",
-    tag: "design chaos", delay: "2.4s",
-    pos: { top: "80%", left: "13%" },
-  },
-  {
-    idx: "05", title: "Creative Direction",
-    desc: "Visual systems, storytelling, layout, and brand feeling.",
-    tag: "big picture", delay: "3.2s",
-    pos: { top: "82%", left: "72%" },
-  },
-];
-
-const MICRO_SKILLS = [
-  { label: "Requirements Writing", desc: "Turning ambiguity into clear product specs.",              delay: "0.4s", pos: { top: "28%", left: "27%" } },
-  { label: "PRDs",                 desc: "Structuring product decisions into build-ready documents.", delay: "1.1s", pos: { top: "7%",  left: "50%" } },
-  { label: "Wireframing",          desc: "Making ideas visible before design polish.",                delay: "1.9s", pos: { top: "65%", left: "29%" } },
-  { label: "User Flows",           desc: "Mapping how users move from intent to action.",             delay: "2.3s", pos: { top: "88%", left: "50%" } },
-  { label: "Stakeholder Mapping",  desc: "Understanding who needs what and why.",                    delay: "0.6s", pos: { top: "26%", left: "66%" } },
-  { label: "Dashboard Thinking",   desc: "Turning messy data into readable product signals.",         delay: "1.5s", pos: { top: "56%", left: "18%" } },
-  { label: "Visual Storytelling",  desc: "Making complex ideas easier to understand.",                delay: "2.7s", pos: { top: "76%", left: "60%" } },
+const SKILL_CARDS_DATA = [
+  { num: "01", title: "Business Analysis",    desc: "Requirements, stakeholder needs, workflows, and decision clarity.",          tag: "PRO BRAIN",       pos: { top: "10%", left: "50%" } },
+  { num: "02", title: "Product Thinking",     desc: "Problems, users, scope, trade-offs, and business value.",                    tag: "MESSY + CLEAR",   pos: { top: "10%", left: "68%" } },
+  { num: "03", title: "Project Management",   desc: "Timelines, dependencies, feedback loops, and delivery rhythm.",              tag: "DELIVERY MODE",   pos: { top: "24%", left: "82%" } },
+  { num: "04", title: "UX / UI Design",       desc: "Screens, wireframes, flows, and usable interfaces.",                         tag: "DESIGN CHAOS",    pos: { top: "46%", left: "86%" } },
+  { num: "05", title: "Creative Direction",   desc: "Visual systems, storytelling, layout, and brand feeling.",                   tag: "BIG PICTURE",     pos: { top: "66%", left: "82%" } },
+  { num: "06", title: "PRDs",                 desc: "Structured product requirement documents that align teams.",                  tag: "SOURCE OF TRUTH", pos: { top: "82%", left: "68%" } },
+  { num: "07", title: "Requirements Writing", desc: "Translating ambiguous needs into clear, actionable specs.",                  tag: "NO GUESSING",     pos: { top: "88%", left: "50%" } },
+  { num: "08", title: "Stakeholder Mapping",  desc: "Identifying, aligning, and managing stakeholder expectations.",              tag: "PEOPLE LAYER",    pos: { top: "82%", left: "32%" } },
+  { num: "09", title: "Dashboard Thinking",   desc: "Turning raw data into decisions through visual reporting.",                  tag: "DATA CLARITY",    pos: { top: "66%", left: "18%" } },
+  { num: "10", title: "Wireframing",          desc: "Low to mid-fidelity flows that communicate before design does.",             tag: "THINK FIRST",     pos: { top: "46%", left: "14%" } },
+  { num: "11", title: "Visual Storytelling",  desc: "Making complex information feel simple and worth reading.",                  tag: "SHOW DON'T TELL", pos: { top: "24%", left: "18%" } },
+  { num: "12", title: "User Flows",           desc: "Mapping every step a user takes through a product journey.",                tag: "PATH FINDER",     pos: { top: "10%", left: "32%" } },
 ];
 
 function Experience() {
-  const [active, setActive] = useStateS(null);
-  const [hoveredMicro, setHoveredMicro] = useStateS(null);
-
   return (
     <section id="experience" className="exp-orbit bg-grid-paper" data-screen-label="03 Practice">
       <div className="eyebrow-light">
-        <span className="num">03</span><span className="dot" /><span>Practice — 12 skills</span>
+        <span className="num">03</span><span className="dot" /><span>Practice — 12 Skills</span>
       </div>
 
       <div className="exp-orbit-stage">
-        {/* Connector lines — viewBox 0 0 100 100, preserveAspectRatio none = 1 unit = 1% of stage */}
+        {/* Connector lines: SVG x/y coords map directly to left%/top% of stage */}
         <svg className="exp-orbit-svg" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <line x1="50" y1="50" x2="14" y2="12" stroke="var(--ink)" strokeWidth="0.3" strokeDasharray="1.5 3" opacity="0.22"/>
-          <line x1="50" y1="50" x2="76" y2="10" stroke="var(--ink)" strokeWidth="0.3" strokeDasharray="1.5 3" opacity="0.22"/>
-          <line x1="50" y1="50" x2="88" y2="46" stroke="var(--ink)" strokeWidth="0.3" strokeDasharray="1.5 3" opacity="0.22"/>
-          <line x1="50" y1="50" x2="13" y2="80" stroke="var(--ink)" strokeWidth="0.3" strokeDasharray="1.5 3" opacity="0.22"/>
-          <line x1="50" y1="50" x2="72" y2="82" stroke="var(--ink)" strokeWidth="0.3" strokeDasharray="1.5 3" opacity="0.22"/>
-          <line x1="50" y1="50" x2="27" y2="28" stroke="var(--ink)" strokeWidth="0.18" strokeDasharray="1 4" opacity="0.12"/>
-          <line x1="50" y1="50" x2="50" y2="7"  stroke="var(--ink)" strokeWidth="0.18" strokeDasharray="1 4" opacity="0.12"/>
-          <line x1="50" y1="50" x2="66" y2="26" stroke="var(--ink)" strokeWidth="0.18" strokeDasharray="1 4" opacity="0.12"/>
-          <ellipse cx="50" cy="50" rx="18" ry="15" fill="none" stroke="var(--ink)" strokeWidth="0.2" strokeDasharray="1 5" opacity="0.09"/>
+          <line x1="50" y1="50" x2="50" y2="10" stroke="var(--ink)" strokeWidth="0.25" strokeDasharray="1.5 3" opacity="0.2"/>
+          <line x1="50" y1="50" x2="68" y2="10" stroke="var(--ink)" strokeWidth="0.25" strokeDasharray="1.5 3" opacity="0.2"/>
+          <line x1="50" y1="50" x2="82" y2="24" stroke="var(--ink)" strokeWidth="0.25" strokeDasharray="1.5 3" opacity="0.2"/>
+          <line x1="50" y1="50" x2="86" y2="46" stroke="var(--ink)" strokeWidth="0.25" strokeDasharray="1.5 3" opacity="0.2"/>
+          <line x1="50" y1="50" x2="82" y2="66" stroke="var(--ink)" strokeWidth="0.25" strokeDasharray="1.5 3" opacity="0.2"/>
+          <line x1="50" y1="50" x2="68" y2="82" stroke="var(--ink)" strokeWidth="0.25" strokeDasharray="1.5 3" opacity="0.2"/>
+          <line x1="50" y1="50" x2="50" y2="88" stroke="var(--ink)" strokeWidth="0.25" strokeDasharray="1.5 3" opacity="0.2"/>
+          <line x1="50" y1="50" x2="32" y2="82" stroke="var(--ink)" strokeWidth="0.25" strokeDasharray="1.5 3" opacity="0.2"/>
+          <line x1="50" y1="50" x2="18" y2="66" stroke="var(--ink)" strokeWidth="0.25" strokeDasharray="1.5 3" opacity="0.2"/>
+          <line x1="50" y1="50" x2="14" y2="46" stroke="var(--ink)" strokeWidth="0.25" strokeDasharray="1.5 3" opacity="0.2"/>
+          <line x1="50" y1="50" x2="18" y2="24" stroke="var(--ink)" strokeWidth="0.25" strokeDasharray="1.5 3" opacity="0.2"/>
+          <line x1="50" y1="50" x2="32" y2="10" stroke="var(--ink)" strokeWidth="0.25" strokeDasharray="1.5 3" opacity="0.2"/>
         </svg>
 
-        {/* Center heading card */}
+        {/* Center card */}
         <div className="exp-orbit-center">
           <h2 className="exp-orbit-heading">What I do<br />on a Tuesday.</h2>
           <p className="exp-orbit-sub">Five disciplines that overlap on almost every product brief.</p>
@@ -458,41 +434,15 @@ function Experience() {
           </div>
         </div>
 
-        {/* Main discipline nodes */}
-        {DISCIPLINES.map((d) => (
-          <button
-            key={d.idx}
-            className={`exp-node${active === d.idx ? ' exp-node-active' : ''}`}
-            style={{ ...d.pos, animationDelay: d.delay }}
-            onClick={() => setActive(active === d.idx ? null : d.idx)}
-            aria-expanded={active === d.idx}
-          >
-            <div className="exp-node-dot" />
-            <div className="exp-node-num">EXP.{d.idx}</div>
-            <div className="exp-node-title">{d.title}</div>
-            <div className="exp-node-desc">{d.desc}</div>
-            <div className="exp-node-tag">{d.tag}</div>
-          </button>
+        {/* 12 skill cards — all identical size and style */}
+        {SKILL_CARDS_DATA.map((card) => (
+          <div key={card.num} className="exp-skill-card" style={card.pos}>
+            <div className="exp-skill-num">EXP.{card.num}</div>
+            <div className="exp-skill-title">{card.title}</div>
+            <div className="exp-skill-desc">{card.desc}</div>
+            <div className="exp-skill-tag">{card.tag}</div>
+          </div>
         ))}
-
-        {/* Micro skill tags */}
-        {MICRO_SKILLS.map((s) => (
-          <span
-            key={s.label}
-            className={`exp-micro${hoveredMicro === s.label ? ' exp-micro-active' : ''}`}
-            style={{ ...s.pos, animationDelay: s.delay }}
-            onMouseEnter={() => setHoveredMicro(s.label)}
-            onMouseLeave={() => setHoveredMicro(null)}
-          >
-            {s.label}
-            <span className="exp-micro-tooltip">{s.desc}</span>
-          </span>
-        ))}
-
-        <span className="exp-doodle exp-d1" aria-hidden="true">✦</span>
-        <span className="exp-doodle exp-d2" aria-hidden="true">→</span>
-        <span className="exp-doodle exp-d3" aria-hidden="true">◦</span>
-        <span className="exp-doodle exp-d4" aria-hidden="true">✦</span>
       </div>
     </section>
   );
@@ -664,17 +614,17 @@ function Contact() {
   const cards = [
     {
       k: "Email",
-      v: "hello@khushi.in",
+      v: "khushii.solannki@gmail.com",
       hint: "fastest way to reach me",
       ar: "↗",
-      href: "mailto:hello@khushi.in",
+      href: "mailto:khushii.solannki@gmail.com",
     },
     {
       k: "LinkedIn",
-      v: "/in/khushi-solanki",
+      v: "/in/khushisolanki-pm",
       hint: "roles, network, history",
       ar: "↗",
-      href: "https://linkedin.com/in/khushi-solanki",
+      href: "https://www.linkedin.com/in/khushisolanki-pm",
     },
     {
       k: "Resume",
@@ -683,13 +633,6 @@ function Contact() {
       ar: "↓",
       href: "Khushi-Solanki-Resume.pdf",
       download: "Khushi-Solanki-Resume.pdf",
-    },
-    {
-      k: "Figma / Portfolio Workspace",
-      v: "View workspace",
-      hint: "case studies + working files",
-      ar: "↗",
-      href: "#",
     },
   ];
   return (
@@ -737,4 +680,606 @@ function Footer() {
 }
 
 
-Object.assign(window, { Hero, Marquee, About, Work, Experience, Skills, DesignArt, Contact, Footer, KMark });
+/* ============================================================ */
+/* CREATIVE ARCHIVE                                              */
+/* ============================================================ */
+const ARCHIVE_FILTERS = ['All', 'Product / UX', 'Brand & Web', 'Social / Video', 'Print / Expo', 'Healthcare'];
+
+const SOURCE_BADGE_MAP = {
+  'Figma':     '#9059E8',
+  'Web Page':  '#1A73E8',
+  'YouTube':   '#E52D27',
+  'Instagram': '#C13584',
+  'Image':     '#3B7A56',
+  'PDF':       '#C05621',
+  'Video':     '#E0411F',
+  'Mixed':     '#6B6059',
+};
+
+const ARCHIVE_CARDS = [
+  {
+    id: '01',
+    title: 'Memotag Healthcare Wireframes',
+    category: 'Product / UX',
+    description: 'Wireframe support for a healthcare product focused on dementia patients — structuring product flows, early screen direction, and information architecture.',
+    tags: ['Healthcare', 'Wireframes', 'UX Flow'],
+    sourceType: 'Figma',
+    sourceUrl: null,
+    ctaLabel: 'View Figma',
+  },
+  {
+    id: '02',
+    title: 'Healthcare Mobile App Concepts',
+    category: 'Healthcare',
+    description: 'Mobile app screen concepts focused on clarity, trust, and usability — for healthcare contexts where hierarchy and readability matter most.',
+    tags: ['Mobile UI', 'Healthcare', 'App Design'],
+    sourceType: 'Image',
+    sourceUrl: null,
+    ctaLabel: 'View Screens',
+  },
+  {
+    id: '03',
+    title: 'Brand Articles & Web Pages',
+    category: 'Brand & Web',
+    description: 'Editorial article layouts and web pages designed for brand storytelling — making content feel sharper, more readable, and visually memorable.',
+    tags: ['Web Design', 'Article Layout', 'Brand Content'],
+    sourceType: 'Web Page',
+    sourceUrl: null,
+    ctaLabel: 'View Page',
+  },
+  {
+    id: '04',
+    title: 'Online Presence for Growing Brands',
+    category: 'Brand & Web',
+    description: 'Helped brands establish online presence through visual design, social creatives, and content structure.',
+    tags: ['Brand Design', 'Social Media', 'Content'],
+    sourceType: 'Mixed',
+    sourceUrl: null,
+    ctaLabel: 'View Work',
+  },
+  {
+    id: '05',
+    title: 'Podcast Edits & Featured Videos',
+    category: 'Social / Video',
+    description: 'Short-form edits, podcast clips, and featured video assets for social platforms — cut for shareability and pacing.',
+    tags: ['Podcast', 'Reels', 'Video Editing'],
+    sourceType: 'Instagram',
+    sourceUrl: null,
+    ctaLabel: 'Watch',
+  },
+  {
+    id: '06',
+    title: 'Brochures & Government Expo Designs',
+    category: 'Print / Expo',
+    description: 'Brochure and expo-facing visual designs for formal brand and government-facing communication.',
+    tags: ['Brochure', 'Expo', 'Print Design'],
+    sourceType: 'PDF',
+    sourceUrl: null,
+    ctaLabel: 'View Designs',
+  },
+  {
+    id: '07',
+    title: 'Overseas Client Brand Work',
+    category: 'Social / Video',
+    description: 'Brand visuals and video editing for overseas clients — shaping digital presence and communication style for international audiences.',
+    tags: ['Client Work', 'Brand Design', 'Video Editing'],
+    sourceType: 'Mixed',
+    sourceUrl: null,
+    ctaLabel: 'View Work',
+  },
+];
+
+function CreativeWork() {
+  const [activeFilter, setActiveFilter] = useStateS('All');
+
+  const visible = activeFilter === 'All'
+    ? ARCHIVE_CARDS
+    : ARCHIVE_CARDS.filter(c => c.category === activeFilter);
+
+  function handleCardClick(card) {
+    if (card.sourceUrl) {
+      window.open(card.sourceUrl, '_blank', 'noopener,noreferrer');
+    }
+  }
+
+  return (
+    <section id="creative-work" className="creative-work-section bg-grid-dark" data-screen-label="03b Archive">
+
+      <div className="cw-header">
+        <div className="cw-eyebrow">
+          <span className="cw-eyebrow-num">03b</span>
+          <span className="cw-eyebrow-dot" />
+          <span>Creative Archive — 7 projects</span>
+        </div>
+        <h2 className="cw-headline">
+          Creative <span className="accent">archive</span> &amp;<br />visual work
+        </h2>
+        <p className="cw-subtitle">
+          Wireframes, brand pages, social videos, brochures, and healthcare screens —
+          work across formats and clients, kept here as a curated visual archive.
+        </p>
+      </div>
+
+      <div className="cw-filters">
+        {ARCHIVE_FILTERS.map(f => (
+          <button
+            key={f}
+            className={`creative-filter-chip${activeFilter === f ? ' active' : ''}`}
+            onClick={() => setActiveFilter(f)}
+          >
+            {f}
+          </button>
+        ))}
+      </div>
+
+      <div className="creative-work-grid">
+        {visible.map(card => {
+          const badgeColor = SOURCE_BADGE_MAP[card.sourceType] || '#6B6059';
+          const hasLink = !!card.sourceUrl;
+          return (
+            <div
+              key={card.id}
+              className={`creative-work-card${hasLink ? '' : ' ca-no-link'}`}
+              onClick={() => handleCardClick(card)}
+              role={hasLink ? 'link' : undefined}
+              tabIndex={hasLink ? 0 : undefined}
+              onKeyDown={hasLink ? (e) => { if (e.key === 'Enter' || e.key === ' ') handleCardClick(card); } : undefined}
+            >
+              <div className="cw-card-thumb">
+                <div className="cw-thumb-inner">
+                  <span className="cw-thumb-label">[ {card.category} ]</span>
+                  <span className="cw-thumb-num">{card.id}</span>
+                </div>
+                <span className="ca-source-badge" style={{ background: badgeColor }}>
+                  {card.sourceType}
+                </span>
+              </div>
+
+              <div className="cw-card-body">
+                <div className="cw-card-cat">{card.category}</div>
+                <h3 className="cw-card-title">{card.title}</h3>
+                <p className="cw-card-desc">{card.description}</p>
+                <div className="cw-card-tags">
+                  {card.tags.map(t => <span key={t} className="cw-tag">{t}</span>)}
+                </div>
+                <div className="cw-card-foot">
+                  {hasLink ? (
+                    <span className="cw-card-cta">
+                      {card.ctaLabel} <span className="cw-arrow">→</span>
+                    </span>
+                  ) : (
+                    <span className="cw-card-cta ca-cta-soon">Coming soon</span>
+                  )}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {visible.length === 0 && (
+        <p className="cw-empty">No items in this category yet.</p>
+      )}
+    </section>
+  );
+}
+
+/* ============================================================ */
+/* CREATIVE DIRECTION & PRODUCTION WORK                         */
+/* ============================================================ */
+
+const CP_FILTERS = ['All', 'Production', 'Post-Production', 'Podcast', 'Brand Work', 'Website / Figma', 'Event Design', 'Social Content'];
+
+const CP_SOURCE_META = {
+  'Images':          { color: '#3B7A56' },
+  'YouTube':         { color: '#E52D27' },
+  'Figma Prototype': { color: '#9059E8' },
+  'Mixed Media':     { color: '#6B6059' },
+  'Coming Soon':     { color: '#9a9390' },
+};
+
+// ── Project data ────────────────────────────────────────────────
+// To replace placeholders later:
+//   thumbnails: swap null → actual path, e.g. "images/tedx-1.jpg"
+//   links.youtube: add YouTube URL, e.g. "https://www.youtube.com/..."
+//   links.figma:   add Figma prototype URL, e.g. "https://www.figma.com/proto/..."
+//   links.primary: add any other external link
+const CP_PROJECTS = [
+  {
+    id: '01',
+    title: 'TEDx IIM 2025',
+    category: 'Production · Post-Production · Event',
+    filterTags: ['Production', 'Post-Production', 'Event Design'],
+    description: 'Production and post-production support for TEDx IIM 2025, including event visuals, content coordination, and post-event creative assets.',
+    responsibilities: ['Production support', 'Post-production', 'Visual coordination', 'Event content'],
+    tags: ['TEDx', 'Event', 'Production', 'Editing'],
+    sourceType: 'Images',
+    // REPLACE: e.g. thumbnails: ["images/tedx-1.jpg", "images/tedx-2.jpg", "images/tedx-3.jpg"]
+    thumbnails: [null, null, null],
+    links: {
+      // REPLACE: primary: "https://..."
+      primary: null,
+    },
+    ctaLabel: 'View Work →',
+    notes: null,
+  },
+  {
+    id: '02',
+    title: 'Ruf Studios',
+    category: 'Creative Studio · Brand Work',
+    filterTags: ['Brand Work'],
+    description: 'Started my own creative studio focused on design, visuals, editing, and digital presence for brands and creators.',
+    responsibilities: ['Creative direction', 'Brand visuals', 'Editing', 'Client communication', 'Digital presence'],
+    tags: ['Studio', 'Brand', 'Design', 'Video'],
+    sourceType: 'Mixed Media',
+    // REPLACE: e.g. thumbnails: ["images/ruf-1.jpg", "images/ruf-2.jpg"]
+    thumbnails: [null, null],
+    links: {
+      // REPLACE: primary: "https://..."
+      primary: null,
+    },
+    ctaLabel: 'View Studio Work →',
+    notes: null,
+  },
+  {
+    id: '03',
+    title: 'Sayacare Podcast',
+    category: 'Podcast · Production · Post-Production',
+    filterTags: ['Podcast', 'Production', 'Post-Production'],
+    description: 'Podcast production and post-production work including edits, episode assets, short clips, and platform-ready video content.',
+    responsibilities: ['Podcast editing', 'Video cleanup', 'Short-form edits', 'Publishing assets'],
+    tags: ['Podcast', 'YouTube', 'Editing', 'Clips'],
+    sourceType: 'YouTube',
+    thumbnails: [],
+    links: {
+      // REPLACE: youtube: "https://www.youtube.com/channel/..."
+      youtube: null,
+    },
+    ctaLabel: 'Watch Episodes →',
+    notes: null,
+  },
+  {
+    id: '04',
+    title: 'The Career Company',
+    category: 'Video · Social Content',
+    filterTags: ['Social Content', 'Post-Production'],
+    description: 'Video editing and content support for career-focused videos, helping shape educational content into platform-ready assets.',
+    responsibilities: ['Video editing', 'Content formatting', 'Social-ready edits', 'YouTube support'],
+    tags: ['Career', 'YouTube', 'Editing', 'Social'],
+    sourceType: 'YouTube',
+    thumbnails: [],
+    links: {
+      // REPLACE: youtube: "https://www.youtube.com/..."
+      youtube: null,
+    },
+    ctaLabel: 'Watch Work →',
+    notes: null,
+  },
+  {
+    id: '05',
+    title: 'Advantage Vidarbha',
+    category: 'Event Design · Visual Communication',
+    filterTags: ['Event Design'],
+    description: 'Visual design support for Advantage Vidarbha, including event-facing creatives, presentation-style assets, and communication material.',
+    responsibilities: ['Visual design', 'Event creatives', 'Layouts', 'Communication assets'],
+    tags: ['Event', 'Design', 'Vidarbha', 'Visuals'],
+    sourceType: 'Images',
+    // REPLACE: e.g. thumbnails: ["images/vidarbha-1.jpg", "images/vidarbha-2.jpg", "images/vidarbha-3.jpg"]
+    thumbnails: [null, null, null],
+    links: {
+      // REPLACE: primary: "https://..."
+      primary: null,
+    },
+    ctaLabel: 'View Designs →',
+    notes: null,
+  },
+  {
+    id: '06',
+    title: 'Run Frenzy Website',
+    category: 'Website · Figma Prototype',
+    filterTags: ['Website / Figma'],
+    description: 'Website design/prototype work for Run Frenzy, focused on creating a clean digital experience and visual direction.',
+    responsibilities: ['Website layout', 'Figma prototype', 'Visual design', 'Interaction planning'],
+    tags: ['Website', 'Figma', 'Prototype', 'UI'],
+    sourceType: 'Figma Prototype',
+    // REPLACE: e.g. thumbnails: ["images/runfrenzy-thumb.jpg"]
+    thumbnails: [null],
+    links: {
+      // REPLACE: figma: "https://www.figma.com/proto/..."
+      figma: null,
+    },
+    ctaLabel: 'Open Prototype →',
+    notes: null,
+  },
+  {
+    id: '07',
+    title: 'Cheap Marketing',
+    category: 'Brand Work · Design · Video Editing',
+    filterTags: ['Brand Work', 'Social Content'],
+    description: 'Design and video editing support for marketing-focused brand content, social assets, and visual communication.',
+    responsibilities: ['Graphic design', 'Video editing', 'Social creatives', 'Brand content'],
+    tags: ['Marketing', 'Design', 'Editing', 'Social'],
+    sourceType: 'Mixed Media',
+    // REPLACE: e.g. thumbnails: ["images/cheapmkt-1.jpg", "images/cheapmkt-2.jpg"]
+    thumbnails: [null, null],
+    links: {
+      // REPLACE: primary: "https://..."
+      primary: null,
+    },
+    ctaLabel: 'View Work →',
+    notes: null,
+  },
+];
+
+// ── Card preview area (type-aware) ──────────────────────────────
+function CPCardPreview({ project }) {
+  const { sourceType, thumbnails } = project;
+
+  if (sourceType === 'YouTube') {
+    return (
+      <div className="cp-preview cp-preview--yt">
+        <div className="cp-yt-mock">
+          <div className="cp-yt-play">▶</div>
+          <span className="cp-yt-label">YouTube</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (sourceType === 'Figma Prototype') {
+    return (
+      <div className="cp-preview cp-preview--figma">
+        <div className="cp-figma-mock">
+          <svg width="28" height="42" viewBox="0 0 38 57" fill="none" aria-hidden="true">
+            <rect x="0"  y="0"  width="18" height="18" rx="9"  fill="rgba(239,233,221,0.22)" />
+            <rect x="20" y="0"  width="18" height="18" rx="9"  fill="rgba(239,233,221,0.22)" />
+            <rect x="0"  y="20" width="18" height="18" rx="0"  fill="rgba(239,233,221,0.22)" />
+            <rect x="20" y="20" width="18" height="18" rx="9"  fill="rgba(239,233,221,0.22)" />
+            <rect x="0"  y="40" width="18" height="18" rx="9 9 9 9" fill="rgba(239,233,221,0.22)" />
+          </svg>
+          <span className="cp-figma-label">Figma Prototype</span>
+        </div>
+      </div>
+    );
+  }
+
+  // Images / Mixed Media: 2–3 placeholder thumbnails
+  const items = thumbnails.length > 0 ? thumbnails.slice(0, 3) : [null, null];
+  return (
+    <div className={`cp-preview cp-preview--imgs cp-imgs-${items.length}`}>
+      {items.map((src, i) => (
+        <div key={i} className="cp-thumb-ph">
+          {src
+            ? <img src={src} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+            : <span className="cp-thumb-ph-label">{String(i + 1).padStart(2, '0')}</span>
+          }
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ── Individual card ─────────────────────────────────────────────
+function CPCard({ project, onOpen }) {
+  const meta = CP_SOURCE_META[project.sourceType] || { color: '#6B6059' };
+  return (
+    <div
+      className="cp-card"
+      onClick={() => onOpen(project)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') onOpen(project); }}
+    >
+      <div className="cp-card-media">
+        <CPCardPreview project={project} />
+        <span className="cp-source-badge" style={{ background: meta.color }}>
+          {project.sourceType}
+        </span>
+      </div>
+
+      <div className="cp-card-body">
+        <div className="cp-card-cat">{project.category}</div>
+        <h3 className="cp-card-title">{project.title}</h3>
+        <p className="cp-card-desc">{project.description}</p>
+        <div className="cp-card-resp">
+          {project.responsibilities.map((r) => (
+            <span key={r} className="cp-resp-chip">{r}</span>
+          ))}
+        </div>
+        <div className="cp-card-tags">
+          {project.tags.map((t) => <span key={t} className="cp-tag">{t}</span>)}
+        </div>
+        <div className="cp-card-foot">
+          <span className="cp-card-cta">{project.ctaLabel} <span className="cp-cta-arrow">→</span></span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Detail modal ────────────────────────────────────────────────
+function CPModal({ project, onClose }) {
+  useEffectS(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = prev; };
+  }, []);
+
+  const meta = CP_SOURCE_META[project.sourceType] || { color: '#6B6059' };
+  const primaryLink = project.links.youtube || project.links.figma || project.links.primary;
+
+  return (
+    <div className="cp-modal-overlay" onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}>
+      <div className="cp-modal" role="dialog" aria-modal="true">
+
+        {/* Bar */}
+        <div className="cp-modal-bar">
+          <div className="cp-modal-bar-left">
+            <span className="cp-modal-num">{project.id}</span>
+            <span className="cp-modal-bar-div" />
+            <span className="cp-modal-bar-cat">{project.category}</span>
+          </div>
+          <button className="cp-modal-close" onClick={onClose}>✕ Close</button>
+        </div>
+
+        {/* Body */}
+        <div className="cp-modal-body">
+
+          {/* Left: text */}
+          <div className="cp-modal-left">
+            <h2 className="cp-modal-title">{project.title}</h2>
+            <p className="cp-modal-desc">{project.description}</p>
+
+            <div className="cp-modal-block">
+              <div className="cp-modal-label">My responsibilities</div>
+              <ul className="cp-modal-resp">
+                {project.responsibilities.map((r, i) => (
+                  <li key={i}>
+                    <span className="cp-modal-resp-n">{String(i + 1).padStart(2, '0')}</span>
+                    <span>{r}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="cp-modal-tags">
+              {project.tags.map((t) => <span key={t} className="cp-tag">{t}</span>)}
+            </div>
+
+            {project.notes && (
+              <div className="cp-modal-block">
+                <div className="cp-modal-label">Notes</div>
+                <p className="cp-modal-note-text">{project.notes}</p>
+              </div>
+            )}
+
+            <div className="cp-modal-ctas">
+              {primaryLink ? (
+                <a href={primaryLink} target="_blank" rel="noopener noreferrer" className="cp-modal-btn cp-modal-btn--primary">
+                  {project.ctaLabel}
+                </a>
+              ) : (
+                <span className="cp-modal-btn cp-modal-btn--soon">Link coming soon</span>
+              )}
+            </div>
+          </div>
+
+          {/* Right: preview */}
+          <div className="cp-modal-right">
+            <span className="cp-modal-source-badge" style={{ background: meta.color }}>
+              {project.sourceType}
+            </span>
+
+            {project.sourceType === 'YouTube' && (
+              <div className="cp-modal-yt">
+                <div className="cp-yt-play cp-yt-play--lg">▶</div>
+                <span className="cp-yt-label">
+                  {project.links.youtube ? 'Use the button below to watch →' : 'YouTube link coming soon'}
+                </span>
+              </div>
+            )}
+
+            {project.sourceType === 'Figma Prototype' && (
+              <div className="cp-modal-figma">
+                <svg width="44" height="66" viewBox="0 0 38 57" fill="none" aria-hidden="true">
+                  <rect x="0"  y="0"  width="18" height="18" rx="9" fill="rgba(24,21,19,0.18)" />
+                  <rect x="20" y="0"  width="18" height="18" rx="9" fill="rgba(24,21,19,0.18)" />
+                  <rect x="0"  y="20" width="18" height="18" rx="0" fill="rgba(24,21,19,0.18)" />
+                  <rect x="20" y="20" width="18" height="18" rx="9" fill="rgba(24,21,19,0.18)" />
+                  <rect x="0"  y="40" width="18" height="18" rx="9" fill="rgba(24,21,19,0.18)" />
+                </svg>
+                <span className="cp-figma-label cp-figma-label--modal">
+                  {project.links.figma ? 'Open prototype via button below →' : 'Figma link coming soon'}
+                </span>
+              </div>
+            )}
+
+            {(project.sourceType === 'Images' || project.sourceType === 'Mixed Media') && (
+              <div className="cp-modal-gallery">
+                {project.thumbnails.length > 0 ? project.thumbnails.map((src, i) => (
+                  <div key={i} className="cp-modal-img-ph">
+                    {src
+                      ? <img src={src} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', borderRadius: 4 }} />
+                      : <span className="cp-thumb-ph-label">
+                          {/* REPLACE: image {i + 1} — swap with real path in thumbnails array */}
+                          img {String(i + 1).padStart(2, '0')}
+                        </span>
+                    }
+                  </div>
+                )) : (
+                  <div className="cp-modal-img-ph">
+                    <span className="cp-thumb-ph-label">Images coming soon</span>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Section ─────────────────────────────────────────────────────
+function CreativeDirectionWork() {
+  const [activeFilter, setActiveFilter] = useStateS('All');
+  const [openProject, setOpenProject] = useStateS(null);
+
+  const visible = activeFilter === 'All'
+    ? CP_PROJECTS
+    : CP_PROJECTS.filter((p) => p.filterTags.includes(activeFilter));
+
+  return (
+    <section id="creative-production" className="cp-section bg-grid-dark" data-screen-label="03a Creative">
+
+      <div className="cp-header">
+        <div className="cp-eyebrow">
+          <span className="cp-eyebrow-num">03a</span>
+          <span className="cp-eyebrow-dot" />
+          <span>Creative Direction &amp; Production — {CP_PROJECTS.length} projects</span>
+        </div>
+        <h2 className="cp-headline">
+          Creative direction &amp; <span className="accent">production</span> work
+        </h2>
+        <p className="cp-subtitle">
+          Alongside product and BA work, I've worked across event production, podcast edits,
+          brand visuals, website prototypes, social content, and creative systems for different
+          teams, studios, and clients.
+        </p>
+        <p className="cp-resp-note">
+          My responsibilities usually included planning creative direction, coordinating
+          production needs, designing visuals, editing videos, preparing brand assets,
+          structuring content, and helping teams present their work more clearly online.
+        </p>
+      </div>
+
+      <div className="cp-filters">
+        {CP_FILTERS.map((f) => (
+          <button
+            key={f}
+            className={`cp-filter-chip${activeFilter === f ? ' active' : ''}`}
+            onClick={() => setActiveFilter(f)}
+          >
+            {f}
+          </button>
+        ))}
+      </div>
+
+      <div className="cp-grid">
+        {visible.map((p) => (
+          <CPCard key={p.id} project={p} onOpen={setOpenProject} />
+        ))}
+      </div>
+
+      {visible.length === 0 && (
+        <p className="cp-empty">No projects in this category yet.</p>
+      )}
+
+      {openProject && (
+        <CPModal project={openProject} onClose={() => setOpenProject(null)} />
+      )}
+    </section>
+  );
+}
+
+Object.assign(window, { Hero, Marquee, About, Work, Experience, Skills, DesignArt, Contact, Footer, KMark, CreativeWork, CreativeDirectionWork });
