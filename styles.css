@@ -3570,19 +3570,26 @@ html { scroll-behavior: auto; }
   transform: none;
 }
 
-/* ── Per-card accent theming ── */
-.wc-card {
+/* ── Per-card accent theming ──
+   Naming note: .wc-card = .case-card in documentation.
+   Functional aliases (.case-card, .case-card--*) are defined below
+   the main rules so both class names work if used in the future.
+   Creative cards: .cp-card = .creative-card (aliases also below).
+   CSS vars exposed: --project-accent, --project-accent-soft, --project-border
+── */
+.wc-card, .case-card {
   --project-accent: #EFE9DD;
   --project-accent-soft: rgba(239,233,221,0.06);
+  --project-border: rgba(239,233,221,0.10);
   --project-tag-border: rgba(239,233,221,0.22);
 }
-.wc-card--rto        { --project-accent: #E04E1E; --project-accent-soft: rgba(224,78,30,0.09);   --project-tag-border: rgba(224,78,30,0.32); }
-.wc-card--meeting    { --project-accent: #4F46E5; --project-accent-soft: rgba(79,70,229,0.10);   --project-tag-border: rgba(79,70,229,0.32); }
-.wc-card--nudge      { --project-accent: #0707EB; --project-accent-soft: rgba(7,7,235,0.10);     --project-tag-border: rgba(7,7,235,0.32);   }
-.wc-card--mvp        { --project-accent: #10B981; --project-accent-soft: rgba(16,185,129,0.09);  --project-tag-border: rgba(16,185,129,0.30); }
-.wc-card--healthcare { --project-accent: #2A9D8F; --project-accent-soft: rgba(42,157,143,0.09);  --project-tag-border: rgba(42,157,143,0.32); }
-.wc-card--wellness   { --project-accent: #7C3AED; --project-accent-soft: rgba(124,58,237,0.10);  --project-tag-border: rgba(124,58,237,0.32); }
-.wc-card--event      { --project-accent: #F59E0B; --project-accent-soft: rgba(245,158,11,0.09);  --project-tag-border: rgba(245,158,11,0.30); }
+.wc-card--rto,        .case-card--rto        { --project-accent: #E04E1E; --project-accent-soft: rgba(224,78,30,0.09);   --project-border: rgba(224,78,30,0.18);   --project-tag-border: rgba(224,78,30,0.32); }
+.wc-card--meeting,    .case-card--meeting     { --project-accent: #4F46E5; --project-accent-soft: rgba(79,70,229,0.10);  --project-border: rgba(79,70,229,0.18);   --project-tag-border: rgba(79,70,229,0.32); }
+.wc-card--nudge,      .case-card--nudge       { --project-accent: #0707EB; --project-accent-soft: rgba(7,7,235,0.10);    --project-border: rgba(7,7,235,0.18);     --project-tag-border: rgba(7,7,235,0.32);   }
+.wc-card--mvp,        .case-card--mvp         { --project-accent: #10B981; --project-accent-soft: rgba(16,185,129,0.09); --project-border: rgba(16,185,129,0.18);  --project-tag-border: rgba(16,185,129,0.30); }
+.wc-card--healthcare, .case-card--healthcare  { --project-accent: #2A9D8F; --project-accent-soft: rgba(42,157,143,0.09); --project-border: rgba(42,157,143,0.18);  --project-tag-border: rgba(42,157,143,0.32); }
+.wc-card--wellness,   .case-card--tanvish     { --project-accent: #7C3AED; --project-accent-soft: rgba(124,58,237,0.10); --project-border: rgba(124,58,237,0.18);  --project-tag-border: rgba(124,58,237,0.32); }
+.wc-card--event,      .case-card--event       { --project-accent: #D97706; --project-accent-soft: rgba(217,119,6,0.09);  --project-border: rgba(217,119,6,0.18);   --project-tag-border: rgba(217,119,6,0.30); }
 
 .wc-card {
   display: flex;
@@ -4161,8 +4168,10 @@ html { scroll-behavior: auto; }
 @media (max-width: 1100px) { .cp-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px)  { .cp-grid { grid-template-columns: 1fr; } }
 
-/* Card */
-.cp-card {
+/* Card — .creative-card is a documented alias for .cp-card
+   Per-project creative card variants: .creative-card--tedx, --ruf, --podcast,
+   --career, --vidarbha, --runfrenzy, --cheapmkt (extend below as needed) */
+.cp-card, .creative-card {
   background: var(--bg-paper);
   color: var(--ink);
   border-radius: 8px;

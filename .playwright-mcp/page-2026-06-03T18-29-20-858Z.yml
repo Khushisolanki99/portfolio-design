@@ -1,0 +1,126 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]: Khushi Solanki
+    - generic [ref=e4]:
+      - generic [ref=e5]: RTO Guard · Concept Case Study
+      - link "← All work" [ref=e6] [cursor=pointer]:
+        - /url: ../Portfolio.html
+  - generic [ref=e8]:
+    - generic [ref=e9]: Concept Case Study
+    - heading "RTO Guard." [level=1] [ref=e11]:
+      - text: RTO
+      - text: Guard.
+    - paragraph [ref=e12]: A post-purchase risk dashboard for detecting likely-to-fail e-commerce deliveries — before they become returns. Early warning for ops teams, not reactive reporting after the damage is done.
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: Type
+          - generic [ref=e17]: Concept Case Study
+        - generic [ref=e18]:
+          - generic [ref=e19]: Focus
+          - generic [ref=e20]: Post-purchase Operations
+        - generic [ref=e21]:
+          - generic [ref=e22]: Year
+          - generic [ref=e23]: "2025"
+      - generic [ref=e24]:
+        - link "Read PRD" [ref=e25] [cursor=pointer]:
+          - /url: ./assets/RTO-Guard-Case-Study.pdf
+        - link "Read Case Study" [ref=e26] [cursor=pointer]:
+          - /url: ./assets/RTO-Guard-Case-Study.pdf
+  - generic [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]: § 01
+        - text: Problem
+      - heading "Too late is the default." [level=2] [ref=e32]:
+        - text: Too late
+        - text: is the
+        - text: default.
+      - img [ref=e33]
+    - generic [ref=e36]:
+      - paragraph [ref=e37]:
+        - strong [ref=e38]: D2C and e-commerce brands
+        - text: often lose margin after an order has already started failing — repeated delivery attempts, unreachable customers, address issues, COD risk, and delayed courier updates all show up too late. Ops teams work from scattered dashboards, manual follow-ups, and reactive reports.
+      - paragraph [ref=e39]:
+        - text: RTO Guard explores how a post-purchase risk dashboard could help operations teams
+        - strong [ref=e40]: identify risky orders earlier
+        - text: ", understand why they are at risk, and take action before the order becomes RTO."
+  - generic [ref=e41]:
+    - generic [ref=e43]: Product Flow
+    - generic [ref=e45]:
+      - complementary [ref=e46]:
+        - generic [ref=e47]: Step 01
+        - heading "Dashboard overview" [level=2] [ref=e48]
+        - paragraph [ref=e49]: Ops manager gets a quick view of risky orders, exceptions, and overall delivery health at a glance.
+        - list [ref=e50]:
+          - listitem [ref=e51] [cursor=pointer]: 01 · Dashboard overview
+          - listitem [ref=e52] [cursor=pointer]: 02 · Risk queue
+          - listitem [ref=e53] [cursor=pointer]: 03 · Order detail
+          - listitem [ref=e54] [cursor=pointer]: 04 · Action / nudge
+          - listitem [ref=e55] [cursor=pointer]: 05 · Performance insights
+      - generic [ref=e57]:
+        - img "Dashboard overview" [ref=e58]
+        - img "Risk queue" [ref=e59]
+        - img "Order detail" [ref=e60]
+        - img "Action / nudge" [ref=e61]
+        - img "Performance insights" [ref=e62]
+  - generic [ref=e70]:
+    - generic [ref=e71]:
+      - generic [ref=e72]: Overview
+      - generic [ref=e73]:
+        - paragraph [ref=e74]:
+          - text: Ops teams lack an early-warning system
+          - text: for orders likely to fail delivery.
+        - paragraph [ref=e75]: RTO Guard turns scattered delivery signals into a focused risk workflow. Instead of showing only shipment status, the dashboard surfaces risk status, reason codes, priority, and the suggested next action — before ops gets a call from an angry customer.
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - generic [ref=e79]: "01"
+          - text: Persona
+        - paragraph [ref=e80]:
+          - text: D2C operations manager handling
+          - strong [ref=e81]: 500–5,000 orders per day
+          - text: . Responsible for delivery performance, exception management, and reducing return-to-origin rates across multiple couriers and regions.
+      - generic [ref=e82]:
+        - generic [ref=e83]:
+          - generic [ref=e84]: "02"
+          - text: Goals
+        - list [ref=e85]:
+          - listitem [ref=e86]: → Surface risky orders early, before failure locks in
+          - listitem [ref=e87]: → Explain why each order is at risk
+          - listitem [ref=e88]: → Reduce manual follow-up and triage effort
+          - listitem [ref=e89]: → Help teams prioritize which orders to act on first
+          - listitem [ref=e90]: → Track RTO patterns and courier performance over time
+    - generic [ref=e91]:
+      - generic [ref=e92]: Product Thinking
+      - generic [ref=e93]:
+        - paragraph [ref=e94]: Risk-first, not status-first.
+        - paragraph [ref=e95]: Most delivery dashboards answer "where is my order?" RTO Guard answers "which orders are about to fail, and what should I do about them?" That shift — from status reporting to risk prioritization — is the core product decision. Clear risk categories, order-level drilldown, and action-oriented layout are all downstream of that framing.
+    - generic [ref=e96]:
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]: "03"
+          - text: Design Decisions
+        - list [ref=e100]:
+          - listitem [ref=e101]: → Risk-first dashboard instead of status-only tracking
+          - listitem [ref=e102]: "→ Clear risk tiers: On Track, At Risk, Exception"
+          - listitem [ref=e103]: → Order-level drilldown for root-cause visibility
+          - listitem [ref=e104]: → Action panel surfaces the suggested next step
+          - listitem [ref=e105]: → Trend and courier view for pattern monitoring
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - generic [ref=e108]: "04"
+          - text: What this demonstrates
+        - paragraph [ref=e109]: Business analysis, dashboard thinking, workflow mapping, risk-prioritization logic, and product storytelling for a post-purchase operations problem.
+        - generic [ref=e110]:
+          - generic [ref=e111]: Business Analysis
+          - generic [ref=e112]: Dashboard Design
+          - generic [ref=e113]: Risk Prioritization
+          - generic [ref=e114]: Workflow Mapping
+          - generic [ref=e115]: D2C Ops
+          - generic [ref=e116]: Product Storytelling
+    - paragraph [ref=e117]: Concept project — because ops teams deserve better than reactive reporting.
+  - contentinfo [ref=e118]:
+    - paragraph [ref=e119]: Concept project · Khushi Solanki · 2025
+    - link "← Back to portfolio" [ref=e120] [cursor=pointer]:
+      - /url: ../Portfolio.html

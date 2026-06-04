@@ -1,0 +1,119 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]: Khushi Solanki
+    - generic [ref=e4]:
+      - generic [ref=e5]: Nudge · Concept Case Study
+      - link "← All work" [ref=e6] [cursor=pointer]:
+        - /url: ../Portfolio.html
+  - generic [ref=e8]:
+    - generic [ref=e9]: Concept Case Study
+    - heading "Checkout at the moment of intent." [level=1] [ref=e11]:
+      - text: Checkout
+      - text: at the
+      - text: moment
+      - text: of intent.
+    - paragraph [ref=e12]: Nudge explores how checkout can happen inside the buying moment instead of after a redirect — reducing handoff friction and keeping the buyer in context where intent is highest.
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: Type
+          - generic [ref=e17]: Concept Case Study
+        - generic [ref=e18]:
+          - generic [ref=e19]: Focus
+          - generic [ref=e20]: Checkout / E-commerce
+        - generic [ref=e21]:
+          - generic [ref=e22]: Year
+          - generic [ref=e23]: "2025"
+      - generic [ref=e24]:
+        - link "Read PRD" [ref=e25] [cursor=pointer]:
+          - /url: https://capable-grey-48b.notion.site/CASE-STUDY-1-Research-to-Checkout-Flow-Redesign-8eb6fc8e583844c4a5c9d6333bdbb1c0
+        - link "Read Case Study" [ref=e26] [cursor=pointer]:
+          - /url: https://capable-grey-48b.notion.site/CASE-STUDY-1-Research-to-Checkout-Flow-Redesign-8eb6fc8e583844c4a5c9d6333bdbb1c0
+  - generic [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]: § 01
+        - text: Problem
+      - heading "Friction at the last mile." [level=2] [ref=e32]:
+        - text: Friction at the
+        - text: last mile.
+      - img [ref=e33]
+    - generic [ref=e36]:
+      - paragraph [ref=e37]:
+        - text: High-intent buyers often discover products inside
+        - strong [ref=e38]: blogs, reviews, and recommendation pages
+        - text: — but checkout usually happens after a redirect. That handoff breaks context, cools down intent, and adds friction exactly when the buyer is most ready to act.
+      - paragraph [ref=e39]: Nudge explores whether checkout can happen inside the buying moment itself — without forcing the user to leave the content surface they are already engaged with.
+  - generic [ref=e40]:
+    - generic [ref=e42]: Product Flow
+    - generic [ref=e44]:
+      - complementary [ref=e45]:
+        - generic [ref=e46]: Step 01
+        - heading "Content surface" [level=2] [ref=e47]
+        - paragraph [ref=e48]: Buyer is reading an editorial or review page and is already engaged with the product context.
+        - list [ref=e49]:
+          - listitem [ref=e50] [cursor=pointer]: 01 · Content surface
+          - listitem [ref=e51] [cursor=pointer]: 02 · Intent detected
+          - listitem [ref=e52] [cursor=pointer]: 03 · Embedded checkout
+          - listitem [ref=e53] [cursor=pointer]: 04 · Confirmation
+          - listitem [ref=e54] [cursor=pointer]: 05 · Merchant dashboard
+      - generic [ref=e56]:
+        - img "Content surface" [ref=e57]
+        - img "Intent detected" [ref=e58]
+        - img "Embedded checkout" [ref=e59]
+        - img "Confirmation" [ref=e60]
+        - img "Merchant dashboard" [ref=e61]
+  - generic [ref=e69]:
+    - generic [ref=e70]:
+      - generic [ref=e71]: Overview
+      - generic [ref=e72]:
+        - paragraph [ref=e73]: Checkout doesn't have to wait for a redirect.
+        - paragraph [ref=e74]: Nudge is a concept that embeds the buying moment into the content surface itself. When intent peaks — inside a review, a recommendation, an editorial — that's when checkout should live. Not after a handoff. Not after a tab switch. Right there.
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - generic [ref=e78]: "01"
+          - text: Persona
+        - paragraph [ref=e79]: A high-intent online shopper discovering products through editorial content — blog posts, reviews, curated recommendations. Already engaged. Already interested. Interrupted by the redirect.
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - generic [ref=e82]: "02"
+          - text: Goals
+        - list [ref=e83]:
+          - listitem [ref=e84]: → Capture checkout intent at the point of discovery
+          - listitem [ref=e85]: → Remove the redirect that cools down purchase intent
+          - listitem [ref=e86]: → Keep buyer in context throughout the transaction
+          - listitem [ref=e87]: → Surface confirmation without losing the content surface
+          - listitem [ref=e88]: → Give merchants signal on where intent converts
+    - generic [ref=e89]:
+      - generic [ref=e90]: Product Thinking
+      - generic [ref=e91]:
+        - paragraph [ref=e92]: The moment of intent is the product surface.
+        - paragraph [ref=e93]: This concept treats the content page as the transaction surface. Embedded checkout, inline confirmation, and contextual intent signals eliminate the mental step of "going to checkout." The merchant dashboard closes the loop — connecting where buyers engage with what they actually buy.
+    - generic [ref=e94]:
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - generic [ref=e97]: "03"
+          - text: Design Decisions
+        - list [ref=e98]:
+          - listitem [ref=e99]: → Embedded checkout panel, triggered in-context
+          - listitem [ref=e100]: → Minimal interruption — buyer stays on the content surface
+          - listitem [ref=e101]: → Intent detection as the trigger, not explicit "Add to cart"
+          - listitem [ref=e102]: → Inline order confirmation without page transition
+          - listitem [ref=e103]: → Merchant view tied to content performance, not just orders
+      - generic [ref=e104]:
+        - generic [ref=e105]:
+          - generic [ref=e106]: "04"
+          - text: What this demonstrates
+        - paragraph [ref=e107]: Product thinking, business analysis, flow design, and requirement documentation for a friction-reduction e-commerce concept.
+        - generic [ref=e108]:
+          - generic [ref=e109]: Product Thinking
+          - generic [ref=e110]: Flow Design
+          - generic [ref=e111]: Business Analysis
+          - generic [ref=e112]: E-commerce
+          - generic [ref=e113]: Requirement Docs
+    - paragraph [ref=e114]: Concept project — built to show how intent and checkout can share the same surface.
+  - contentinfo [ref=e115]:
+    - paragraph [ref=e116]: Concept project · Khushi Solanki · 2025
+    - link "← Back to portfolio" [ref=e117] [cursor=pointer]:
+      - /url: ../Portfolio.html

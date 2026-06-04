@@ -1,0 +1,114 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]: Khushi Solanki
+    - generic [ref=e4]:
+      - generic [ref=e5]: Tanvish Wellness App · Case Study
+      - link "← All work" [ref=e6] [cursor=pointer]:
+        - /url: ../Portfolio.html
+  - generic [ref=e8]:
+    - generic [ref=e9]: BA + PM · UI Design · Mobile App
+    - heading "Tanvish Wellness." [level=1] [ref=e11]:
+      - text: Tanvish
+      - text: Wellness.
+    - paragraph [ref=e12]: Wellness mobile app for meditation videos, live meditation, daily quotes, and store experiences — bringing multiple wellness touchpoints into one coherent, calm product.
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]: Type
+        - generic [ref=e17]: Client Project
+      - generic [ref=e18]:
+        - generic [ref=e19]: Role
+        - generic [ref=e20]: BA + PM + UI Design
+      - generic [ref=e21]:
+        - generic [ref=e22]: Domain
+        - generic [ref=e23]: Wellness · Mobile
+      - generic [ref=e24]:
+        - generic [ref=e25]: Output
+        - generic [ref=e26]: Wireframes + UI Screens
+  - generic [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]: § 01
+        - text: Problem
+      - heading "Four experiences, one flow." [level=2] [ref=e32]:
+        - text: Four
+        - text: experiences,
+        - text: one flow.
+      - img [ref=e33]
+    - generic [ref=e36]:
+      - paragraph [ref=e37]:
+        - text: The app needed to bring
+        - strong [ref=e38]: multiple wellness experiences
+        - text: into one simple mobile product — recorded meditation videos, live sessions, daily quotes, and a store — without making the product feel scattered or disconnected.
+      - paragraph [ref=e39]: The challenge was to unify different experience types (passive content, live interaction, transactional) under one navigation structure while keeping each experience feel purposeful and easy to access on its own terms.
+  - generic [ref=e41]:
+    - generic [ref=e42]:
+      - generic [ref=e43]: Overview
+      - generic [ref=e44]:
+        - paragraph [ref=e45]:
+          - text: One navigation.
+          - text: Four distinct wellness experiences.
+        - paragraph [ref=e46]: The design question wasn't just "how do these sections look?" — it was "how do they feel unified without feeling identical?" Meditation videos, live sessions, daily quotes, and a store each have different interaction patterns. Making them share a home without losing their identity was the work.
+    - generic [ref=e47]:
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: "01"
+          - text: My Role
+        - paragraph [ref=e51]:
+          - text: I worked as a
+          - strong [ref=e52]: Business Analyst, Project Manager, and UI Designer
+          - text: across the full product cycle — from client meetings and requirement gathering through wireframes and final mobile UI screens, end-to-end.
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: "02"
+          - text: What I Contributed
+        - list [ref=e56]:
+          - listitem [ref=e57]: → Requirement gathering from client discussions
+          - listitem [ref=e58]: → Product flow planning across all four sections
+          - listitem [ref=e59]: → Wireframes for key screens
+          - listitem [ref=e60]: → UI design for the full mobile app
+          - listitem [ref=e61]: → Feature planning and prioritization
+          - listitem [ref=e62]: → Store section structure
+          - listitem [ref=e63]: → Meditation and live-session flow structure
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - generic [ref=e67]: "03"
+          - text: Process
+        - paragraph [ref=e68]: "I started by mapping the four distinct product experiences the client wanted: video content, live sessions, daily quotes, and a store. The key design question was how to give each section a clear identity without making the overall app feel like four separate products glued together."
+        - paragraph [ref=e69]: From there I structured the navigation, defined feature priorities for each section, created the wireframes, and moved into UI design — keeping a calm, focused visual language throughout that matched the wellness context.
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - generic [ref=e72]: "04"
+          - text: What This Demonstrates
+        - list [ref=e73]:
+          - listitem [ref=e74]: → Multi-section product architecture
+          - listitem [ref=e75]: → BA and PM work on a client mobile app
+          - listitem [ref=e76]: → Bridging requirements into wireframes and UI
+          - listitem [ref=e77]: → Navigation design for diverse content types
+          - listitem [ref=e78]: → End-to-end ownership from brief to screens
+          - listitem [ref=e79]: → Wellness / consumer app domain experience
+        - generic [ref=e80]:
+          - generic [ref=e81]: Wellness App
+          - generic [ref=e82]: BA + PM
+          - generic [ref=e83]: UI Design
+          - generic [ref=e84]: Mobile
+          - generic [ref=e85]: Wireframes
+          - generic [ref=e86]: Client Project
+    - paragraph [ref=e87]: End-to-end client project — from brief to final UI screens.
+  - generic [ref=e88]:
+    - generic [ref=e90]: Screens · Mobile App
+    - generic [ref=e92]:
+      - generic [ref=e93]:
+        - img "Tanvish Wellness App — isometric mobile mockup" [ref=e94]
+        - generic [ref=e95]: App · Isometric View
+      - generic [ref=e96]:
+        - img "Tanvish Wellness App — perspective tilt mockup" [ref=e97]
+        - generic [ref=e98]: App · Perspective View
+      - generic [ref=e99]:
+        - img "Tanvish Wellness App — two screens layered" [ref=e100]
+        - generic [ref=e101]: App · Dual Screen
+    - paragraph [ref=e102]: Client project · additional screens available on request.
+  - contentinfo [ref=e103]:
+    - paragraph [ref=e104]: Client project · Wellness Mobile · Khushi Solanki
+    - link "← Back to portfolio" [ref=e105] [cursor=pointer]:
+      - /url: ../Portfolio.html

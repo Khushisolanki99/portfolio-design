@@ -6,266 +6,167 @@
   <title>Tanvish Wellness App · Khushi Solanki</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&family=Special+Elite&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cs-styles.css">
   <style>
+    /* Per-project accent override: soft purple / wellness tone */
     :root {
-      --bg: #000000;
-      --panel: #050505;
-      --text: #F7F5EF;
-      --muted: #A3A3A3;
-      --line: #222222;
-      --accent: #7C3AED;
-    }
-
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: "Inter", sans-serif;
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.45;
-    }
-
-    .page {
-      width: min(1200px, 92vw);
-      margin: 0 auto;
-      padding: 28px 0 52px;
-    }
-
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 11px;
-      letter-spacing: .11em;
-      text-transform: uppercase;
-      color: #BEBEBE;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 14px;
-      margin-bottom: 20px;
-    }
-    .topbar a { color: inherit; text-decoration: none; }
-
-    .hero {
-      text-align: center;
-      padding: 56px 12px 46px;
-      border: 1px solid var(--line);
-      background: var(--panel);
-    }
-    .eyebrow {
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 11px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: #C8C8C8;
-      margin-bottom: 14px;
-    }
-    h1 {
-      margin: 0 auto 14px;
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(2rem, 6vw, 4.2rem);
-      letter-spacing: -0.035em;
-      line-height: 1.0;
-      font-weight: 800;
-    }
-    .hero p {
-      margin: 0 auto;
-      color: var(--muted);
-      max-width: 64ch;
-      font-size: 1.02rem;
-    }
-
-    .section-label {
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 10px;
-      letter-spacing: .13em;
-      text-transform: uppercase;
-      color: #BDBDBD;
-    }
-
-    .problem-section {
-      margin-top: 18px;
-      border: 1px solid var(--line);
-      background: var(--panel);
-      padding: 32px 36px 36px;
-    }
-    .problem-section .section-label {
-      display: block;
-      margin-bottom: 20px;
-    }
-    .problem-copy {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.02rem;
-      line-height: 1.75;
-      max-width: 74ch;
-    }
-    .problem-copy + .problem-copy { margin-top: 16px; }
-    mark {
-      background: transparent;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .narrative-section { margin-top: 18px; }
-    .narrative-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      border: 1px solid var(--line);
-      background: var(--panel);
-    }
-    .narrative-card {
-      padding: 28px 32px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-    .narrative-card:nth-child(even) { border-right: none; }
-    .narrative-card:nth-last-child(-n+2) { border-bottom: none; }
-    .narrative-card .section-label {
-      display: block;
-      margin-bottom: 14px;
-    }
-    .narrative-copy {
-      margin: 0;
-      color: var(--muted);
-      font-size: .95rem;
-      line-height: 1.7;
-    }
-    .narrative-copy + .narrative-copy { margin-top: 12px; }
-    .narrative-list {
-      margin: 0;
-      padding-left: 16px;
-      color: var(--muted);
-      font-size: .95rem;
-      line-height: 1.9;
-    }
-    .narrative-list li { margin-bottom: 2px; }
-
-    /* Gallery */
-    .gallery-section {
-      margin-top: 18px;
-      border: 1px solid var(--line);
-      background: var(--panel);
-    }
-    .gallery-header {
-      padding: 14px 24px;
-      border-bottom: 1px solid var(--line);
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-    .gallery-tile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      padding: 48px 32px 24px;
-      border-right: 1px solid var(--line);
-      background: #020202;
-      gap: 18px;
-      min-height: 480px;
-    }
-    .gallery-tile:last-child { border-right: none; }
-    .gallery-tile img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
-    }
-    .gallery-tile-cap {
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 9px;
-      letter-spacing: .07em;
-      text-transform: uppercase;
-      color: #444;
-      text-align: center;
-    }
-
-    .bottom-note {
-      margin-top: 14px;
-      text-align: center;
-      color: #8A8A8A;
-      font-size: 11px;
-      letter-spacing: .02em;
-    }
-
-    @media (max-width: 900px) {
-      .narrative-grid { grid-template-columns: 1fr; }
-      .narrative-card { border-right: none; border-bottom: 1px solid var(--line); }
-      .narrative-card:nth-last-child(-n+2) { border-bottom: 1px solid var(--line); }
-      .narrative-card:last-child { border-bottom: none; }
-      .problem-section { padding: 24px 20px 28px; }
-    }
-    @media (max-width: 600px) {
-      .gallery-grid { grid-template-columns: 1fr; }
-      .gallery-tile { border-right: none; border-bottom: 1px solid var(--line); }
-      .gallery-tile:last-child { border-bottom: none; }
-      .hero { padding: 38px 12px 34px; }
-    }
-
-    #cursor-glow {
-      pointer-events: none;
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
+      --accent:     #7C3AED;
+      --accent-2:   #8b50f0;
+      --accent-ink: #6429c8;
     }
   </style>
 </head>
 <body>
-  <div id="cursor-glow" aria-hidden="true"></div>
-  <main class="page">
 
-    <header class="topbar">
-      <div>Khushi Solanki · Portfolio</div>
-      <div>Tanvish Wellness App · Case Study</div>
-      <a href="../Portfolio.html">← All work</a>
-    </header>
+  <!-- ── Fixed nav ── -->
+  <nav class="cs-nav">
+    <div class="cs-nav-brand">K<b>h</b>ushi <b>S</b>olanki</div>
+    <div class="cs-nav-right">
+      <span class="cs-nav-title">Tanvish Wellness App · Case Study</span>
+      <a href="../Portfolio.html" class="cs-nav-back">← All work</a>
+    </div>
+  </nav>
 
-    <section class="hero">
-      <div class="eyebrow">Wellness Mobile App · BA + PM · Wireframes · UI Design</div>
-      <h1>Tanvish<br />Wellness App</h1>
-      <p>Wellness mobile app for meditation videos, live meditation, daily quotes, and store experiences — bringing multiple wellness touchpoints into one coherent product.</p>
-    </section>
+  <!-- ── Hero ── -->
+  <section class="cs-hero bg-dark">
+    <div class="cs-hero-inner">
 
-    <section class="problem-section">
-      <div class="section-label">Problem Statement</div>
-      <p class="problem-copy">The app needed to bring <mark>multiple wellness experiences</mark> into one simple mobile product — recorded meditation videos, live sessions, daily quotes, and a store — without making the product feel scattered or disconnected.</p>
-      <p class="problem-copy">The challenge was to <mark>unify different experience types</mark> (passive content, live interaction, transactional) under one navigation structure while keeping each experience feel purposeful and easy to access on its own terms.</p>
-    </section>
+      <div class="cs-hero-tag">
+        <span class="dot"></span>
+        BA + PM · UI Design · Mobile App
+      </div>
 
-    <section class="narrative-section">
-      <div class="narrative-grid">
+      <h1 class="cs-hero-title">
+        Tanvish<br><span class="accent-word">Wellness.</span>
+      </h1>
 
-        <div class="narrative-card">
-          <span class="section-label">My Role</span>
-          <p class="narrative-copy">I worked as a <strong>Business Analyst and Project Manager</strong> across the full product cycle. I participated in client meetings, understood user needs and business requirements, then created the wireframes and designed the mobile app screens end-to-end.</p>
+      <p class="cs-hero-sub">
+        Wellness mobile app for meditation videos, live meditation, daily quotes,
+        and store experiences — bringing multiple wellness touchpoints into one
+        coherent, calm product.
+      </p>
+
+      <div class="cs-hero-bottom">
+        <div class="cs-hero-meta">
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Type</span>
+            <span class="cs-hero-meta-value">Client Project</span>
+          </div>
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Role</span>
+            <span class="cs-hero-meta-value">BA + PM + UI Design</span>
+          </div>
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Domain</span>
+            <span class="cs-hero-meta-value">Wellness · Mobile</span>
+          </div>
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Output</span>
+            <span class="cs-hero-meta-value">Wireframes + UI Screens</span>
+          </div>
         </div>
+        <!-- No CTA buttons — this page is the case study -->
+      </div>
 
-        <div class="narrative-card">
-          <span class="section-label">What I Contributed</span>
-          <ul class="narrative-list">
+    </div>
+  </section>
+
+  <!-- ── Problem ── -->
+  <section class="cs-problem bg-paper">
+    <div class="cs-problem-inner">
+
+      <div class="cs-problem-left">
+        <div class="cs-sticker tilt-r"><span class="num">§ 01</span> Problem</div>
+
+        <h2 class="cs-problem-pull">
+          Four<br>experiences,<br>one <span class="u">flow.</span>
+        </h2>
+
+        <svg class="cs-doodle-arrow" width="30" height="26" viewBox="0 0 30 26" fill="none" aria-hidden="true">
+          <path d="M4 4 C6 4 24 8 24 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M18 16 L25 21 L18 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="cs-problem-right">
+        <p class="cs-problem-copy">
+          The app needed to bring <strong>multiple wellness experiences</strong> into one simple mobile product — recorded meditation videos, live sessions, daily quotes, and a store — without making the product feel scattered or disconnected.
+        </p>
+        <p class="cs-problem-copy">
+          The challenge was to <span class="hl">unify different experience types</span> (passive content, live interaction, transactional) under one navigation structure while keeping each experience feel purposeful and easy to access on its own terms.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Narrative ── -->
+  <section class="cs-narrative bg-paper">
+    <div class="cs-narrative-inner">
+
+      <!-- Statement -->
+      <div class="cs-statement">
+        <span class="cs-statement-label">Overview</span>
+        <div>
+          <p class="cs-statement-body">
+            One navigation.<br>
+            Four distinct <span class="hl">wellness experiences.</span>
+          </p>
+          <p class="cs-statement-sub">
+            The design question wasn't just "how do these sections look?" — it was "how do they feel unified without feeling identical?" Meditation videos, live sessions, daily quotes, and a store each have different interaction patterns. Making them share a home without losing their identity was the work.
+          </p>
+        </div>
+      </div>
+
+      <!-- My Role + What I Contributed -->
+      <div class="cs-two-col">
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">01</span>
+            My Role
+          </div>
+          <p class="cs-block-copy">
+            I worked as a <strong>Business Analyst, Project Manager, and UI Designer</strong> across the full product cycle — from client meetings and requirement gathering through wireframes and final mobile UI screens, end-to-end.
+          </p>
+        </div>
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">02</span>
+            What I Contributed
+          </div>
+          <ul class="cs-block-list">
             <li>Requirement gathering from client discussions</li>
-            <li>Product flow planning across all sections</li>
+            <li>Product flow planning across all four sections</li>
             <li>Wireframes for key screens</li>
-            <li>UI design for the mobile app</li>
+            <li>UI design for the full mobile app</li>
             <li>Feature planning and prioritization</li>
             <li>Store section structure</li>
             <li>Meditation and live-session flow structure</li>
           </ul>
         </div>
+      </div>
 
-        <div class="narrative-card">
-          <span class="section-label">Process · How I Approached It</span>
-          <p class="narrative-copy">I started by mapping the four distinct product experiences the client wanted: video content, live sessions, daily quotes, and a store. The key design question was how to give each section a clear identity without making the overall app feel like four separate products glued together.</p>
-          <p class="narrative-copy">From there I structured the navigation, defined feature priorities for each section, created the wireframes, and moved into UI design — keeping a calm, focused visual language throughout that matched the wellness context.</p>
+      <!-- Process + What This Demonstrates -->
+      <div class="cs-two-col" style="border-bottom: none;">
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">03</span>
+            Process
+          </div>
+          <p class="cs-block-copy" style="margin-bottom: 14px;">
+            I started by mapping the four distinct product experiences the client wanted: video content, live sessions, daily quotes, and a store. The key design question was how to give each section a clear identity without making the overall app feel like four separate products glued together.
+          </p>
+          <p class="cs-block-copy">
+            From there I structured the navigation, defined feature priorities for each section, created the wireframes, and moved into UI design — keeping a calm, focused visual language throughout that matched the wellness context.
+          </p>
         </div>
-
-        <div class="narrative-card">
-          <span class="section-label">What This Demonstrates</span>
-          <ul class="narrative-list">
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">04</span>
+            What This Demonstrates
+          </div>
+          <ul class="cs-block-list" style="margin-bottom: 20px;">
             <li>Multi-section product architecture</li>
             <li>BA and PM work on a client mobile app</li>
             <li>Bridging requirements into wireframes and UI</li>
@@ -273,47 +174,58 @@
             <li>End-to-end ownership from brief to screens</li>
             <li>Wellness / consumer app domain experience</li>
           </ul>
+          <div class="cs-tags">
+            <span class="cs-tag">Wellness App</span>
+            <span class="cs-tag">BA + PM</span>
+            <span class="cs-tag">UI Design</span>
+            <span class="cs-tag">Mobile</span>
+            <span class="cs-tag">Wireframes</span>
+            <span class="cs-tag">Client Project</span>
+          </div>
         </div>
-
       </div>
-    </section>
 
-    <section class="gallery-section">
-      <div class="gallery-header">
-        <span class="section-label">Screens · Mobile App Mockups</span>
+      <p class="cs-hand-note">End-to-end client project — from brief to final UI screens.</p>
+
+    </div>
+  </section>
+
+  <!-- ── Gallery ── -->
+  <section class="cs-gallery bg-dark">
+    <div class="cs-gallery-header">
+      <div class="cs-sticker flat"><span class="dot"></span> Screens · Mobile App</div>
+    </div>
+
+    <div class="cs-gallery-grid">
+
+      <!-- REPLACE: swap src with actual Tanvish app mockup, e.g. "./assets/tanvish-wellness-screen-isometric.png" -->
+      <div class="cs-gallery-tile">
+        <img src="./assets/tanvish-wellness-screen-isometric.png" alt="Tanvish Wellness App — isometric mobile mockup" />
+        <span class="cs-gallery-tile-cap">App · Isometric View</span>
       </div>
-      <div class="gallery-grid">
 
-        <div class="gallery-tile">
-          <img src="./assets/tanvish-wellness-screen-isometric.png" alt="Tanvish Wellness App — isometric mobile mockup" />
-          <span class="gallery-tile-cap">App · Isometric View</span>
-        </div>
-
-        <div class="gallery-tile">
-          <img src="./assets/tanvish-wellness-screen-tilt.png" alt="Tanvish Wellness App — perspective tilt mockup" />
-          <span class="gallery-tile-cap">App · Perspective View</span>
-        </div>
-
-        <div class="gallery-tile">
-          <img src="./assets/tanvish-wellness-screen-duo.png" alt="Tanvish Wellness App — two screens layered" />
-          <span class="gallery-tile-cap">App · Dual Screen View</span>
-        </div>
-
+      <!-- REPLACE: swap src with perspective tilt mockup -->
+      <div class="cs-gallery-tile">
+        <img src="./assets/tanvish-wellness-screen-tilt.png" alt="Tanvish Wellness App — perspective tilt mockup" />
+        <span class="cs-gallery-tile-cap">App · Perspective View</span>
       </div>
-    </section>
 
-    <p class="bottom-note">Tanvish Wellness App · Meditation, live sessions, quotes, store · BA + PM · Wireframes · UI Design</p>
+      <!-- REPLACE: swap src with dual-screen mockup -->
+      <div class="cs-gallery-tile">
+        <img src="./assets/tanvish-wellness-screen-duo.png" alt="Tanvish Wellness App — two screens layered" />
+        <span class="cs-gallery-tile-cap">App · Dual Screen</span>
+      </div>
 
-  </main>
-  <script>
-    const glow = document.getElementById('cursor-glow');
-    let glowX = window.innerWidth / 2, glowY = window.innerHeight / 2, raf = 0;
-    function draw() {
-      glow.style.background = `radial-gradient(600px circle at ${glowX}px ${glowY}px, rgba(124,58,237,0.12) 0%, rgba(124,58,237,0.05) 35%, transparent 70%)`;
-      raf = 0;
-    }
-    document.addEventListener('mousemove', e => { glowX = e.clientX; glowY = e.clientY; if (!raf) raf = requestAnimationFrame(draw); });
-    draw();
-  </script>
+    </div>
+
+    <p class="cs-gallery-note">Client project · additional screens available on request.</p>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="cs-footer bg-paper">
+    <p class="cs-footer-note">Client project · Wellness Mobile · Khushi Solanki</p>
+    <a href="../Portfolio.html" class="cs-footer-back">← Back to portfolio</a>
+  </footer>
+
 </body>
 </html>

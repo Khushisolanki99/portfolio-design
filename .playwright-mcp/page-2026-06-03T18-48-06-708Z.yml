@@ -1,0 +1,115 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]: Khushi Solanki
+    - generic [ref=e4]:
+      - generic [ref=e5]: Event Management SaaS · Case Study
+      - link "← All work" [ref=e6] [cursor=pointer]:
+        - /url: ../Portfolio.html
+  - generic [ref=e8]:
+    - generic [ref=e9]: SaaS Concept · Dashboard · Product Flow
+    - heading "Event Mgmt SaaS." [level=1] [ref=e11]:
+      - text: Event Mgmt
+      - text: SaaS.
+    - paragraph [ref=e12]: SaaS concept for managing events, registrations, vendors, attendees, and operational workflows — bringing scattered event operations into one organized, coherent dashboard.
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]: Type
+        - generic [ref=e17]: Concept Project
+      - generic [ref=e18]:
+        - generic [ref=e19]: Role
+        - generic [ref=e20]: Product Structure + Wireframes
+      - generic [ref=e21]:
+        - generic [ref=e22]: Domain
+        - generic [ref=e23]: SaaS · Event Management
+      - generic [ref=e24]:
+        - generic [ref=e25]: Focus
+        - generic [ref=e26]: Dashboard IA · Workflows
+  - generic [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]: § 01
+        - text: Problem
+      - heading "Events without silos." [level=2] [ref=e32]:
+        - text: Events
+        - text: without
+        - text: silos.
+      - img [ref=e33]
+    - generic [ref=e36]:
+      - paragraph [ref=e37]:
+        - strong [ref=e38]: Event teams
+        - text: often manage registrations, attendees, vendors, schedules, and operations across multiple disconnected tools. The overhead of switching contexts, exporting data, and tracking status manually creates unnecessary operational drag.
+      - paragraph [ref=e39]: The challenge was to structure a SaaS platform that could bring these workflows into one organized dashboard — giving event teams a single place to set up, manage, and track events without losing the operational detail they need.
+  - generic [ref=e41]:
+    - generic [ref=e42]:
+      - generic [ref=e43]: Overview
+      - generic [ref=e44]:
+        - paragraph [ref=e45]:
+          - text: One dashboard.
+          - text: Every stage of the event.
+        - paragraph [ref=e46]: The product needed to serve event setup, live operations, and post-event reporting through a single admin experience. Not three tools. One structured platform that understood the operational journey from first registration to final wrap-up.
+    - generic [ref=e47]:
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: "01"
+          - text: My Role
+        - paragraph [ref=e51]:
+          - text: I contributed to shaping the
+          - strong [ref=e52]: product structure
+          - text: ", mapping key operational workflows, understanding admin and event-team needs, and creating screen flows and wireframes for the core platform experience."
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: "02"
+          - text: What I Contributed
+        - list [ref=e56]:
+          - listitem [ref=e57]: → Workflow mapping across event operations
+          - listitem [ref=e58]: → Admin dashboard structure and IA
+          - listitem [ref=e59]: → Registration flow planning
+          - listitem [ref=e60]: → Vendor and attendee management flow
+          - listitem [ref=e61]: → Wireframe support for core screens
+          - listitem [ref=e62]: → Feature breakdown and prioritization
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e65]:
+          - generic [ref=e66]: "03"
+          - text: Process
+        - paragraph [ref=e67]: I started by mapping the operational journey of an event — from initial setup through live event day through post-event follow-up. Each stage surfaced different user types (event admins, vendors, attendees) with different needs and action sets.
+        - paragraph [ref=e68]: From that map I structured the dashboard IA, defined the key workflow modules (registration, vendor management, attendee tracking, scheduling), and then created wireframes that connected those workflows into a coherent admin experience.
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - generic [ref=e71]: "04"
+          - text: What This Demonstrates
+        - list [ref=e72]:
+          - listitem [ref=e73]: → SaaS product structure and dashboard thinking
+          - listitem [ref=e74]: → Multi-role workflow mapping (admin, vendor, attendee)
+          - listitem [ref=e75]: → B2B operations product design
+          - listitem [ref=e76]: → Information architecture for complex platforms
+          - listitem [ref=e77]: → End-to-end product flow ownership
+          - listitem [ref=e78]: → Translating operational complexity into clear screens
+        - generic [ref=e79]:
+          - generic [ref=e80]: SaaS Dashboard
+          - generic [ref=e81]: Event Ops
+          - generic [ref=e82]: Workflow Mapping
+          - generic [ref=e83]: B2B Product
+          - generic [ref=e84]: IA Design
+          - generic [ref=e85]: Wireframes
+    - paragraph [ref=e86]: Concept project — operational complexity made navigable.
+  - generic [ref=e87]:
+    - generic [ref=e89]: Screens · Platform Visuals
+    - generic [ref=e91]:
+      - generic [ref=e92]:
+        - img "Event Management SaaS — platform screen 1" [ref=e93]
+        - generic [ref=e94]: Platform · View 01
+      - generic [ref=e95]:
+        - img "Event Management SaaS — platform screen 2" [ref=e96]
+        - generic [ref=e97]: Platform · View 02
+      - generic [ref=e98]:
+        - img "Event Management SaaS — platform screen 3" [ref=e99]
+        - generic [ref=e100]: Platform · View 03
+      - generic [ref=e101]:
+        - img "Event Management SaaS — platform screen 4" [ref=e102]
+        - generic [ref=e103]: Platform · View 04
+    - paragraph [ref=e104]: Concept project · additional wireframes available on request.
+  - contentinfo [ref=e105]:
+    - paragraph [ref=e106]: Concept project · Event SaaS · Khushi Solanki
+    - link "← Back to portfolio" [ref=e107] [cursor=pointer]:
+      - /url: ../Portfolio.html

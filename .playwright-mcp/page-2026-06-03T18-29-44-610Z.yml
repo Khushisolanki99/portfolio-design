@@ -1,0 +1,128 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]: Khushi Solanki
+    - generic [ref=e4]:
+      - generic [ref=e5]: AI Meeting Brief · Concept Case Study
+      - link "← All work" [ref=e6] [cursor=pointer]:
+        - /url: ../Portfolio.html
+  - generic [ref=e8]:
+    - generic [ref=e9]: Concept Case Study
+    - heading "AI Meeting Brief." [level=1] [ref=e11]:
+      - text: AI
+      - text: Meeting
+      - text: Brief.
+    - paragraph [ref=e12]: An AI workspace that helps teams prepare for meetings, understand context, capture decisions, and turn discussions into follow-up actions — before, during, and after the call.
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: Type
+          - generic [ref=e17]: Concept Case Study
+        - generic [ref=e18]:
+          - generic [ref=e19]: Focus
+          - generic [ref=e20]: AI Productivity / Meeting Ops
+        - generic [ref=e21]:
+          - generic [ref=e22]: Year
+          - generic [ref=e23]: "2025"
+      - generic [ref=e24]:
+        - link "Read PRD" [ref=e25] [cursor=pointer]:
+          - /url: assets/Meeting-Brief-PRD.pdf
+        - link "Read Case Study" [ref=e26] [cursor=pointer]:
+          - /url: assets/Meeting-Brief-PRD.pdf
+  - generic [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]: § 01
+        - text: Problem
+      - heading "Context lost in transit." [level=2] [ref=e32]:
+        - text: Context
+        - text: lost in
+        - text: transit.
+      - img [ref=e33]
+    - generic [ref=e36]:
+      - paragraph [ref=e37]:
+        - text: Meetings often happen
+        - strong [ref=e38]: without enough context
+        - text: . Product managers, business analysts, and cross-functional teams spend time jumping between calendars, notes, documents, and previous discussions just to understand what needs attention before the call even starts.
+      - paragraph [ref=e39]:
+        - text: After the meeting, decisions and action items are scattered or forgotten. AI Meeting Brief explores how an
+        - strong [ref=e40]: AI-assisted workspace
+        - text: could prepare users before a meeting, surface relevant context, capture key decisions, and convert discussions into clear follow-up actions.
+  - generic [ref=e41]:
+    - generic [ref=e43]: Product Flow
+    - generic [ref=e45]:
+      - complementary [ref=e46]:
+        - generic [ref=e47]: Step 01
+        - heading "Dashboard" [level=2] [ref=e48]
+        - paragraph [ref=e49]: User sees all upcoming meetings pulled from Google Calendar. Each card shows title, date, attendee count, and location — with a one-click Generate Brief action.
+        - list [ref=e50]:
+          - listitem [ref=e51] [cursor=pointer]: 01 · Dashboard
+          - listitem [ref=e52] [cursor=pointer]: 02 · Create meeting
+          - listitem [ref=e53] [cursor=pointer]: 03 · AI brief generation
+          - listitem [ref=e54] [cursor=pointer]: 04 · Brief ready
+          - listitem [ref=e55] [cursor=pointer]: 05 · Brief + insights
+      - generic [ref=e57]:
+        - img "Dashboard" [ref=e58]
+        - img "Create meeting" [ref=e59]
+        - img "AI brief generation" [ref=e60]
+        - img "Brief ready" [ref=e61]
+        - img "Brief + insights" [ref=e62]
+  - generic [ref=e70]:
+    - generic [ref=e71]:
+      - generic [ref=e72]: Overview
+      - generic [ref=e73]:
+        - paragraph [ref=e74]:
+          - text: Teams lose time preparing for meetings and fail to convert
+          - text: discussions into clear decisions and actions.
+        - paragraph [ref=e75]: AI Meeting Brief connects pre-meeting preparation with post-meeting execution. Instead of treating meetings as isolated calendar events, the workspace turns them into structured workflows — with context, decisions, and follow-up accountability all in one place.
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - generic [ref=e79]: "01"
+          - text: Persona
+        - paragraph [ref=e80]:
+          - text: Product manager or business analyst working with
+          - strong [ref=e81]: cross-functional stakeholders
+          - text: . Spends significant time on meeting prep and often leaves meetings with unclear ownership of next steps.
+      - generic [ref=e82]:
+        - generic [ref=e83]:
+          - generic [ref=e84]: "02"
+          - text: Goals
+        - list [ref=e85]:
+          - listitem [ref=e86]: → Reduce meeting preparation time significantly
+          - listitem [ref=e87]: → Surface relevant context before the discussion starts
+          - listitem [ref=e88]: → Make stakeholder expectations easier to understand
+          - listitem [ref=e89]: → Capture decisions clearly and with attribution
+          - listitem [ref=e90]: → Convert follow-ups into trackable action items
+    - generic [ref=e91]:
+      - generic [ref=e92]: Product Thinking
+      - generic [ref=e93]:
+        - paragraph [ref=e94]: Meetings aren't events. They're workflows.
+        - paragraph [ref=e95]: "The concept focuses on connecting pre-meeting preparation with post-meeting execution. Instead of treating meetings as isolated calendar blocks, the workspace turns them into structured workflows: the AI agent pulls company context and news, generates a focused brief, captures decisions in real time, and converts action items into trackable outputs. The calendar is just the entry point."
+    - generic [ref=e96]:
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]: "03"
+          - text: Design Decisions
+        - list [ref=e100]:
+          - listitem [ref=e101]: → Meeting-first dashboard — calendar is the anchor
+          - listitem [ref=e102]: → AI brief generated from multiple context sources
+          - listitem [ref=e103]: → Clear agenda and risk sections in every brief
+          - listitem [ref=e104]: → Post-meeting summary with explicit decision capture
+          - listitem [ref=e105]: → Action tracker connected to meeting outcomes
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - generic [ref=e108]: "04"
+          - text: What this demonstrates
+        - paragraph [ref=e109]: AI product thinking, workflow design, business analysis, meeting operations, decision tracking, and product storytelling.
+        - generic [ref=e110]:
+          - generic [ref=e111]: AI Product Thinking
+          - generic [ref=e112]: Workflow Design
+          - generic [ref=e113]: Business Analysis
+          - generic [ref=e114]: Meeting Operations
+          - generic [ref=e115]: Decision Tracking
+          - generic [ref=e116]: Product Storytelling
+    - paragraph [ref=e117]: Concept project — AI that shows up prepared so you don't have to.
+  - contentinfo [ref=e118]:
+    - paragraph [ref=e119]: Concept project · Khushi Solanki · 2025
+    - link "← Back to portfolio" [ref=e120] [cursor=pointer]:
+      - /url: ../Portfolio.html

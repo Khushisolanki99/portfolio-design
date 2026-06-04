@@ -6,249 +6,135 @@
   <title>Event Management SaaS Platform · Khushi Solanki</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&family=Special+Elite&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cs-styles.css">
   <style>
+    /* Per-project accent override: amber / warm orange */
     :root {
-      --bg: #000000;
-      --panel: #050505;
-      --text: #F7F5EF;
-      --muted: #A3A3A3;
-      --line: #222222;
-      --accent: #F59E0B;
-    }
-
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: "Inter", sans-serif;
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.45;
-    }
-
-    .page {
-      width: min(1200px, 92vw);
-      margin: 0 auto;
-      padding: 28px 0 52px;
-    }
-
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 11px;
-      letter-spacing: .11em;
-      text-transform: uppercase;
-      color: #BEBEBE;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 14px;
-      margin-bottom: 20px;
-    }
-    .topbar a { color: inherit; text-decoration: none; }
-
-    .hero {
-      text-align: center;
-      padding: 56px 12px 46px;
-      border: 1px solid var(--line);
-      background: var(--panel);
-    }
-    .eyebrow {
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 11px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: #C8C8C8;
-      margin-bottom: 14px;
-    }
-    h1 {
-      margin: 0 auto 14px;
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(2rem, 6vw, 4.2rem);
-      letter-spacing: -0.035em;
-      line-height: 1.0;
-      font-weight: 800;
-    }
-    .hero p {
-      margin: 0 auto;
-      color: var(--muted);
-      max-width: 64ch;
-      font-size: 1.02rem;
-    }
-
-    .section-label {
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 10px;
-      letter-spacing: .13em;
-      text-transform: uppercase;
-      color: #BDBDBD;
-    }
-
-    .problem-section {
-      margin-top: 18px;
-      border: 1px solid var(--line);
-      background: var(--panel);
-      padding: 32px 36px 36px;
-    }
-    .problem-section .section-label {
-      display: block;
-      margin-bottom: 20px;
-    }
-    .problem-copy {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.02rem;
-      line-height: 1.75;
-      max-width: 74ch;
-    }
-    .problem-copy + .problem-copy { margin-top: 16px; }
-    mark {
-      background: transparent;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .narrative-section { margin-top: 18px; }
-    .narrative-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      border: 1px solid var(--line);
-      background: var(--panel);
-    }
-    .narrative-card {
-      padding: 28px 32px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-    .narrative-card:nth-child(even) { border-right: none; }
-    .narrative-card:nth-last-child(-n+2) { border-bottom: none; }
-    .narrative-card .section-label {
-      display: block;
-      margin-bottom: 14px;
-    }
-    .narrative-copy {
-      margin: 0;
-      color: var(--muted);
-      font-size: .95rem;
-      line-height: 1.7;
-    }
-    .narrative-copy + .narrative-copy { margin-top: 12px; }
-    .narrative-list {
-      margin: 0;
-      padding-left: 16px;
-      color: var(--muted);
-      font-size: .95rem;
-      line-height: 1.9;
-    }
-    .narrative-list li { margin-bottom: 2px; }
-
-    /* Gallery */
-    .gallery-section {
-      margin-top: 18px;
-      border: 1px solid var(--line);
-      background: var(--panel);
-    }
-    .gallery-header {
-      padding: 14px 24px;
-      border-bottom: 1px solid var(--line);
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .gallery-tile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 32px 28px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      background: #020202;
-      gap: 18px;
-      min-height: 420px;
-    }
-    .gallery-tile:nth-child(2n) { border-right: none; }
-    .gallery-tile:nth-last-child(-n+2) { border-bottom: none; }
-    .gallery-tile img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
-    }
-    .gallery-tile-cap {
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 9px;
-      letter-spacing: .07em;
-      text-transform: uppercase;
-      color: #444;
-      text-align: center;
-    }
-
-    .bottom-note {
-      margin-top: 14px;
-      text-align: center;
-      color: #8A8A8A;
-      font-size: 11px;
-      letter-spacing: .02em;
-    }
-
-    @media (max-width: 900px) {
-      .narrative-grid { grid-template-columns: 1fr; }
-      .narrative-card { border-right: none; border-bottom: 1px solid var(--line); }
-      .narrative-card:nth-last-child(-n+2) { border-bottom: 1px solid var(--line); }
-      .narrative-card:last-child { border-bottom: none; }
-      .problem-section { padding: 24px 20px 28px; }
-    }
-    @media (max-width: 600px) {
-      .gallery-grid { grid-template-columns: 1fr; }
-      .gallery-tile { border-right: none; border-bottom: 1px solid var(--line); }
-      .gallery-tile:last-child { border-bottom: none; }
-      .hero { padding: 38px 12px 34px; }
-    }
-
-    #cursor-glow {
-      pointer-events: none;
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
+      --accent:     #D97706;
+      --accent-2:   #F59E0B;
+      --accent-ink: #B45309;
     }
   </style>
 </head>
 <body>
-  <div id="cursor-glow" aria-hidden="true"></div>
-  <main class="page">
 
-    <header class="topbar">
-      <div>Khushi Solanki · Portfolio</div>
-      <div>Event Management SaaS · Case Study</div>
-      <a href="../Portfolio.html">← All work</a>
-    </header>
+  <!-- ── Fixed nav ── -->
+  <nav class="cs-nav">
+    <div class="cs-nav-brand">K<b>h</b>ushi <b>S</b>olanki</div>
+    <div class="cs-nav-right">
+      <span class="cs-nav-title">Event Management SaaS · Case Study</span>
+      <a href="../Portfolio.html" class="cs-nav-back">← All work</a>
+    </div>
+  </nav>
 
-    <section class="hero">
-      <div class="eyebrow">SaaS Platform · Event Management · Dashboard · Product Flow</div>
-      <h1>Event Management<br />SaaS Platform</h1>
-      <p>SaaS concept for managing events, registrations, vendors, attendees, and operational workflows — bringing scattered event operations into one organized dashboard.</p>
-    </section>
+  <!-- ── Hero ── -->
+  <section class="cs-hero bg-dark">
+    <div class="cs-hero-inner">
 
-    <section class="problem-section">
-      <div class="section-label">Problem Statement</div>
-      <p class="problem-copy"><mark>Event teams</mark> often manage registrations, attendees, vendors, schedules, and operations across multiple disconnected tools. The overhead of switching contexts, exporting data, and tracking status manually creates unnecessary operational drag.</p>
-      <p class="problem-copy">The challenge was to structure a <mark>SaaS platform</mark> that could bring these workflows into one organized dashboard — giving event teams a single place to set up, manage, and track events without losing the operational detail they need.</p>
-    </section>
+      <div class="cs-hero-tag">
+        <span class="dot"></span>
+        SaaS Concept · Dashboard · Product Flow
+      </div>
 
-    <section class="narrative-section">
-      <div class="narrative-grid">
+      <h1 class="cs-hero-title">
+        Event Mgmt<br><span class="accent-word">SaaS.</span>
+      </h1>
 
-        <div class="narrative-card">
-          <span class="section-label">My Role</span>
-          <p class="narrative-copy">I contributed to shaping the <strong>product structure</strong>, mapping key operational workflows, understanding admin and event-team needs, and creating screen flows and wireframes for the core platform experience.</p>
+      <p class="cs-hero-sub">
+        SaaS concept for managing events, registrations, vendors, attendees,
+        and operational workflows — bringing scattered event operations into
+        one organized, coherent dashboard.
+      </p>
+
+      <div class="cs-hero-bottom">
+        <div class="cs-hero-meta">
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Type</span>
+            <span class="cs-hero-meta-value">Concept Project</span>
+          </div>
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Role</span>
+            <span class="cs-hero-meta-value">Product Structure + Wireframes</span>
+          </div>
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Domain</span>
+            <span class="cs-hero-meta-value">SaaS · Event Management</span>
+          </div>
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Focus</span>
+            <span class="cs-hero-meta-value">Dashboard IA · Workflows</span>
+          </div>
         </div>
+        <!-- No CTA buttons — this page is the case study -->
+      </div>
 
-        <div class="narrative-card">
-          <span class="section-label">What I Contributed</span>
-          <ul class="narrative-list">
+    </div>
+  </section>
+
+  <!-- ── Problem ── -->
+  <section class="cs-problem bg-paper">
+    <div class="cs-problem-inner">
+
+      <div class="cs-problem-left">
+        <div class="cs-sticker"><span class="num">§ 01</span> Problem</div>
+
+        <h2 class="cs-problem-pull">
+          Events<br>without<br><span class="u">silos.</span>
+        </h2>
+
+        <svg class="cs-doodle-arrow" width="30" height="26" viewBox="0 0 30 26" fill="none" aria-hidden="true">
+          <path d="M4 4 C6 4 24 8 24 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M18 16 L25 21 L18 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="cs-problem-right">
+        <p class="cs-problem-copy">
+          <strong>Event teams</strong> often manage registrations, attendees, vendors, schedules, and operations across multiple disconnected tools. The overhead of switching contexts, exporting data, and tracking status manually creates unnecessary operational drag.
+        </p>
+        <p class="cs-problem-copy">
+          The challenge was to structure a <span class="hl">SaaS platform</span> that could bring these workflows into one organized dashboard — giving event teams a single place to set up, manage, and track events without losing the operational detail they need.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Narrative ── -->
+  <section class="cs-narrative bg-paper">
+    <div class="cs-narrative-inner">
+
+      <!-- Statement -->
+      <div class="cs-statement">
+        <span class="cs-statement-label">Overview</span>
+        <div>
+          <p class="cs-statement-body">
+            One dashboard.<br>Every stage of <span class="hl">the event.</span>
+          </p>
+          <p class="cs-statement-sub">
+            The product needed to serve event setup, live operations, and post-event reporting through a single admin experience. Not three tools. One structured platform that understood the operational journey from first registration to final wrap-up.
+          </p>
+        </div>
+      </div>
+
+      <!-- My Role + What I Contributed -->
+      <div class="cs-two-col">
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">01</span>
+            My Role
+          </div>
+          <p class="cs-block-copy">
+            I contributed to shaping the <strong>product structure</strong>, mapping key operational workflows, understanding admin and event-team needs, and creating screen flows and wireframes for the core platform experience.
+          </p>
+        </div>
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">02</span>
+            What I Contributed
+          </div>
+          <ul class="cs-block-list">
             <li>Workflow mapping across event operations</li>
             <li>Admin dashboard structure and IA</li>
             <li>Registration flow planning</li>
@@ -257,16 +143,28 @@
             <li>Feature breakdown and prioritization</li>
           </ul>
         </div>
+      </div>
 
-        <div class="narrative-card">
-          <span class="section-label">Process · How I Approached It</span>
-          <p class="narrative-copy">I started by mapping the operational journey of an event — from initial setup through live event day through post-event follow-up. Each stage surfaced different user types (event admins, vendors, attendees) with different needs and action sets.</p>
-          <p class="narrative-copy">From that map I structured the dashboard IA, defined the key workflow modules (registration, vendor management, attendee tracking, scheduling), and then created wireframes that connected those workflows into a coherent admin experience.</p>
+      <!-- Process + What This Demonstrates -->
+      <div class="cs-two-col" style="border-bottom: none;">
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">03</span>
+            Process
+          </div>
+          <p class="cs-block-copy" style="margin-bottom: 14px;">
+            I started by mapping the operational journey of an event — from initial setup through live event day through post-event follow-up. Each stage surfaced different user types (event admins, vendors, attendees) with different needs and action sets.
+          </p>
+          <p class="cs-block-copy">
+            From that map I structured the dashboard IA, defined the key workflow modules (registration, vendor management, attendee tracking, scheduling), and then created wireframes that connected those workflows into a coherent admin experience.
+          </p>
         </div>
-
-        <div class="narrative-card">
-          <span class="section-label">What This Demonstrates</span>
-          <ul class="narrative-list">
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">04</span>
+            What This Demonstrates
+          </div>
+          <ul class="cs-block-list" style="margin-bottom: 20px;">
             <li>SaaS product structure and dashboard thinking</li>
             <li>Multi-role workflow mapping (admin, vendor, attendee)</li>
             <li>B2B operations product design</li>
@@ -274,52 +172,65 @@
             <li>End-to-end product flow ownership</li>
             <li>Translating operational complexity into clear screens</li>
           </ul>
+          <div class="cs-tags">
+            <span class="cs-tag">SaaS Dashboard</span>
+            <span class="cs-tag">Event Ops</span>
+            <span class="cs-tag">Workflow Mapping</span>
+            <span class="cs-tag">B2B Product</span>
+            <span class="cs-tag">IA Design</span>
+            <span class="cs-tag">Wireframes</span>
+          </div>
         </div>
-
       </div>
-    </section>
 
-    <section class="gallery-section">
-      <div class="gallery-header">
-        <span class="section-label">Screens · Platform Visuals</span>
+      <p class="cs-hand-note">Concept project — operational complexity made navigable.</p>
+
+    </div>
+  </section>
+
+  <!-- ── Gallery ── -->
+  <section class="cs-gallery bg-dark">
+    <div class="cs-gallery-header">
+      <div class="cs-sticker flat"><span class="dot"></span> Screens · Platform Visuals</div>
+    </div>
+
+    <!-- 2x2 grid for 4 platform screens -->
+    <div class="cs-gallery-grid cols-2">
+
+      <!-- REPLACE: swap src with actual event management screen 1, e.g. "./assets/event-screen-1.jpg" -->
+      <div class="cs-gallery-tile">
+        <img src="./assets/event-screen-1.jpg" alt="Event Management SaaS — platform screen 1" />
+        <span class="cs-gallery-tile-cap">Platform · View 01</span>
       </div>
-      <div class="gallery-grid">
 
-        <div class="gallery-tile">
-          <img src="./assets/event-screen-1.jpg" alt="Event Management SaaS — screen 1" />
-          <span class="gallery-tile-cap">Platform · View 01</span>
-        </div>
-
-        <div class="gallery-tile">
-          <img src="./assets/event-screen-2.jpg" alt="Event Management SaaS — screen 2" />
-          <span class="gallery-tile-cap">Platform · View 02</span>
-        </div>
-
-        <div class="gallery-tile">
-          <img src="./assets/event-screen-3.jpg" alt="Event Management SaaS — screen 3" />
-          <span class="gallery-tile-cap">Platform · View 03</span>
-        </div>
-
-        <div class="gallery-tile">
-          <img src="./assets/event-screen-4.webp" alt="Event Management SaaS — screen 4" />
-          <span class="gallery-tile-cap">Platform · View 04</span>
-        </div>
-
+      <!-- REPLACE: swap src with platform screen 2 -->
+      <div class="cs-gallery-tile">
+        <img src="./assets/event-screen-2.jpg" alt="Event Management SaaS — platform screen 2" />
+        <span class="cs-gallery-tile-cap">Platform · View 02</span>
       </div>
-    </section>
 
-    <p class="bottom-note">Event Management SaaS Platform · Registrations, vendors, attendees, operations · Product flow · Dashboard</p>
+      <!-- REPLACE: swap src with platform screen 3 -->
+      <div class="cs-gallery-tile">
+        <img src="./assets/event-screen-3.jpg" alt="Event Management SaaS — platform screen 3" />
+        <span class="cs-gallery-tile-cap">Platform · View 03</span>
+      </div>
 
-  </main>
-  <script>
-    const glow = document.getElementById('cursor-glow');
-    let glowX = window.innerWidth / 2, glowY = window.innerHeight / 2, raf = 0;
-    function draw() {
-      glow.style.background = `radial-gradient(600px circle at ${glowX}px ${glowY}px, rgba(245,158,11,0.11) 0%, rgba(245,158,11,0.04) 35%, transparent 70%)`;
-      raf = 0;
-    }
-    document.addEventListener('mousemove', e => { glowX = e.clientX; glowY = e.clientY; if (!raf) raf = requestAnimationFrame(draw); });
-    draw();
-  </script>
+      <!-- REPLACE: swap src with platform screen 4 -->
+      <div class="cs-gallery-tile">
+        <img src="./assets/event-screen-4.webp" alt="Event Management SaaS — platform screen 4" />
+        <span class="cs-gallery-tile-cap">Platform · View 04</span>
+      </div>
+
+    </div>
+
+    <p class="cs-gallery-note">Concept project · additional wireframes available on request.</p>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="cs-footer bg-paper">
+    <p class="cs-footer-note">Concept project · Event SaaS · Khushi Solanki</p>
+    <a href="../Portfolio.html" class="cs-footer-back">← Back to portfolio</a>
+  </footer>
+
 </body>
 </html>
