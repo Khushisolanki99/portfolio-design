@@ -50,11 +50,10 @@ function App() {
         <About />
         <window.Process />
         <Work onOpen={setOpenCS} />
-        <CreativeDirectionWork />
-        <CreativeWork />
+        <window.CreativeDirection />
         <Experience />
         <Skills />
-        <DesignArt />
+        <window.VisualDiary />
         <Contact />
       </main>
       <Footer />

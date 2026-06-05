@@ -1,0 +1,20 @@
+[     180ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js:29904
+[     243ms] [WARNING] You are using the in-browser Babel transformer. Be sure to precompile your scripts for production - https://babeljs.io/docs/setup/ @ https://unpkg.com/@babel/standalone@7.29.0/babel.min.js:2
+[    1019ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/favicon.ico:0
+[    8641ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.44.43%20AM.jpeg:0
+[    8641ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.38.18%20AM.jpeg:0
+[    8642ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.37.27%20AM.jpeg:0
+[    8642ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.36.47%20AM.jpeg:0
+[    8643ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.43.04%20AM.jpeg:0
+[    8643ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.39.47%20AM.jpeg:0
+[    8751ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.36.21%20AM.jpeg:0
+[    8753ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.37.49%20AM.jpeg:0
+[    8777ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.39.52%20AM.jpeg:0
+[    8777ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.43.34%20AM.jpeg:0
+[    8786ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.38.38%20AM.jpeg:0
+[    8793ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.37.17%20AM.jpeg:0
+[    8833ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.36.31%20AM.jpeg:0
+[    8942ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.38.07%20AM.jpeg:0
+[    8943ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.44.17%20AM.jpeg:0
+[    8943ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.41.03%20AM.jpeg:0
+[    8957ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/WhatsApp%20Image%202026-06-06%20at%2012.39.02%20AM.jpeg:0

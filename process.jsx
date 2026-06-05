@@ -67,13 +67,14 @@ function buildThreadPath(cx, sy, ey) {
 }
 
 function Process() {
-  const sectionRef       = useRefProc(null);
-  const scribbleScreenRef = useRefProc(null); /* .process-screen-scribble for measuring position */
-  const scribbleGroupRef  = useRefProc(null); /* outer <g> in overlay SVG — gets dynamic transform */
-  const threadWrapRef    = useRefProc(null);
-  const svgRef           = useRefProc(null);
-  const pathRef          = useRefProc(null);
-  const beadRef          = useRefProc(null);
+  const sectionRef         = useRefProc(null);
+  const scribbleScreenRef  = useRefProc(null);
+  const scribbleGroupRef   = useRefProc(null);
+  const threadWrapRef      = useRefProc(null);
+  const svgRef             = useRefProc(null);
+  const stickyThreadSvgRef = useRefProc(null); /* centered sticky SVG for the orange thread */
+  const pathRef            = useRefProc(null);
+  const beadRef            = useRefProc(null);
   const ms1Ref           = useRefProc(null);
   const ms2Ref           = useRefProc(null);
   const ms3Ref           = useRefProc(null);
@@ -84,68 +85,55 @@ function Process() {
     let sectionStart = 0, sectionEnd = 0, pathLen = 0;
 
     const measure = () => {
-      const sec       = sectionRef.current;
-      const scrScreen = scribbleScreenRef.current;
-      const twrap     = threadWrapRef.current;
-      const svg       = svgRef.current;
-      const path      = pathRef.current;
-      const scribbleG = scribbleGroupRef.current;
-      if (!sec || !scrScreen || !twrap || !svg || !path || !scribbleG) return;
+      const sec        = sectionRef.current;
+      const scrScreen  = scribbleScreenRef.current;
+      const twrap      = threadWrapRef.current;
+      const svg        = svgRef.current;
+      const stickySvg  = stickyThreadSvgRef.current;
+      const path       = pathRef.current;
+      const scribbleG  = scribbleGroupRef.current;
+      if (!sec || !scrScreen || !twrap || !svg || !stickySvg || !path || !scribbleG) return;
 
-      const secRect    = sec.getBoundingClientRect();
-      const secAbsTop  = secRect.top + window.scrollY;
-      const secW       = sec.offsetWidth;
-      const secH       = sec.offsetHeight;
+      const secRect   = sec.getBoundingClientRect();
+      const secAbsTop = secRect.top + window.scrollY;
+      const secW      = sec.offsetWidth;
+      const secH      = sec.offsetHeight;
 
-      /* SVG spans the whole section */
+      /* Overlay SVG covers the whole section — used only for the scribble */
       svg.setAttribute('viewBox', `0 0 ${secW} ${secH}`);
 
       /* Scribble screen bounds in section-local coords */
-      const scrRect  = scrScreen.getBoundingClientRect();
-      const scrLeft  = scrRect.left - secRect.left;
-      const scrTop   = (scrRect.top  + window.scrollY) - secAbsTop;
-      const scrW     = scrRect.width;
-
-      /* Match .scribble-svg { width: min(480px, 85vw) } — same apparent size */
+      const scrRect       = scrScreen.getBoundingClientRect();
+      const scrLeft       = scrRect.left - secRect.left;
+      const scrTop        = (scrRect.top + window.scrollY) - secAbsTop;
+      const scrW          = scrRect.width;
       const cssScribbleW  = Math.min(480, window.innerWidth * 0.85);
       const scribbleScale = cssScribbleW / 400;
+      const scrH          = scrRect.height;
+      const scribbleH     = 260 * scribbleScale;
+      const labelWithMargin = 76;
+      const scribbleX     = scrLeft + (scrW - cssScribbleW) / 2;
+      const scribbleY     = scrTop  + (scrH - labelWithMargin - scribbleH) / 2 + labelWithMargin;
 
-      /* Place the scribble to match the flex-centered layout:
-         label (~28px) + margin-bottom (48px) sit above the scribble block. */
-      const scrH = scrRect.height;
-      const scribbleH = 260 * scribbleScale;
-      const labelWithMargin = 76; // 28px label + 48px margin-bottom
-      const scribbleX = scrLeft + (scrW - cssScribbleW) / 2;
-      const scribbleY = scrTop + (scrH - labelWithMargin - scribbleH) / 2 + labelWithMargin;
-
-      /* Position the scribble group in section-local space */
       scribbleG.setAttribute('transform',
         `translate(${scribbleX.toFixed(1)}, ${scribbleY.toFixed(1)}) scale(${scribbleScale.toFixed(4)})`
       );
       scribbleG.style.opacity = '1';
 
-      /* Thread starts at viewBox (200, 180) — inside the lower scribble cloud.
-         ~100px of the initial path overlaps the scribble before exiting downward. */
-      const threadStartY = scribbleY + 180 * scribbleScale;
-      const cx = secW / 2;
-
-      /* Thread ends at bottom of thread-wrap (the tall sticky scroll zone) */
-      const twRect    = twrap.getBoundingClientRect();
-      const twBottom  = (twRect.bottom + window.scrollY) - secAbsTop;
-
-      path.setAttribute('d', buildThreadPath(cx, threadStartY, twBottom));
-
+      /* Thread lives in the sticky SVG — coordinates are viewport-local (0..120 × 0..innerHeight).
+         left: 50% + translateX(-50%) on the SVG element keeps it horizontally centered on any
+         screen width without any JS measurement, so it can never drift off-screen. */
+      const H = window.innerHeight;
+      stickySvg.setAttribute('viewBox', `0 0 120 ${H}`);
+      path.setAttribute('d', buildThreadPath(60, 0, H));
       pathLen = path.getTotalLength();
       path.style.strokeDasharray  = pathLen;
-      /* 10% always visible — thread is already emerging from scribble on first view */
-      path.style.strokeDashoffset = pathLen * 0.90;
+      path.style.strokeDashoffset = pathLen * 0.90; /* 10% pre-drawn at entry */
 
-      /* Scroll bounds: section top → thread-wrap bottom.
-         This ties the reveal to when the scribble first enters view, so the
-         bead is always in the lower viewport as the user scrolls. */
-      const twAbsBottom = twRect.bottom + window.scrollY;
-      sectionStart = secAbsTop;
-      sectionEnd   = twAbsBottom - window.innerHeight;
+      /* Scroll bounds span the thread-wrap zone only */
+      const twRect = twrap.getBoundingClientRect();
+      sectionStart = twRect.top  + window.scrollY;
+      sectionEnd   = twRect.bottom + window.scrollY - window.innerHeight;
     };
 
     const draw = () => {
@@ -207,12 +195,6 @@ function Process() {
   return (
     <section id="process" ref={sectionRef} className="process bg-grid-paper">
 
-      {/* Decorative "PM tool" nav — sticky at top of section */}
-      <nav className="process-ui-nav" aria-hidden="true">
-        <span className="pun-item">Queue</span>
-        <span className="pun-item pun-active">Brief · Day 01</span>
-      </nav>
-
       {/* Screen 1 — Messy scribble */}
       <div ref={scribbleScreenRef} className="process-screen process-screen-scribble">
         <div className="process-label reveal">
@@ -230,6 +212,32 @@ function Process() {
       {/* Thread scroll zone — tall div keeps milestones sticky while thread draws */}
       <div className="process-thread-wrap" ref={threadWrapRef}>
         <div className="process-thread-sticky">
+
+          {/* Orange thread — viewport-local coordinates, always centered via CSS */}
+          <svg
+            ref={stickyThreadSvgRef}
+            className="thread-line-svg"
+            preserveAspectRatio="xMidYMid meet"
+            overflow="visible"
+            aria-hidden="true"
+          >
+            <path
+              ref={pathRef}
+              stroke="var(--accent)"
+              strokeWidth="4"
+              fill="none"
+              strokeLinecap="round"
+              vectorEffect="non-scaling-stroke"
+              style={{ transition: 'none', willChange: 'stroke-dashoffset' }}
+            />
+            <circle
+              ref={beadRef}
+              r="5"
+              fill="var(--accent)"
+              style={{ opacity: 0 }}
+            />
+          </svg>
+
           <div ref={ms1Ref} className="thread-milestone left" style={{ top: "28%", opacity: 0, transform: "translateY(8px)" }}>
             <span className="ms-tag">listen</span>
             <span className="ms-note">interviews · field notes</span>
@@ -350,18 +358,14 @@ function Process() {
         </div>
       </div>
 
-      {/* ── Unified overlay SVG ─────────────────────────────────── */}
-      {/* Scribble paths + orange thread share this coordinate space */}
-      {/* so the thread visually emerges from inside the tangle.    */}
+      {/* ── Scribble overlay SVG ────────────────────────────────── */}
+      {/* Scribble only — thread has moved to the sticky viewport SVG */}
       <svg
         ref={svgRef}
         className="process-thread-svg"
         preserveAspectRatio="none"
         aria-hidden="true"
       >
-        {/* Outer g gets a dynamic transform in measure() to place the
-            scribble at the exact position of .process-screen-scribble.
-            Inner g carries the CSS breathing animation. */}
         <g ref={scribbleGroupRef} style={{ opacity: 0 }}>
           <g className="scribble-wiggle">
             {scribble.map((sp, i) => (
@@ -369,25 +373,6 @@ function Process() {
             ))}
           </g>
         </g>
-
-        {/* Orange thread — starts inside the scribble, grows downward with scroll */}
-        <path
-          ref={pathRef}
-          stroke="var(--accent)"
-          strokeWidth="4"
-          fill="none"
-          strokeLinecap="round"
-          vectorEffect="non-scaling-stroke"
-          style={{ transition: 'none', willChange: 'stroke-dashoffset' }}
-        />
-
-        {/* Bead sits exactly at the visible drawn endpoint, never floats freely */}
-        <circle
-          ref={beadRef}
-          r="5"
-          fill="var(--accent)"
-          style={{ opacity: 0 }}
-        />
       </svg>
     </section>
   );
