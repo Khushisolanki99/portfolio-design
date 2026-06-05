@@ -332,6 +332,11 @@ function Work({ onOpen }) {
         <h2 className="ws-headline">
           Business <span className="accent">analysis</span> &amp; product <span className="accent">thinking</span>
         </h2>
+        <span className="ws-hnote">— {projects.length} cases · 2024–26</span>
+      </div>
+
+      <div className="ws-archive-rule">
+        <span className="ws-archive-label">Case Archive ◆ Selected Work</span>
       </div>
 
       <div className="wc-grid">
