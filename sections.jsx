@@ -96,7 +96,7 @@ function Hero() {
         </div>
         <div className="hero-ctas">
           <button className="btn accent" onClick={() => document.getElementById("work").scrollIntoView({ behavior: "smooth" })}>View Work →</button>
-          <button className="btn">Download Resume →</button>
+          <a className="btn" href="/Khushi-Solanki-Resume.pdf" download="Khushi-Solanki-Resume.pdf">Download Resume →</a>
           <button className="btn dark" onClick={() => document.getElementById("contact").scrollIntoView({ behavior: "smooth" })}>Contact →</button>
         </div>
       </div>
