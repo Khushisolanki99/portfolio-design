@@ -1277,7 +1277,7 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
   transform: translate(-50%, -50%);
   z-index: 5;
   text-align: center;
-  width: clamp(210px, 22vw, 280px);
+  width: clamp(230px, 24vw, 300px);
   padding: 22px 20px 20px;
   background: var(--bg-paper-2);
   border: 1.5px solid rgba(0,0,0,0.18);
@@ -1298,8 +1298,8 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 
 .exp-orbit-sub {
   font-family: var(--sans);
-  font-size: 11.5px;
-  line-height: 1.55;
+  font-size: 11px;
+  line-height: 1.5;
   color: var(--ink-soft);
   margin: 0 0 14px;
 }
@@ -1317,7 +1317,7 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
   z-index: 3;
   transform: translate(-50%, -50%);
   width: 220px;
-  height: 160px;
+  height: 172px;
   padding: 13px 15px 12px;
   box-sizing: border-box;
   background: var(--paper);
@@ -1360,8 +1360,8 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 
 .exp-skill-desc {
   font-family: var(--sans);
-  font-size: 11px;
-  line-height: 1.45;
+  font-size: 10.5px;
+  line-height: 1.4;
   color: var(--ink-soft);
   margin-top: 5px;
   flex: 1;
@@ -1432,6 +1432,14 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
     transform: translateY(-3px) !important;
   }
 }
+@media (max-width: 600px) {
+  .exp-orbit-stage {
+    grid-template-columns: 1fr;
+  }
+  .exp-skill-card {
+    min-height: 150px;
+  }
+}
 
 /* ============================================================ */
 /* Skills (dark)                                                 */
@@ -1441,8 +1449,10 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 32px;
+  align-items: stretch;
 }
 @media (max-width: 900px) { .skills-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .skill-col li { font-size: 13.5px; } }
 .skill-col {
   background: var(--paper-on-dark);
   color: var(--ink);
@@ -1531,7 +1541,7 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
   font-family: var(--display); font-weight: 800;
   font-size: clamp(40px, 6vw, 88px); line-height: 0.88;
   letter-spacing: -0.04em; margin: 20px 0 48px;
-  max-width: 14ch; color: var(--ink); position: relative;
+  max-width: 22ch; color: var(--ink); position: relative;
 }
 .contact h2 .accent { color: var(--accent); }
 .contact h2 .sticker { transform: rotate(-3deg) translateY(-12px); display: inline-block; margin-left: 8px; }
@@ -1540,7 +1550,7 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
   font-size: 16px;
   line-height: 1.55;
   color: var(--ink-soft);
-  max-width: 64ch;
+  max-width: 72ch;
   margin: -32px 0 48px;
 }
 .contact-sub b { color: var(--ink); font-weight: 700; }
@@ -1548,7 +1558,15 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
   margin-top: 32px;
 }
-@media (max-width: 720px) { .contact-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 720px) { .contact-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  .contact h2 { font-size: clamp(32px, 8vw, 56px); }
+  .contact h2 .sticker { display: block; margin: 12px 0 0; transform: rotate(-2deg); }
+}
+.contact-card .v span:first-child { word-break: break-all; }
+@media (min-width: 480px) {
+  .contact-card .v span:first-child { word-break: normal; }
+}
 .contact-card {
   background: var(--paper);
   border: 1px solid rgba(0,0,0,0.08);

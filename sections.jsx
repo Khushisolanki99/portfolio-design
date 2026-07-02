@@ -390,18 +390,18 @@ function CyclingWord({ words }) {
 /* EXPERIENCE — constellation skill map (paper)                  */
 /* ============================================================ */
 const SKILL_CARDS_DATA = [
-  { num: "01", title: "Business Analysis",    desc: "Requirements, stakeholder needs, workflows, and decision clarity.",          tag: "PRO BRAIN",       pos: { top: "10%", left: "50%" } },
-  { num: "02", title: "Product Thinking",     desc: "Problems, users, scope, trade-offs, and business value.",                    tag: "MESSY + CLEAR",   pos: { top: "10%", left: "68%" } },
-  { num: "03", title: "Project Management",   desc: "Timelines, dependencies, feedback loops, and delivery rhythm.",              tag: "DELIVERY MODE",   pos: { top: "24%", left: "82%" } },
-  { num: "04", title: "UX / UI Design",       desc: "Screens, wireframes, flows, and usable interfaces.",                         tag: "DESIGN CHAOS",    pos: { top: "46%", left: "86%" } },
-  { num: "05", title: "Creative Direction",   desc: "Visual systems, storytelling, layout, and brand feeling.",                   tag: "BIG PICTURE",     pos: { top: "66%", left: "82%" } },
-  { num: "06", title: "PRDs",                 desc: "Structured product requirement documents that align teams.",                  tag: "SOURCE OF TRUTH", pos: { top: "82%", left: "68%" } },
-  { num: "07", title: "Requirements Writing", desc: "Translating ambiguous needs into clear, actionable specs.",                  tag: "NO GUESSING",     pos: { top: "88%", left: "50%" } },
-  { num: "08", title: "Stakeholder Mapping",  desc: "Identifying, aligning, and managing stakeholder expectations.",              tag: "PEOPLE LAYER",    pos: { top: "82%", left: "32%" } },
-  { num: "09", title: "Dashboard Thinking",   desc: "Turning raw data into decisions through visual reporting.",                  tag: "DATA CLARITY",    pos: { top: "66%", left: "18%" } },
-  { num: "10", title: "Wireframing",          desc: "Low to mid-fidelity flows that communicate before design does.",             tag: "THINK FIRST",     pos: { top: "46%", left: "14%" } },
-  { num: "11", title: "Visual Storytelling",  desc: "Making complex information feel simple and worth reading.",                  tag: "SHOW DON'T TELL", pos: { top: "24%", left: "18%" } },
-  { num: "12", title: "User Flows",           desc: "Mapping every step a user takes through a product journey.",                tag: "PATH FINDER",     pos: { top: "10%", left: "32%" } },
+  { num: "01", title: "Business Analysis",      desc: "Understanding business needs, clarifying scope, and converting ambiguity into structured execution inputs.", tag: "PROBLEM → REQUIREMENT", pos: { top: "10%", left: "50%" } },
+  { num: "02", title: "Requirement Gathering",  desc: "Asking the right questions, capturing stakeholder needs, and translating them into clear functional requirements.", tag: "DISCOVERY MODE", pos: { top: "10%", left: "32%" } },
+  { num: "03", title: "Stakeholder Management", desc: "Aligning clients, product teams, designers, developers, and reporting teams around priorities and expectations.", tag: "PEOPLE + PRIORITIES", pos: { top: "10%", left: "68%" } },
+  { num: "04", title: "Jira Workflows",         desc: "Creating sprint boards, task workflows, backlog items, dashboards, and trackers for delivery visibility.", tag: "EXECUTION SYSTEM", pos: { top: "24%", left: "18%" } },
+  { num: "05", title: "User Stories",           desc: "Breaking requirements into user stories that help teams understand what needs to be built and why.", tag: "BUILD CLARITY", pos: { top: "24%", left: "82%" } },
+  { num: "06", title: "Acceptance Criteria",    desc: "Defining clear conditions of success so features can be reviewed, tested, and delivered with less ambiguity.", tag: "DONE MEANS DONE", pos: { top: "46%", left: "14%" } },
+  { num: "07", title: "User Flows",             desc: "Mapping how users move through a product journey, from entry points to task completion.", tag: "JOURNEY LOGIC", pos: { top: "46%", left: "86%" } },
+  { num: "08", title: "Wireframing",            desc: "Creating low to mid-fidelity screens that communicate structure, flow, and product intent before design.", tag: "THINK BEFORE UI", pos: { top: "66%", left: "18%" } },
+  { num: "09", title: "Process Mapping",        desc: "Visualizing business workflows, dependencies, handoffs, and decision points to improve clarity.", tag: "FLOW CLARITY", pos: { top: "66%", left: "82%" } },
+  { num: "10", title: "Power BI Reporting",     desc: "Gathering dashboard and reporting requirements that support visibility, analysis, and business decisions.", tag: "DATA TO DECISION", pos: { top: "82%", left: "32%" } },
+  { num: "11", title: "Gap Analysis",           desc: "Identifying missing features, broken flows, process gaps, and opportunities for product improvement.", tag: "FIND THE GAP", pos: { top: "82%", left: "68%" } },
+  { num: "12", title: "Product Execution",      desc: "Supporting sprint planning, backlog management, coordination, delivery follow-ups, and release readiness.", tag: "SHIP MODE", pos: { top: "88%", left: "50%" } },
 ];
 
 function Experience() {
@@ -430,11 +430,11 @@ function Experience() {
 
         {/* Center card */}
         <div className="exp-orbit-center">
-          <h2 className="exp-orbit-heading">What I do<br />on a Tuesday.</h2>
-          <p className="exp-orbit-sub">Five disciplines that overlap on almost every product brief.</p>
+          <h2 className="exp-orbit-heading">What I bring<br />to product teams.</h2>
+          <p className="exp-orbit-sub">Business analysis, product execution, workflows, documentation, and reporting skills used across real client and product work.</p>
           <div className="exp-orbit-tags">
-            <span className="sticker tilt-l">★ open to freelance</span>
-            <span className="sticker tilt-r">⌁ remote-friendly</span>
+            <span className="sticker tilt-l">★ open to BA / APM roles</span>
+            <span className="sticker tilt-r">⌁ India + remote-friendly</span>
           </div>
         </div>
 
@@ -457,16 +457,22 @@ function Experience() {
 /* ============================================================ */
 const SKILLS = [
   {
-    title: "Business & Product", em: "Product",
-    items: ["Requirement Gathering","PRD Writing","User Stories","Acceptance Criteria","Stakeholder Communication","Process Mapping","Market Research","Competitor Research"],
+    label: "BUSINESS ANALYSIS",
+    title: "Business Analysis",
+    em: "Analysis",
+    items: ["Requirement Gathering","Business Analysis","User Stories","Acceptance Criteria","BRD/FRD Documentation","Process Mapping","Gap Analysis","Stakeholder Management"],
   },
   {
-    title: "Execution & Delivery", em: "Delivery",
-    items: ["Agile / Scrum","Sprint Planning","JIRA Boards","Task Tracking","Documentation","Review Presentations","Stakeholder Updates","QA Coordination"],
+    label: "PRODUCT EXECUTION",
+    title: "Product & Delivery Execution",
+    em: "Execution",
+    items: ["Agile / Scrum","Sprint Planning","Jira Boards","Backlog Management","Task Tracking","Stakeholder Updates","UAT Support","Release Coordination"],
   },
   {
-    title: "Design & Creative", em: "Creative",
-    items: ["Wireframing","UI Layouts","Design Systems","Visual Storytelling","Figma Prototyping","Portfolio Presentation","Creative Direction","Poster / Web Design"],
+    label: "UX, DATA & TOOLS",
+    title: "UX, Data & Tools",
+    em: "Tools",
+    items: ["User Flows","Wireframing","Figma","Power BI","Excel / Google Sheets","Dashboard Requirements","Market Research","Competitor Research"],
   },
 ];
 
@@ -477,8 +483,8 @@ function Skills() {
       <h2 className="display" style={{ fontSize: "clamp(36px, 5vw, 72px)", margin: "0 0 14px", color: "var(--paper-on-dark)" }}>
         Skills, <span style={{ color: "var(--accent)" }}>in three</span><br />columns.
       </h2>
-      <p style={{ fontFamily: "var(--sans)", fontSize: 15, color: "rgba(239,233,221,0.7)", maxWidth: "52ch", margin: 0 }}>
-        A working inventory of skills used across product briefs, case studies, and shipped work.
+      <p style={{ fontFamily: "var(--sans)", fontSize: 15, color: "rgba(239,233,221,0.7)", maxWidth: "72ch", margin: 0 }}>
+        A practical skill inventory across business analysis, product execution, documentation, workflows, reporting, and stakeholder-ready delivery.
       </p>
 
       <div className="skills-grid">
@@ -486,7 +492,7 @@ function Skills() {
           const parts = col.title.split(col.em);
           return (
             <div className="skill-col" key={col.title}>
-              <div className="label">{col.em.toUpperCase()} · {String(col.items.length).padStart(2, "0")}</div>
+              <div className="label">{col.label} · {String(col.items.length).padStart(2, "0")}</div>
               <h4>{parts[0]}<span className="accent">{col.em}</span></h4>
               <ul>
                 {col.items.map((it, i) => (
@@ -513,21 +519,21 @@ function Contact() {
     {
       k: "Email",
       v: "khushii.solannki@gmail.com",
-      hint: "fastest way to reach me",
+      hint: "For job opportunities, referrals, and recruiter conversations",
       ar: "↗",
       href: "mailto:khushii.solannki@gmail.com",
     },
     {
       k: "LinkedIn",
       v: "/in/khushisolanki-pm",
-      hint: "roles, network, history",
+      hint: "Connect for BA/APM opportunities and referrals",
       ar: "↗",
       href: "https://www.linkedin.com/in/khushisolanki-pm",
     },
     {
       k: "Resume",
       v: "Download Resume",
-      hint: "BA · Product · UX",
+      hint: "Business Analyst · Associate PM · Product Coordination",
       ar: "↓",
       href: "Khushi-Solanki-Resume.pdf",
       download: "Khushi-Solanki-Resume.pdf",
@@ -537,13 +543,13 @@ function Contact() {
     <section id="contact" className="contact bg-grid-paper" data-screen-label="06 Contact">
       <div className="eyebrow-light"><span className="num">06</span><span className="dot" /><span>Contact — let's chat</span></div>
       <h2>
-        Let's build clear, <span className="accent">useful</span>,
-        &amp; beautifully structured digital products.
-        <span className="sticker">⌁ open · 2026</span>
+        Let's turn <span className="accent">business needs</span> into clear, useful,
+        and execution-ready product work.
+        <span className="sticker">⌁ open to roles · 2026</span>
       </h2>
       <p className="contact-sub">
-        I'm open to <b>BA, Product Analyst, Associate PM, UX / Product, and creative product</b> roles.
-        Also happy to collaborate on product ideas, case studies, dashboards, and early-stage concepts.
+        I'm open to <b>Business Analyst, Associate Business Analyst, Associate Product Manager, Product Coordinator, Project Coordinator, and Product Analyst</b> roles.
+        I'm especially interested in work involving requirement gathering, stakeholder coordination, Jira workflows, user stories, wireframes, dashboards, reporting requirements, and product execution.
       </p>
       <div className="contact-grid">
         {cards.map((c) => (
