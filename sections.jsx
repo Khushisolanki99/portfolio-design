@@ -28,17 +28,17 @@ function Badge({ children }) {
 /* ============================================================ */
 function Hero() {
   const objects = [
-    { id: "cd",       src: "images/cd.png",       alt: "CD case",
+    { id: "cd",       src: "/assets/cd-case.png",    alt: "CD case",
       style: { top: "12%",    left: "-3%",   width: "11%", aspectRatio: "1/1",  transform: "rotate(-22deg)" } },
-    { id: "keyboard", src: "images/keyboard.png", alt: "Keyboard",
+    { id: "keyboard", src: "/assets/keyboard.png",   alt: "Keyboard",
       style: { top: "-20%",   right: "-6%",  width: "30%", aspectRatio: "3/4",  transform: "rotate(65deg)"  } },
-    { id: "earbuds",  src: "images/earbuds.png",  alt: "Earbuds",
+    { id: "earbuds",  src: "/assets/earbuds.png",    alt: "Earbuds",
       style: { top: "-7%",    left: "44%",   width: "11%", aspectRatio: "1/1",  transform: "rotate(28deg)"  } },
-    { id: "latte",    src: "images/latte.png",    alt: "Iced latte",
+    { id: "latte",    src: "/assets/iced-latte.png", alt: "Iced latte",
       style: { top: "22%",    left: "8%",    width: "21%", aspectRatio: "2/3",  transform: "rotate(3deg)"   } },
-    { id: "radio",    src: "images/radio.png",    alt: "Radio",
+    { id: "radio",    src: "/assets/radio.png",      alt: "Radio",
       style: { bottom: "-8%", right: "-8%",  width: "24%", aspectRatio: "4/5",  transform: "rotate(5deg)"   } },
-    { id: "notebook", src: "images/notebook.png", alt: "Notebook",
+    { id: "notebook", src: "/assets/book-stack.png", alt: "Notebook",
       style: { bottom: "-5%", left: "-5%",   width: "20%", aspectRatio: "3/4",  transform: "rotate(-17deg)" } },
   ];
 
