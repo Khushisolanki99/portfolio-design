@@ -104,12 +104,18 @@ function CDFrame({ item, pid, idx }) {
       </div>
     );
   } else {
-    /* type: "image" — fillable placeholder; item.src sets a pre-filled image */
-    inner = (
+    /* type: "image" — plain img when src is set (React won't reliably pass
+       src as an attribute on <image-slot>); image-slot only for empty drops */
+    inner = item.src ? (
+      <img
+        src={item.src}
+        alt={item.label}
+        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+      />
+    ) : (
       <image-slot
         id={slotId}
         shape="rect"
-        src={item.src || ""}
         placeholder={item.label}
         style={{ width: "100%", height: "100%", display: "block" }}
       ></image-slot>
@@ -336,8 +342,8 @@ const CD_PROJECTS = [
     resp: ["Production planning", "Post-production", "Visual coordination", "Event content", "Creative asset support"],
     tags: ["TEDx", "Nagpur", "Event Production", "Post-Production", "Creative Direction"],
     items: [
-      { type: "image", w: "62%", ar: "16 / 10", rot: -1.5, par: 0.04, src: "uploads/tedx-nagpur-01.jpeg", label: "main stage — wide", corner: "fig. 01 · stage", pin: "the red dot ●" },
-      { type: "image", w: "34%", ar: "3 / 4",   rot: 2.5,  par: 0.09, src: "uploads/tedx-nagpur-02.webp", label: "think beyond the obvious" },
+      { type: "image", w: "62%", ar: "16 / 10", rot: -1.5, par: 0.04, src: "/uploads/tedx-nagpur-01.jpeg", label: "main stage — wide", corner: "fig. 01 · stage", pin: "the red dot ●" },
+      { type: "image", w: "34%", ar: "3 / 4",   rot: 2.5,  par: 0.09, src: "/uploads/tedx-nagpur-02.webp", label: "think beyond the obvious" },
     ],
   },
   {
@@ -349,8 +355,8 @@ const CD_PROJECTS = [
     tags: ["Studio", "Production", "Post-Production", "Video Editing", "Graphic Design", "Client Work"],
     items: [
       { type: "play",  w: "100%", ar: "16 / 9", rot: 0,    par: 0.03, href: "https://youtu.be/mMUdmrtWLoY?si=AhO9jCNbygF7Omnv", thumbnailUrl: "https://img.youtube.com/vi/mMUdmrtWLoY/maxresdefault.jpg", runtime: "Ruf Studios · Showreel", pin: "studio work" },
-      { type: "image", w: "50%",  ar: "4 / 3",  rot: 1.5,  par: 0.08, src: "uploads/ruf-studios-01.jpeg", label: "production — on-site", corner: "fig. 01 · production", pin: "on-site work" },
-      { type: "image", w: "40%",  ar: "1 / 1",  rot: -2.5, par: 0.07, src: "uploads/ruf-studios-02.jpeg", label: "client visual", corner: "fig. 02 · client" },
+      { type: "image", w: "50%",  ar: "4 / 3",  rot: 1.5,  par: 0.08, src: "/uploads/ruf-studios-01.jpeg", label: "production — on-site", corner: "fig. 01 · production", pin: "on-site work" },
+      { type: "image", w: "40%",  ar: "1 / 1",  rot: -2.5, par: 0.07, src: "/uploads/ruf-studios-02.jpeg", label: "client visual", corner: "fig. 02 · client" },
     ],
   },
   {
@@ -433,9 +439,9 @@ const CD_PROJECTS = [
     resp: ["Ticketing partnership", "Design partnership", "Visitor lanyards", "Exhibitor lanyards", "Brochure design", "Event creatives", "BTS content", "Social content support"],
     tags: ["Event", "Ticketing", "Lanyards", "Brochures", "BTS Content", "Design Partner", "Vidarbha"],
     items: [
-      { type: "image", w: "72%", ar: "4 / 3", rot: -1.5, par: 0.05, src: "uploads/av-01.jpg",            label: "lanyard design",    corner: "fig. 01 · lanyard", pin: "design partner" },
-      { type: "image", w: "30%", ar: "3 / 4", rot: 2.5,  par: 0.09, src: "uploads/av-coordinator-1.jpg", label: "exhibitor lanyard", corner: "exhibitor" },
-      { type: "image", w: "30%", ar: "3 / 4", rot: -2,   par: 0.08, src: "uploads/av-coordinator-2.jpg", label: "visitor lanyard",   corner: "visitor" },
+      { type: "image", w: "72%", ar: "4 / 3", rot: -1.5, par: 0.05, src: "/uploads/av-01.jpg",            label: "lanyard design",    corner: "fig. 01 · lanyard", pin: "design partner" },
+      { type: "image", w: "30%", ar: "3 / 4", rot: 2.5,  par: 0.09, src: "/uploads/av-coordinator-1.jpg", label: "exhibitor lanyard", corner: "exhibitor" },
+      { type: "image", w: "30%", ar: "3 / 4", rot: -2,   par: 0.08, src: "/uploads/av-coordinator-2.jpg", label: "visitor lanyard",   corner: "visitor" },
     ],
   },
   {
@@ -448,9 +454,9 @@ const CD_PROJECTS = [
     items: [
       { type: "figma", w: "100%", ar: "16 / 9", rot: 0,    par: 0.03,
         href: "https://www.figma.com/proto/t9TMfnS9aR8Zc3GGsRX9we/Run-Frenzy?node-id=263-389&t=W5UlrbNlxHyD2MSg-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
-        url: "figma.com/proto/Run-Frenzy", previewSrc: "uploads/rf-screen-01.png", label: "open prototype →", pin: "live prototype", pinGreen: true },
-      { type: "image", w: "58%",  ar: "16 / 9", rot: -1.5, par: 0.05, src: "uploads/rf-screen-new.png", label: "homepage preview",       corner: "fig. 01 · homepage" },
-      { type: "image", w: "38%",  ar: "4 / 3",  rot: 2,    par: 0.08, src: "uploads/bollywood-seduction.png", label: "website section preview", corner: "section detail" },
+        url: "figma.com/proto/Run-Frenzy", previewSrc: "/uploads/rf-screen-01.png", label: "open prototype →", pin: "live prototype", pinGreen: true },
+      { type: "image", w: "58%",  ar: "16 / 9", rot: -1.5, par: 0.05, src: "/uploads/rf-screen-new.png", label: "homepage preview",       corner: "fig. 01 · homepage" },
+      { type: "image", w: "38%",  ar: "4 / 3",  rot: 2,    par: 0.08, src: "/uploads/bollywood-seduction.png", label: "website section preview", corner: "section detail" },
     ],
   },
   {
@@ -461,7 +467,7 @@ const CD_PROJECTS = [
     resp: ["Video editing", "Graphic design", "Content planning", "Brand assets", "Social content", "Marketing creatives"],
     tags: ["New York", "Marketing", "Video Editing", "Graphic Design", "Content Planning", "Brand Work"],
     items: [
-      { type: "image", w: "100%", ar: "16 / 9", rot: 0, par: 0.04, src: "uploads/cheap-marketing-01.png", label: "brand website", corner: "fig. 01 · brand" },
+      { type: "image", w: "100%", ar: "16 / 9", rot: 0, par: 0.04, src: "/uploads/cheap-marketing-01.png", label: "brand website", corner: "fig. 01 · brand" },
     ],
   },
 ];

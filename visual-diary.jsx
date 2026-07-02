@@ -8,7 +8,7 @@
 const { useState: useStateVD, useEffect: useEffectVD, useRef: useRefVD } = React;
 
 /* Scatter map — to add a new image:
-   1. Copy the file to uploads/ with a clean name (no spaces), e.g. vd-26.jpeg
+   1. Copy the file to public/uploads/ with a clean name (no spaces), e.g. vd-26.jpeg
    2. Append a new object below using the same fields:
         l     = left  (% of stage width)   — keep 35–65% clear for the title
         t     = top   (% of stage height)  — keep 38–62% clear for the title
@@ -19,41 +19,41 @@ const { useState: useStateVD, useEffect: useEffectVD, useRef: useRefVD } = React
         src   = path relative to Portfolio.html */
 const VD_FRAMES = [
   // ── Top row: 7 frames spread l=1–80%, t=2–8% ───────────────────────
-  { l:1,  t:3,  w:9, depth:0.80, rot:-3, tag:"off-duty",  src:"uploads/vd-01.jpeg" },
-  { l:13, t:6,  w:8, depth:0.60, rot:3,  tag:"film",      src:"uploads/vd-02.jpeg" },
-  { l:25, t:2,  w:9, depth:0.70, rot:-5, tag:"street",    src:"uploads/vd-03.jpeg" },
-  { l:37, t:7,  w:8, depth:0.55, rot:4,  tag:"weekend",   src:"uploads/vd-04.jpeg" },
-  { l:55, t:4,  w:9, depth:0.65, rot:-4, tag:"candid",    src:"uploads/vd-05.jpeg" },
-  { l:67, t:8,  w:8, depth:0.72, rot:5,  tag:"poster",    src:"uploads/vd-06.jpeg" },
-  { l:80, t:3,  w:9, depth:0.85, rot:-3, tag:"keeper",    src:"uploads/vd-07.jpeg" },
+  { l:1,  t:3,  w:9, depth:0.80, rot:-3, tag:"off-duty",  src:"/uploads/vd-01.jpeg" },
+  { l:13, t:6,  w:8, depth:0.60, rot:3,  tag:"film",      src:"/uploads/vd-02.jpeg" },
+  { l:25, t:2,  w:9, depth:0.70, rot:-5, tag:"street",    src:"/uploads/vd-03.jpeg" },
+  { l:37, t:7,  w:8, depth:0.55, rot:4,  tag:"weekend",   src:"/uploads/vd-04.jpeg" },
+  { l:55, t:4,  w:9, depth:0.65, rot:-4, tag:"candid",    src:"/uploads/vd-05.jpeg" },
+  { l:67, t:8,  w:8, depth:0.72, rot:5,  tag:"poster",    src:"/uploads/vd-06.jpeg" },
+  { l:80, t:3,  w:9, depth:0.85, rot:-3, tag:"keeper",    src:"/uploads/vd-07.jpeg" },
 
   // ── Second tier: fills gap between top row and middle, t=14–26% ─────
-  { l:46, t:14, w:8, depth:0.65, rot:-2, tag:"found",     src:"uploads/vd-18.jpeg" },
-  { l:10, t:23, w:9, depth:0.60, rot:-4, tag:"grain",     src:"uploads/vd-20.jpeg" },
-  { l:68, t:26, w:8, depth:0.75, rot:3,  tag:"mood",      src:"uploads/vd-21.jpeg" },
-  { l:88, t:20, w:8, depth:0.72, rot:4,  tag:"sunday",    src:"uploads/vd-19.jpeg" },
+  { l:46, t:14, w:8, depth:0.65, rot:-2, tag:"found",     src:"/uploads/vd-18.jpeg" },
+  { l:10, t:23, w:9, depth:0.60, rot:-4, tag:"grain",     src:"/uploads/vd-20.jpeg" },
+  { l:68, t:26, w:8, depth:0.75, rot:3,  tag:"mood",      src:"/uploads/vd-21.jpeg" },
+  { l:88, t:20, w:8, depth:0.72, rot:4,  tag:"sunday",    src:"/uploads/vd-19.jpeg" },
 
   // ── Middle sides only: title center (35–65%, 38–62%) stays clear ────
-  { l:1,  t:36, w:8, depth:0.95, rot:2,  tag:"riso",      src:"uploads/vd-08.jpeg" },
-  { l:2,  t:63, w:9, depth:0.75, rot:-3, tag:"type",      src:"uploads/vd-09.jpeg" },
-  { l:84, t:34, w:8, depth:1.00, rot:-4, tag:"still",     src:"uploads/vd-10.jpeg" },
-  { l:83, t:62, w:9, depth:0.80, rot:3,  tag:"contact",   src:"uploads/vd-11.jpeg" },
+  { l:1,  t:36, w:8, depth:0.95, rot:2,  tag:"riso",      src:"/uploads/vd-08.jpeg" },
+  { l:2,  t:63, w:9, depth:0.75, rot:-3, tag:"type",      src:"/uploads/vd-09.jpeg" },
+  { l:84, t:34, w:8, depth:1.00, rot:-4, tag:"still",     src:"/uploads/vd-10.jpeg" },
+  { l:83, t:62, w:9, depth:0.80, rot:3,  tag:"contact",   src:"/uploads/vd-11.jpeg" },
 
   // ── Lower-middle fill: t=63–73%, stays outside title zone ───────────
-  { l:33, t:63, w:8, depth:0.80, rot:2,  tag:"still life",src:"uploads/vd-25.jpeg" },
-  { l:25, t:65, w:9, depth:0.68, rot:-5, tag:"colour",    src:"uploads/vd-22.jpeg" },
-  { l:51, t:72, w:8, depth:0.70, rot:4,  tag:"take two",  src:"uploads/vd-23.jpeg" },
+  { l:33, t:63, w:8, depth:0.80, rot:2,  tag:"still life",src:"/uploads/vd-25.jpeg" },
+  { l:25, t:65, w:9, depth:0.68, rot:-5, tag:"colour",    src:"/uploads/vd-22.jpeg" },
+  { l:51, t:72, w:8, depth:0.70, rot:4,  tag:"take two",  src:"/uploads/vd-23.jpeg" },
 
   // ── Bottom row: 6 frames spread l=2–72%, t=76–82% ───────────────────
-  { l:2,  t:80, w:9, depth:0.68, rot:3,  tag:"frame 22",  src:"uploads/vd-12.jpeg" },
-  { l:16, t:76, w:8, depth:0.58, rot:-4, tag:"light",     src:"uploads/vd-13.jpeg" },
-  { l:29, t:82, w:9, depth:0.72, rot:5,  tag:"for fun",   src:"uploads/vd-14.jpeg" },
-  { l:42, t:78, w:8, depth:0.62, rot:-3, tag:"cover",     src:"uploads/vd-15.jpeg" },
-  { l:59, t:80, w:9, depth:0.78, rot:4,  tag:"amber",     src:"uploads/vd-16.jpeg" },
-  { l:72, t:77, w:8, depth:0.55, rot:-5, tag:"no client", src:"uploads/vd-17.jpeg" },
+  { l:2,  t:80, w:9, depth:0.68, rot:3,  tag:"frame 22",  src:"/uploads/vd-12.jpeg" },
+  { l:16, t:76, w:8, depth:0.58, rot:-4, tag:"light",     src:"/uploads/vd-13.jpeg" },
+  { l:29, t:82, w:9, depth:0.72, rot:5,  tag:"for fun",   src:"/uploads/vd-14.jpeg" },
+  { l:42, t:78, w:8, depth:0.62, rot:-3, tag:"cover",     src:"/uploads/vd-15.jpeg" },
+  { l:59, t:80, w:9, depth:0.78, rot:4,  tag:"amber",     src:"/uploads/vd-16.jpeg" },
+  { l:72, t:77, w:8, depth:0.55, rot:-5, tag:"no client", src:"/uploads/vd-17.jpeg" },
 
   // ── Bottom-right corner extension ───────────────────────────────────
-  { l:85, t:79, w:9, depth:0.62, rot:-3, tag:"late",      src:"uploads/vd-24.jpeg" },
+  { l:85, t:79, w:9, depth:0.62, rot:-3, tag:"late",      src:"/uploads/vd-24.jpeg" },
 ];
 
 function VisualDiary() {

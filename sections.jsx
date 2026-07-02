@@ -140,7 +140,7 @@ function About() {
     <section id="about" className="about-section" data-screen-label="01 About">
       <img
         className="about-bg"
-        src="images/about-photo.jpeg"
+        src="/images/about-photo.jpeg"
         alt="Khushi Solanki standing in a warm, light-filled stone corridor"
       />
       <div className="about-tint" aria-hidden></div>
@@ -535,7 +535,7 @@ function Contact() {
       v: "Download Resume",
       hint: "Business Analyst · Associate PM · Product Coordination",
       ar: "↓",
-      href: "Khushi-Solanki-Resume.pdf",
+      href: "/Khushi-Solanki-Resume.pdf",
       download: "Khushi-Solanki-Resume.pdf",
     },
   ];
