@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RTO Guard — Concept Case Study · Khushi Solanki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&family=Special+Elite&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" crossorigin href="/assets/cs-styles-DDEIme3S.css">
+</head>
+<body>
+
+  <!-- ── Fixed nav ── -->
+  <nav class="cs-nav">
+    <div class="cs-nav-brand">K<b>h</b>ushi <b>S</b>olanki</div>
+    <div class="cs-nav-right">
+      <span class="cs-nav-title">RTO Guard · Concept Case Study</span>
+      <a href="../Portfolio.html" class="cs-nav-back">← All work</a>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="cs-hero bg-dark">
+    <div class="cs-hero-inner">
+
+      <div class="cs-hero-tag">
+        <span class="dot"></span>
+        Concept Case Study
+      </div>
+
+      <h1 class="cs-hero-title">
+        RTO<br><span class="accent-word">Guard.</span>
+      </h1>
+
+      <p class="cs-hero-sub">
+        A post-purchase risk dashboard for detecting likely-to-fail
+        e-commerce deliveries — before they become returns. Early warning
+        for ops teams, not reactive reporting after the damage is done.
+      </p>
+
+      <div class="cs-hero-bottom">
+        <div class="cs-hero-meta">
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Type</span>
+            <span class="cs-hero-meta-value">Concept Case Study</span>
+          </div>
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Focus</span>
+            <span class="cs-hero-meta-value">Post-purchase Operations</span>
+          </div>
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Year</span>
+            <span class="cs-hero-meta-value">2025</span>
+          </div>
+        </div>
+        <div class="cs-hero-ctas">
+          <a class="cs-btn primary" href="./assets/RTO-Guard-Case-Study.pdf" target="_blank" rel="noopener">Read PRD</a>
+          <a class="cs-btn" href="./assets/RTO-Guard-Case-Study.pdf" target="_blank" rel="noopener">Read Case Study</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Problem ── -->
+  <section class="cs-problem bg-paper">
+    <div class="cs-problem-inner">
+
+      <div class="cs-problem-left">
+        <div class="cs-sticker tilt-r"><span class="num">§ 01</span> Problem</div>
+
+        <h2 class="cs-problem-pull">
+          Too late<br>is the<br><span class="u">default.</span>
+        </h2>
+
+        <svg class="cs-doodle-arrow" width="30" height="26" viewBox="0 0 30 26" fill="none" aria-hidden="true">
+          <path d="M4 4 C6 4 24 8 24 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M18 16 L25 21 L18 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="cs-problem-right">
+        <p class="cs-problem-copy">
+          <strong>D2C and e-commerce brands</strong> often lose margin after an order has already started failing — <span class="hl">repeated delivery attempts</span>, <span class="hl">unreachable customers</span>, <span class="hl">address issues</span>, <span class="hl">COD risk</span>, and delayed courier updates all show up too late. Ops teams work from scattered dashboards, manual follow-ups, and reactive reports.
+        </p>
+        <p class="cs-problem-copy">
+          RTO Guard explores how a post-purchase risk dashboard could help operations teams <strong>identify risky orders earlier</strong>, understand why they are at risk, and take action <span class="hl">before the order becomes RTO</span>.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Product Flow ── -->
+  <section class="cs-flow bg-dark">
+
+    <div class="cs-flow-header">
+      <div class="cs-sticker flat"><span class="dot"></span> Product Flow</div>
+    </div>
+
+    <div class="cs-flow-shell">
+      <aside class="cs-flow-left">
+        <div class="cs-step-num"  id="activeStepNumber">Step 01</div>
+        <h2  class="cs-step-title" id="activeStepTitle">Dashboard overview</h2>
+        <p   class="cs-step-copy"  id="activeStepCopy">Ops manager gets a quick view of risky orders, exceptions, and delivery health.</p>
+        <ol  class="cs-step-list"  id="stepList"></ol>
+      </aside>
+
+      <div class="cs-flow-right">
+        <div class="cs-screen-stage" id="screenStage"></div>
+        <div id="triggers"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── Narrative ── -->
+  <section class="cs-narrative bg-paper">
+    <div class="cs-narrative-inner">
+
+      <!-- Statement -->
+      <div class="cs-statement">
+        <span class="cs-statement-label">Overview</span>
+        <div>
+          <p class="cs-statement-body">
+            Ops teams lack an <span class="hl">early-warning system</span><br>for orders likely to fail delivery.
+          </p>
+          <p class="cs-statement-sub">
+            RTO Guard turns scattered delivery signals into a focused risk workflow. Instead of showing only shipment status, the dashboard surfaces risk status, reason codes, priority, and the suggested next action — before ops gets a call from an angry customer.
+          </p>
+        </div>
+      </div>
+
+      <!-- Persona + Goals -->
+      <div class="cs-two-col">
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">01</span>
+            Persona
+          </div>
+          <p class="cs-block-copy">
+            D2C operations manager handling <strong>500–5,000 orders per day</strong>. Responsible for delivery performance, exception management, and reducing return-to-origin rates across multiple couriers and regions.
+          </p>
+        </div>
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">02</span>
+            Goals
+          </div>
+          <ul class="cs-block-list">
+            <li>Surface risky orders early, before failure locks in</li>
+            <li>Explain why each order is at risk</li>
+            <li>Reduce manual follow-up and triage effort</li>
+            <li>Help teams prioritize which orders to act on first</li>
+            <li>Track RTO patterns and courier performance over time</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Product Thinking -->
+      <div class="cs-statement" style="margin-top: 0; border-top: 1px solid var(--rule-light);">
+        <span class="cs-statement-label">Product Thinking</span>
+        <div>
+          <p class="cs-statement-body" style="font-size: clamp(18px, 2vw, 28px);">
+            Risk-first, not status-first.
+          </p>
+          <p class="cs-statement-sub">
+            Most delivery dashboards answer "where is my order?" RTO Guard answers "which orders are about to fail, and what should I do about them?" That shift — from status reporting to risk prioritization — is the core product decision. Clear risk categories, order-level drilldown, and action-oriented layout are all downstream of that framing.
+          </p>
+        </div>
+      </div>
+
+      <!-- Design Decisions + Outcome -->
+      <div class="cs-two-col" style="border-bottom: none;">
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">03</span>
+            Design Decisions
+          </div>
+          <ul class="cs-block-list">
+            <li>Risk-first dashboard instead of status-only tracking</li>
+            <li>Clear risk tiers: On Track, At Risk, Exception</li>
+            <li>Order-level drilldown for root-cause visibility</li>
+            <li>Action panel surfaces the suggested next step</li>
+            <li>Trend and courier view for pattern monitoring</li>
+          </ul>
+        </div>
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">04</span>
+            What this demonstrates
+          </div>
+          <p class="cs-block-copy" style="margin-bottom: 18px;">
+            Business analysis, dashboard thinking, workflow mapping, risk-prioritization logic, and product storytelling for a post-purchase operations problem.
+          </p>
+          <div class="cs-tags">
+            <span class="cs-tag">Business Analysis</span>
+            <span class="cs-tag">Dashboard Design</span>
+            <span class="cs-tag">Risk Prioritization</span>
+            <span class="cs-tag">Workflow Mapping</span>
+            <span class="cs-tag">D2C Ops</span>
+            <span class="cs-tag">Product Storytelling</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="cs-hand-note">Concept project — because ops teams deserve better than reactive reporting.</p>
+
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="cs-footer bg-paper">
+    <p class="cs-footer-note">Concept project · Khushi Solanki · 2025</p>
+    <a href="../Portfolio.html" class="cs-footer-back">← Back to portfolio</a>
+  </footer>
+
+  <script src="cs-flow.js"></script>
+  <script>
+    initFlow([
+      {
+        number: "01",
+        title:  "Dashboard overview",
+        copy:   "Ops manager gets a quick view of risky orders, exceptions, and overall delivery health at a glance.",
+        image:  "./assets/rto-overview-dashboard.png"
+      },
+      {
+        number: "02",
+        title:  "Risk queue",
+        copy:   "Orders are grouped by risk status so the team can immediately see where to act first.",
+        image:  "./assets/rto-risky-orders.png"
+      },
+      {
+        number: "03",
+        title:  "Order detail",
+        copy:   "Each risky order shows reason codes, customer and delivery signals, and a suggested next action.",
+        image:  "./assets/rto-order-detail.png"
+      },
+      {
+        number: "04",
+        title:  "Action / nudge",
+        copy:   "Ops can trigger follow-up actions — customer confirmation, address check, or courier escalation — from a single panel.",
+        image:  "./assets/rto-action-panel.png"
+      },
+      {
+        number: "05",
+        title:  "Performance insights",
+        copy:   "Team tracks RTO trends, courier performance, reason patterns, and improvement opportunities over time.",
+        image:  "./assets/rto-delivery-insights.png"
+      }
+    ]);
+  </script>
+
+</body>
+</html>

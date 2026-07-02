@@ -49,7 +49,7 @@ function Hero() {
           <div className="mark"><KMark size={28} /></div>
           <div className="name">
             Khushi <b>Solanki</b>
-            <span>business analyst · product · creative direction</span>
+            <span>business analyst · product execution · jira · wireframes</span>
           </div>
         </div>
       </div>
@@ -63,19 +63,18 @@ function Hero() {
         </div>
 
         {objects.map((o) => (
-          <div key={o.id} className="hero-obj" style={o.style}>
+          <div key={o.id} className={`hero-obj hero-obj--${o.id}`} style={o.style}>
             <img src={o.src} alt={o.alt} />
           </div>
         ))}
 
         <div className="hero-center">
           <div className="hero-wordmark">
-            <span className="line">BA / Product</span>
-            <span className="line accent">Portfolio</span>
+            <span className="line">Business Analyst &amp;</span>
+            <span className="line accent">Associate Product Manager</span>
           </div>
           <p className="hero-tagline">
-            PRDs, flows, screens, dashboards, and creative systems for
-            <span> real-world product problems.</span>
+            Turning business needs into requirements, workflows, user journeys, dashboards, and execution-ready product documentation.
           </p>
         </div>
       </div>
@@ -92,7 +91,7 @@ function Hero() {
           </div>
           <div className="m">
             <span className="k">Focus</span>
-            <span className="v"><b>Product thinking</b> + business analysis + design direction</span>
+            <span className="v"><b>Business Analysis</b> + Product Execution + User Flows + Reporting</span>
           </div>
         </div>
         <div className="hero-ctas">
@@ -153,8 +152,8 @@ function About() {
           <h1>Hi, I'm <span className="o">Khushi</span><br />Solanki.</h1>
           <div className="about-tags">
             <span>Business Analysis</span>
-            <span>Product Thinking</span>
-            <span>Visual Storytelling</span>
+            <span>Product Execution</span>
+            <span>Jira + Wireframes</span>
           </div>
         </div>
 
@@ -162,16 +161,15 @@ function About() {
         <div className="about-panel about-intro">
           <span className="about-pin" aria-hidden></span>
           <span className="about-label">— intro</span>
-          <p>I work at the intersection of <b>business analysis, product thinking and visual storytelling</b> — turning unclear ideas into structured product direction. I take messy problems, ask the right questions, map user journeys, and shape requirements that tell teams what to build and why.</p>
-          <p>My work usually starts with a <em>problem statement</em>, a few uncomfortable questions, and a blank flow. From there I build PRDs, user stories, wireframes, dashboards, process maps and product concepts — <b>structured enough for teams</b>, <b>clear enough for users</b>.</p>
-          <p>I care about making product thinking visible — connecting business goals with user needs, translating ambiguity into decisions, and using design to communicate the solution, not just decorate it.</p>
-          <p className="about-off"><span>Off the clock —</span> editing visuals, exploring web layouts, making posters, or redesigning something nobody asked me to.</p>
+          <p>I work at the intersection of <b>business analysis</b>, <b>product execution</b>, and user-focused problem solving — turning unclear business needs into <b>structured requirements</b>, workflows, user journeys, wireframes, dashboards, and <b>delivery-ready documentation</b>.</p>
+          <p>My work usually starts with understanding the problem, asking the right questions, mapping user and business flows, and translating ambiguity into clear execution inputs for design, development, reporting, and stakeholder teams.</p>
+          <p>I have worked across client projects, SaaS product development, healthcare product journeys, website revamps, Jira workflows, and Power BI reporting requirements. My focus is simple: make product direction clear, structured, and easy for teams to execute.</p>
         </div>
 
         {/* WHAT I SHIP */}
         <div className="about-panel about-ship">
           <span className="about-label">what i ship</span>
-          <p className="about-shiplist">PRDs · User Flows · Specs · Journey Maps · Wireframes · Decks · Playbooks</p>
+          <p className="about-shiplist">BRD/FRD Notes · User Stories · Acceptance Criteria · User Flows · Wireframes · Jira Boards · Dashboards · Process Maps · Stakeholder Decks</p>
         </div>
 
         {/* EXPERIENCE */}
@@ -179,11 +177,11 @@ function About() {
           <div className="about-cardhead"><span className="about-label">experience</span><span className="about-rule" aria-hidden></span></div>
           <div className="about-row">
             <span className="yr">2024–2026</span>
-            <div className="meta"><span className="role">Project Manager</span><span className="co">ProChat Technologies</span></div>
+            <div className="meta"><span className="role">Project Manager, Business Analysis &amp; Product Execution</span><span className="co">ProCoHat Technologies</span></div>
           </div>
           <div className="about-row">
-            <span className="yr">2023–2024</span>
-            <div className="meta"><span className="role">Product Associate Intern</span><span className="co">ProChat Technologies</span></div>
+            <span className="yr">2023–2023</span>
+            <div className="meta"><span className="role">Product Associate Intern, SaaS Product &amp; Business Analysis</span><span className="co">ProCoHat Technologies</span></div>
           </div>
           <div className="about-row">
             <span className="yr">2022–2023</span>
@@ -195,12 +193,12 @@ function About() {
         <div className="about-panel about-education">
           <div className="about-cardhead"><span className="about-label">education</span><span className="about-rule" aria-hidden></span></div>
           <div className="about-row">
-            <span className="yr">2025–now</span>
-            <div className="meta"><span className="role">PM, Generative &amp; Agentic AI</span><span className="co">BITSOM</span></div>
+            <span className="yr">2025–2026</span>
+            <div className="meta"><span className="role">Product Management with Generative &amp; Agentic AI</span><span className="co">BITSOM</span></div>
           </div>
           <div className="about-row">
             <span className="yr">2021–2024</span>
-            <div className="meta"><span className="role">B.Tech, Artificial Intelligence</span><span className="co">G.H. Raisoni Institute · Nagpur</span></div>
+            <div className="meta"><span className="role">B.Tech, Artificial Intelligence</span><span className="co">G.H. Raisoni Institute, Nagpur</span></div>
           </div>
         </div>
 
@@ -209,9 +207,10 @@ function About() {
           <span className="about-label">focus</span>
           <ul>
             <li>Business Analysis</li>
-            <li>Product Thinking</li>
+            <li>Requirement Gathering</li>
+            <li>Product Execution</li>
             <li>UX / Wireframing</li>
-            <li>Creative Direction</li>
+            <li>Reporting Workflows</li>
           </ul>
         </div>
 
@@ -219,7 +218,7 @@ function About() {
         <div className="about-panel about-tools">
           <span className="about-label">tools</span>
           <div className="about-chips">
-            <span>Figma</span><span>JIRA</span><span>Notion</span><span>Miro</span><span>SQL</span><span>Excel</span><span>Sheets</span><span>Power BI</span><span>Canva</span><span>Adobe</span><span>PPT</span>
+            <span>Jira</span><span>Figma</span><span>Power BI</span><span>Excel</span><span>Google Sheets</span><span>Notion</span><span>PowerPoint</span><span>Canva</span><span>Adobe Suite</span><span>SQL</span><span>Miro</span>
           </div>
         </div>
       </div>

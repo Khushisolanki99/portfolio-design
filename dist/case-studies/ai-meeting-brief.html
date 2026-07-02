@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Meeting Brief — Concept Case Study · Khushi Solanki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&family=Special+Elite&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" crossorigin href="/assets/cs-styles-DDEIme3S.css">
+</head>
+<body>
+
+  <!-- ── Fixed nav ── -->
+  <nav class="cs-nav">
+    <div class="cs-nav-brand">K<b>h</b>ushi <b>S</b>olanki</div>
+    <div class="cs-nav-right">
+      <span class="cs-nav-title">AI Meeting Brief · Concept Case Study</span>
+      <a href="../Portfolio.html" class="cs-nav-back">← All work</a>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="cs-hero bg-dark">
+    <div class="cs-hero-inner">
+
+      <div class="cs-hero-tag">
+        <span class="dot"></span>
+        Concept Case Study
+      </div>
+
+      <h1 class="cs-hero-title">
+        AI<br>Meeting<br><span class="accent-word">Brief.</span>
+      </h1>
+
+      <p class="cs-hero-sub">
+        An AI workspace that helps teams prepare for meetings, understand
+        context, capture decisions, and turn discussions into follow-up actions
+        — before, during, and after the call.
+      </p>
+
+      <div class="cs-hero-bottom">
+        <div class="cs-hero-meta">
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Type</span>
+            <span class="cs-hero-meta-value">Concept Case Study</span>
+          </div>
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Focus</span>
+            <span class="cs-hero-meta-value">AI Productivity / Meeting Ops</span>
+          </div>
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Year</span>
+            <span class="cs-hero-meta-value">2025</span>
+          </div>
+        </div>
+        <div class="cs-hero-ctas">
+          <a class="cs-btn primary" href="assets/Meeting-Brief-PRD.pdf" target="_blank" rel="noopener">Read PRD</a>
+          <a class="cs-btn" href="assets/Meeting-Brief-PRD.pdf" target="_blank" rel="noopener">Read Case Study</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Problem ── -->
+  <section class="cs-problem bg-paper">
+    <div class="cs-problem-inner">
+
+      <div class="cs-problem-left">
+        <div class="cs-sticker"><span class="num">§ 01</span> Problem</div>
+
+        <h2 class="cs-problem-pull">
+          Context<br>lost in<br><span class="u">transit.</span>
+        </h2>
+
+        <svg class="cs-doodle-arrow" width="30" height="26" viewBox="0 0 30 26" fill="none" aria-hidden="true">
+          <path d="M4 4 C6 4 24 8 24 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M18 16 L25 21 L18 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="cs-problem-right">
+        <p class="cs-problem-copy">
+          Meetings often happen <strong>without enough context</strong>. Product managers, business analysts, and cross-functional teams spend time jumping between <span class="hl">calendars, notes, documents</span>, and <span class="hl">previous discussions</span> just to understand what needs attention before the call even starts.
+        </p>
+        <p class="cs-problem-copy">
+          After the meeting, <span class="hl">decisions and action items</span> are scattered or forgotten. AI Meeting Brief explores how an <strong>AI-assisted workspace</strong> could prepare users before a meeting, surface relevant context, capture key decisions, and convert discussions into <span class="hl">clear follow-up actions</span>.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Product Flow ── -->
+  <section class="cs-flow bg-dark">
+
+    <div class="cs-flow-header">
+      <div class="cs-sticker flat"><span class="dot"></span> Product Flow</div>
+    </div>
+
+    <div class="cs-flow-shell">
+      <aside class="cs-flow-left">
+        <div class="cs-step-num"  id="activeStepNumber">Step 01</div>
+        <h2  class="cs-step-title" id="activeStepTitle">Dashboard</h2>
+        <p   class="cs-step-copy"  id="activeStepCopy">User sees all upcoming meetings pulled from Google Calendar, with a one-click Generate Brief action.</p>
+        <ol  class="cs-step-list"  id="stepList"></ol>
+      </aside>
+
+      <div class="cs-flow-right">
+        <div class="cs-screen-stage" id="screenStage"></div>
+        <div id="triggers"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── Narrative ── -->
+  <section class="cs-narrative bg-paper">
+    <div class="cs-narrative-inner">
+
+      <!-- Statement -->
+      <div class="cs-statement">
+        <span class="cs-statement-label">Overview</span>
+        <div>
+          <p class="cs-statement-body">
+            Teams lose time preparing for meetings and fail to convert<br>discussions into <span class="hl">clear decisions and actions.</span>
+          </p>
+          <p class="cs-statement-sub">
+            AI Meeting Brief connects pre-meeting preparation with post-meeting execution. Instead of treating meetings as isolated calendar events, the workspace turns them into structured workflows — with context, decisions, and follow-up accountability all in one place.
+          </p>
+        </div>
+      </div>
+
+      <!-- Persona + Goals -->
+      <div class="cs-two-col">
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">01</span>
+            Persona
+          </div>
+          <p class="cs-block-copy">
+            Product manager or business analyst working with <strong>cross-functional stakeholders</strong>. Spends significant time on meeting prep and often leaves meetings with unclear ownership of next steps.
+          </p>
+        </div>
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">02</span>
+            Goals
+          </div>
+          <ul class="cs-block-list">
+            <li>Reduce meeting preparation time significantly</li>
+            <li>Surface relevant context before the discussion starts</li>
+            <li>Make stakeholder expectations easier to understand</li>
+            <li>Capture decisions clearly and with attribution</li>
+            <li>Convert follow-ups into trackable action items</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Product Thinking -->
+      <div class="cs-statement" style="margin-top: 0; border-top: 1px solid var(--rule-light);">
+        <span class="cs-statement-label">Product Thinking</span>
+        <div>
+          <p class="cs-statement-body" style="font-size: clamp(18px, 2vw, 28px);">
+            Meetings aren't events. They're workflows.
+          </p>
+          <p class="cs-statement-sub">
+            The concept focuses on connecting pre-meeting preparation with post-meeting execution. Instead of treating meetings as isolated calendar blocks, the workspace turns them into structured workflows: the AI agent pulls company context and news, generates a focused brief, captures decisions in real time, and converts action items into trackable outputs. The calendar is just the entry point.
+          </p>
+        </div>
+      </div>
+
+      <!-- Design Decisions + Outcome -->
+      <div class="cs-two-col" style="border-bottom: none;">
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">03</span>
+            Design Decisions
+          </div>
+          <ul class="cs-block-list">
+            <li>Meeting-first dashboard — calendar is the anchor</li>
+            <li>AI brief generated from multiple context sources</li>
+            <li>Clear agenda and risk sections in every brief</li>
+            <li>Post-meeting summary with explicit decision capture</li>
+            <li>Action tracker connected to meeting outcomes</li>
+          </ul>
+        </div>
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">04</span>
+            What this demonstrates
+          </div>
+          <p class="cs-block-copy" style="margin-bottom: 18px;">
+            AI product thinking, workflow design, business analysis, meeting operations, decision tracking, and product storytelling.
+          </p>
+          <div class="cs-tags">
+            <span class="cs-tag">AI Product Thinking</span>
+            <span class="cs-tag">Workflow Design</span>
+            <span class="cs-tag">Business Analysis</span>
+            <span class="cs-tag">Meeting Operations</span>
+            <span class="cs-tag">Decision Tracking</span>
+            <span class="cs-tag">Product Storytelling</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="cs-hand-note">Concept project — AI that shows up prepared so you don't have to.</p>
+
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="cs-footer bg-paper">
+    <p class="cs-footer-note">Concept project · Khushi Solanki · 2025</p>
+    <a href="../Portfolio.html" class="cs-footer-back">← Back to portfolio</a>
+  </footer>
+
+  <script src="cs-flow.js"></script>
+  <script>
+    initFlow([
+      {
+        number: "01",
+        title:  "Dashboard",
+        copy:   "User sees all upcoming meetings pulled from Google Calendar. Each card shows title, date, attendee count, and location — with a one-click Generate Brief action.",
+        image:  "assets/mb-02-calendar-meetings.png"
+      },
+      {
+        number: "02",
+        title:  "Create meeting",
+        copy:   "Users can also add meetings manually. The form captures title, company, date, time, region, and key stakeholders to seed the AI brief generation.",
+        image:  "assets/mb-03-create-meeting.png"
+      },
+      {
+        number: "03",
+        title:  "AI brief generation",
+        copy:   "The system starts generating the brief asynchronously. The dashboard shows a live Generating… state while the agent pulls company context, news, and talking points.",
+        image:  "assets/mb-04-generating.png"
+      },
+      {
+        number: "04",
+        title:  "Brief ready",
+        copy:   "Once complete, the meeting card flips to READY status. The user can regenerate, view the full brief, or delete — all from the same dashboard row.",
+        image:  "assets/mb-05-brief-ready.png"
+      },
+      {
+        number: "05",
+        title:  "Brief + insights",
+        copy:   "The full brief shows agenda, context, company background, risk flags, and talking points — all generated and ready before the meeting starts.",
+        image:  "assets/mb-06-brief-insights.png"
+      }
+    ]);
+  </script>
+
+</body>
+</html>

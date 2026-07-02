@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- ALERT/STARTLED — puffed up, huge shocked eyes, open mouth -->
+  <!-- Body (puffed wider) -->
+  <ellipse cx="60" cy="104" rx="34" ry="20" fill="#D96020" stroke="#1A0A00" stroke-width="2.5"/>
+  <ellipse cx="60" cy="108" rx="20" ry="14" fill="#E89050"/>
+  <!-- Fur spikes around body -->
+  <polygon points="30,96 22,88 32,92" fill="#D96020" stroke="#1A0A00" stroke-width="1.5" stroke-linejoin="round"/>
+  <polygon points="28,106 18,104 28,100" fill="#D96020" stroke="#1A0A00" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Neck -->
+  <ellipse cx="60" cy="82" rx="22" ry="12" fill="#D96020" stroke="#1A0A00" stroke-width="2"/>
+  <!-- Head (puffed, bigger) -->
+  <circle cx="60" cy="46" r="38" fill="#D96020" stroke="#1A0A00" stroke-width="2.5"/>
+  <!-- Ear L (very tall, erect!) -->
+  <polygon points="24,26 32,4 50,28" fill="#D96020" stroke="#1A0A00" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="29,24 33,10 48,26" fill="#C04828"/>
+  <!-- Ear R (very tall, erect!) -->
+  <polygon points="70,28 88,6 96,26" fill="#D96020" stroke="#1A0A00" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="72,26 87,10 91,24" fill="#C04828"/>
+  <!-- Fur spikes from head -->
+  <polygon points="30,28 22,20 30,24" fill="#D96020" stroke="#1A0A00" stroke-width="1.5"/>
+  <polygon points="90,28 98,20 90,24" fill="#D96020" stroke="#1A0A00" stroke-width="1.5"/>
+  <!-- Forehead stripes -->
+  <path d="M50,18 Q52,26 51,34" stroke="#A83808" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M60,16 Q60,24 60,32" stroke="#A83808" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M70,18 Q68,26 69,34" stroke="#A83808" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Eyes (HUGE, round, shocked) -->
+  <circle cx="45" cy="46" r="14" fill="#1A0A00"/>
+  <circle cx="50" cy="40" r="5" fill="white"/>
+  <circle cx="75" cy="46" r="14" fill="#1A0A00"/>
+  <circle cx="80" cy="40" r="5" fill="white"/>
+  <!-- Nose -->
+  <polygon points="60,58 55,64 65,64" fill="#8A2008"/>
+  <line x1="60" y1="64" x2="60" y2="68" stroke="#1A0A00" stroke-width="1.5"/>
+  <!-- Open shocked mouth (O shape) -->
+  <ellipse cx="60" cy="74" rx="8" ry="7" fill="#1A0A00"/>
+  <!-- Whiskers (STIFF) -->
+  <line x1="53" y1="61" x2="22" y2="54" stroke="#1A0A00" stroke-width="1.5"/>
+  <line x1="53" y1="66" x2="22" y2="73" stroke="#1A0A00" stroke-width="1.5"/>
+  <line x1="67" y1="61" x2="98" y2="54" stroke="#1A0A00" stroke-width="1.5"/>
+  <line x1="67" y1="66" x2="98" y2="73" stroke="#1A0A00" stroke-width="1.5"/>
+</svg>

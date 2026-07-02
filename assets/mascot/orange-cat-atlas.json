@@ -1,0 +1,28 @@
+{
+  "basePath": "assets/mascot/orange-cat",
+  "frameWidth": 120,
+  "frameHeight": 120,
+  "animations": {
+    "idle":    { "files": ["idle.svg"],                    "frameRate": 6,  "loop": true  },
+    "sit":     { "files": ["sit.svg"],                     "frameRate": 6,  "loop": true  },
+    "walk":    { "files": ["walk-1.svg","walk-2.svg"],     "frameRate": 8,  "loop": true  },
+    "run":     { "files": ["run-1.svg","run-2.svg"],       "frameRate": 12, "loop": true  },
+    "sleep":   { "files": ["sleep.svg"],                   "frameRate": 2,  "loop": true  },
+    "stretch": { "files": ["stretch.svg"],                 "frameRate": 4,  "loop": false },
+    "purr":    { "files": ["purr.svg"],                    "frameRate": 4,  "loop": true  },
+    "happy":   { "files": ["happy.svg"],                   "frameRate": 6,  "loop": true  },
+    "sad":     { "files": ["sad.svg"],                     "frameRate": 4,  "loop": true  },
+    "hungry":  { "files": ["hungry.svg"],                  "frameRate": 4,  "loop": true  },
+    "playful": { "files": ["playful.svg"],                 "frameRate": 6,  "loop": true  },
+    "pounce":  { "files": ["pounce.svg"],                  "frameRate": 6,  "loop": false },
+    "alert":   { "files": ["alert.svg"],                   "frameRate": 6,  "loop": false },
+    "read":    { "files": ["read.svg"],                    "frameRate": 4,  "loop": true  },
+    "roll":    { "files": ["roll.svg","idle.svg"],         "frameRate": 4,  "loop": false },
+    "play":    { "files": ["playful.svg"],                 "frameRate": 6,  "loop": true  },
+    "love":    { "files": ["purr.svg","happy.svg"],        "frameRate": 5,  "loop": true  },
+    "eat":     { "files": ["happy.svg","purr.svg"],        "frameRate": 5,  "loop": true  },
+    "groom":   { "files": ["sit.svg","idle.svg"],          "frameRate": 4,  "loop": true  },
+    "jump":    { "files": ["pounce.svg","happy.svg"],      "frameRate": 8,  "loop": false },
+    "wave":    { "files": ["playful.svg","sit.svg"],       "frameRate": 6,  "loop": true  }
+  }
+}

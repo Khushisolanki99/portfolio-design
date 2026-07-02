@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nudge — Concept Case Study · Khushi Solanki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&family=Special+Elite&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" crossorigin href="/assets/cs-styles-DDEIme3S.css">
+</head>
+<body>
+
+  <!-- ── Fixed nav ── -->
+  <nav class="cs-nav">
+    <div class="cs-nav-brand">K<b>h</b>ushi <b>S</b>olanki</div>
+    <div class="cs-nav-right"></div>
+      <span class="cs-nav-title">Nudge · Concept Case Study</span>
+      <a href="../Portfolio.html" class="cs-nav-back">← All work</a>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="cs-hero bg-dark">
+    <div class="cs-hero-inner">
+
+      <div class="cs-hero-tag">
+        <span class="dot"></span>
+        Concept Case Study
+      </div>
+
+      <h1 class="cs-hero-title">
+        Checkout<br>at the<br>moment<br>of <span class="accent-word">intent.</span>
+      </h1>
+
+      <p class="cs-hero-sub">
+        Nudge explores how checkout can happen inside the buying moment
+        instead of after a redirect — reducing handoff friction and keeping
+        the buyer in context where intent is highest.
+      </p>
+
+      <div class="cs-hero-bottom">
+        <div class="cs-hero-meta">
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Type</span>
+            <span class="cs-hero-meta-value">Concept Case Study</span>
+          </div>
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Focus</span>
+            <span class="cs-hero-meta-value">Checkout / E-commerce</span>
+          </div>
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Year</span>
+            <span class="cs-hero-meta-value">2025</span>
+          </div>
+        </div>
+        <div class="cs-hero-ctas">
+          <a class="cs-btn primary" href="https://capable-grey-48b.notion.site/CASE-STUDY-1-Research-to-Checkout-Flow-Redesign-8eb6fc8e583844c4a5c9d6333bdbb1c0" target="_blank" rel="noopener">Read PRD</a>
+          <a class="cs-btn" href="https://capable-grey-48b.notion.site/CASE-STUDY-1-Research-to-Checkout-Flow-Redesign-8eb6fc8e583844c4a5c9d6333bdbb1c0" target="_blank" rel="noopener">Read Case Study</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Problem ── -->
+  <section class="cs-problem bg-paper">
+    <div class="cs-problem-inner">
+
+      <div class="cs-problem-left">
+        <div class="cs-sticker"><span class="num">§ 01</span> Problem</div>
+
+        <h2 class="cs-problem-pull">
+          Friction at the<br><span class="u">last mile.</span>
+        </h2>
+
+        <!-- small hand-drawn arrow SVG -->
+        <svg class="cs-doodle-arrow" width="30" height="26" viewBox="0 0 30 26" fill="none" aria-hidden="true">
+          <path d="M4 4 C6 4 24 8 24 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M18 16 L25 21 L18 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="cs-problem-right">
+        <p class="cs-problem-copy">
+          High-intent buyers often discover products inside <strong>blogs, reviews, and recommendation pages</strong> — but checkout usually happens after a redirect. That handoff breaks context, cools down intent, and adds friction exactly when the buyer is most ready to act.
+        </p>
+        <p class="cs-problem-copy">
+          Nudge explores whether checkout can happen <span class="hl">inside the buying moment itself</span> — without forcing the user to leave the content surface they are already engaged with.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Product Flow ── -->
+  <section class="cs-flow bg-dark">
+
+    <div class="cs-flow-header">
+      <div class="cs-sticker flat"><span class="dot"></span> Product Flow</div>
+    </div>
+
+    <div class="cs-flow-shell">
+      <aside class="cs-flow-left">
+        <div class="cs-step-num"  id="activeStepNumber">Step 01</div>
+        <h2  class="cs-step-title" id="activeStepTitle">Content surface</h2>
+        <p   class="cs-step-copy"  id="activeStepCopy">Buyer is reading an editorial or review page and is already engaged.</p>
+        <ol  class="cs-step-list"  id="stepList"></ol>
+      </aside>
+
+      <div class="cs-flow-right">
+        <div class="cs-screen-stage" id="screenStage"></div>
+        <div id="triggers"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── Narrative ── -->
+  <section class="cs-narrative bg-paper">
+    <div class="cs-narrative-inner">
+
+      <!-- Statement -->
+      <div class="cs-statement">
+        <span class="cs-statement-label">Overview</span>
+        <div>
+          <p class="cs-statement-body">
+            Checkout doesn't have to wait for a <span class="hl">redirect.</span>
+          </p>
+          <p class="cs-statement-sub">
+            Nudge is a concept that embeds the buying moment into the content surface itself.
+            When intent peaks — inside a review, a recommendation, an editorial — that's when checkout should live.
+            Not after a handoff. Not after a tab switch. Right there.
+          </p>
+        </div>
+      </div>
+
+      <!-- Persona + Goals -->
+      <div class="cs-two-col">
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">01</span>
+            Persona
+          </div>
+          <p class="cs-block-copy">
+            A high-intent online shopper discovering products through editorial content — blog posts, reviews, curated recommendations. Already engaged. Already interested. Interrupted by the redirect.
+          </p>
+        </div>
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">02</span>
+            Goals
+          </div>
+          <ul class="cs-block-list">
+            <li>Capture checkout intent at the point of discovery</li>
+            <li>Remove the redirect that cools down purchase intent</li>
+            <li>Keep buyer in context throughout the transaction</li>
+            <li>Surface confirmation without losing the content surface</li>
+            <li>Give merchants signal on where intent converts</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Product Thinking -->
+      <div class="cs-statement" style="margin-top: 0; border-top: 1px solid var(--rule-light);">
+        <span class="cs-statement-label">Product Thinking</span>
+        <div>
+          <p class="cs-statement-body" style="font-size: clamp(18px, 2vw, 28px);">
+            The moment of intent is the product surface.
+          </p>
+          <p class="cs-statement-sub">
+            This concept treats the content page as the transaction surface. Embedded checkout, inline confirmation, and contextual intent signals eliminate the mental step of "going to checkout." The merchant dashboard closes the loop — connecting where buyers engage with what they actually buy.
+          </p>
+        </div>
+      </div>
+
+      <!-- Design Decisions + Outcome -->
+      <div class="cs-two-col" style="border-bottom: none;">
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">03</span>
+            Design Decisions
+          </div>
+          <ul class="cs-block-list">
+            <li>Embedded checkout panel, triggered in-context</li>
+            <li>Minimal interruption — buyer stays on the content surface</li>
+            <li>Intent detection as the trigger, not explicit "Add to cart"</li>
+            <li>Inline order confirmation without page transition</li>
+            <li>Merchant view tied to content performance, not just orders</li>
+          </ul>
+        </div>
+        <div class="cs-col-block">
+          <div class="cs-block-label">
+            <span class="num">04</span>
+            What this demonstrates
+          </div>
+          <p class="cs-block-copy" style="margin-bottom: 18px;">
+            Product thinking, business analysis, flow design, and requirement documentation for a friction-reduction e-commerce concept.
+          </p>
+          <div class="cs-tags">
+            <span class="cs-tag">Product Thinking</span>
+            <span class="cs-tag">Flow Design</span>
+            <span class="cs-tag">Business Analysis</span>
+            <span class="cs-tag">E-commerce</span>
+            <span class="cs-tag">Requirement Docs</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="cs-hand-note">Concept project — built to show how intent and checkout can share the same surface.</p>
+
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="cs-footer bg-paper">
+    <p class="cs-footer-note">Concept project · Khushi Solanki · 2025</p>
+    <a href="../Portfolio.html" class="cs-footer-back">← Back to portfolio</a>
+  </footer>
+
+  <script src="cs-flow.js"></script>
+  <script>
+    initFlow([
+      {
+        number: "01",
+        title:  "Content surface",
+        copy:   "Buyer is reading an editorial or review page and is already engaged with the product context.",
+        image:  "../../Blog - Portfolio Style (Compact v2).png"
+      },
+      {
+        number: "02",
+        title:  "Intent detected",
+        copy:   "Buyer shows clear product interest — Nudge registers the signal from interaction patterns.",
+        image:  "../../AI Assistant - Portfolio Style (Compact).png"
+      },
+      {
+        number: "03",
+        title:  "Embedded checkout",
+        copy:   "Checkout opens inline on the same content page. No redirect, no tab switch, no lost context.",
+        image:  "../../Checkout - Portfolio Style (Compact) (1).png"
+      },
+      {
+        number: "04",
+        title:  "Confirmation",
+        copy:   "Buyer completes the order without leaving the article. The content surface stays intact.",
+        image:  "../../Order Confirmation - Portfolio Style (Compact).png"
+      },
+      {
+        number: "05",
+        title:  "Merchant dashboard",
+        copy:   "Merchant sees intent signals, conversion paths, and performance data tied to the original content.",
+        image:  "../../Merchant Dashboard - Portfolio Style (Compact).png"
+      }
+    ]);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+{
+  "basePath": "assets/mascot/cat",
+  "frameWidth": 80,
+  "frameHeight": 80,
+  "animations": {
+    "idle": {
+      "files": [
+        "idle/idle-01.png",
+        "idle/idle-02.png",
+        "idle/idle-03.png",
+        "idle/idle-04.png"
+      ],
+      "frameRate": 4,
+      "loop": true
+    },
+    "walk": {
+      "files": [
+        "walk/walk-01.png",
+        "walk/walk-02.png",
+        "walk/walk-03.png",
+        "walk/walk-04.png",
+        "walk/walk-05.png"
+      ],
+      "frameRate": 9,
+      "loop": true
+    },
+    "run": {
+      "files": [
+        "run/run-01.png",
+        "run/run-02.png",
+        "run/run-03.png"
+      ],
+      "frameRate": 12,
+      "loop": true
+    },
+    "jump": {
+      "files": [
+        "jump/jump-01.png",
+        "jump/jump-02.png",
+        "jump/jump-03.png"
+      ],
+      "frameRate": 8,
+      "loop": false
+    },
+    "play": {
+      "files": [
+        "play/play-01.png",
+        "play/play-02.png",
+        "play/play-03.png"
+      ],
+      "frameRate": 8,
+      "loop": true
+    },
+    "sleep": {
+      "files": [
+        "sleep/sleep-01.png",
+        "sleep/sleep-02.png",
+        "sleep/sleep-03.png"
+      ],
+      "frameRate": 3,
+      "loop": true
+    },
+    "groom": {
+      "files": [
+        "groom/groom-01.png",
+        "groom/groom-02.png",
+        "groom/groom-03.png"
+      ],
+      "frameRate": 5,
+      "loop": true
+    },
+    "stretch": {
+      "files": [
+        "stretch/stretch-01.png",
+        "stretch/stretch-02.png",
+        "stretch/stretch-03.png"
+      ],
+      "frameRate": 4,
+      "loop": false
+    },
+    "alert": {
+      "files": [
+        "alert/alert-01.png",
+        "alert/alert-02.png",
+        "alert/alert-03.png"
+      ],
+      "frameRate": 6,
+      "loop": true
+    },
+    "sad": {
+      "files": [
+        "sad/sad-01.png",
+        "sad/sad-02.png",
+        "sad/sad-03.png",
+        "sad/sad-04.png"
+      ],
+      "frameRate": 4,
+      "loop": true
+    },
+    "box": {
+      "files": [
+        "box/box-01.png",
+        "box/box-02.png",
+        "box/box-03.png",
+        "box/box-04.png"
+      ],
+      "frameRate": 5,
+      "loop": true
+    },
+    "misc": {
+      "files": [
+        "misc/misc-01.png",
+        "misc/misc-02.png",
+        "misc/misc-03.png",
+        "misc/misc-04.png"
+      ],
+      "frameRate": 4,
+      "loop": true
+    },
+    "wave": {
+      "files": [
+        "wave/wave-01.png"
+      ],
+      "frameRate": 4,
+      "loop": true
+    },
+    "read": {
+      "files": [
+        "read/read-01.png"
+      ],
+      "frameRate": 4,
+      "loop": true
+    },
+    "roll": {
+      "files": [
+        "roll/roll-01.png"
+      ],
+      "frameRate": 4,
+      "loop": true
+    },
+    "eat": {
+      "files": [
+        "eat/eat-01.png"
+      ],
+      "frameRate": 4,
+      "loop": true
+    },
+    "love": {
+      "files": [
+        "love/love-01.png"
+      ],
+      "frameRate": 4,
+      "loop": true
+    },
+    "shake": {
+      "files": [
+        "shake/shake-01.png"
+      ],
+      "frameRate": 6,
+      "loop": true
+    },
+    "lookup": {
+      "files": [
+        "lookup/lookup-01.png"
+      ],
+      "frameRate": 4,
+      "loop": true
+    }
+  }
+}

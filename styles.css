@@ -248,7 +248,7 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 }
 .hero-center {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex; flex-direction: column; align-items: center; gap: 22px;
   max-width: 920px;
   width: 100%;
@@ -259,7 +259,7 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
   font-size: clamp(15px, 1.4vw, 19px);
   line-height: 1.5;
   color: rgba(239,233,221,0.78);
-  max-width: 56ch;
+  max-width: 58ch;
   margin: 0;
   letter-spacing: -0.005em;
 }
@@ -267,7 +267,7 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 .hero-wordmark {
   font-family: var(--display);
   font-weight: 800;
-  font-size: clamp(44px, 7vw, 104px);
+  font-size: clamp(40px, 6.2vw, 96px);
   line-height: 0.88;
   letter-spacing: -0.04em;
   color: var(--paper-on-dark);
@@ -405,6 +405,39 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 .hero-ctas { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
 @media (max-width: 900px) { .hero-ctas { justify-content: flex-start; } }
 
+@media (max-width: 900px) {
+  .hero-obj { transform: scale(0.82) !important; opacity: 0.65; }
+  .hero-obj--keyboard { transform: rotate(65deg) scale(0.75) translate(12%, -8%) !important; }
+  .hero-obj--radio { transform: rotate(5deg) scale(0.78) translate(10%, 8%) !important; }
+}
+@media (max-width: 600px) {
+  .hero-stage { min-height: 50vh; }
+  .hero-wordmark {
+    font-size: clamp(30px, 8.5vw, 44px);
+    line-height: 0.92;
+    text-shadow: 0 2px 24px rgba(26, 23, 21, 0.85);
+  }
+  .hero-tagline {
+    font-size: clamp(14px, 3.8vw, 16px);
+    text-shadow: 0 2px 24px rgba(26, 23, 21, 0.85);
+  }
+  .brand .name { white-space: normal; }
+  .brand .name span { letter-spacing: 0.12em; }
+  .hero-obj--keyboard,
+  .hero-obj--radio { opacity: 0; visibility: hidden; }
+  .hero-obj--latte,
+  .hero-obj--notebook { opacity: 0.35; }
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+  .hero-ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* ============================================================ */
 /* Buttons                                                       */
 /* ============================================================ */
@@ -489,7 +522,7 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 }
 .about-section .about-tint {
   position: absolute; inset: 0; z-index: 1;
-  background: rgba(22,15,9,0.12); pointer-events: none;
+  background: rgba(22,15,9,0.18); pointer-events: none;
 }
 
 /* ---- pinned-content grid ---- */
@@ -507,7 +540,7 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
   position: relative; z-index: 4;
   min-width: 0; min-height: 0;
   display: flex; flex-direction: column;
-  background: rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.13);
   -webkit-backdrop-filter: blur(18px) saturate(1.3) brightness(0.74);
   backdrop-filter: blur(18px) saturate(1.3) brightness(0.74);
   border: 1px solid rgba(255,255,255,0.18);
@@ -572,7 +605,7 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 .about-section .about-ship { grid-area: 10 / 1 / 13 / 5; justify-content: center; border-color: rgba(224,65,31,0.55); }
 .about-section .about-shiplist {
   margin: 0; font-family: var(--about-display); font-weight: 500;
-  font-size: clamp(11px,1.0vw,15px); line-height: 1.5; letter-spacing: -0.01em; color: var(--about-paper);
+  font-size: clamp(10px,0.92vw,14px); line-height: 1.45; letter-spacing: -0.01em; color: var(--about-paper);
 }
 
 /* ---- experience / education ---- */
@@ -593,9 +626,9 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 }
 .about-section .about-row .meta { display: flex; flex-direction: column; gap: 1px; min-width: 0; overflow: hidden; }
 .about-section .about-row .role {
-  font-family: var(--about-display); font-weight: 700; font-size: clamp(11.5px,0.95vw,14px);
-  line-height: 1.15; letter-spacing: -0.01em; color: var(--about-paper);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  font-family: var(--about-display); font-weight: 700; font-size: clamp(10.5px,0.88vw,13px);
+  line-height: 1.2; letter-spacing: -0.01em; color: var(--about-paper);
+  white-space: normal;
 }
 .about-section .about-row .co {
   font-family: var(--about-type); font-size: clamp(8.5px,0.72vw,10px); letter-spacing: 0.04em;
@@ -640,7 +673,8 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 @media (max-width: 860px) {
   .about-section { height: auto; min-height: 100svh; }
   .about-section .about-bg { object-position: 52% 24%; }
-  .about-section .about-tint { background: rgba(18,12,8,0.5); }
+  .about-section .about-tint { background: rgba(18,12,8,0.55); }
+  .about-section .about-panel { background: rgba(255,255,255,0.14); }
   .about-section .about-stage {
     position: relative; inset: auto;
     display: flex; flex-direction: column; gap: 13px;

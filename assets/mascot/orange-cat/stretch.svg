@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- STRETCHING — front paws extended forward, back raised high, facing right -->
+  <!-- Tail (up high from raised back) -->
+  <path d="M18,74 Q10,56 14,38 Q18,22 12,10" stroke="#D96020" stroke-width="11" stroke-linecap="round" fill="none"/>
+  <path d="M18,74 Q10,56 14,38 Q18,22 12,10" stroke="#1A0A00" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Back haunches (raised) -->
+  <ellipse cx="30" cy="70" rx="18" ry="22" fill="#D96020" stroke="#1A0A00" stroke-width="2.5"/>
+  <!-- Back legs -->
+  <line x1="24" y1="88" x2="16" y2="110" stroke="#D96020" stroke-width="11" stroke-linecap="round"/>
+  <line x1="24" y1="88" x2="16" y2="110" stroke="#1A0A00" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="14" cy="111" rx="9" ry="5" fill="#D96020" stroke="#1A0A00" stroke-width="2"/>
+  <line x1="36" y1="88" x2="42" y2="110" stroke="#D96020" stroke-width="11" stroke-linecap="round"/>
+  <line x1="36" y1="88" x2="42" y2="110" stroke="#1A0A00" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="42" cy="111" rx="9" ry="5" fill="#D96020" stroke="#1A0A00" stroke-width="2"/>
+  <!-- Body arc (stretching down) -->
+  <path d="M44,72 Q62,96 92,90" stroke="#D96020" stroke-width="22" stroke-linecap="round" fill="none"/>
+  <path d="M44,72 Q62,96 92,90" stroke="#1A0A00" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Belly lighter -->
+  <path d="M48,80 Q62,96 88,90" stroke="#E89050" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <!-- Body stripes -->
+  <path d="M56,84 Q58,90 62,88" stroke="#A83808" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M66,88 Q68,94 72,92" stroke="#A83808" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Front arms stretched flat forward -->
+  <line x1="92" y1="88" x2="114" y2="104" stroke="#D96020" stroke-width="11" stroke-linecap="round"/>
+  <line x1="92" y1="88" x2="114" y2="104" stroke="#1A0A00" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="115" cy="105" rx="9" ry="5" fill="#D96020" stroke="#1A0A00" stroke-width="2"/>
+  <line x1="86" y1="90" x2="106" y2="108" stroke="#D96020" stroke-width="10" stroke-linecap="round"/>
+  <line x1="86" y1="90" x2="106" y2="108" stroke="#1A0A00" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="106" cy="109" rx="9" ry="5" fill="#D96020" stroke="#1A0A00" stroke-width="2"/>
+  <!-- Head (low, squinting) -->
+  <circle cx="100" cy="72" r="20" fill="#D96020" stroke="#1A0A00" stroke-width="2.5"/>
+  <polygon points="88,54 96,40 108,56" fill="#D96020" stroke="#1A0A00" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="92,52 96,44 106,54" fill="#C04828"/>
+  <!-- Eyes squinting with pleasure -->
+  <path d="M92,71 Q96,66 100,71" fill="none" stroke="#1A0A00" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M100,69 Q104,64 108,69" fill="none" stroke="#1A0A00" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Nose -->
+  <polygon points="106,76 103,81 111,81" fill="#8A2008"/>
+  <!-- Tiny smile -->
+  <path d="M103,81 Q106,85 111,81" fill="none" stroke="#1A0A00" stroke-width="2" stroke-linecap="round"/>
+  <!-- Whiskers -->
+  <line x1="102" y1="78" x2="117" y2="74" stroke="#1A0A00" stroke-width="1.3"/>
+  <line x1="102" y1="82" x2="118" y2="84" stroke="#1A0A00" stroke-width="1.3"/>
+</svg>

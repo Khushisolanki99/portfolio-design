@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- ROLLING OVER — on back, all paws in air, happy face -->
+  <!-- Body (wide horizontal, on back) -->
+  <ellipse cx="62" cy="86" rx="48" ry="22" fill="#D96020" stroke="#1A0A00" stroke-width="2.5"/>
+  <!-- Belly exposed (lighter) -->
+  <ellipse cx="62" cy="84" rx="34" ry="15" fill="#E89050"/>
+  <!-- Tail (curled out to right) -->
+  <path d="M104,90 Q118,100 114,112" stroke="#D96020" stroke-width="11" stroke-linecap="round" fill="none"/>
+  <path d="M104,90 Q118,100 114,112" stroke="#1A0A00" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Body stripes (sides) -->
+  <path d="M20,80 Q18,88 20,96" stroke="#A83808" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M28,76 Q26,88 28,98" stroke="#A83808" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- All 4 paws raised -->
+  <line x1="40" y1="78" x2="30" y2="52" stroke="#D96020" stroke-width="11" stroke-linecap="round"/>
+  <line x1="40" y1="78" x2="30" y2="52" stroke="#1A0A00" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="29" cy="50" rx="9" ry="7" fill="#D96020" stroke="#1A0A00" stroke-width="2.5"/>
+  <line x1="54" y1="74" x2="50" y2="46" stroke="#D96020" stroke-width="11" stroke-linecap="round"/>
+  <line x1="54" y1="74" x2="50" y2="46" stroke="#1A0A00" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="50" cy="44" rx="9" ry="7" fill="#D96020" stroke="#1A0A00" stroke-width="2.5"/>
+  <line x1="70" y1="74" x2="74" y2="46" stroke="#D96020" stroke-width="11" stroke-linecap="round"/>
+  <line x1="70" y1="74" x2="74" y2="46" stroke="#1A0A00" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="74" cy="44" rx="9" ry="7" fill="#D96020" stroke="#1A0A00" stroke-width="2.5"/>
+  <line x1="84" y1="78" x2="94" y2="52" stroke="#D96020" stroke-width="11" stroke-linecap="round"/>
+  <line x1="84" y1="78" x2="94" y2="52" stroke="#1A0A00" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="95" cy="50" rx="9" ry="7" fill="#D96020" stroke="#1A0A00" stroke-width="2.5"/>
+  <!-- Head (side, happy/goofy) -->
+  <circle cx="24" cy="74" r="22" fill="#D96020" stroke="#1A0A00" stroke-width="2.5"/>
+  <polygon points="10,56 16,40 28,58" fill="#D96020" stroke="#1A0A00" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="14,54 17,44 26,56" fill="#C04828"/>
+  <!-- Head stripe -->
+  <path d="M16,56 Q18,62 17,68" stroke="#A83808" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Eyes (large, happy/silly) -->
+  <circle cx="18" cy="72" r="8" fill="#1A0A00"/>
+  <circle cx="21" cy="68" r="2.5" fill="white"/>
+  <circle cx="32" cy="72" r="8" fill="#1A0A00"/>
+  <circle cx="35" cy="68" r="2.5" fill="white"/>
+  <!-- Nose -->
+  <polygon points="25,80 21,85 29,85" fill="#8A2008"/>
+  <!-- Big smile -->
+  <path d="M18,85 Q25,92 32,85" fill="none" stroke="#1A0A00" stroke-width="2" stroke-linecap="round"/>
+  <!-- Whiskers -->
+  <line x1="19" y1="82" x2="4" y2="78" stroke="#1A0A00" stroke-width="1.3"/>
+  <line x1="29" y1="82" x2="44" y2="78" stroke="#1A0A00" stroke-width="1.3"/>
+</svg>

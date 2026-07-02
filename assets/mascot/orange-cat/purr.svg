@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- PURRING — sitting, close-up face, eyes happily closed -->
+  <!-- Body (bottom hint) -->
+  <ellipse cx="60" cy="106" rx="28" ry="18" fill="#D96020" stroke="#1A0A00" stroke-width="2.5"/>
+  <ellipse cx="60" cy="110" rx="16" ry="12" fill="#E89050"/>
+  <!-- Neck -->
+  <ellipse cx="60" cy="82" rx="18" ry="10" fill="#D96020" stroke="#1A0A00" stroke-width="2"/>
+  <!-- Head (large, close-up) -->
+  <circle cx="60" cy="50" r="36" fill="#D96020" stroke="#1A0A00" stroke-width="2.5"/>
+  <!-- Left ear -->
+  <polygon points="28,28 36,8 52,30" fill="#D96020" stroke="#1A0A00" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="33,26 37,14 50,28" fill="#C04828"/>
+  <!-- Right ear -->
+  <polygon points="68,30 84,10 92,28" fill="#D96020" stroke="#1A0A00" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="70,28 83,14 87,26" fill="#C04828"/>
+  <!-- Forehead stripes -->
+  <path d="M50,20 Q52,28 51,36" stroke="#A83808" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M60,18 Q60,26 60,34" stroke="#A83808" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M70,20 Q68,28 69,36" stroke="#A83808" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Eyes CLOSED (happy U-curves) -->
+  <path d="M40,48 Q48,40 56,48" fill="none" stroke="#1A0A00" stroke-width="3" stroke-linecap="round"/>
+  <path d="M64,48 Q72,40 80,48" fill="none" stroke="#1A0A00" stroke-width="3" stroke-linecap="round"/>
+  <!-- Blush marks -->
+  <ellipse cx="36" cy="56" rx="7" ry="4" fill="#D04020" opacity="0.4"/>
+  <ellipse cx="84" cy="56" rx="7" ry="4" fill="#D04020" opacity="0.4"/>
+  <!-- Nose -->
+  <polygon points="60,58 55,64 65,64" fill="#8A2008"/>
+  <!-- Big happy smile -->
+  <path d="M50,64 Q60,74 70,64" fill="none" stroke="#1A0A00" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Purr lines -->
+  <path d="M18,48 Q12,50 16,54 Q20,58 14,62" fill="none" stroke="#1A0A00" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M22,44 Q16,46 20,50" fill="none" stroke="#1A0A00" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <path d="M102,48 Q108,50 104,54 Q100,58 106,62" fill="none" stroke="#1A0A00" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M98,44 Q104,46 100,50" fill="none" stroke="#1A0A00" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <!-- Whiskers -->
+  <line x1="53" y1="61" x2="22" y2="56" stroke="#1A0A00" stroke-width="1.3"/>
+  <line x1="53" y1="65" x2="22" y2="70" stroke="#1A0A00" stroke-width="1.3"/>
+  <line x1="67" y1="61" x2="98" y2="56" stroke="#1A0A00" stroke-width="1.3"/>
+  <line x1="67" y1="65" x2="98" y2="70" stroke="#1A0A00" stroke-width="1.3"/>
+</svg>
