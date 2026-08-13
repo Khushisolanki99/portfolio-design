@@ -32,7 +32,19 @@ function rawJsxPlugin() {
           });
         }
       }
+      // Classic scripts referenced by absolute path from nested HTML pages
+      for (const file of ['image-slot.js']) {
+        const filePath = resolve(root, file);
+        if (existsSync(filePath)) {
+          this.emitFile({
+            type: 'asset',
+            fileName: file,
+            source: readFileSync(filePath),
+          });
+        }
+      }
     },
+
   };
 }
 
@@ -55,6 +67,7 @@ export default defineConfig({
       input: {
         main: resolve(root, 'index.html'),
         portfolio: resolve(root, 'Portfolio.html'),
+        creative: resolve(root, 'creative/index.html'),
         ...Object.fromEntries(
           caseStudies.map((name) => [
             name,
@@ -65,3 +78,4 @@ export default defineConfig({
     },
   },
 });
+
